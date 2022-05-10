@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Indi Games Engine'
+copyright = '2022, Indigames'
+author = 'admin@indigames.net'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.0.1'
+version = '0.0.1'
 
 # -- General configuration
 
@@ -28,8 +28,16 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- Turn on sphinx.ext.autosummary
+autosummary_generate = True 
+
+# -- If no docstring, inherit from base class
+autodoc_inherit_docstrings = True
+
+# -- Add templates paths
+templates_path = ['templates']

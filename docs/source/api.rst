@@ -1,7 +1,9 @@
-API
-===
+API Documents
+=============
 
 .. autosummary::
-   :toctree: generated
+   :toctree: _api
+   :template: custom-module-template.rst
+   :recursive:
 
-   lumache
+   igeScene
