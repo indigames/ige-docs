@@ -1,6 +1,3 @@
-igeCore==0.5.81
-igeVmath==0.6.7
-igeScene==0.0.6
-igeBullet==0.4.65
+
 
 
