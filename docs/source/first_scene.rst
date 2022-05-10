@@ -19,8 +19,73 @@ A project can contain multiple scenes. To create a new scene, go to ``File -> Ne
 
 To change a scene at runtime, we need to use Scripting :doc:`api` which will be introduced later.
 
-Creating Game Object
---------------------
+Project Structure
+------------------
 
+.. table::
+   :widths: auto
 
+   =============  =================================
+    Item           Meaning
+   =============  =================================
+   config          [Folder] Contains project's configuration.
+   figures         [Folder] Contains models and animations.
+   fonts           [Folder] Contains fonts used in the project.
+   scenes          [Folder] Contains scene files.
+   scripts         [Folder] Contains game logic source codes.
+   sounds          [Folder] Contains audio files.
+   sprites         [Folder] Contains UI and 2D images.
+   \*.igeproj      [File] The project file
+   =============  =================================
 
+Create Object
+-------------
+
+In order to add an object to the scene, select and right-click an item in Hierarchy, select ``Create -> Primitive -> Cube``.
+
+.. figure:: static/new_cube.png
+   :alt: Create Cube
+
+You should now see a cube in your scene.
+
+.. figure:: static/new_cube_scene.png
+   :alt: Scene With New Cube
+
+Scripting
+---------
+
+To control behavior of an object, we use Script Component.
+
+In the Inspector, add new Script Component.
+
+.. figure:: static/new_script.png
+   :alt: Create Script Component
+
+In the Asset Browser, go to ``scripts``, right-click then select ``New Script``, then name it ``move.py``.
+
+.. figure:: static/new_python.png
+   :alt: Create Script Component
+
+Open the newly created file, edit it with content below:
+
+.. code:: python
+
+   import math
+   import igeVmath as vmath   
+   from igeScene import Script
+
+   class Move(Script):
+      def __init__(self, owner):
+         super().__init__(owner)
+         self.elapsed = 0.0
+
+      def onUpdate(self, dt):
+         self.elapsed = self.elapsed + dt
+         self.owner.transform.position = vmath.vec3(0, math.sin(self.elapsed), 0)
+
+Then drag the file in Script component Inspector.
+
+.. figure:: static/drag_python.png
+   :alt: Create Script Component
+
+Save the scene, by pressing ``Ctrl + S`` or ``File -> Save Scene``. Then you can press the ``Play`` button to test it. The cube should move up and down continuously.
