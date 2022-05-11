@@ -1,17 +1,12 @@
-API Documents
-=============
+Python API
+==========
 
-.. This is on Windows only
-.. .. autosummary::
-..    :toctree: _api
-..    :template: custom-module-template.rst
-..    :recursive:
+.. table::
+   :widths: auto
 
-..    igeScene
-
-.. This is on readthedoc
-.. toctree::
-   :glob:
-
-   _api/igeScene
-   _api/igeScene.*
+   ================================================  =================================
+    `igeScene <_static/html/igeScene.html>`_           Scene management library
+    `igeCore <_static/html/igeCore/index.html>`_       Core module
+    `igeVmath <_static/html/igeVmath.html>`_           Vector math library
+    `igeSdk <_static/html/igeSdk.html>`_               Third party SDK library
+   ================================================  =================================

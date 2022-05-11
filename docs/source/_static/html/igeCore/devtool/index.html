@@ -1,0 +1,1422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>igeCore.devtool API documentation</title>
+<meta name="description" content="indi game engine offline develop tools …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>igeCore.devtool</code></h1>
+</header>
+<section id="section-intro">
+<p>indi game engine offline develop tools</p>
+<p>convert 3d assets
+convert images to platform dipend format
+make ige package
+upload package to devserver</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+indi game engine offline develop tools
+
+convert 3d assets
+convert images to platform dipend format
+make ige package
+upload package to devserver
+
+&#34;&#34;&#34;
+
+import py_compile
+import shutil
+import glob
+import os.path
+import igeCore as core
+from igeCore import apputil
+from igeCore.devtool._igeTools import *
+from igeCore import apputil
+from igeCore.apputil import launch_server
+import hashlib
+import tokenize
+
+def isHiddenFolder(path):
+    if path.find(&#39;/.&#39;) != -1 or path.find(&#39;\\.&#39;) != -1 :
+        return True
+    return False
+
+def findFiles(path, exts = [&#39;.*&#39;]):
+    list = []
+    for root, dirs, files in os.walk(path):
+        if isHiddenFolder(root): continue
+        for fname in files:
+            name, ext = os.path.splitext(fname)
+            for e in exts:
+                if e == &#39;.*&#39; or e == ext:
+                    list.append(os.path.join(root, fname))
+                    break
+    return list
+
+def findImageFiles(path):
+    list = []
+    for root, dirs, files in os.walk(path):
+        if isHiddenFolder(root): continue
+        for fname in files:
+            name, ext = os.path.splitext(fname)
+            extl = ext.lower()
+            if extl == &#39;.png&#39; or extl == &#39;.dds&#39; or extl == &#39;.tga&#39; or extl == &#39;.psd&#39; or extl == &#39;.jpg&#39;:
+                list.append(os.path.join(root, fname))
+    return list
+
+def find3DSceneFiles(path):
+    dict = {}
+    for root, dirs, files in os.walk(path):
+        if root.find(&#39;\.&#39;) != -1: continue
+        folder = os.path.basename(root)
+
+        folderRule = False
+        for f in files:
+            name, ext = os.path.splitext(f)
+            if name == folder:
+                folderRule = True
+                baseFile = f
+                break
+
+        if folderRule:
+            daes = [os.path.join(root, baseFile)]
+            for f2 in files:
+                f2_name, f2_ext = os.path.splitext(f2)
+                if (f2_ext.lower() == &#39;.dae&#39; or f2_ext.lower() == &#39;.fbx&#39;) and f2_name != folder:
+                    daes.append(os.path.join(root, f2))
+            dict[folder] = daes
+        else:
+            for f2 in files:
+                f2_name, f2_ext = os.path.splitext(f2)
+                if f2_ext.lower() == &#39;.dae&#39; or f2_ext.lower() == &#39;.fbx&#39;:
+                    dict[f2_name] = [os.path.join(root, f2)]
+    return dict
+
+def createDirectoryTree(filelist, root):
+    imageDirectory = dict()
+    for img in filelist:
+        while True:
+            img, file = os.path.split(img)
+            if img not in imageDirectory:
+                imageDirectory[img] = {file: 0};
+            elif file not in imageDirectory[img]:
+                imageDirectory[img][file] = 0
+            if img == root: break
+    return imageDirectory
+
+def findFileFromDiorectoryTree(imageDirectory, file, dir):
+    files = imageDirectory.get(dir)
+    if files is None: return None
+    if file in files:
+        return os.path.join(dir, file)
+    for d in files:
+        _, ext = os.path.splitext(d)
+        if ext == &#39;&#39;:
+            rv = findFileFromDiorectoryTree(imageDirectory, file, os.path.join(dir, d))
+            if rv: return rv
+    return None
+
+def removeRoot(path, root):
+    newpath = path.replace(root, &#39;&#39;, 1)
+    if len(newpath) &gt;0:
+        if newpath[0] == &#39;/&#39; or newpath[0] == &#39;\\&#39;:
+            newpath = newpath[1:]
+    else:
+        newpath = &#34;&#34;
+    return newpath
+
+def replaceExt(file, ext):
+    name, extold = os.path.splitext(file)
+    return name + ext
+
+def readAndCalcHash(srcfile, dstfile, hashfile):
+    hashcode = &#39;00000000000000000000000000000000&#39;
+    newhash  = &#39;ffffffffffffffffffffffffffffffff&#39;
+    if os.path.exists(dstfile):
+        try:
+            with open(hashfile, &#39;r&#39;) as f:
+                hashcode = f.read()
+        except : None
+
+    with open(srcfile, &#39;rb&#39;) as f:
+        fileDataBinary = f.read()
+        if len(fileDataBinary) != 0:
+            hash = hashlib.md5()
+            hash.update(fileDataBinary)
+            newhash = hash.hexdigest()
+    return hashcode,newhash
+
+def saveHash(hashfile, newhash):
+    if newhash != &#39;ffffffffffffffffffffffffffffffff&#39;:
+        apputil.makeDirectories(hashfile)
+        with open(hashfile, &#39;w&#39;) as f:
+            f.write(newhash)
+
+def readFigureConf(path):
+    mode = 0
+    label = &#39;&#39;
+    keyvalue = {}
+    with open(path, &#39;rb&#39;) as f:
+        for token in tokenize.tokenize(f.readline):
+            if token.type is tokenize.ENDMARKER:
+                break
+            elif token.type is tokenize.NAME:
+                if mode == 0:
+                    label = token.string
+                else:
+                    keyvalue[label] = token.string
+                    mode = 0
+            elif token.type is tokenize.OP:
+                mode = 1
+            elif token.type is tokenize.NUMBER:
+                if mode == 1:
+                    try:
+                        keyvalue[label] = int(token.string)
+                    except ValueError:
+                        keyvalue[label] = float(token.string)
+                    mode = 0
+    return keyvalue
+
+def createFigureConfTree(path, unit=1.0):
+    path = os.path.abspath(path)
+    filelist = []
+    for root, dirs, files in os.walk(path):
+        if root.find(&#39;\.&#39;) != -1: continue
+        for fname in files:
+            if fname == &#39;figure.conf&#39;:
+                filelist.append(os.path.join(root, fname))
+    figureConfTree = dict()
+    for filepath in filelist:
+        conf = readFigureConf(filepath)
+        dir, file = os.path.split(filepath)
+        figureConfTree[dir] = conf
+
+    for dir, val in figureConfTree.items():
+        while True:
+            dir, _ = os.path.split(dir)
+            if dir == os.path.abspath(&#39;.&#39;).split(os.path.sep)[0]+os.path.sep:
+                break
+            parent = figureConfTree.get(dir)
+            if parent is not None:
+                for parentkey, parentval in parent.items():
+                    if val.get(parentkey) is None:
+                        val[parentkey] = parentval
+
+    if len(figureConfTree) == 0:
+        figureConfTree[path] = {}
+
+    for conf in figureConfTree.values():
+        if conf.get(&#39;BASE_SCALE&#39;) is None:
+           conf[&#39;BASE_SCALE&#39;] = unit
+        #if conf.get(&#39;OPTIMIZE_MESH&#39;) is None:
+        #   conf[&#39;OPTIMIZE_MESH&#39;] = True
+
+    return figureConfTree
+
+def findFigureConf(dir: str, tree: dict):
+    dir = os.path.abspath(dir)
+    while True:
+        dir, _ = os.path.split(dir)
+        if dir == os.path.abspath(&#39;.&#39;).split(os.path.sep)[0]+os.path.sep:
+            break
+        conf = tree.get(dir)
+        if conf is not None:
+            return conf
+    return dict()
+
+def load3DScene(tmpfig, files, conf):
+    loadModel(files[0], tmpfig, conf)
+    for i in range(1, len(files)):
+        loadAnimation(files[i], tmpfig, conf)
+
+def replaceTexturePath(tmpfig, imageDirectory, startPath, endPath, allTextures, subFolder):
+    texs = tmpfig.getTextureSource()
+    for tex in texs:
+        filename = os.path.basename(tex[&#39;path&#39;])
+        current = startPath
+        inputimage = None
+        while True:
+            inputimage = findFileFromDiorectoryTree(imageDirectory, filename, current)
+            if inputimage is not None: break
+            if current == endPath: break
+            current, _ = os.path.split(current)
+        if inputimage is None:
+            print(&#39;file not found &#39; + tex[&#39;path&#39;])
+        else:
+            allTextures[inputimage] = tex;
+            inputimage = removeRoot(inputimage, endPath);
+            inputimage, ext = os.path.splitext(inputimage)
+            inputimage = os.path.join(subFolder, inputimage)
+            inputimage = inputimage.replace(&#39;\\&#39;, &#39;/&#39;)
+            newTex = {&#39;path&#39;: inputimage, &#39;normal&#39;: tex[&#39;normal&#39;], &#39;wrap&#39;: tex[&#39;wrap&#39;]}
+            tmpfig.replaceTextureSource(tex, newTex)
+
+def setMaterialAlpha(tmpfig, imageDirectory, startPath, endPath):
+    texs = tmpfig.getTextureSource()
+    for tex in texs:
+        filename = os.path.basename(tex[&#39;path&#39;])
+        current = startPath
+        inputimage = None
+        while True:
+            inputimage = findFileFromDiorectoryTree(imageDirectory, filename, current)
+            if inputimage is not None: break
+            if current == endPath: break
+            current, _ = os.path.split(current)
+        if inputimage is not None:
+            if isAlpha(inputimage):
+                tmpfig.enableAlphaModeByTexture(tex[&#39;path&#39;])
+
+def getHashPath(root, source, platform):
+    abspath = os.path.abspath(source)
+    if abspath[0]==&#39;/&#39; or abspath[0]==&#39;\\&#39;:
+       abspath = abspath[1:]
+    elif abspath[2]==&#39;\\&#39;:
+        abspath = abspath[3:]
+    return os.path.join(os.path.join(root, apputil.targetFolderName(platform)), abspath)
+
+def convertImages(allTextures, sourceDir, destDir, platform):
+    print(&#39;----------------------&#39;)
+    print(&#39;Convert image files&#39;)
+    print(&#39;----------------------&#39;)
+    for key, val in allTextures.items():
+        outfile = os.path.normpath(key.replace(sourceDir, destDir, 1))
+        outfile = replaceExt(outfile, &#39;.pyxi&#39;)
+        hashfile = getHashPath(&#39;.tmp/hash&#39;, key, platform)
+        hashcode, newhash = readAndCalcHash(key, outfile, hashfile)
+        if hashcode != newhash:
+            print(&#34;convert {} for {}&#34;.format(key,apputil.targetFolderName(platform)))
+            apputil.makeDirectories(outfile)
+            convertTextureToPlatform(key, outfile, platform, val[&#39;normal&#39;], val[&#39;wrap&#39;])
+            saveHash(hashfile, newhash)
+        else:
+            print(&#34;skip {} &#34;.format(key))
+
+def copyFiles(src, dst, exts=[&#39;.*&#39;]):
+    for root, dirs, files in os.walk(src):
+        if isHiddenFolder(root): continue
+        for fname in files:
+            name, ext = os.path.splitext(fname)
+            for e in exts:
+                if e == &#39;.*&#39; or ext == e:
+                    srcPath = os.path.join(root, fname)
+                    dstPath = os.path.join(dst, removeRoot(srcPath, src))
+                    apputil.makeDirectories(dstPath)
+                    shutil.copy2(srcPath, dstPath)
+                    print(&#34;copy {}&#34;.format(dstPath))
+                    break
+
+def compilePrograms(src, dst):
+    list = findFiles(src, [&#39;.py&#39;])
+    for infile in list:
+        outfile = os.path.normpath(infile.replace(src, dst, 1))
+        apputil.makeDirectories(outfile)
+        if os.path.basename(infile) == &#39;root.py&#39;:
+            shutil.copy(infile, outfile)
+        else:
+            outfile = replaceExt(outfile, &#39;.pyc&#39;)
+            apputil.makeDirectories(outfile)
+            print(&#39;compile : &#39;+infile)
+            py_compile.compile(infile, outfile)
+
+def hashCheck(files, outfile, platform):
+    changed = False
+    for file in files:
+        hashfile = getHashPath(&#39;.tmp/hash&#39;, file, platform)
+        hashcode, newhash = readAndCalcHash(file, outfile, hashfile)
+        if hashcode != newhash:
+            changed = True
+            saveHash(hashfile, newhash)
+    return changed
+
+def buildAppPackage(src, dest):
+    apputil.makeDirectories(dest)
+    list =glob.glob(os.path.join(src,&#39;*&#39; ))
+    for dir in list:
+        if os.path.isdir(dir):
+            outpath = os.path.join(dest,os.path.basename(dir))
+
+            list = findFiles(dir)
+            if hashCheck(list, outpath+&#39;.pyxd&#39;, 0):
+                print(&#34;build asset database {}.pyxd&#34;.format(outpath))
+                compressFolder(dir, outpath)
+            else:
+                print(&#34;skip asset database {}.pyxd&#34;.format(outpath))
+        else:
+            print(&#34;copy {}&#34;.format(dir))
+            shutil.copy2(dir, dest)
+
+
+def findConvertReplaceTextures(fig : core.editableFigure, sourceRoot, destRoot, platform=core.TARGET_PLATFORM_PC, figurePath=&#34;&#34;):
+    &#34;&#34;&#34;
+    Find and convert the texture file linked from editableFigure.
+
+    :param sourceRoot: Root folder to search for texture files
+    :param destRoot: Root folder to save the textures
+    :param editableFigure: The location where the editableFigure was saved (optional). It must be included under sourceRoot.
+    :param platform: Formats to convert textures to.　TARGET_PLATFORM_PC or TARGET_PLATFORM_MOBILE
+
+    :return: None
+
+    The figurePath must always be under the sourceRoot.
+    The specified folder hierarchy may contain multiple texture files with the same name.
+    When figurePath is specified, the texture file closest to it will be selected.
+
+    Example.
+        ・File path saved in editableFigure
+            D:/aaa/bbb/ccc/test.png
+        ・Location of the actual file
+            C:/user/input/images/test.png
+        ・sourceRoot
+            C:/user/input
+        ・destRoot
+            C:/user/output
+        ・The actual output file
+            C:/user/output/images/test.pyxi
+        ・New file path to be saved in editableFigure
+            images/test
+    &#34;&#34;&#34;
+    sourceRoot = os.path.abspath(sourceRoot).replace(&#39;\\&#39;, &#39;/&#39;)
+    destRoot = os.path.abspath(destRoot).replace(&#39;\\&#39;, &#39;/&#39;)
+
+    if figurePath == &#34;&#34;:
+        daepath = figurePath = sourceRoot
+    else:
+        figurePath = os.path.abspath(figurePath).replace(&#39;\\&#39;, &#39;/&#39;)
+        daepath, _ = os.path.split(figurePath)
+        if len(daepath) == 0 : daepath = os.path.abspath(&#34;.&#34;).replace(&#39;\\&#39;, &#39;/&#39;)
+
+
+    imageList = findImageFiles(sourceRoot)
+    imageDirectoryTree = createDirectoryTree(imageList, sourceRoot)
+    setMaterialAlpha(fig, imageDirectoryTree, daepath, sourceRoot)
+
+    allTextures = dict()
+    replaceTexturePath(fig, imageDirectoryTree, daepath, sourceRoot, allTextures, removeRoot(destRoot,sourceRoot))
+    convertImages(allTextures, sourceRoot, destRoot, platform)
+
+
+def convertAssets(sourceDir, destDir, platform, unit=1.0, rootDir=None):
+    &#34;&#34;&#34;
+    Convert model and image data to ige format
+    model(.dae) -&gt; .pyxf
+    image(.png .dds .tga .psd ) -&gt; .pyxi
+
+    If model data with the same name as the folder name is found,
+    it is regarded as base model data, and other model data in the
+    same folder are regarded as motion files, and all are packed
+    into one file
+    If there is no model data with the same name as the folder name,
+    Each model data as base model data and convert separately
+
+    :param sourceDir: source root folder
+    :param destDir: destination root folder
+    :param platform: target platform (core.TARGET_PLATFORM_XX)
+    :param unit: scale unit size of 3d model
+    :return: None
+    &#34;&#34;&#34;
+    if rootDir is None: rootDir = destDir
+
+    imageList = findImageFiles(sourceDir)
+    sceneList = find3DSceneFiles(sourceDir)
+    imageDirectoryTree = createDirectoryTree(imageList, sourceDir)
+    confTree = createFigureConfTree(sourceDir, unit)
+    allTextures = dict()
+    tmpfig = core.editableFigure(&#34;tmpfigure&#34;, True)
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Convert 3d scene files&#39;)
+    print(&#39;----------------------&#39;)
+
+    for files in sceneList.values():
+        tmpfig.clear()
+        conf = findFigureConf(files[0], confTree)
+        load3DScene(tmpfig, files, conf)
+
+        daepath, _ = os.path.split(files[0])
+        setMaterialAlpha(tmpfig, imageDirectoryTree, daepath, sourceDir)
+        replaceTexturePath(tmpfig, imageDirectoryTree, daepath, sourceDir, allTextures, removeRoot(destDir,rootDir))
+
+        outfile = os.path.normpath(files[0].replace(sourceDir, destDir, 1))
+        outfile = replaceExt(outfile, &#39;.pyxf&#39;)
+
+        if hashCheck(files, outfile, platform):
+            print(&#34;convert {}&#34;.format(files[0]))
+            apputil.makeDirectories(outfile)
+
+            if &#39;OPTIMIZE_VERTEX&#39; in conf.keys() and conf[&#39;OPTIMIZE_VERTEX&#39;]:
+                tmpfig.removeUnreferencedVertices()
+            if &#39;OPTIMIZE_MESH&#39; in conf.keys() and conf[&#39;OPTIMIZE_MESH&#39;]:
+                tmpfig.mergeSameMaterialMesh()
+
+            tmpfig.saveFigure(outfile)
+        else:
+            print(&#34;skip {}&#34;.format(files[0]))
+
+    for img in imageList:
+        if img not in allTextures:
+            allTextures[img] = {&#39;path&#39;: removeRoot(img,sourceDir), &#39;normal&#39;: False, &#39;wrap&#39;: False}
+    convertImages(allTextures, sourceDir, destDir, platform)
+
+    return allTextures
+
+
+def deploy(projectFolder, userID, appName, appVersion, unit = 1.0, assetSource=None, assetDestination=None):
+    if assetSource == None: assetSource = projectFolder
+    if assetDestination == None: assetDestination = projectFolder
+    allTextures = convertAssets(assetSource, assetDestination, core.TARGET_PLATFORM_PC, unit, projectFolder)
+
+    deployTmp = &#39;.tmp/deploy/&#39;+appName+&#39;/&#39;+appVersion+&#39;/&#39;
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Create non pack app image&#39;)
+    print(&#39;----------------------&#39;)
+    print(&#39;--- PC ---&#39;)
+    copyFiles(projectFolder, deployTmp+&#39;unpackimage/pc&#39;, [&#39;.pyxf&#39;, &#39;.json&#39;, &#39;.pyxa&#39;, &#39;.pyxb&#39;, &#39;.pickle&#39;, &#39;.zip&#39;, &#39;.txt&#39;, &#39;.db&#39;, &#39;.ttf&#39;])
+    compilePrograms(projectFolder, deployTmp+&#39;unpackimage/pc&#39;)
+    convertImages(allTextures, assetSource, os.path.join(deployTmp+&#39;unpackimage/pc&#39;,removeRoot(assetDestination, projectFolder)), core.TARGET_PLATFORM_PC)
+    print(&#39;--- Mobile ---&#39;)
+    copyFiles(projectFolder, deployTmp+&#39;unpackimage/mobile&#39;, [&#39;.pyxf&#39;, &#39;.json&#39;, &#39;.pyxa&#39;, &#39;.pyxb&#39;, &#39;.pickle&#39;, &#39;.zip&#39;, &#39;.txt&#39;, &#39;.db&#39;, &#39;.ttf&#39;])
+    compilePrograms(projectFolder, deployTmp+&#39;unpackimage/mobile&#39;)
+    convertImages(allTextures, assetSource, os.path.join(deployTmp+&#39;unpackimage/mobile&#39;,removeRoot(assetDestination, projectFolder)), core.TARGET_PLATFORM_MOBILE)
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Create packed app image&#39;)
+    print(&#39;----------------------&#39;)
+    print(&#39;--- PC ---&#39;)
+    buildAppPackage(deployTmp+&#39;unpackimage/pc&#39;, deployTmp+&#39;packimage/pc&#39;)
+    print(&#39;--- Mobile ---&#39;)
+    buildAppPackage(deployTmp+&#39;unpackimage/mobile&#39;, deployTmp+&#39;packimage/mobile&#39;)
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Upload app image to the server&#39;)
+    print(&#39;----------------------&#39;)
+    print(&#39;--- PC ---&#39;)
+    launch_server.makeProjectDir(userID, appName, appVersion, &#34;pc&#34;)
+    launch_server.upload_files(deployTmp+&#39;packimage/pc&#39;, &#39;/&#39;+userID+&#39;/&#39;+appName+&#39;/&#39;+appVersion+&#39;/pc&#39;)
+    print(&#39;--- Mobile ---&#39;)
+    launch_server.makeProjectDir(userID, appName, appVersion, &#34;mobile&#34;)
+    launch_server.upload_files(deployTmp+&#39;packimage/mobile&#39;,  &#39;/&#39;+userID+&#39;/&#39;+appName+&#39;/&#39;+appVersion+&#39;/mobile&#39;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="igeCore.devtool.buildAppPackage"><code class="name flex">
+<span>def <span class="ident">buildAppPackage</span></span>(<span>src, dest)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def buildAppPackage(src, dest):
+    apputil.makeDirectories(dest)
+    list =glob.glob(os.path.join(src,&#39;*&#39; ))
+    for dir in list:
+        if os.path.isdir(dir):
+            outpath = os.path.join(dest,os.path.basename(dir))
+
+            list = findFiles(dir)
+            if hashCheck(list, outpath+&#39;.pyxd&#39;, 0):
+                print(&#34;build asset database {}.pyxd&#34;.format(outpath))
+                compressFolder(dir, outpath)
+            else:
+                print(&#34;skip asset database {}.pyxd&#34;.format(outpath))
+        else:
+            print(&#34;copy {}&#34;.format(dir))
+            shutil.copy2(dir, dest)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.compilePrograms"><code class="name flex">
+<span>def <span class="ident">compilePrograms</span></span>(<span>src, dst)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compilePrograms(src, dst):
+    list = findFiles(src, [&#39;.py&#39;])
+    for infile in list:
+        outfile = os.path.normpath(infile.replace(src, dst, 1))
+        apputil.makeDirectories(outfile)
+        if os.path.basename(infile) == &#39;root.py&#39;:
+            shutil.copy(infile, outfile)
+        else:
+            outfile = replaceExt(outfile, &#39;.pyc&#39;)
+            apputil.makeDirectories(outfile)
+            print(&#39;compile : &#39;+infile)
+            py_compile.compile(infile, outfile)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.compressFolder"><code class="name flex">
+<span>def <span class="ident">compressFolder</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.devtool.convertAssets"><code class="name flex">
+<span>def <span class="ident">convertAssets</span></span>(<span>sourceDir, destDir, platform, unit=1.0, rootDir=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert model and image data to ige format
+model(.dae) -&gt; .pyxf
+image(.png .dds .tga .psd ) -&gt; .pyxi</p>
+<p>If model data with the same name as the folder name is found,
+it is regarded as base model data, and other model data in the
+same folder are regarded as motion files, and all are packed
+into one file
+If there is no model data with the same name as the folder name,
+Each model data as base model data and convert separately</p>
+<p>:param sourceDir: source root folder
+:param destDir: destination root folder
+:param platform: target platform (core.TARGET_PLATFORM_XX)
+:param unit: scale unit size of 3d model
+:return: None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convertAssets(sourceDir, destDir, platform, unit=1.0, rootDir=None):
+    &#34;&#34;&#34;
+    Convert model and image data to ige format
+    model(.dae) -&gt; .pyxf
+    image(.png .dds .tga .psd ) -&gt; .pyxi
+
+    If model data with the same name as the folder name is found,
+    it is regarded as base model data, and other model data in the
+    same folder are regarded as motion files, and all are packed
+    into one file
+    If there is no model data with the same name as the folder name,
+    Each model data as base model data and convert separately
+
+    :param sourceDir: source root folder
+    :param destDir: destination root folder
+    :param platform: target platform (core.TARGET_PLATFORM_XX)
+    :param unit: scale unit size of 3d model
+    :return: None
+    &#34;&#34;&#34;
+    if rootDir is None: rootDir = destDir
+
+    imageList = findImageFiles(sourceDir)
+    sceneList = find3DSceneFiles(sourceDir)
+    imageDirectoryTree = createDirectoryTree(imageList, sourceDir)
+    confTree = createFigureConfTree(sourceDir, unit)
+    allTextures = dict()
+    tmpfig = core.editableFigure(&#34;tmpfigure&#34;, True)
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Convert 3d scene files&#39;)
+    print(&#39;----------------------&#39;)
+
+    for files in sceneList.values():
+        tmpfig.clear()
+        conf = findFigureConf(files[0], confTree)
+        load3DScene(tmpfig, files, conf)
+
+        daepath, _ = os.path.split(files[0])
+        setMaterialAlpha(tmpfig, imageDirectoryTree, daepath, sourceDir)
+        replaceTexturePath(tmpfig, imageDirectoryTree, daepath, sourceDir, allTextures, removeRoot(destDir,rootDir))
+
+        outfile = os.path.normpath(files[0].replace(sourceDir, destDir, 1))
+        outfile = replaceExt(outfile, &#39;.pyxf&#39;)
+
+        if hashCheck(files, outfile, platform):
+            print(&#34;convert {}&#34;.format(files[0]))
+            apputil.makeDirectories(outfile)
+
+            if &#39;OPTIMIZE_VERTEX&#39; in conf.keys() and conf[&#39;OPTIMIZE_VERTEX&#39;]:
+                tmpfig.removeUnreferencedVertices()
+            if &#39;OPTIMIZE_MESH&#39; in conf.keys() and conf[&#39;OPTIMIZE_MESH&#39;]:
+                tmpfig.mergeSameMaterialMesh()
+
+            tmpfig.saveFigure(outfile)
+        else:
+            print(&#34;skip {}&#34;.format(files[0]))
+
+    for img in imageList:
+        if img not in allTextures:
+            allTextures[img] = {&#39;path&#39;: removeRoot(img,sourceDir), &#39;normal&#39;: False, &#39;wrap&#39;: False}
+    convertImages(allTextures, sourceDir, destDir, platform)
+
+    return allTextures</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.convertImages"><code class="name flex">
+<span>def <span class="ident">convertImages</span></span>(<span>allTextures, sourceDir, destDir, platform)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convertImages(allTextures, sourceDir, destDir, platform):
+    print(&#39;----------------------&#39;)
+    print(&#39;Convert image files&#39;)
+    print(&#39;----------------------&#39;)
+    for key, val in allTextures.items():
+        outfile = os.path.normpath(key.replace(sourceDir, destDir, 1))
+        outfile = replaceExt(outfile, &#39;.pyxi&#39;)
+        hashfile = getHashPath(&#39;.tmp/hash&#39;, key, platform)
+        hashcode, newhash = readAndCalcHash(key, outfile, hashfile)
+        if hashcode != newhash:
+            print(&#34;convert {} for {}&#34;.format(key,apputil.targetFolderName(platform)))
+            apputil.makeDirectories(outfile)
+            convertTextureToPlatform(key, outfile, platform, val[&#39;normal&#39;], val[&#39;wrap&#39;])
+            saveHash(hashfile, newhash)
+        else:
+            print(&#34;skip {} &#34;.format(key))</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.convertTextureToPlatform"><code class="name flex">
+<span>def <span class="ident">convertTextureToPlatform</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.devtool.copyFiles"><code class="name flex">
+<span>def <span class="ident">copyFiles</span></span>(<span>src, dst, exts=['.*'])</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def copyFiles(src, dst, exts=[&#39;.*&#39;]):
+    for root, dirs, files in os.walk(src):
+        if isHiddenFolder(root): continue
+        for fname in files:
+            name, ext = os.path.splitext(fname)
+            for e in exts:
+                if e == &#39;.*&#39; or ext == e:
+                    srcPath = os.path.join(root, fname)
+                    dstPath = os.path.join(dst, removeRoot(srcPath, src))
+                    apputil.makeDirectories(dstPath)
+                    shutil.copy2(srcPath, dstPath)
+                    print(&#34;copy {}&#34;.format(dstPath))
+                    break</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.createDirectoryTree"><code class="name flex">
+<span>def <span class="ident">createDirectoryTree</span></span>(<span>filelist, root)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def createDirectoryTree(filelist, root):
+    imageDirectory = dict()
+    for img in filelist:
+        while True:
+            img, file = os.path.split(img)
+            if img not in imageDirectory:
+                imageDirectory[img] = {file: 0};
+            elif file not in imageDirectory[img]:
+                imageDirectory[img][file] = 0
+            if img == root: break
+    return imageDirectory</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.createFigureConfTree"><code class="name flex">
+<span>def <span class="ident">createFigureConfTree</span></span>(<span>path, unit=1.0)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def createFigureConfTree(path, unit=1.0):
+    path = os.path.abspath(path)
+    filelist = []
+    for root, dirs, files in os.walk(path):
+        if root.find(&#39;\.&#39;) != -1: continue
+        for fname in files:
+            if fname == &#39;figure.conf&#39;:
+                filelist.append(os.path.join(root, fname))
+    figureConfTree = dict()
+    for filepath in filelist:
+        conf = readFigureConf(filepath)
+        dir, file = os.path.split(filepath)
+        figureConfTree[dir] = conf
+
+    for dir, val in figureConfTree.items():
+        while True:
+            dir, _ = os.path.split(dir)
+            if dir == os.path.abspath(&#39;.&#39;).split(os.path.sep)[0]+os.path.sep:
+                break
+            parent = figureConfTree.get(dir)
+            if parent is not None:
+                for parentkey, parentval in parent.items():
+                    if val.get(parentkey) is None:
+                        val[parentkey] = parentval
+
+    if len(figureConfTree) == 0:
+        figureConfTree[path] = {}
+
+    for conf in figureConfTree.values():
+        if conf.get(&#39;BASE_SCALE&#39;) is None:
+           conf[&#39;BASE_SCALE&#39;] = unit
+        #if conf.get(&#39;OPTIMIZE_MESH&#39;) is None:
+        #   conf[&#39;OPTIMIZE_MESH&#39;] = True
+
+    return figureConfTree</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.deploy"><code class="name flex">
+<span>def <span class="ident">deploy</span></span>(<span>projectFolder, userID, appName, appVersion, unit=1.0, assetSource=None, assetDestination=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def deploy(projectFolder, userID, appName, appVersion, unit = 1.0, assetSource=None, assetDestination=None):
+    if assetSource == None: assetSource = projectFolder
+    if assetDestination == None: assetDestination = projectFolder
+    allTextures = convertAssets(assetSource, assetDestination, core.TARGET_PLATFORM_PC, unit, projectFolder)
+
+    deployTmp = &#39;.tmp/deploy/&#39;+appName+&#39;/&#39;+appVersion+&#39;/&#39;
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Create non pack app image&#39;)
+    print(&#39;----------------------&#39;)
+    print(&#39;--- PC ---&#39;)
+    copyFiles(projectFolder, deployTmp+&#39;unpackimage/pc&#39;, [&#39;.pyxf&#39;, &#39;.json&#39;, &#39;.pyxa&#39;, &#39;.pyxb&#39;, &#39;.pickle&#39;, &#39;.zip&#39;, &#39;.txt&#39;, &#39;.db&#39;, &#39;.ttf&#39;])
+    compilePrograms(projectFolder, deployTmp+&#39;unpackimage/pc&#39;)
+    convertImages(allTextures, assetSource, os.path.join(deployTmp+&#39;unpackimage/pc&#39;,removeRoot(assetDestination, projectFolder)), core.TARGET_PLATFORM_PC)
+    print(&#39;--- Mobile ---&#39;)
+    copyFiles(projectFolder, deployTmp+&#39;unpackimage/mobile&#39;, [&#39;.pyxf&#39;, &#39;.json&#39;, &#39;.pyxa&#39;, &#39;.pyxb&#39;, &#39;.pickle&#39;, &#39;.zip&#39;, &#39;.txt&#39;, &#39;.db&#39;, &#39;.ttf&#39;])
+    compilePrograms(projectFolder, deployTmp+&#39;unpackimage/mobile&#39;)
+    convertImages(allTextures, assetSource, os.path.join(deployTmp+&#39;unpackimage/mobile&#39;,removeRoot(assetDestination, projectFolder)), core.TARGET_PLATFORM_MOBILE)
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Create packed app image&#39;)
+    print(&#39;----------------------&#39;)
+    print(&#39;--- PC ---&#39;)
+    buildAppPackage(deployTmp+&#39;unpackimage/pc&#39;, deployTmp+&#39;packimage/pc&#39;)
+    print(&#39;--- Mobile ---&#39;)
+    buildAppPackage(deployTmp+&#39;unpackimage/mobile&#39;, deployTmp+&#39;packimage/mobile&#39;)
+
+    print(&#39;----------------------&#39;)
+    print(&#39;Upload app image to the server&#39;)
+    print(&#39;----------------------&#39;)
+    print(&#39;--- PC ---&#39;)
+    launch_server.makeProjectDir(userID, appName, appVersion, &#34;pc&#34;)
+    launch_server.upload_files(deployTmp+&#39;packimage/pc&#39;, &#39;/&#39;+userID+&#39;/&#39;+appName+&#39;/&#39;+appVersion+&#39;/pc&#39;)
+    print(&#39;--- Mobile ---&#39;)
+    launch_server.makeProjectDir(userID, appName, appVersion, &#34;mobile&#34;)
+    launch_server.upload_files(deployTmp+&#39;packimage/mobile&#39;,  &#39;/&#39;+userID+&#39;/&#39;+appName+&#39;/&#39;+appVersion+&#39;/mobile&#39;)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.find3DSceneFiles"><code class="name flex">
+<span>def <span class="ident">find3DSceneFiles</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find3DSceneFiles(path):
+    dict = {}
+    for root, dirs, files in os.walk(path):
+        if root.find(&#39;\.&#39;) != -1: continue
+        folder = os.path.basename(root)
+
+        folderRule = False
+        for f in files:
+            name, ext = os.path.splitext(f)
+            if name == folder:
+                folderRule = True
+                baseFile = f
+                break
+
+        if folderRule:
+            daes = [os.path.join(root, baseFile)]
+            for f2 in files:
+                f2_name, f2_ext = os.path.splitext(f2)
+                if (f2_ext.lower() == &#39;.dae&#39; or f2_ext.lower() == &#39;.fbx&#39;) and f2_name != folder:
+                    daes.append(os.path.join(root, f2))
+            dict[folder] = daes
+        else:
+            for f2 in files:
+                f2_name, f2_ext = os.path.splitext(f2)
+                if f2_ext.lower() == &#39;.dae&#39; or f2_ext.lower() == &#39;.fbx&#39;:
+                    dict[f2_name] = [os.path.join(root, f2)]
+    return dict</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.findConvertReplaceTextures"><code class="name flex">
+<span>def <span class="ident">findConvertReplaceTextures</span></span>(<span>fig: <a title="igeCore.editableFigure" href="../index.html#igeCore.editableFigure">editableFigure</a>, sourceRoot, destRoot, platform=0, figurePath='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Find and convert the texture file linked from editableFigure.</p>
+<p>:param sourceRoot: Root folder to search for texture files
+:param destRoot: Root folder to save the textures
+:param editableFigure: The location where the editableFigure was saved (optional). It must be included under sourceRoot.
+:param platform: Formats to convert textures to.　TARGET_PLATFORM_PC or TARGET_PLATFORM_MOBILE</p>
+<p>:return: None</p>
+<p>The figurePath must always be under the sourceRoot.
+The specified folder hierarchy may contain multiple texture files with the same name.
+When figurePath is specified, the texture file closest to it will be selected.</p>
+<p>Example.
+・File path saved in editableFigure
+D:/aaa/bbb/ccc/test.png
+・Location of the actual file
+C:/user/input/images/test.png
+・sourceRoot
+C:/user/input
+・destRoot
+C:/user/output
+・The actual output file
+C:/user/output/images/test.pyxi
+・New file path to be saved in editableFigure
+images/test</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def findConvertReplaceTextures(fig : core.editableFigure, sourceRoot, destRoot, platform=core.TARGET_PLATFORM_PC, figurePath=&#34;&#34;):
+    &#34;&#34;&#34;
+    Find and convert the texture file linked from editableFigure.
+
+    :param sourceRoot: Root folder to search for texture files
+    :param destRoot: Root folder to save the textures
+    :param editableFigure: The location where the editableFigure was saved (optional). It must be included under sourceRoot.
+    :param platform: Formats to convert textures to.　TARGET_PLATFORM_PC or TARGET_PLATFORM_MOBILE
+
+    :return: None
+
+    The figurePath must always be under the sourceRoot.
+    The specified folder hierarchy may contain multiple texture files with the same name.
+    When figurePath is specified, the texture file closest to it will be selected.
+
+    Example.
+        ・File path saved in editableFigure
+            D:/aaa/bbb/ccc/test.png
+        ・Location of the actual file
+            C:/user/input/images/test.png
+        ・sourceRoot
+            C:/user/input
+        ・destRoot
+            C:/user/output
+        ・The actual output file
+            C:/user/output/images/test.pyxi
+        ・New file path to be saved in editableFigure
+            images/test
+    &#34;&#34;&#34;
+    sourceRoot = os.path.abspath(sourceRoot).replace(&#39;\\&#39;, &#39;/&#39;)
+    destRoot = os.path.abspath(destRoot).replace(&#39;\\&#39;, &#39;/&#39;)
+
+    if figurePath == &#34;&#34;:
+        daepath = figurePath = sourceRoot
+    else:
+        figurePath = os.path.abspath(figurePath).replace(&#39;\\&#39;, &#39;/&#39;)
+        daepath, _ = os.path.split(figurePath)
+        if len(daepath) == 0 : daepath = os.path.abspath(&#34;.&#34;).replace(&#39;\\&#39;, &#39;/&#39;)
+
+
+    imageList = findImageFiles(sourceRoot)
+    imageDirectoryTree = createDirectoryTree(imageList, sourceRoot)
+    setMaterialAlpha(fig, imageDirectoryTree, daepath, sourceRoot)
+
+    allTextures = dict()
+    replaceTexturePath(fig, imageDirectoryTree, daepath, sourceRoot, allTextures, removeRoot(destRoot,sourceRoot))
+    convertImages(allTextures, sourceRoot, destRoot, platform)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.findFigureConf"><code class="name flex">
+<span>def <span class="ident">findFigureConf</span></span>(<span>dir: str, tree: dict)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def findFigureConf(dir: str, tree: dict):
+    dir = os.path.abspath(dir)
+    while True:
+        dir, _ = os.path.split(dir)
+        if dir == os.path.abspath(&#39;.&#39;).split(os.path.sep)[0]+os.path.sep:
+            break
+        conf = tree.get(dir)
+        if conf is not None:
+            return conf
+    return dict()</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.findFileFromDiorectoryTree"><code class="name flex">
+<span>def <span class="ident">findFileFromDiorectoryTree</span></span>(<span>imageDirectory, file, dir)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def findFileFromDiorectoryTree(imageDirectory, file, dir):
+    files = imageDirectory.get(dir)
+    if files is None: return None
+    if file in files:
+        return os.path.join(dir, file)
+    for d in files:
+        _, ext = os.path.splitext(d)
+        if ext == &#39;&#39;:
+            rv = findFileFromDiorectoryTree(imageDirectory, file, os.path.join(dir, d))
+            if rv: return rv
+    return None</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.findFiles"><code class="name flex">
+<span>def <span class="ident">findFiles</span></span>(<span>path, exts=['.*'])</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def findFiles(path, exts = [&#39;.*&#39;]):
+    list = []
+    for root, dirs, files in os.walk(path):
+        if isHiddenFolder(root): continue
+        for fname in files:
+            name, ext = os.path.splitext(fname)
+            for e in exts:
+                if e == &#39;.*&#39; or e == ext:
+                    list.append(os.path.join(root, fname))
+                    break
+    return list</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.findImageFiles"><code class="name flex">
+<span>def <span class="ident">findImageFiles</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def findImageFiles(path):
+    list = []
+    for root, dirs, files in os.walk(path):
+        if isHiddenFolder(root): continue
+        for fname in files:
+            name, ext = os.path.splitext(fname)
+            extl = ext.lower()
+            if extl == &#39;.png&#39; or extl == &#39;.dds&#39; or extl == &#39;.tga&#39; or extl == &#39;.psd&#39; or extl == &#39;.jpg&#39;:
+                list.append(os.path.join(root, fname))
+    return list</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.getHashPath"><code class="name flex">
+<span>def <span class="ident">getHashPath</span></span>(<span>root, source, platform)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getHashPath(root, source, platform):
+    abspath = os.path.abspath(source)
+    if abspath[0]==&#39;/&#39; or abspath[0]==&#39;\\&#39;:
+       abspath = abspath[1:]
+    elif abspath[2]==&#39;\\&#39;:
+        abspath = abspath[3:]
+    return os.path.join(os.path.join(root, apputil.targetFolderName(platform)), abspath)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.hashCheck"><code class="name flex">
+<span>def <span class="ident">hashCheck</span></span>(<span>files, outfile, platform)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hashCheck(files, outfile, platform):
+    changed = False
+    for file in files:
+        hashfile = getHashPath(&#39;.tmp/hash&#39;, file, platform)
+        hashcode, newhash = readAndCalcHash(file, outfile, hashfile)
+        if hashcode != newhash:
+            changed = True
+            saveHash(hashfile, newhash)
+    return changed</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.isAlpha"><code class="name flex">
+<span>def <span class="ident">isAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.devtool.isHiddenFolder"><code class="name flex">
+<span>def <span class="ident">isHiddenFolder</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def isHiddenFolder(path):
+    if path.find(&#39;/.&#39;) != -1 or path.find(&#39;\\.&#39;) != -1 :
+        return True
+    return False</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.load3DScene"><code class="name flex">
+<span>def <span class="ident">load3DScene</span></span>(<span>tmpfig, files, conf)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load3DScene(tmpfig, files, conf):
+    loadModel(files[0], tmpfig, conf)
+    for i in range(1, len(files)):
+        loadAnimation(files[i], tmpfig, conf)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.loadAnimation"><code class="name flex">
+<span>def <span class="ident">loadAnimation</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Import 3D animation scene to editableFigure</p>
+<p>igeTools.loadAnimation(filePath, editableFigure, options)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>filePath : string
+    dae or fbx file path to read
+editableFigure : igeCore.editableFigure
+    The editableFigure object to which the Collada file is read
+options : dict
+    Various options to specify when converting data 
+        {BASE_SCALE:1.0,    
+         EXPORT_NAMES:1,    
+         TRIANGLE_STRIP:1,  
+         INHERIT_JOINT_NAME:1,      
+         CLOP_JOINT:1,      
+         GEN_MIPMAP:1,      
+         KILL_MIPMAP:1,     
+         FREEZE_GEOMETORY:1,        
+         COMPUTE_PERIOD:1}
+</code></pre></div>
+</dd>
+<dt id="igeCore.devtool.loadCollada"><code class="name flex">
+<span>def <span class="ident">loadCollada</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load collada file to editableFigure</p>
+<p>igeTools.loadCollada(filePath, editableFigure, options)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>filePath : string
+    collada file path to read
+editableFigure : igeCore.editableFigure
+    The editableFigure object to which the Collada file is read
+options : dict
+    Various options to specify when converting data 
+        {BASE_SCALE:1.0,    
+         EXPORT_NAMES:1,    
+         TRIANGLE_STRIP:1,  
+         INHERIT_JOINT_NAME:1,      
+         CLOP_JOINT:1,      
+         GEN_MIPMAP:1,      
+         KILL_MIPMAP:1,     
+         FREEZE_GEOMETORY:1,        
+         COMPUTE_PERIOD:1}
+</code></pre></div>
+</dd>
+<dt id="igeCore.devtool.loadColladaAnimation"><code class="name flex">
+<span>def <span class="ident">loadColladaAnimation</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.devtool.loadModel"><code class="name flex">
+<span>def <span class="ident">loadModel</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Import 3D model scene to editableFigure</p>
+<p>igeTools.loadModel(filePath, editableFigure, options)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>filePath : string
+    dae or fbx file path to read
+editableFigure : igeCore.editableFigure
+    The editableFigure object to which the Collada file is read
+options : dict
+    Various options to specify when converting data 
+        {BASE_SCALE:1.0,    
+         EXPORT_NAMES:1,    
+         TRIANGLE_STRIP:1,  
+         INHERIT_JOINT_NAME:1,      
+         CLOP_JOINT:1,      
+         GEN_MIPMAP:1,      
+         KILL_MIPMAP:1,     
+         FREEZE_GEOMETORY:1,        
+         COMPUTE_PERIOD:1}
+</code></pre></div>
+</dd>
+<dt id="igeCore.devtool.readAndCalcHash"><code class="name flex">
+<span>def <span class="ident">readAndCalcHash</span></span>(<span>srcfile, dstfile, hashfile)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def readAndCalcHash(srcfile, dstfile, hashfile):
+    hashcode = &#39;00000000000000000000000000000000&#39;
+    newhash  = &#39;ffffffffffffffffffffffffffffffff&#39;
+    if os.path.exists(dstfile):
+        try:
+            with open(hashfile, &#39;r&#39;) as f:
+                hashcode = f.read()
+        except : None
+
+    with open(srcfile, &#39;rb&#39;) as f:
+        fileDataBinary = f.read()
+        if len(fileDataBinary) != 0:
+            hash = hashlib.md5()
+            hash.update(fileDataBinary)
+            newhash = hash.hexdigest()
+    return hashcode,newhash</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.readFigureConf"><code class="name flex">
+<span>def <span class="ident">readFigureConf</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def readFigureConf(path):
+    mode = 0
+    label = &#39;&#39;
+    keyvalue = {}
+    with open(path, &#39;rb&#39;) as f:
+        for token in tokenize.tokenize(f.readline):
+            if token.type is tokenize.ENDMARKER:
+                break
+            elif token.type is tokenize.NAME:
+                if mode == 0:
+                    label = token.string
+                else:
+                    keyvalue[label] = token.string
+                    mode = 0
+            elif token.type is tokenize.OP:
+                mode = 1
+            elif token.type is tokenize.NUMBER:
+                if mode == 1:
+                    try:
+                        keyvalue[label] = int(token.string)
+                    except ValueError:
+                        keyvalue[label] = float(token.string)
+                    mode = 0
+    return keyvalue</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.removeRoot"><code class="name flex">
+<span>def <span class="ident">removeRoot</span></span>(<span>path, root)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeRoot(path, root):
+    newpath = path.replace(root, &#39;&#39;, 1)
+    if len(newpath) &gt;0:
+        if newpath[0] == &#39;/&#39; or newpath[0] == &#39;\\&#39;:
+            newpath = newpath[1:]
+    else:
+        newpath = &#34;&#34;
+    return newpath</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.replaceExt"><code class="name flex">
+<span>def <span class="ident">replaceExt</span></span>(<span>file, ext)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def replaceExt(file, ext):
+    name, extold = os.path.splitext(file)
+    return name + ext</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.replaceTexturePath"><code class="name flex">
+<span>def <span class="ident">replaceTexturePath</span></span>(<span>tmpfig, imageDirectory, startPath, endPath, allTextures, subFolder)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def replaceTexturePath(tmpfig, imageDirectory, startPath, endPath, allTextures, subFolder):
+    texs = tmpfig.getTextureSource()
+    for tex in texs:
+        filename = os.path.basename(tex[&#39;path&#39;])
+        current = startPath
+        inputimage = None
+        while True:
+            inputimage = findFileFromDiorectoryTree(imageDirectory, filename, current)
+            if inputimage is not None: break
+            if current == endPath: break
+            current, _ = os.path.split(current)
+        if inputimage is None:
+            print(&#39;file not found &#39; + tex[&#39;path&#39;])
+        else:
+            allTextures[inputimage] = tex;
+            inputimage = removeRoot(inputimage, endPath);
+            inputimage, ext = os.path.splitext(inputimage)
+            inputimage = os.path.join(subFolder, inputimage)
+            inputimage = inputimage.replace(&#39;\\&#39;, &#39;/&#39;)
+            newTex = {&#39;path&#39;: inputimage, &#39;normal&#39;: tex[&#39;normal&#39;], &#39;wrap&#39;: tex[&#39;wrap&#39;]}
+            tmpfig.replaceTextureSource(tex, newTex)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.saveHash"><code class="name flex">
+<span>def <span class="ident">saveHash</span></span>(<span>hashfile, newhash)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveHash(hashfile, newhash):
+    if newhash != &#39;ffffffffffffffffffffffffffffffff&#39;:
+        apputil.makeDirectories(hashfile)
+        with open(hashfile, &#39;w&#39;) as f:
+            f.write(newhash)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.devtool.setMaterialAlpha"><code class="name flex">
+<span>def <span class="ident">setMaterialAlpha</span></span>(<span>tmpfig, imageDirectory, startPath, endPath)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setMaterialAlpha(tmpfig, imageDirectory, startPath, endPath):
+    texs = tmpfig.getTextureSource()
+    for tex in texs:
+        filename = os.path.basename(tex[&#39;path&#39;])
+        current = startPath
+        inputimage = None
+        while True:
+            inputimage = findFileFromDiorectoryTree(imageDirectory, filename, current)
+            if inputimage is not None: break
+            if current == endPath: break
+            current, _ = os.path.split(current)
+        if inputimage is not None:
+            if isAlpha(inputimage):
+                tmpfig.enableAlphaModeByTexture(tex[&#39;path&#39;])</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="igeCore" href="../index.html">igeCore</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="igeCore.devtool.buildAppPackage" href="#igeCore.devtool.buildAppPackage">buildAppPackage</a></code></li>
+<li><code><a title="igeCore.devtool.compilePrograms" href="#igeCore.devtool.compilePrograms">compilePrograms</a></code></li>
+<li><code><a title="igeCore.devtool.compressFolder" href="#igeCore.devtool.compressFolder">compressFolder</a></code></li>
+<li><code><a title="igeCore.devtool.convertAssets" href="#igeCore.devtool.convertAssets">convertAssets</a></code></li>
+<li><code><a title="igeCore.devtool.convertImages" href="#igeCore.devtool.convertImages">convertImages</a></code></li>
+<li><code><a title="igeCore.devtool.convertTextureToPlatform" href="#igeCore.devtool.convertTextureToPlatform">convertTextureToPlatform</a></code></li>
+<li><code><a title="igeCore.devtool.copyFiles" href="#igeCore.devtool.copyFiles">copyFiles</a></code></li>
+<li><code><a title="igeCore.devtool.createDirectoryTree" href="#igeCore.devtool.createDirectoryTree">createDirectoryTree</a></code></li>
+<li><code><a title="igeCore.devtool.createFigureConfTree" href="#igeCore.devtool.createFigureConfTree">createFigureConfTree</a></code></li>
+<li><code><a title="igeCore.devtool.deploy" href="#igeCore.devtool.deploy">deploy</a></code></li>
+<li><code><a title="igeCore.devtool.find3DSceneFiles" href="#igeCore.devtool.find3DSceneFiles">find3DSceneFiles</a></code></li>
+<li><code><a title="igeCore.devtool.findConvertReplaceTextures" href="#igeCore.devtool.findConvertReplaceTextures">findConvertReplaceTextures</a></code></li>
+<li><code><a title="igeCore.devtool.findFigureConf" href="#igeCore.devtool.findFigureConf">findFigureConf</a></code></li>
+<li><code><a title="igeCore.devtool.findFileFromDiorectoryTree" href="#igeCore.devtool.findFileFromDiorectoryTree">findFileFromDiorectoryTree</a></code></li>
+<li><code><a title="igeCore.devtool.findFiles" href="#igeCore.devtool.findFiles">findFiles</a></code></li>
+<li><code><a title="igeCore.devtool.findImageFiles" href="#igeCore.devtool.findImageFiles">findImageFiles</a></code></li>
+<li><code><a title="igeCore.devtool.getHashPath" href="#igeCore.devtool.getHashPath">getHashPath</a></code></li>
+<li><code><a title="igeCore.devtool.hashCheck" href="#igeCore.devtool.hashCheck">hashCheck</a></code></li>
+<li><code><a title="igeCore.devtool.isAlpha" href="#igeCore.devtool.isAlpha">isAlpha</a></code></li>
+<li><code><a title="igeCore.devtool.isHiddenFolder" href="#igeCore.devtool.isHiddenFolder">isHiddenFolder</a></code></li>
+<li><code><a title="igeCore.devtool.load3DScene" href="#igeCore.devtool.load3DScene">load3DScene</a></code></li>
+<li><code><a title="igeCore.devtool.loadAnimation" href="#igeCore.devtool.loadAnimation">loadAnimation</a></code></li>
+<li><code><a title="igeCore.devtool.loadCollada" href="#igeCore.devtool.loadCollada">loadCollada</a></code></li>
+<li><code><a title="igeCore.devtool.loadColladaAnimation" href="#igeCore.devtool.loadColladaAnimation">loadColladaAnimation</a></code></li>
+<li><code><a title="igeCore.devtool.loadModel" href="#igeCore.devtool.loadModel">loadModel</a></code></li>
+<li><code><a title="igeCore.devtool.readAndCalcHash" href="#igeCore.devtool.readAndCalcHash">readAndCalcHash</a></code></li>
+<li><code><a title="igeCore.devtool.readFigureConf" href="#igeCore.devtool.readFigureConf">readFigureConf</a></code></li>
+<li><code><a title="igeCore.devtool.removeRoot" href="#igeCore.devtool.removeRoot">removeRoot</a></code></li>
+<li><code><a title="igeCore.devtool.replaceExt" href="#igeCore.devtool.replaceExt">replaceExt</a></code></li>
+<li><code><a title="igeCore.devtool.replaceTexturePath" href="#igeCore.devtool.replaceTexturePath">replaceTexturePath</a></code></li>
+<li><code><a title="igeCore.devtool.saveHash" href="#igeCore.devtool.saveHash">saveHash</a></code></li>
+<li><code><a title="igeCore.devtool.setMaterialAlpha" href="#igeCore.devtool.setMaterialAlpha">setMaterialAlpha</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

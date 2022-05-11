@@ -1,0 +1,4291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>igeCore API documentation</title>
+<meta name="description" content="indi game engine" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>igeCore</code></h1>
+</header>
+<section id="section-intro">
+<p>indi game engine</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+indi game engine
+&#34;&#34;&#34;
+
+from igeCore._igeCore import *</code></pre>
+</details>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="igeCore.apputil" href="apputil/index.html">igeCore.apputil</a></code></dt>
+<dd>
+<div class="desc"><p>indi game engine …</p></div>
+</dd>
+<dt><code class="name"><a title="igeCore.devtool" href="devtool/index.html">igeCore.devtool</a></code></dt>
+<dd>
+<div class="desc"><p>indi game engine offline develop tools …</p></div>
+</dd>
+<dt><code class="name"><a title="igeCore.input" href="input/index.html">igeCore.input</a></code></dt>
+<dd>
+<div class="desc"><p>indi game engine - input module</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="igeCore.animator"><code class="flex name class">
+<span>class <span class="ident">animator</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>animator is a key frame animation data object </p>
+<h2 id="constructor">Constructor</h2>
+<pre><code>anim = igeCore.animator(path)
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<pre><code>path : string        animation file path
+</code></pre></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.animator.defaultEndTime"><code class="name">var <span class="ident">defaultEndTime</span></code></dt>
+<dd>
+<div class="desc"><p>Default animation end time second</p>
+<p>type : float
+<br>
+(read only)</p></div>
+</dd>
+<dt id="igeCore.animator.elapsedTime"><code class="name">var <span class="ident">elapsedTime</span></code></dt>
+<dd>
+<div class="desc"><p>Time from previous frame to current frame</p>
+<p>type : float
+<br>
+(read only)</p></div>
+</dd>
+<dt id="igeCore.animator.endTime"><code class="name">var <span class="ident">endTime</span></code></dt>
+<dd>
+<div class="desc"><p>Animation end time second</p>
+<p>type : float
+<br>
+(read / write)</p></div>
+</dd>
+<dt id="igeCore.animator.evalTime"><code class="name">var <span class="ident">evalTime</span></code></dt>
+<dd>
+<div class="desc"><p>Current animation frame second</p>
+<p>type : float
+<br>
+(read / write)</p></div>
+</dd>
+<dt id="igeCore.animator.loop"><code class="name">var <span class="ident">loop</span></code></dt>
+<dd>
+<div class="desc"><p>Whether to play loop</p>
+<p>type : bool
+<br>
+(read/write)</p></div>
+</dd>
+<dt id="igeCore.animator.speed"><code class="name">var <span class="ident">speed</span></code></dt>
+<dd>
+<div class="desc"><p>Animation play speed</p>
+<p>type : float
+<br>
+(read / write)
+(default 1.0)</p></div>
+</dd>
+<dt id="igeCore.animator.startTime"><code class="name">var <span class="ident">startTime</span></code></dt>
+<dd>
+<div class="desc"><p>Animation start time second(Loop back point)</p>
+<p>type : float
+<br>
+(read / write)</p></div>
+</dd>
+<dt id="igeCore.animator.totalEvalTime"><code class="name">var <span class="ident">totalEvalTime</span></code></dt>
+<dd>
+<div class="desc"><p>Cumulative animation frame second</p>
+<p>type : float
+<br>
+(read / write)</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.animator.dump"><code class="name flex">
+<span>def <span class="ident">dump</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.animator.rewind"><code class="name flex">
+<span>def <span class="ident">rewind</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return evalTime to start time</p>
+<p>animator.rewind()</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.camera"><code class="flex name class">
+<span>class <span class="ident">camera</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A camera is an object for rendering a scene
+There are two modes of projection for the camera, orthographicand perspective.</p>
+<h2 id="constructor">Constructor</h2>
+<pre><code>cam = igeCore.camera(name)
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string (optional)
+    Name of camera
+</code></pre></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.camera.aspectRate"><code class="name">var <span class="ident">aspectRate</span></code></dt>
+<dd>
+<div class="desc"><p>Aspect rate for perspective transformation</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.farPlane"><code class="name">var <span class="ident">farPlane</span></code></dt>
+<dd>
+<div class="desc"><p>Far clip plane</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.fieldOfView"><code class="name">var <span class="ident">fieldOfView</span></code></dt>
+<dd>
+<div class="desc"><p>Viewing angle in radians for perspective transformation</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.lockon"><code class="name">var <span class="ident">lockon</span></code></dt>
+<dd>
+<div class="desc"><p>Specifies whether to gaze at the target</p>
+<p>type : bool
+read / write
+<br>
+(Default value is True)</p></div>
+</dd>
+<dt id="igeCore.camera.nearPlane"><code class="name">var <span class="ident">nearPlane</span></code></dt>
+<dd>
+<div class="desc"><p>Near clip plane</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.orthoHeight"><code class="name">var <span class="ident">orthoHeight</span></code></dt>
+<dd>
+<div class="desc"><p>Screen height in orthographic projection</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.orthoWidth"><code class="name">var <span class="ident">orthoWidth</span></code></dt>
+<dd>
+<div class="desc"><p>Screen width in orthographic projection</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.orthographicProjection"><code class="name">var <span class="ident">orthographicProjection</span></code></dt>
+<dd>
+<div class="desc"><p>Set to orthographic projection mode</p>
+<p>type : bool
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.pan"><code class="name">var <span class="ident">pan</span></code></dt>
+<dd>
+<div class="desc"><p>A radian value representing horizontal rotation along the Y axis</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.position"><code class="name">var <span class="ident">position</span></code></dt>
+<dd>
+<div class="desc"><p>camera position</p>
+<p>type : pyvmath.vec3
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.projectionMatrix"><code class="name">var <span class="ident">projectionMatrix</span></code></dt>
+<dd>
+<div class="desc"><p>Projection matrix value</p>
+<p>type : igeVmath.mat4
+<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.camera.roll"><code class="name">var <span class="ident">roll</span></code></dt>
+<dd>
+<div class="desc"><p>A radian value representing vertical rotation along the X axis</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.rotation"><code class="name">var <span class="ident">rotation</span></code></dt>
+<dd>
+<div class="desc"><p>camera rotation </p>
+<p>type :
+pyvmath.quat : (x,y,z,w)
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.scale"><code class="name">var <span class="ident">scale</span></code></dt>
+<dd>
+<div class="desc"><p>camera scale</p>
+<p>type :
+pyvmath.vec3 : (x,y,z)
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.screenMatrix"><code class="name">var <span class="ident">screenMatrix</span></code></dt>
+<dd>
+<div class="desc"><p>Screen Matrix</p>
+<p>type : igeVmath.mat4
+<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.camera.screenOffset"><code class="name">var <span class="ident">screenOffset</span></code></dt>
+<dd>
+<div class="desc"><p>Offset of 2D screen after perspective projection conversion</p>
+<p>type : pyvmath.vec2
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.screenRadian"><code class="name">var <span class="ident">screenRadian</span></code></dt>
+<dd>
+<div class="desc"><p>Radians for 2D screen rotation after perspective projection transformation</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.screenScale"><code class="name">var <span class="ident">screenScale</span></code></dt>
+<dd>
+<div class="desc"><p>Scale of 2D screen after perspective projection conversion</p>
+<p>type : pyvmath.vec2
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.target"><code class="name">var <span class="ident">target</span></code></dt>
+<dd>
+<div class="desc"><p>Attention point.If you set it, lockon will be True</p>
+<p>type : pyvmath.vec3
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.tilt"><code class="name">var <span class="ident">tilt</span></code></dt>
+<dd>
+<div class="desc"><p>A radian value representing vertical rotation along the X axis</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.camera.viewInverseMatrix"><code class="name">var <span class="ident">viewInverseMatrix</span></code></dt>
+<dd>
+<div class="desc"><p>View matrix inverse</p>
+<p>type : igeVmath.mat4
+<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.camera.widthBase"><code class="name">var <span class="ident">widthBase</span></code></dt>
+<dd>
+<div class="desc"><p>When set to True, the height is obtained
+based on the width when calculating
+the angle of view in the orthographic mode.</p>
+<pre><code>type : bool 
+read / write
+</code></pre></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.camera.shadowShoot"><code class="name flex">
+<span>def <span class="ident">shadowShoot</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Render the view seen from the camera</p>
+<p>camera.shoot(showcase, texture, clearColor, clearDepth, clearColorValue)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>showcase : igeCore.showcase
+    Showcase containing the objects you want to render
+texture : igeCore.texture (optional)
+    texture object to render to
+    If you don't set, renders to the frame buffer
+clearColor : bool  (optional)
+    clear textre (or frame buffer) by clearColorValue befor render
+clearDepth : bool  (optional)
+    clear textre (or frame buffer) depth value befor render
+    whether a texture has a depth value is specified at texture generation time.
+clearColorValue : pyvmath.vec4 (optional)
+    texture clear color
+</code></pre></div>
+</dd>
+<dt id="igeCore.camera.shoot"><code class="name flex">
+<span>def <span class="ident">shoot</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Render the view seen from the camera</p>
+<p>camera.shoot(showcase, texture, clearColor, clearDepth, clearColorValue)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>showcase : igeCore.showcase
+    Showcase containing the objects you want to render
+texture : igeCore.texture (optional)
+    texture object to render to
+    If you don't set, renders to the frame buffer
+clearColor : bool  (optional)
+    clear textre (or frame buffer) by clearColorValue befor render
+clearDepth : bool  (optional)
+    clear textre (or frame buffer) depth value befor render
+    whether a texture has a depth value is specified at texture generation time.
+clearColorValue : pyvmath.vec4 (optional)
+    texture clear color
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.editableFigure"><code class="flex name class">
+<span>class <span class="ident">editableFigure</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>figure for edditing.</p>
+<p>igeCore.editableFigure(name, newFigure)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    Unique name of figure
+newFigure : bool (optional default False)
+    It will always generate a new editable figure, even if a figure with the same name exists in the system.
+</code></pre></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.editableFigure.numJoints"><code class="name">var <span class="ident">numJoints</span></code></dt>
+<dd>
+<div class="desc"><p>Number of joints </p>
+<p>type :
+int
+read only</p></div>
+</dd>
+<dt id="igeCore.editableFigure.numMaterials"><code class="name">var <span class="ident">numMaterials</span></code></dt>
+<dd>
+<div class="desc"><p>Number of materials </p>
+<p>type :
+int
+read only</p></div>
+</dd>
+<dt id="igeCore.editableFigure.numMeshes"><code class="name">var <span class="ident">numMeshes</span></code></dt>
+<dd>
+<div class="desc"><p>Number of meshes </p>
+<p>type :
+int
+read only</p></div>
+</dd>
+<dt id="igeCore.editableFigure.position"><code class="name">var <span class="ident">position</span></code></dt>
+<dd>
+<div class="desc"><p>object position</p>
+<p>type :
+pyvmath.vec3 : (x,y,z)
+read / write</p></div>
+</dd>
+<dt id="igeCore.editableFigure.rotation"><code class="name">var <span class="ident">rotation</span></code></dt>
+<dd>
+<div class="desc"><p>object rotation</p>
+<p>type :
+pyvmath.quat : (x,y,z,w)
+read / write</p></div>
+</dd>
+<dt id="igeCore.editableFigure.scale"><code class="name">var <span class="ident">scale</span></code></dt>
+<dd>
+<div class="desc"><p>object scale </p>
+<p>type :
+pyvmath.vec3 : (x,y,z)
+read / write</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.editableFigure.addDrawSet"><code class="name flex">
+<span>def <span class="ident">addDrawSet</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set drawSet to the mesh</p>
+<p>editableFigure.addDrawSet(meshName or index, offset, size)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add drawSet
+index : int
+    Registered mesh index to which you want to add drawSet
+offset : int
+    Offset of tryangle
+size : int
+    Num triangles
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.addJoint"><code class="name flex">
+<span>def <span class="ident">addJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add joint object to the editableFigure</p>
+<p>editableFigure.addJoint(jointName, scaleCompensate, parentJointName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+scaleCompensate : bool(optional)
+    When it is True, it does not inherit the scale value of the parent joint
+parentJointName : string (optional)
+    Parent joint name
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.addMaterial"><code class="name flex">
+<span>def <span class="ident">addMaterial</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add new material object to the editableFigure</p>
+<p>editableFigure.addMaterial(materialName, shaderGen)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>materialName : string
+    Unique name of material
+shaderGen : igeCore.shaderGenerator
+    shaderGenerator object
+</code></pre>
+<h2 id="notes">Notes</h2>
+<pre><code>If the material name is already registered, 
+discard the old one and register again.
+Update mesh information if the mesh already refers
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.addMesh"><code class="name flex">
+<span>def <span class="ident">addMesh</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add new mesh object to the editableFigure</p>
+<p>editableFigure.addMesh(meshName, materialName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Unique name of mesh
+materialName : string
+    Registered material names that you want to assign to the mesh
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reset all data</p>
+<p>editableFigure.clear()</p></div>
+</dd>
+<dt id="igeCore.editableFigure.clearMesh"><code class="name flex">
+<span>def <span class="ident">clearMesh</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reset all mesh data</p>
+<p>editableFigure.clearMesh()</p></div>
+</dd>
+<dt id="igeCore.editableFigure.connectAnimator"><code class="name flex">
+<span>def <span class="ident">connectAnimator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply animation data to the model.</p>
+<p>editableFigure.connectAnimator(slot, anime)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>slot : int
+    There are 6 slots, and the final motion is output by the following calculation.
+
+    A0* A1 + B0 * B1 + C0 * C1
+   (* :weighted average , + : Additive synthesis)
+
+   Slots specify the following values 
+   igeCore.ANIMETION_SLOT_A0
+   igeCore.ANIMETION_SLOT_A1
+   igeCore.ANIMETION_SLOT_B0
+   igeCore.ANIMETION_SLOT_B1
+   igeCore.ANIMETION_SLOT_C0
+   igeCore.ANIMETION_SLOT_C1
+
+anime : string or igeCore.animator
+    Animation name or igeCore.animator object
+
+    File name of the underlying motion data
+</code></pre>
+<h2 id="examples">Examples</h2>
+<p>editableFigure.connectAnimator(igeCore.ANIMETION_SLOT_A0, 'animationA')
+editableFigure.connectAnimator(igeCore.ANIMETION_SLOT_A1, 'animationB')
+editableFigure.setBlendingWeight(igeCore.ANIMETION_PART_A), 0.5)</p>
+<p>It becomes the middle posture of animationA and animationB</p></div>
+</dd>
+<dt id="igeCore.editableFigure.dump"><code class="name flex">
+<span>def <span class="ident">dump</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.editableFigure.enableAlphaModeByTexture"><code class="name flex">
+<span>def <span class="ident">enableAlphaModeByTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.editableFigure.getAABB"><code class="name flex">
+<span>def <span class="ident">getAABB</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calclate axis aligned bounding box</p>
+<p>min, max, = editableFigure.getMeshAABB(name or index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string  (optional)
+    The name of the mesh to calclate AABB
+index : int  (optional)
+    Index number of mesh to calclate AABB
+
+    If the parameter is not specified or -1 is specified, 
+    the AABB of the entire figure is calculated.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>min : vec3
+    minimum edge of bounding box
+max : vec3
+    maximum edge of bounding box
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getBlendingWeight"><code class="name flex">
+<span>def <span class="ident">getBlendingWeight</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get weight of weighted average of animation part</p>
+<p>weight = editableFigure.getBlendingWeight(part)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>part : int
+    Animation part for which you want to obtain a weighted average
+
+             Specify the following value
+    igeCore.ANIMETION_PART_A
+    igeCore.ANIMETION_PART_B
+    igeCore.ANIMETION_PART_C
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>weight
+    Weighted average value specified for each part
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getCamera"><code class="name flex">
+<span>def <span class="ident">getCamera</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get camera information included in the scene</p>
+<p>camera = editableFigure.getCamera(cameraName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>cameraName : string
+    Name of camea node
+    If omitted, the first camera found is returned.
+    It is not necessary to specify a name if the scene contains only one camera
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>camera : igeCore.camera
+    camera object
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getJoint"><code class="name flex">
+<span>def <span class="ident">getJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the value of joint after animation calculation in world coordinate system</p>
+<p>position, rotation, scale = editableFigure.getJoint(jointName or jointIndex, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+    Returns
+</code></pre>
+<hr>
+<pre><code>position : igeVmath.Vec3
+    position of joint
+rotation : igeVmath.Quat
+    rotation of joint
+scale : igeVmath.Vec3
+    scale of joint
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getJointIndex"><code class="name flex">
+<span>def <span class="ident">getJointIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get joint indexNo from joint name.</p>
+<p>index = editableFigure.getJointIndex(name)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    joint name
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>index : int
+    joint indexNo   
+    return -1 if joint is not found
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getJointName"><code class="name flex">
+<span>def <span class="ident">getJointName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get joint name.</p>
+<p>name = editableFigure.getJointName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of joint
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    joint name      
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getJointParentIndex"><code class="name flex">
+<span>def <span class="ident">getJointParentIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the index of the parent joint of the specified joint</p>
+<p>parentindex = figure.getJointParentIndex(jointName or index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    jointName : string
+            The name of the joint
+    index : int
+            The index of the joint
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    parentindex : int
+            The parent joint index
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMaterialIndex"><code class="name flex">
+<span>def <span class="ident">getMaterialIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get material indexNo from material name.</p>
+<p>index = editableFigure.getMaterialIndex(name)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    material name
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>index : int
+    material indexNo        
+    return -1 if material is not found
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMaterialName"><code class="name flex">
+<span>def <span class="ident">getMaterialName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get material name.</p>
+<p>name = editableFigure.getMaterialName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of material
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    material name   
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMaterialParam"><code class="name flex">
+<span>def <span class="ident">getMaterialParam</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get material parameters</p>
+<p>value = figure.getMaterialParam(materialName, paramName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string (or int)
+            string of the material name or integer of material index value.for which you want to get parameters
+    paramName : string
+            parameter name you want to get value.
+            SystemAlpha                             Float
+            DiffuseColor                    Float4
+            Bumpiness                               Float
+            SpecularParams                  Float2
+            SpecularStrength                Float
+            SpecularPower                   Float
+            ReflectionStrength              Float
+            FresnelMin                              Float
+            FresnelExp                              Float
+            SurfaceColor                    Float3
+            FuzzySpecColor                  Float3
+            SubColor                                Float3
+            RollOff                                 Float
+            VelvetStrength                  Float
+            OverlayBumpiness                Float
+            OverlayStrength                 Float
+            GlassParams                             Float3
+            GlassStrength                   Float
+            Curvature                               Float
+            UpsideDown                              Float
+            ParallaxBias                    Float2
+            ParallaxBiasX                   Float
+            ParallaxBiasY                   Float
+            Time                                    Float
+            ScrollSpeedSet1                 Float2
+            ScrollSpeedSet2                 Float2
+            ScrollSpeedSet3                 Float2
+            OffsetSet1                              Float2
+            OffsetSet2                              Float2
+            DistortionStrength              Float
+            AlphaRef                                Float
+            CoverAddition                   Float
+            LightMapPower                   Float
+            LightMapStrength                Float
+            Saturation                              Float
+            OffsetSet3                              Float2
+            Fat                                             Float
+            RotationSet1                    Float
+            RotationSet2                    Float
+            RotationSet3                    Float
+            ScaleSet1                               Float2
+            ScaleSet2                               Float2
+            ScaleSet3                               Float2
+            ZBias                                   Float
+            InnerGrowAValue                 Float3
+            InnerGrowBValue                 Float3
+            LocalIntensity                  Float
+            InnerGrowAColor                 Float3
+            InnerGrowBColor                 Float3
+            SepiaStrength                   Float
+            ViewOffset                              Float3
+            ColorSamplerScale               Float2
+            BloomLimit                              Float
+            BlurOffset                              Float2
+            BloomScale                              Float
+            ShadowDensity                   Float
+            DofParams                               Float4
+            DofOptions                              Float4
+            DofGrayScale                    Float
+            LightColor                              Float4
+            MulColor                                Float4
+            ScreenVertexSize                Float4
+            ColorTextureSize                Float
+            ColorSampler                    Texture
+            NormalSampler                   Texture
+            EnvSampler                              Texture
+            CLUTSampler                             Texture
+            LightSampler                    Texture
+            OverlayColorSampler             Texture
+            OverlayNormalSampler    Texture
+            EnvsSampler                             Texture
+            GlowACLUTSampler                Texture
+            GlowBCLUTSampler                Texture
+            ColorCorrectionSampler  Texture
+            BlurredSampler                  Texture
+            DepthSampler                    Texture
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    value : float or igeVmath.vec2 or igeVmath.vec3 or igeVmath.vec4 or igeCore.texture
+            Gets the value corresponding to the specified parameter name from the shader..
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMeshAlpha"><code class="name flex">
+<span>def <span class="ident">getMeshAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get mesh alpha value.</p>
+<p>alpha = editableFigure.setMeshAlpha(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to set alpha value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    alpha : float
+            alpha values.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMeshIndex"><code class="name flex">
+<span>def <span class="ident">getMeshIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get mesh indexNo from mesh name.</p>
+<p>index = editableFigure.getMeshIndex(name)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    mesh name
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>index : int
+    mesh indexNo    
+    return -1 if mesh is not found
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMeshName"><code class="name flex">
+<span>def <span class="ident">getMeshName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get mesh name.</p>
+<p>name = editableFigure.getMeshName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of mesh
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    mesh name       
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getMeshPrimitiveType"><code class="name flex">
+<span>def <span class="ident">getMeshPrimitiveType</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the primitive type of Mesh.</p>
+<p>type = editableFigure.getMeshPrimitiveType(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or mesh index : int)
+            string of mesh name or int of mesh index to get the value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    type : int
+            primirive type.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getNumMeshTriangles"><code class="name flex">
+<span>def <span class="ident">getNumMeshTriangles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the number of polygons in the mesh.</p>
+<p>number = editableFigure.getNumMeshTriangles(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to get the value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    number : int
+            number of triangles.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getNumMeshVertices"><code class="name flex">
+<span>def <span class="ident">getNumMeshVertices</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the number of vertices in the mesh.</p>
+<p>number = editableFigure.getNumMeshVertices(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to get the value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    number : int
+            number of vertices.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getShaderGenerator"><code class="name flex">
+<span>def <span class="ident">getShaderGenerator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get shaderGenerator.</p>
+<p>Returns the ShaderGenerator for the specified material.</p>
+<p>shaderGen = editableFigure.getShaderGenerator(materialName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string (or int)
+            string of material name or int of material index.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    shaderGen : igeCore.shaderGenerator
+            shaderGenerator object.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getTextureSource"><code class="name flex">
+<span>def <span class="ident">getTextureSource</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get information about the textures being loaded</p>
+<p>texinfo = editableFigure.getTextureSource()</p>
+<h2 id="returns">Returns</h2>
+<pre><code>texinfo : tuple(dict)
+    'path' : file path
+    'wrap' :wrap mode 
+    'normal' : normal map or not
+</code></pre>
+<h2 id="notes">Notes</h2>
+<pre><code>wrap &amp; normal can be used to improve the quality of data conversion.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getTriangles"><code class="name flex">
+<span>def <span class="ident">getTriangles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get traiangle index data of the mesh object</p>
+<p>triangles = editableFigure.getTriangles(meshName or index, data, offset, size)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to get triangle index
+index : string
+    Registered mesh index to which you want to get triangle index
+offset : int (optional)
+    Start triangle position to get triangles
+size : int (optional)
+    Number of triangles  to get
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    triangles :tuple of integer
+            Triangle indices array
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.getVertexElements"><code class="name flex">
+<span>def <span class="ident">getVertexElements</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get vertex data from the mesh object</p>
+<p>editableFigure.getVertexElements(meshName or index, attributeType, offset, size)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add vertex information
+index : int
+    Registered mesh index No to which you want to get vertex information
+attributeType : int
+    Vertex element type
+    One of the following values
+
+    igeCore.ATTRIBUTE_ID_POSITION
+    igeCore.ATTRIBUTE_ID_NORMAL
+    igeCore.ATTRIBUTE_ID_TANGENT
+    igeCore.ATTRIBUTE_ID_BINORMAL
+    igeCore.ATTRIBUTE_ID_UV0
+    igeCore.ATTRIBUTE_ID_UV1
+    igeCore.ATTRIBUTE_ID_UV2
+    igeCore.ATTRIBUTE_ID_UV3
+    igeCore.ATTRIBUTE_ID_COLOR
+    igeCore.ATTRIBUTE_ID_BLENDINDICES
+    igeCore.ATTRIBUTE_ID_BLENDWEIGHT
+    igeCore.ATTRIBUTE_ID_PSIZE
+offset : int (optional)
+    Start position to get vertex elements
+    0 if omitted.
+size : int (optional)
+    Numver of vertex elements to get.
+    If omitted, all data after the offset.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.importFigure"><code class="name flex">
+<span>def <span class="ident">importFigure</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Import the figure (pyxf) file.</p>
+<p>rv = editableFigure.importFigure(path)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>path : string
+    figure file path
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>rv : bool
+    Success or failure of reading
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.jointNameToIndex"><code class="name flex">
+<span>def <span class="ident">jointNameToIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get Joint index from Joint name</p>
+<p>jointIndex = editablefigure.jointNameToIndex(jointName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    jointIndex : int
+            The index of joint
+            If there is no parent joint (root joint), -1 is returned.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.mergeSameMaterialMesh"><code class="name flex">
+<span>def <span class="ident">mergeSameMaterialMesh</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Improve drawing efficiency by merging meshes that share the same material into one.</p>
+<p>editableFigure.mergeSameMaterialMesh()</p></div>
+</dd>
+<dt id="igeCore.editableFigure.removeUnreferencedVertices"><code class="name flex">
+<span>def <span class="ident">removeUnreferencedVertices</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes useless vertices that are not referenced from the index.</p>
+<p>editableFigure.removeUnreferencedVertices()</p></div>
+</dd>
+<dt id="igeCore.editableFigure.replaceTextureSource"><code class="name flex">
+<span>def <span class="ident">replaceTextureSource</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rewrites the texture information loaded inside</p>
+<p>editableFigure.replaceTextureSource(oldTex, newTex)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>oldTex : dict {'path':path, 'wrap':wrap, 'normal':normal}
+newTex : dict {'path':path, 'wrap':wrap, 'normal':normal}
+</code></pre>
+<h2 id="notes">Notes</h2>
+<pre><code>Used when rewriting the texture file path
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.saveAnimation"><code class="name flex">
+<span>def <span class="ident">saveAnimation</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Export animation data</p>
+<p>under construction</p></div>
+</dd>
+<dt id="igeCore.editableFigure.saveFigure"><code class="name flex">
+<span>def <span class="ident">saveFigure</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Export to figure format</p>
+<p>editableFigure.saveFigure(filePath, excludeAnime, excludeSkeleton)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>filePath : string
+    Output file path
+excludeAnime : bool (optional)
+    Do not include animation data
+excludeSkeleton : bool (optional)
+    Do not include skeleton data
+</code></pre>
+<h2 id="notes">Notes</h2>
+<pre><code>The figure format is optimized, so
+It is more efficient to create a figure in advanceand then load it,
+rather than using Editable Figure directly
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.saveSkeleton"><code class="name flex">
+<span>def <span class="ident">saveSkeleton</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Export skeleton data</p>
+<p>under construction</p></div>
+</dd>
+<dt id="igeCore.editableFigure.setBlendingWeight"><code class="name flex">
+<span>def <span class="ident">setBlendingWeight</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the weight of the weighted average of animation parts</p>
+<p>editableFigure.setBlendingWeight(part, weight)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>part : int
+    Animation part for which you want to specify weights
+
+             Specify the following value
+    igeCore.ANIMETION_PART_A
+    igeCore.ANIMETION_PART_B
+    igeCore.ANIMETION_PART_C
+
+weight : float
+    Specify the weight of weighted average in the range of 0.0 to 1.0
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setBoxGeometory"><code class="name flex">
+<span>def <span class="ident">setBoxGeometory</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.editableFigure.setDrawSetRenderState"><code class="name flex">
+<span>def <span class="ident">setDrawSetRenderState</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set render state for drawSet</p>
+<p>editableFigure.setDrawSetRenderState(meshName or index, drawSetNo, paramName, value1, value2, value3, value4)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add drawSet
+index : int
+    Registered mesh index to which you want to add drawSet
+drawSetNo : int
+    Order added by AddDrawSet()
+paramName : string
+    Render states name
+    The available renderstate is the same as setMaterialRenderState
+value1 : float or int or bool
+    Render state parameter
+value2 : float or int or bool
+    Render state parameter
+value3 : float or int or bool
+    Render state parameter
+value4 : float or int or bool
+    Render state parameter
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setJoint"><code class="name flex">
+<span>def <span class="ident">setJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the value of joint in world coordinate system</p>
+<p>editableFigure.setJoint(jointName or jointIndex, position, rotation, scale, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+position : igeVmath.Vec3 (optional)
+    position of joint
+rotation : igeVmath.Quat (optional)
+    rotation of joint
+scale : igeVmath.Vec3 (optional)
+    scale of joint
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setJointParent"><code class="name flex">
+<span>def <span class="ident">setJointParent</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the parent John of the specified joint</p>
+<p>editableFigure.setJointParent(jointName or jointIndex, parentJointName or parentJointIndex)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint
+jointIndex : int
+    The index of the joint
+parentJointName : string
+    The name of the parent joint
+parentJointIndex : int
+    The index of the parent joint
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setMaterialParam"><code class="name flex">
+<span>def <span class="ident">setMaterialParam</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set material parameters</p>
+<p>editableFigure.setMaterialParam(materialName, paramName, paramValue)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string
+            Name of the material for which you want to set parameters
+    paramName : string
+            Name of the parameter to pass to the shader
+            SystemAlpha                     Float
+            DiffuseColor            Float4
+            Bumpiness                       Float
+            SpecularParams          Float2
+            SpecularStrength        Float
+            SpecularPower           Float
+            ReflectionStrength      Float
+            FresnelMin                      Float
+            FresnelExp                      Float
+            SurfaceColor            Float3
+            FuzzySpecColor          Float3
+            SubColor                        Float3
+            RollOff                         Float
+            VelvetStrength          Float
+            OverlayBumpiness        Float
+            OverlayStrength         Float
+            GlassParams                     Float3
+            GlassStrength           Float
+            Curvature                       Float
+            UpsideDown                      Float
+            ParallaxBias            Float2
+            ParallaxBiasX           Float
+            ParallaxBiasY           Float
+            Time                            Float
+            ScrollSpeedSet1         Float2
+            ScrollSpeedSet2         Float2
+            ScrollSpeedSet3         Float2
+            OffsetSet1                      Float2
+            OffsetSet2                      Float2
+            DistortionStrength      Float
+            AlphaRef                        Float
+            CoverAddition           Float
+            LightMapPower           Float
+            LightMapStrength        Float
+            Saturation                      Float
+            OffsetSet3                      Float2
+            Fat                                     Float
+            RotationSet1            Float
+            RotationSet2            Float
+            RotationSet3            Float
+            ScaleSet1                       Float2
+            ScaleSet2                       Float2
+            ScaleSet3                       Float2
+            ZBias                           Float
+            InnerGrowAValue         Float3
+            InnerGrowBValue         Float3
+            LocalIntensity          Float
+            InnerGrowAColor         Float3
+            InnerGrowBColor         Float3
+            SepiaStrength           Float
+            ViewOffset                      Float3
+            ColorSamplerScale       Float2
+            BloomLimit                      Float
+            BlurOffset                      Float2
+            BloomScale                      Float
+            ShadowDensity           Float
+            DofParams                       Float4
+            DofOptions                      Float4
+            DofGrayScale            Float
+            LightColor                      Float4
+            MulColor                        Float4
+            ScreenVertexSize        Float4
+            ColorTextureSize        Float
+paramValue
+    Tuple of value pass to the shader
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setMaterialParamTexture"><code class="name flex">
+<span>def <span class="ident">setMaterialParamTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set texture material parameters</p>
+<p>editableFigure.setMaterialParam(materialName, samplerName, textureName, pixel, width, height, wrap_s, wrap_t, minfilter, magfilter, mipfilter)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string
+            Name of the material for which you want to set parameters
+    samplerName : string
+            Name of the sampler parameter to pass to the shader
+            ColorSampler
+            NormalSampler
+            EnvSampler
+            CLUTSampler
+            LightSampler
+            OverlayColorSampler
+            OverlayNormalSampler
+            EnvsSampler
+            GlowACLUTSampler
+            GlowBCLUTSampler
+            ColorCorrectionSampler
+            BlurredSampler
+            DepthSampler
+textureName : string (optional)
+    Texture file path
+pixel : binary (optional)
+    binary array of rgba 32bit format image
+    textureName and pixel + width, height can not be specified at the same time, 
+    textureName takes precedence
+width : int (optional)
+    pixel image width
+height : int  (optional)
+    pixel image height
+wrap_s : int  (optional)
+    Texture horizontal wrap mode of sampler state
+    The following values are available
+    igeCore.SAMPLERSTATE_WRAP &lt;- (default)
+    igeCore.SAMPLERSTATE_MIRROR
+    igeCore.SAMPLERSTATE_CLAMP
+    igeCore.SAMPLERSTATE_BORDER
+wrap_t : int  (optional)
+    Texture vertical wrap mode of sampler state
+    The content is the same as wrap_s
+minfilter : int  (optional)
+    Sampling method when expanding the texture
+    The following values are available
+    igeCore.SAMPLERSTATE_LINEAR &lt;- (default)
+    igeCore.SAMPLERSTATE_NEAREST
+magfilter : int  (optional)
+   Sampling method when reducing the texture
+    The following values are available
+    igeCore.SAMPLERSTATE_LINEAR
+    igeCore.SAMPLERSTATE_NEAREST
+    igeCore.SAMPLERSTATE_NEAREST_MIPMAP_NEAREST
+    igeCore.SAMPLERSTATE_LINEAR_MIPMAP_NEAREST
+    igeCore.SAMPLERSTATE_NEAREST_MIPMAP_LINEAR
+    igeCore.SAMPLERSTATE_LINEAR_MIPMAP_LINEAR
+mipfilter : int  (optional)
+    Not used now.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setMaterialRenderState"><code class="name flex">
+<span>def <span class="ident">setMaterialRenderState</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set render state for material</p>
+<p>editableFigure.setMaterialRenderState(materialName, paramName, value1, value2, value3, value4)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>materialName : string
+    Name of the material to which you want to add RenderState
+paramName : string
+    Render state name
+    The following names are currently available
+    alpha_func
+    alpha_test_enable
+    blend_func
+    blend_equation
+    blend_enable
+    cull_face
+    cull_face_enable
+    depth_func
+    depth_mask
+    depth_test_enable
+    polygon_offset
+    polygon_offset_fill_enable
+    color_mask
+    stencil_func
+    stencil_mask
+    stencil_op
+    stencil_test_enable
+    scissor_test_enable
+    scissor
+value1 : float or int or bool
+    Render state parameter
+value2 : float or int or bool
+    Render state parameter
+value3 : float or int or bool
+    Render state parameter
+value4 : float or int or bool
+    Render state parameter
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setMeshAlpha"><code class="name flex">
+<span>def <span class="ident">setMeshAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set mesh alpha value.</p>
+<p>if you set alpha valie is less than 1.0 mesh is going to transparent.
+you set alpha valie is 0, mesh rendaring is skipped.</p>
+<p>editableFigure.setMeshAlpha(meshName, alpha)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to set alpha value.
+            alpha : float
+            alpha value.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setMeshPrimitiveType"><code class="name flex">
+<span>def <span class="ident">setMeshPrimitiveType</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the primitive type of Mesh.</p>
+<p>editableFigure.setMeshPrimitiveType(meshName, mode)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to set value.
+            type : int
+            primitive type.
+                    igeCore.GL_LINES
+                    igeCore.GL_LINE_LOOP
+                    igeCore.GL_LINE_STRIP
+                    igeCore.GL_TRIANGLES
+                    igeCore.GL_TRIANGLE_STRIP
+                    igeCore.GL_TRIANGLE_FAN
+                    igeCore.GL_QUADS
+                    igeCore.GL_QUAD_STRIP
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setParentJoint"><code class="name flex">
+<span>def <span class="ident">setParentJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the joint of another figure
+(or EditableFigure) as the parent joint.</p>
+<p>editableFigure.setParentJoint(figure, jointName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>figure : figure
+    Parent figure or EditableFigure
+jointName : string
+    Parent joint name
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setPlaneGeometory"><code class="name flex">
+<span>def <span class="ident">setPlaneGeometory</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.editableFigure.setShaderGenerator"><code class="name flex">
+<span>def <span class="ident">setShaderGenerator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set shaderGenerator.</p>
+<p>Set shaderGenerator to specified material and replace shader.</p>
+<p>editableFigure.setShaderGenerator(materialName, shaderGen)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string (or int)
+            string of material name or int of material index.
+            shaderGen : igeCore.shaderGenerator
+            shaderGenerator object.
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setSphereGeometory"><code class="name flex">
+<span>def <span class="ident">setSphereGeometory</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.editableFigure.setTime"><code class="name flex">
+<span>def <span class="ident">setTime</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the animation time applied by connectAnimator</p>
+<p>editableFigure.setTime(time)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>time : float
+    Specifies the animation time in seconds
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setTrianglePtr"><code class="name flex">
+<span>def <span class="ident">setTrianglePtr</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set formatted triangle index list data to the mesh.</p>
+<p>editableFigure.setTrianglePtr(meshName or index, ptr, numTriangles, dataSize)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add triangle index
+index : int
+    Registered mesh index to which you want to add triangle index
+ptr
+    Pointer of indices
+numTriangles long
+    Number of triangles
+dataSize : int
+    data byte size(2 or 4)
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setTriangles"><code class="name flex">
+<span>def <span class="ident">setTriangles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set traiangle index data to the mesh object</p>
+<p>editableFigure.setTriangles(meshName or index, data, offset)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add triangle index
+index : string
+    Registered mesh index to which you want to add triangle index
+data : tuple or list
+    Triangle index
+offset : int (optional)
+    Start triangle position to add vertex elements
+</code></pre>
+<h2 id="examples">Examples</h2>
+<pre><code>#create rectangle
+efig.addMesh('meshA', 'materialA');
+points = ((-1, 1, 0), (1, 1, 0), (-1, -1, 0), (1, -1, 0))
+efig.setVertexElements('meshA', igeCore.ATTRIBUTE_ID_POSITION, points)
+tris = (0, 2, 1, 1, 2, 3)
+efig.setTriangles('meshA', tris);
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setVertexElements"><code class="name flex">
+<span>def <span class="ident">setVertexElements</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set vertex data to the mesh object</p>
+<p>editableFigure.setVertexElements(meshName or index, attributeType, data, offset)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add vertex information
+index : int
+    Registered mesh index to which you want to add vertex information
+attributeType : int
+    Vertex element type
+    One of the following values
+
+    igeCore.ATTRIBUTE_ID_POSITION
+    igeCore.ATTRIBUTE_ID_NORMAL
+    igeCore.ATTRIBUTE_ID_TANGENT
+    igeCore.ATTRIBUTE_ID_BINORMAL
+    igeCore.ATTRIBUTE_ID_UV0
+    igeCore.ATTRIBUTE_ID_UV1
+    igeCore.ATTRIBUTE_ID_UV2
+    igeCore.ATTRIBUTE_ID_UV3
+    igeCore.ATTRIBUTE_ID_COLOR
+    igeCore.ATTRIBUTE_ID_BLENDINDICES
+    igeCore.ATTRIBUTE_ID_BLENDWEIGHT
+    igeCore.ATTRIBUTE_ID_PSIZE
+data : tuple or list
+    Vertex elements
+offset : int (optional)
+    Start position to add vertex elements
+</code></pre>
+<h2 id="examples">Examples</h2>
+<pre><code>efig.addMesh('meshA', 'materialA');
+points = ((-1, 1, 0), (1, 1, 0), (-1, -1, 0), (1, -1, 0))
+efig.setVertexElements('meshA', igeCore.ATTRIBUTE_ID_POSITION, points
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.setVertexPtr"><code class="name flex">
+<span>def <span class="ident">setVertexPtr</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set formatted vertex data to the mesh.</p>
+<p>editableFigure.setVertexPtr(meshName or index, ptr, numVerts, attributes)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add vertex information
+index : string
+    Registered mesh index to which you want to add vertex information
+ptr : void* 
+    Pointer of vertices
+numVerts : long
+    Number of vertices
+attributes : tuple
+    Vertex format description(ID, size, normalize, type)
+</code></pre></div>
+</dd>
+<dt id="igeCore.editableFigure.step"><code class="name flex">
+<span>def <span class="ident">step</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Advances the animation applied with connectAnimator() by elapsedTime</p>
+<p>editableFigure.step(elapsedTime)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>elapsedTime : float
+    Specifies the delta animation time in seconds
+    If omitted, it will be the value of igeCore.elapsedTime()
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.environment"><code class="flex name class">
+<span>class <span class="ident">environment</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rendering environment such as light source and fog</p></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.environment.ambientColor"><code class="name">var <span class="ident">ambientColor</span></code></dt>
+<dd>
+<div class="desc"><p>Ambient color <br>
+igeVmath.vec3</p></div>
+</dd>
+<dt id="igeCore.environment.ambientDirection"><code class="name">var <span class="ident">ambientDirection</span></code></dt>
+<dd>
+<div class="desc"><p>Ambient direction for hemisphere ambient
+<br>
+igeVmath.vec3</p></div>
+</dd>
+<dt id="igeCore.environment.distanceFogAlpha"><code class="name">var <span class="ident">distanceFogAlpha</span></code></dt>
+<dd>
+<div class="desc"><p>alpha value of fog distance
+<br>
+float</p></div>
+</dd>
+<dt id="igeCore.environment.distanceFogColor"><code class="name">var <span class="ident">distanceFogColor</span></code></dt>
+<dd>
+<div class="desc"><p>distance value of fog distance<br>
+float</p></div>
+</dd>
+<dt id="igeCore.environment.distanceFogFar"><code class="name">var <span class="ident">distanceFogFar</span></code></dt>
+<dd>
+<div class="desc"><p>far value of fog distance
+<br>
+float</p></div>
+</dd>
+<dt id="igeCore.environment.distanceFogNear"><code class="name">var <span class="ident">distanceFogNear</span></code></dt>
+<dd>
+<div class="desc"><p>near value of fog distance
+<br>
+float</p></div>
+</dd>
+<dt id="igeCore.environment.groundColor"><code class="name">var <span class="ident">groundColor</span></code></dt>
+<dd>
+<div class="desc"><p>Ground color for hemisphere ambient
+<br>
+igeVmath.vec3</p></div>
+</dd>
+<dt id="igeCore.environment.shadowColor"><code class="name">var <span class="ident">shadowColor</span></code></dt>
+<dd>
+<div class="desc"><p>shadow color
+<br>
+igeVmath.vec3</p></div>
+</dd>
+<dt id="igeCore.environment.shadowDensity"><code class="name">var <span class="ident">shadowDensity</span></code></dt>
+<dd>
+<div class="desc"><p>shadow density<br>
+float</p></div>
+</dd>
+<dt id="igeCore.environment.shadowWideness"><code class="name">var <span class="ident">shadowWideness</span></code></dt>
+<dd>
+<div class="desc"><p>shadow wideness
+float</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.environment.getDirectionalLampColor"><code class="name flex">
+<span>def <span class="ident">getDirectionalLampColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get directional lamp color</p>
+<p>color = environment.getDirectionalLampColor(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>color : igeVmath.vec3
+   color value of directional lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getDirectionalLampDirection"><code class="name flex">
+<span>def <span class="ident">getDirectionalLampDirection</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get directional lamp direction</p>
+<p>dir = environment.getDirectionalLampDirection(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>dir : igeVmath.vec3
+   lamp direction vector
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getDirectionalLampIntensity"><code class="name flex">
+<span>def <span class="ident">getDirectionalLampIntensity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get intensity value of directional lamp</p>
+<p>intensity = environment.getDirectionalLampIntensity(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)Returns
+</code></pre>
+<hr>
+<pre><code>intensity : float
+    intensity value of directional lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getPointLampColor"><code class="name flex">
+<span>def <span class="ident">getPointLampColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get point lamp color</p>
+<p>color = environment.getPointLampColor(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>color : igeVmath.vec3
+   color value of point lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getPointLampIntensity"><code class="name flex">
+<span>def <span class="ident">getPointLampIntensity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get intensity value of point lamp</p>
+<p>intensity = environment.getPointLampIntensity(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)Returns
+</code></pre>
+<hr>
+<pre><code>intensity : float
+    intensity value of point lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getPointLampPosition"><code class="name flex">
+<span>def <span class="ident">getPointLampPosition</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get point lamp position</p>
+<p>pos = environment.getPointLampPosition(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>pos : igeVmath.vec3
+   lamp position
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getPointLampRange"><code class="name flex">
+<span>def <span class="ident">getPointLampRange</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get point lamp range value</p>
+<p>range = environment.getPointLampRange(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)Returns
+</code></pre>
+<hr>
+<pre><code>range : float
+    range distance value of point lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getSpotLampAngle"><code class="name flex">
+<span>def <span class="ident">getSpotLampAngle</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get angle value of spot lamp</p>
+<p>angle = environment.getSpotLampAngle(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)Returns
+</code></pre>
+<hr>
+<pre><code>angle : float
+    angle value of spot lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getSpotLampColor"><code class="name flex">
+<span>def <span class="ident">getSpotLampColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get spot lamp color</p>
+<p>color = environment.getSpotLampColor(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>color : igeVmath.vec3
+   color value of spot lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getSpotLampDirection"><code class="name flex">
+<span>def <span class="ident">getSpotLampDirection</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get spot lamp direction</p>
+<p>dir = environment.getSpotLampPosition(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>dir : igeVmath.vec3
+   lamp direction
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getSpotLampIntensity"><code class="name flex">
+<span>def <span class="ident">getSpotLampIntensity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get intensity value of spot lamp</p>
+<p>intensity = environment.getSpotLampIntensity(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)Returns
+</code></pre>
+<hr>
+<pre><code>intensity : float
+    intensity value of spot lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getSpotLampPosition"><code class="name flex">
+<span>def <span class="ident">getSpotLampPosition</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get spot lamp position</p>
+<p>pos = environment.getSpotLampPosition(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>pos : igeVmath.vec3
+   lamp position
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.getSpotLampRange"><code class="name flex">
+<span>def <span class="ident">getSpotLampRange</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get spot lamp range value</p>
+<p>range = environment.getSpotLampRange(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)Returns
+</code></pre>
+<hr>
+<pre><code>range : float
+    range distance value of spot lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setDirectionalLampColor"><code class="name flex">
+<span>def <span class="ident">setDirectionalLampColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set directional lamp color</p>
+<p>environment.setDirectionalLampColor(index, color)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)
+value : igeVmath.vec3
+    lamp color
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setDirectionalLampDirection"><code class="name flex">
+<span>def <span class="ident">setDirectionalLampDirection</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set directional lamp direction</p>
+<p>environment.setDirectionalLampDirection(index, dir)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)
+dir : igeVmath.vec3
+   lamp direction vector
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setDirectionalLampIntensity"><code class="name flex">
+<span>def <span class="ident">setDirectionalLampIntensity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set intensity value of directional lamp</p>
+<p>environment.getDirectionalLampIntensity(index, value)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)    value : float
+    intensity value of directional lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setPointLampColor"><code class="name flex">
+<span>def <span class="ident">setPointLampColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set point lamp color</p>
+<p>environment.setPointLampColor(index, color)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)
+value : igeVmath.vec3
+    lamp color
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setPointLampIntensity"><code class="name flex">
+<span>def <span class="ident">setPointLampIntensity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set intensity value of point lamp</p>
+<p>environment.getPointLampIntensity(index, value)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)    value : float
+    intensity value of point lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setPointLampPosition"><code class="name flex">
+<span>def <span class="ident">setPointLampPosition</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set point lamp position</p>
+<p>environment.getPointLampPosition(index, pos)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+pos : igeVmath.vec3
+   lamp position
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setPointLampRange"><code class="name flex">
+<span>def <span class="ident">setPointLampRange</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set point lamp range value</p>
+<p>environment.setPointLampRange(index, range)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)    range : float
+    range distance value of point lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setSpotLampAngle"><code class="name flex">
+<span>def <span class="ident">setSpotLampAngle</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set angle value of spot lamp</p>
+<p>environment.getSpotLampAngle(index, value)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)    value : float
+    angle value of spot lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setSpotLampColor"><code class="name flex">
+<span>def <span class="ident">setSpotLampColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set spot lamp color</p>
+<p>environment.setSpotLampColor(index, color)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 2)
+value : igeVmath.vec3
+    lamp color
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setSpotLampDirection"><code class="name flex">
+<span>def <span class="ident">setSpotLampDirection</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set spot lamp direction</p>
+<p>environment.getSpotLampDirection(index, dir)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+dir : igeVmath.vec3
+   lamp direction
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setSpotLampIntensity"><code class="name flex">
+<span>def <span class="ident">setSpotLampIntensity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set intensity value of spot lamp</p>
+<p>environment.getSpotLampIntensity(index, value)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)    value : float
+    intensity value of spot lamp
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setSpotLampPosition"><code class="name flex">
+<span>def <span class="ident">setSpotLampPosition</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set spot lamp position</p>
+<p>environment.getSpotLampPosition(index, pos)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)
+pos : igeVmath.vec3
+   lamp position
+</code></pre></div>
+</dd>
+<dt id="igeCore.environment.setSpotLampRange"><code class="name flex">
+<span>def <span class="ident">setSpotLampRange</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set spot lamp range value</p>
+<p>environment.setSpotLampRange(index, range)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int
+    light index no (0 - 6)    range : float
+    range distance value of spot lamp
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.figure"><code class="flex name class">
+<span>class <span class="ident">figure</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>3D scene object.</p>
+<p>igeCore.figure(name, cloneSkeleton, cloneMesh)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    name : string
+            Unique name of figure
+    cloneSkeleton : bool
+            Determine if each instance has its own Skeleton information.
+    cloneMesh : bool
+            Determine if each instance has its own Mesh information.
+</code></pre>
+<h2 id="note">Note</h2>
+<pre><code>    Normally, when you generate multiple figures from the same file,        
+    Skeleton and Mesh informations are shared for data saving.      
+    Usually it's no probrem,        
+    But, if you use the set/getJoint() function     
+    to directly manipulate the skeleton,    
+    Editing one figure will affect the other figures as well.       
+    Enabling 'cloneSkeleton' will generate the Skeleton information separately,     
+    which will aboid this issue.    
+    Similarly, if you use the setVertexElements() function to       
+    edit the vertex directly,       
+    you will get similar problems.  
+    enabling 'cloneMesh' will aboid it.
+</code></pre></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.figure.numAnimations"><code class="name">var <span class="ident">numAnimations</span></code></dt>
+<dd>
+<div class="desc"><p>Number of registered animations </p>
+<p>type :
+int (read only)</p></div>
+</dd>
+<dt id="igeCore.figure.numEmbeddedAnimations"><code class="name">var <span class="ident">numEmbeddedAnimations</span></code></dt>
+<dd>
+<div class="desc"><p>The number of animation embedded in the file </p>
+<p>type :
+int (read only)</p></div>
+</dd>
+<dt id="igeCore.figure.numJoints"><code class="name">var <span class="ident">numJoints</span></code></dt>
+<dd>
+<div class="desc"><p>Number of joints </p>
+<p>type :
+int (read only)</p></div>
+</dd>
+<dt id="igeCore.figure.numMaterials"><code class="name">var <span class="ident">numMaterials</span></code></dt>
+<dd>
+<div class="desc"><p>Number of materials </p>
+<p>type :
+int (read only)</p></div>
+</dd>
+<dt id="igeCore.figure.numMeshes"><code class="name">var <span class="ident">numMeshes</span></code></dt>
+<dd>
+<div class="desc"><p>Number of meshes </p>
+<p>type :
+int (read only)</p></div>
+</dd>
+<dt id="igeCore.figure.numTextures"><code class="name">var <span class="ident">numTextures</span></code></dt>
+<dd>
+<div class="desc"><p>The number of textures linked in the file </p>
+<p>type :
+int (read only)</p></div>
+</dd>
+<dt id="igeCore.figure.position"><code class="name">var <span class="ident">position</span></code></dt>
+<dd>
+<div class="desc"><p>3D position of object </p>
+<p>type :
+pyvmath.vec3 : (x,y,z)</p></div>
+</dd>
+<dt id="igeCore.figure.rotation"><code class="name">var <span class="ident">rotation</span></code></dt>
+<dd>
+<div class="desc"><p>3D rotation of object </p>
+<p>type :
+pyvmath.quat : (x,y,z,w)</p></div>
+</dd>
+<dt id="igeCore.figure.scale"><code class="name">var <span class="ident">scale</span></code></dt>
+<dd>
+<div class="desc"><p>3D scale of object </p>
+<p>type :
+pyvmath.vec3 : (x,y,z)</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.figure.connectAnimator"><code class="name flex">
+<span>def <span class="ident">connectAnimator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply animation data to the model.</p>
+<p>figure.connectAnimator(slot, anime)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>slot : int
+    There are 6 slots, and the final motion is output by the following calculation.
+
+    A0* A1 + B0 * B1 + C0 * C1
+   (* :weighted average , + : Additive synthesis)
+
+   Slots specify the following values 
+   igeCore.ANIMETION_SLOT_A0
+   igeCore.ANIMETION_SLOT_A1
+   igeCore.ANIMETION_SLOT_B0
+   igeCore.ANIMETION_SLOT_B1
+   igeCore.ANIMETION_SLOT_C0
+   igeCore.ANIMETION_SLOT_C1
+
+anime : string or igeCore.animator
+    Animation name or igeCore.animator object
+
+    File name of the underlying motion data
+</code></pre>
+<h2 id="examples">Examples</h2>
+<p>figure.connectAnimator(igeCore.ANIMETION_SLOT_A0, 'animationA')
+figure.connectAnimator(igeCore.ANIMETION_SLOT_A1, 'animationB')
+figure.setBlendingWeight(igeCore.ANIMETION_PART_A), 0.5)</p>
+<p>It becomes the middle posture of animationA and animationB</p></div>
+</dd>
+<dt id="igeCore.figure.dump"><code class="name flex">
+<span>def <span class="ident">dump</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.figure.getAABB"><code class="name flex">
+<span>def <span class="ident">getAABB</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calclate axis aligned bounding box</p>
+<p>min, max, = figure.getAABB(name or index, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string  (optional)
+    The name of the mesh to calclate AABB   
+    By omitting it, the entire figure will be calculated.
+index : int  (optional)
+    Index number of mesh to calclate AABB
+
+    If the parameter is not specified or -1 is specified, 
+    the AABB of the entire figure is calculated. 
+    space : int 
+            -1 (default value)
+                    Calculate AABB from vertex before animation
+            0 (igeCore.LocalSpace)
+                    Calculate AABB after animation in locak space
+            1 (igeCore.WorldSpace)
+                    Calculate AABB after animation in world space
+
+            This function is slow as it uses the CPU to compute all vertices.
+            Frequent use in real time is not recommended.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>min : vec3
+    minimum edge of bounding box
+max : vec3
+    maximum edge of bounding box
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getBlendingWeight"><code class="name flex">
+<span>def <span class="ident">getBlendingWeight</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get weight of weighted average of animation part</p>
+<p>weight = figure.getBlendingWeight(part)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>part : int
+    Animation part for which you want to obtain a weighted average
+
+             Specify the following value
+    igeCore.ANIMETION_PART_A
+    igeCore.ANIMETION_PART_B
+    igeCore.ANIMETION_PART_C
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>weight
+    Weighted average value specified for each part
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getCamera"><code class="name flex">
+<span>def <span class="ident">getCamera</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get camera information included in the scene</p>
+<p>camera = figure.getCamera(cameraName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>cameraName : string
+    Name of camea node
+    If omitted, the first camera found is returned.
+    It is not necessary to specify a name if the scene contains only one camera
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>camera : igeCore.camera
+    camera object
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getEmbeddedAnimationName"><code class="name flex">
+<span>def <span class="ident">getEmbeddedAnimationName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get embedded animation name.</p>
+<p>When converting from Collada, EXPORT_NAMES = 1 must be defined in figure.conf.</p>
+<p>name = figure.getEmbeddedAnimationName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of animation
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    animnation file name    
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getEmbeddedAnimator"><code class="name flex">
+<span>def <span class="ident">getEmbeddedAnimator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get animator embedded in the scene</p>
+<p>animator = figure.getEmbeddedAnimator(animeName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>animeName : string
+    Name of anine file
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>animator : igeCore.animator
+    animator object  or None if not found.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getEnvironment"><code class="name flex">
+<span>def <span class="ident">getEnvironment</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get environmental information included in the scene
+Environmental information is information such as lightingand fog.</p>
+<p>env = figure.getEnvironment()</p>
+<h2 id="returns">Returns</h2>
+<pre><code>env : igeCore.environment
+    enbironment object
+</code></pre>
+<p>environment object</p>
+<dl>
+<dt><code>Specification</code> of <code><a title="igeCore.environment" href="#igeCore.environment">environment</a> is still under construction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+</dd>
+<dt id="igeCore.figure.getJoint"><code class="name flex">
+<span>def <span class="ident">getJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the value of joint after animation calculation in world coordinate system</p>
+<p>position, rotation, scale = figure.getJoint(jointName or jointIndex, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+    Returns
+</code></pre>
+<hr>
+<pre><code>position : igeVmath.Vec3
+    position of joint
+rotation : igeVmath.Quat
+    rotation of joint
+scale : igeVmath.Vec3
+    scale of joint
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getJointIndex"><code class="name flex">
+<span>def <span class="ident">getJointIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get joint indexNo from joint name.</p>
+<p>index = figure.getJointIndex(name)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    joint name
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>index : int
+    joint indexNo   
+    return -1 if joint is not found
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getJointName"><code class="name flex">
+<span>def <span class="ident">getJointName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get joint name.</p>
+<p>When converting from Collada, EXPORT_NAMES = 1 must be defined in figure.conf.</p>
+<p>name = figure.getJointName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of joint
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    joint name      
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getJointParentIndex"><code class="name flex">
+<span>def <span class="ident">getJointParentIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the index of the parent joint of the specified joint</p>
+<p>parentindex = figure.getJointParentIndex(jointName or index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    jointName : string
+            The name of the joint
+    index : int
+            The index of the joint
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    parentindex : int
+            The parent joint index
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMaterialIndex"><code class="name flex">
+<span>def <span class="ident">getMaterialIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get material indexNo from material name.</p>
+<p>index = figure.getMaterialIndex(name)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    material name
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>index : int
+    material indexNo        
+    return -1 if material is not found
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMaterialName"><code class="name flex">
+<span>def <span class="ident">getMaterialName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get material name.</p>
+<p>When converting from Collada, EXPORT_NAMES = 1 must be defined in figure.conf.</p>
+<p>name = figure.getMaterialName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of material
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    material name   
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMaterialParam"><code class="name flex">
+<span>def <span class="ident">getMaterialParam</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get material parameters</p>
+<p>value = figure.getMaterialParam(materialName, paramName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>materialName : string (or int)
+    string of the material name or integer of material index value.for which you want to get parameters
+paramName : string
+    parameter name you want to get value.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    value : float or igeVmath.vec2 or igeVmath.vec3 or igeVmath.vec4 or igeCore.texture
+            Gets the value corresponding to the specified parameter name from the shader..
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMeshAlpha"><code class="name flex">
+<span>def <span class="ident">getMeshAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get mesh alpha value.</p>
+<p>alpha = figure.setMeshAlpha(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to set alpha value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    alpha : float
+            alpha values.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMeshIndex"><code class="name flex">
+<span>def <span class="ident">getMeshIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get mesh indexNo from mesh name.</p>
+<p>index = figure.getMeshIndex(name)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    mesh name
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>index : int
+    mesh indexNo    
+    return -1 if mesh is not found
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMeshName"><code class="name flex">
+<span>def <span class="ident">getMeshName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get mesh name.</p>
+<p>When converting from Collada, EXPORT_NAMES = 1 must be defined in figure.conf.</p>
+<p>name = figure.getMeshName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of mesh
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    mesh name       
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getMeshPrimitiveType"><code class="name flex">
+<span>def <span class="ident">getMeshPrimitiveType</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the primitive type of Mesh.</p>
+<p>type = figure.getMeshPrimitiveType(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or mesh index : int)
+            string of mesh name or int of mesh index to get the value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    type : int
+            primirive type.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getNumMeshTriangles"><code class="name flex">
+<span>def <span class="ident">getNumMeshTriangles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the number of polygons in the mesh.</p>
+<p>number = figure.getNumMeshTriangles(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to get the value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    number : int
+            number of triangles.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getNumMeshVertices"><code class="name flex">
+<span>def <span class="ident">getNumMeshVertices</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the number of vertices in the mesh.</p>
+<p>number = figure.getNumMeshVertices(meshName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to get the value.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    number : int
+            number of vertices.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getShaderGenerator"><code class="name flex">
+<span>def <span class="ident">getShaderGenerator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get shaderGenerator.</p>
+<p>Returns the ShaderGenerator for the specified material.</p>
+<p>shaderGen = figure.getShaderGenerator(materialName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string (or int)
+            string of material name or int of material index.
+    Returns
+</code></pre>
+<hr>
+<pre><code>    shaderGen : igeCore.shaderGenerator
+            shaderGenerator object.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getTextureName"><code class="name flex">
+<span>def <span class="ident">getTextureName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get linked texture file name.</p>
+<p>name = figure.getTextureName(index)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>index : int  (optional)
+    Index number of texture
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>name : string
+    texture file name       
+    None if the index is out of range
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getTriangles"><code class="name flex">
+<span>def <span class="ident">getTriangles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get traiangle index data of the mesh object</p>
+<p>triangles = figure.getTriangles(meshName or index, data, offset, size)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to get triangle index
+index : string
+    Registered mesh index to which you want to get triangle index
+offset : int (optional)
+    Start triangle position to get triangles
+size : int (optional)
+    Number of triangles  to get
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    triangles :tuple of integer
+            Triangle indices array
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.getVertexElements"><code class="name flex">
+<span>def <span class="ident">getVertexElements</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get vertex data from the mesh object</p>
+<p>figure.getVertexElements(meshName or index, attributeType, offset, size)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add vertex information
+index : int
+    Registered mesh index No to which you want to get vertex information
+attributeType : int
+    Vertex element type
+    One of the following values
+
+    igeCore.ATTRIBUTE_ID_POSITION
+    igeCore.ATTRIBUTE_ID_NORMAL
+    igeCore.ATTRIBUTE_ID_TANGENT
+    igeCore.ATTRIBUTE_ID_BINORMAL
+    igeCore.ATTRIBUTE_ID_UV0
+    igeCore.ATTRIBUTE_ID_UV1
+    igeCore.ATTRIBUTE_ID_UV2
+    igeCore.ATTRIBUTE_ID_UV3
+    igeCore.ATTRIBUTE_ID_COLOR
+    igeCore.ATTRIBUTE_ID_BLENDINDICES
+    igeCore.ATTRIBUTE_ID_BLENDWEIGHT
+    igeCore.ATTRIBUTE_ID_PSIZE
+offset : int (optional)
+    Start position to get vertex elements
+    0 if omitted.
+size : int (optional)
+    Numver of vertex elements to get.
+    If omitted, all data after the offset.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.jointNameToIndex"><code class="name flex">
+<span>def <span class="ident">jointNameToIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get Joint index from Joint name</p>
+<p>index = figure.jointNameToIndex(jointName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    index : int
+            The index of joint
+            If there is no parent joint (root joint), -1 is returned.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.killJointTransform"><code class="name flex">
+<span>def <span class="ident">killJointTransform</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.figure.setBlendingWeight"><code class="name flex">
+<span>def <span class="ident">setBlendingWeight</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the weight of the weighted average of animation parts</p>
+<p>figure.setBlendingWeight(part, weight)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>part : int
+    Animation part for which you want to specify weights
+
+             Specify the following value
+    igeCore.ANIMETION_PART_A
+    igeCore.ANIMETION_PART_B
+    igeCore.ANIMETION_PART_C
+
+weight : float
+    Specify the weight of weighted average in the range of 0.0 to 1.0
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setJoint"><code class="name flex">
+<span>def <span class="ident">setJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the value of joint in world coordinate system</p>
+<p>figure.setJoint(jointName or jointIndex, position, rotation, scale, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+position : igeVmath.Vec3 (optional)
+    position of joint
+rotation : igeVmath.Quat (optional)
+    rotation of joint
+scale : igeVmath.Vec3 (optional)
+    scale of joint
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setMaterialParam"><code class="name flex">
+<span>def <span class="ident">setMaterialParam</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set material parameters</p>
+<p>figure.setMaterialParam(materialName, paramName, paramValue)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>materialName : string
+    Name of the material for which you want to set parameters
+paramName : string
+    Name of the parameter to pass to the shader
+paramValue
+    Tuple of value pass to the shader
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setMaterialParamTexture"><code class="name flex">
+<span>def <span class="ident">setMaterialParamTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set texture material parameters</p>
+<p>figure.setMaterialParam(materialName, samplerName, textureName, pixel, width, height, wrap_s, wrap_t, minfilter, magfilter, mipfilter)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>materialName : string
+    Name of the material for which you want to set parameters
+samplerName : string
+     Name of the sampler parameter to pass to the shader
+textureName : string (optional)
+    Texture file path
+pixel : binary (optional)
+    binary array of rgba 32bit format image
+    textureName and pixel + width, height can not be specified at the same time, 
+    textureName takes precedence
+width : int (optional)
+    pixel image width
+height : int  (optional)
+    pixel image height
+wrap_s : int  (optional)
+    Texture horizontal wrap mode of sampler state
+    The following values are available
+    igeCore.SAMPLERSTATE_WRAP &lt;- (default)
+    igeCore.SAMPLERSTATE_MIRROR
+    igeCore.SAMPLERSTATE_CLAMP
+    igeCore.SAMPLERSTATE_BORDER
+wrap_t : int  (optional)
+    Texture vertical wrap mode of sampler state
+    The content is the same as wrap_s
+minfilter : int  (optional)
+    Sampling method when expanding the texture
+    The following values are available
+    igeCore.SAMPLERSTATE_LINEAR &lt;- (default)
+    igeCore.SAMPLERSTATE_NEAREST
+magfilter : int  (optional)
+   Sampling method when reducing the texture
+    The following values are available
+    igeCore.SAMPLERSTATE_LINEAR
+    igeCore.SAMPLERSTATE_NEAREST
+    igeCore.SAMPLERSTATE_NEAREST_MIPMAP_NEAREST
+    igeCore.SAMPLERSTATE_LINEAR_MIPMAP_NEAREST
+    igeCore.SAMPLERSTATE_NEAREST_MIPMAP_LINEAR
+    igeCore.SAMPLERSTATE_LINEAR_MIPMAP_LINEAR
+mipfilter : int  (optional)
+    Not used now.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setMaterialRenderState"><code class="name flex">
+<span>def <span class="ident">setMaterialRenderState</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set render state for material</p>
+<p>editableFigure.setMaterialRenderState(materialName, paramName, value1, value2, value3, value4)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>materialName : string
+    Name of the material to which you want to add RenderState
+paramName : string
+    Render state name
+    The following names are currently available
+    alpha_func
+    alpha_test_enable
+    blend_func
+    blend_equation
+    blend_enable
+    cull_face
+    cull_face_enable
+    depth_func
+    depth_mask
+    depth_test_enable
+    polygon_offset
+    polygon_offset_fill_enable
+    color_mask
+    stencil_func
+    stencil_mask
+    stencil_op
+    stencil_test_enable
+    scissor_test_enable
+    scissor
+value1 : float or int or bool
+    Render state parameter
+value2 : float or int or bool
+    Render state parameter
+value3 : float or int or bool
+    Render state parameter
+value4 : float or int or bool
+    Render state parameter
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setMeshAlpha"><code class="name flex">
+<span>def <span class="ident">setMeshAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set mesh alpha value.</p>
+<p>if you set alpha valie is less than 1.0 mesh is going to transparent.
+you set alpha valie is 0, mesh rendaring is skipped.</p>
+<p>figure.setMeshAlpha(meshName, alpha)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to set alpha value.
+            alpha : float
+            alpha value.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setMeshPrimitiveType"><code class="name flex">
+<span>def <span class="ident">setMeshPrimitiveType</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the primitive type of Mesh.</p>
+<p>figure.setMeshPrimitiveType(meshName, mode)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    meshName : string (or int)
+            string of mesh name or int of mesh index to set value.
+            type : int
+            primitive type.
+                    igeCore.GL_LINES
+                    igeCore.GL_LINE_LOOP
+                    igeCore.GL_LINE_STRIP
+                    igeCore.GL_TRIANGLES
+                    igeCore.GL_TRIANGLE_STRIP
+                    igeCore.GL_TRIANGLE_FAN
+                    igeCore.GL_QUADS
+                    igeCore.GL_QUAD_STRIP
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setParentJoint"><code class="name flex">
+<span>def <span class="ident">setParentJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the joint of another figure
+(or EditableFigure) as the parent joint.</p>
+<p>figure.setParentJoint(figure, jointName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>figure : figure
+    Parent figure or EditableFigure
+jointName : string
+    Parent joint name
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setShaderGenerator"><code class="name flex">
+<span>def <span class="ident">setShaderGenerator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set shaderGenerator.</p>
+<p>Set shaderGenerator to specified material and replace shader.</p>
+<p>figure.setShaderGenerator(materialName, shaderGen)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    materialName : string (or int)
+            string of material name or int of material index.
+            shaderGen : igeCore.shaderGenerator
+            shaderGenerator object.
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setTime"><code class="name flex">
+<span>def <span class="ident">setTime</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the animation time applied by connectAnimator</p>
+<p>figure.setTime(time)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>time : float
+    Specifies the animation time in seconds
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setTriangles"><code class="name flex">
+<span>def <span class="ident">setTriangles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set traiangle index data to the mesh object</p>
+<p>figure.setTriangles(meshName or index, data, offset)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add triangle index
+index : string
+    Registered mesh index to which you want to add triangle index
+data : tuple or list
+    Triangle index
+offset : int (optional)
+    Start triangle position to add
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.setVertexElements"><code class="name flex">
+<span>def <span class="ident">setVertexElements</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set vertex data to the mesh object</p>
+<p>figure.setVertexElements(meshName or index, attributeType, data, offset)</p>
+<p>This method can't add new attributes or vertices like editableFigure.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>meshName : string
+    Registered mesh name to which you want to add vertex information
+index : int
+    Registered mesh index to which you want to add vertex information
+attributeType : int
+    Vertex element type
+    One of the following values
+
+    igeCore.ATTRIBUTE_ID_POSITION
+    igeCore.ATTRIBUTE_ID_NORMAL
+    igeCore.ATTRIBUTE_ID_TANGENT
+    igeCore.ATTRIBUTE_ID_BINORMAL
+    igeCore.ATTRIBUTE_ID_UV0
+    igeCore.ATTRIBUTE_ID_UV1
+    igeCore.ATTRIBUTE_ID_UV2
+    igeCore.ATTRIBUTE_ID_UV3
+    igeCore.ATTRIBUTE_ID_COLOR
+    igeCore.ATTRIBUTE_ID_BLENDINDICES
+    igeCore.ATTRIBUTE_ID_BLENDWEIGHT
+    igeCore.ATTRIBUTE_ID_PSIZE
+data : tuple or list
+    Vertex elements
+offset : int (optional)
+    Start position to add vertex elements
+</code></pre>
+<h2 id="examples">Examples</h2>
+<pre><code>efig.addMesh('meshA', 'materialA');
+points = ((-1, 1, 0), (1, 1, 0), (-1, -1, 0), (1, -1, 0))
+efig.setVertexElements('meshA', igeCore.ATTRIBUTE_ID_POSITION, points
+</code></pre></div>
+</dd>
+<dt id="igeCore.figure.step"><code class="name flex">
+<span>def <span class="ident">step</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Advances the animation applied with connectAnimator() by elapsedTime</p>
+<p>figure.step(elapsedTime)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>elapsedTime : float
+    Specifies the delta animation time in seconds
+    If omitted, it will be the value of igeCore.elapsedTime()
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.haptic"><code class="flex name class">
+<span>class <span class="ident">haptic</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.haptic.effectPlay"><code class="name flex">
+<span>def <span class="ident">effectPlay</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>haptic effect play</p>
+<p>haptic.effectPlay(strength, length)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>strength : float
+    strength of the rumble to play as a 0-1 float value
+length : unsigned int
+    ength of the rumble to play in milliseconds
+</code></pre></div>
+</dd>
+<dt id="igeCore.haptic.init"><code class="name flex">
+<span>def <span class="ident">init</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>init the haptic system </p>
+<p>haptic.init()</p></div>
+</dd>
+<dt id="igeCore.haptic.play"><code class="name flex">
+<span>def <span class="ident">play</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Allow you to trigger vibrations and haptic feedbacks on both iOS and Android</p>
+<p>haptic.effectPlay(type, repeat)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>type : int
+   type specify the following values 
+   pyxie.HAPTIC_SELECTION
+   pyxie.HAPTIC_SUCCESS
+   pyxie.HAPTIC_WARNING
+   pyxie.HAPTIC_FAILURE
+   pyxie.HAPTIC_LIGHT_IMPACT
+   pyxie.HAPTIC_MEDIUM_IMPACT
+   pyxie.HAPTIC_HEAVY_IMPACT
+repeat : bool
+    pass the index into the timings array at which to start the repetition, or -1 to disable repeating.
+</code></pre></div>
+</dd>
+<dt id="igeCore.haptic.release"><code class="name flex">
+<span>def <span class="ident">release</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>release the profiler system</p>
+<p>haptic.release()</p></div>
+</dd>
+<dt id="igeCore.haptic.rumblePlay"><code class="name flex">
+<span>def <span class="ident">rumblePlay</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>haptic rumble play</p>
+<p>haptic.rumblePlay(strength, length)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>strength : float
+    strength of the rumble to play as a 0-1 float value
+length : unsigned int
+    ength of the rumble to play in milliseconds
+</code></pre></div>
+</dd>
+<dt id="igeCore.haptic.stop"><code class="name flex">
+<span>def <span class="ident">stop</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>haptic stop</p>
+<p>haptic.stop()</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.particle"><code class="flex name class">
+<span>class <span class="ident">particle</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.particle.position"><code class="name">var <span class="ident">position</span></code></dt>
+<dd>
+<div class="desc"><p>3D position of object </p>
+<p>type :
+pyvmath.vec3 : (x,y,z)</p></div>
+</dd>
+<dt id="igeCore.particle.rotation"><code class="name">var <span class="ident">rotation</span></code></dt>
+<dd>
+<div class="desc"><p>3D rotation of object </p>
+<p>type :
+pyvmath.quat : (x,y,z,w)</p></div>
+</dd>
+<dt id="igeCore.particle.scale"><code class="name">var <span class="ident">scale</span></code></dt>
+<dd>
+<div class="desc"><p>3D scale of object </p>
+<p>type :
+pyvmath.vec3 : (x,y,z)</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.particle.SetCamera"><code class="name flex">
+<span>def <span class="ident">SetCamera</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the value of joint in world coordinate system</p>
+<p>figure.setJoint(jointName or jointIndex, position, rotation, scale, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+position : igeVmath.Vec3 (optional)
+    position of joint
+rotation : igeVmath.Quat (optional)
+    rotation of joint
+scale : igeVmath.Vec3 (optional)
+    scale of joint
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.SetPPM"><code class="name flex">
+<span>def <span class="ident">SetPPM</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the value of joint in world coordinate system</p>
+<p>figure.setJoint(jointName or jointIndex, position, rotation, scale, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+position : igeVmath.Vec3 (optional)
+    position of joint
+rotation : igeVmath.Quat (optional)
+    rotation of joint
+scale : igeVmath.Vec3 (optional)
+    scale of joint
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.UpdateParticles"><code class="name flex">
+<span>def <span class="ident">UpdateParticles</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the value of joint in world coordinate system</p>
+<p>figure.setJoint(jointName or jointIndex, position, rotation, scale, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+position : igeVmath.Vec3 (optional)
+    position of joint
+rotation : igeVmath.Quat (optional)
+    rotation of joint
+scale : igeVmath.Vec3 (optional)
+    scale of joint
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.connectAnimator"><code class="name flex">
+<span>def <span class="ident">connectAnimator</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply animation data to the model.</p>
+<p>figure.connectAnimator(slot, anime)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>slot : int
+    There are 6 slots, and the final motion is output by the following calculation.
+
+    A0* A1 + B0 * B1 + C0 * C1
+   (* :weighted average , + : Additive synthesis)
+
+   Slots specify the following values 
+   igeCore.ANIMETION_SLOT_A0
+   igeCore.ANIMETION_SLOT_A1
+   igeCore.ANIMETION_SLOT_B0
+   igeCore.ANIMETION_SLOT_B1
+   igeCore.ANIMETION_SLOT_C0
+   igeCore.ANIMETION_SLOT_C1
+
+anime : string or igeCore.animator
+    Animation name or igeCore.animator object
+
+    File name of the underlying motion data
+</code></pre>
+<h2 id="examples">Examples</h2>
+<p>figure.connectAnimator(igeCore.ANIMETION_SLOT_A0, 'animationA')
+figure.connectAnimator(igeCore.ANIMETION_SLOT_A1, 'animationB')
+figure.setBlendingWeight(igeCore.ANIMETION_PART_A), 0.5)</p>
+<p>It becomes the middle posture of animationA and animationB</p></div>
+</dd>
+<dt id="igeCore.particle.getBlendingWeight"><code class="name flex">
+<span>def <span class="ident">getBlendingWeight</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get weight of weighted average of animation part</p>
+<p>weight = figure.getBlendingWeight(part)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>part : int
+    Animation part for which you want to obtain a weighted average
+
+             Specify the following value
+    igeCore.ANIMETION_PART_A
+    igeCore.ANIMETION_PART_B
+    igeCore.ANIMETION_PART_C
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>weight
+    Weighted average value specified for each part
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.getCamera"><code class="name flex">
+<span>def <span class="ident">getCamera</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get camera information included in the scene</p>
+<p>camera = figure.getCamera(cameraName)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>cameraName : string
+    Name of camea node
+    If omitted, the first camera found is returned.
+    It is not necessary to specify a name if the scene contains only one camera
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>camera : igeCore.camera
+    camera object
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.getEnvironment"><code class="name flex">
+<span>def <span class="ident">getEnvironment</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get environmental information included in the scene
+Environmental information is information such as lightingand fog.</p>
+<p>env = figure.getEnvironment()</p>
+<h2 id="returns">Returns</h2>
+<pre><code>env : igeCore.environment
+    enbironment object
+</code></pre>
+<p>environment object</p>
+<dl>
+<dt><code>Specification</code> of <code><a title="igeCore.environment" href="#igeCore.environment">environment</a> is still under construction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+</dd>
+<dt id="igeCore.particle.getJoint"><code class="name flex">
+<span>def <span class="ident">getJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the value of joint after animation calculation in world coordinate system</p>
+<p>position, rotation, scale = figure.getJoint(jointName or jointIndex, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+    Returns
+</code></pre>
+<hr>
+<pre><code>position : igeVmath.Vec3
+    position of joint
+rotation : igeVmath.Quat
+    rotation of joint
+scale : igeVmath.Vec3
+    scale of joint
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.setBlendingWeight"><code class="name flex">
+<span>def <span class="ident">setBlendingWeight</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the weight of the weighted average of animation parts</p>
+<p>figure.setBlendingWeight(part, weight)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>part : int
+    Animation part for which you want to specify weights
+
+             Specify the following value
+    igeCore.ANIMETION_PART_A
+    igeCore.ANIMETION_PART_B
+    igeCore.ANIMETION_PART_C
+
+weight : float
+    Specify the weight of weighted average in the range of 0.0 to 1.0
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.setJoint"><code class="name flex">
+<span>def <span class="ident">setJoint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the value of joint in world coordinate system</p>
+<p>figure.setJoint(jointName or jointIndex, position, rotation, scale, space)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>jointName : string
+    The name of the joint you want to get
+jointIndex : int
+    The index of the joint you want to get
+position : igeVmath.Vec3 (optional)
+    position of joint
+rotation : igeVmath.Quat (optional)
+    rotation of joint
+scale : igeVmath.Vec3 (optional)
+    scale of joint
+    space : int (optional)  
+            Coordinate system of the value to get
+           (core.WorldSpace or core.LocalSpace)
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.setTime"><code class="name flex">
+<span>def <span class="ident">setTime</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the animation time applied by connectAnimator</p>
+<p>figure.setTime(time)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>time : float
+    Specifies the animation time in seconds
+</code></pre></div>
+</dd>
+<dt id="igeCore.particle.step"><code class="name flex">
+<span>def <span class="ident">step</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Advances the animation applied with connectAnimator() by elapsedTime</p>
+<p>figure.step(elapsedTime)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>elapsedTime : float
+    Specifies the delta animation time in seconds
+    If omitted, it will be the value of igeCore.elapsedTime()
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.profiler"><code class="flex name class">
+<span>class <span class="ident">profiler</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor"><code class="flex name class">
+<span>class <span class="ident">shaderGenerator</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>shaderGenerator is abstracted to be compatible
+with multiple platforms by replacing
+shader code with simple procedure
+You can see the current shader code with print (shaderGeneragtor)</p></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.shaderGeneragtor.globalAlphaRef"><code class="name">var <span class="ident">globalAlphaRef</span></code></dt>
+<dd>
+<div class="desc"><p>Depth Shadow coefficient. default value is 0.005</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.globalMipBias"><code class="name">var <span class="ident">globalMipBias</span></code></dt>
+<dd>
+<div class="desc"><p>Texture mip bias. default value is -1.5</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.globalShadowBias"><code class="name">var <span class="ident">globalShadowBias</span></code></dt>
+<dd>
+<div class="desc"><p>Depth Shadow coefficient. default value is 0.005</p>
+<p>type : float
+<br>
+read / write</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.shaderGeneragtor.dicardViewProj"><code class="name flex">
+<span>def <span class="ident">dicardViewProj</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.discardColorMapRGB"><code class="name flex">
+<span>def <span class="ident">discardColorMapRGB</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Discard the RGB channel of the color map.
+Used in combination with GL_ALPHA format textures.</p>
+<p>shaderGenerater.discardColorMapRGB(dicardRGB)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>dicardRGB : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setAlphaMap"><code class="name flex">
+<span>def <span class="ident">setAlphaMap</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>set diffuce alpha map channel. </p>
+<p>shaderGenerater.setAlphaMap(channel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>channel : int
+            igeCore.DIFFUSE_ALPHA
+            igeCore.DIFFUSE_RED
+            igeCore.NORMAL_ALPHA
+            igeCore.NORMAL_RED
+            igeCore.LIGHT_ALPHA
+            igeCore.LIGHT_RED
+            igeCore.OVERLAY_DIFFUSE_ALPHA
+            igeCore.OVERLAY_DIFFUSE_RED
+            igeCore.OVERLAY_NORMAL_ALPHA
+            igeCore.OVERLAY_NORMAL_RED
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setAmbientOcclusion"><code class="name flex">
+<span>def <span class="ident">setAmbientOcclusion</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable or disable ambient occlusion mapping.</p>
+<p>shaderGenerater.setAmbientOcclusion(textureMapChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>textureMapChannel : int
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setAmbientType"><code class="name flex">
+<span>def <span class="ident">setAmbientType</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the ambient light type</p>
+<p>shaderGenerater.setAmbientType(type)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>type : int 
+    Ambient light type
+    igeCore.AMBIENT_TYPE_NONE
+    igeCore.AMBIENT_TYPE_AMBIENT
+    igeCore.AMBIENT_TYPE_HEMISPHERE
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setBoneCondition"><code class="name flex">
+<span>def <span class="ident">setBoneCondition</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifys the number of
+bone palette and number of bone influencen</p>
+<p>shaderGenerater.setBoneCondition(numBoneInfluence, numBonePalette)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>numBoneInfluence : int
+    Number of bones that one vertex refers to simultaneously
+numBonePalette : int
+    Number of bones to put in the bones palette
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setCalcBinormalInShader"><code class="name flex">
+<span>def <span class="ident">setCalcBinormalInShader</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to calculate Binormal values used in
+normal mapping calculations in the shader</p>
+<p>shaderGenerater.setCalcBinormalInShader(calcBinormal)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>calcBinormal : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setClutLamp"><code class="name flex">
+<span>def <span class="ident">setClutLamp</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable or disable color look up table lighting
+Useful for expressing cartoon lighting</p>
+<p>shaderGenerater.setClutLamp(enableCLUT)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableCLUT : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setColorTexture"><code class="name flex">
+<span>def <span class="ident">setColorTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to enable color texture</p>
+<p>shaderGenerater.setColorTexture(enableTexture)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableTexture : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setColorTextureUVSet"><code class="name flex">
+<span>def <span class="ident">setColorTextureUVSet</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the UV channel of the color map texture
+RGB and A can be specified separately
+Supports 3 channels of UV0, UV1and UV2</p>
+<p>shaderGenerater.setColorTextureUVSet(rgbChannel, aChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>rgbChannel : int
+    uv channel no (0, 1, 2)
+aChannel : int
+    uv channel no (0, 1, 2)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setDistortion"><code class="name flex">
+<span>def <span class="ident">setDistortion</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable / Disable distortion shader. </p>
+<p>shaderGenerater.setDistortion(enable)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enable : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setLightTexture"><code class="name flex">
+<span>def <span class="ident">setLightTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to enable light texture</p>
+<p>shaderGenerater.setLightTexture(enableTexture)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableTexture : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setLightTextureUVSet"><code class="name flex">
+<span>def <span class="ident">setLightTextureUVSet</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the UV channel of the light map texture
+RGBand A can be specified separately
+Supports 3 channels of UV0, UV1and UV2</p>
+<p>shaderGenerater.setLightTextureUVSet(rgbChannel, aChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>rgbChannel : int
+    uv channel no (0, 1, 2)
+aChannel : int
+    uv channel no (0, 1, 2)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setNormalTexture"><code class="name flex">
+<span>def <span class="ident">setNormalTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to enable normal texture</p>
+<p>shaderGenerater.setNormalTexture(enableTexture)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableTexture : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setNormalTextureUVSet"><code class="name flex">
+<span>def <span class="ident">setNormalTextureUVSet</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the UV channel of the normal map texture
+RGBand A can be specified separately
+Supports 3 channels of UV0, UV1and UV2</p>
+<p>shaderGenerater.setNormalTextureUVSet(rgbChannel, aChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>rgbChannel : int
+    uv channel no (0, 1, 2)
+aChannel : int
+    uv channel no (0, 1, 2)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setNumDirLamp"><code class="name flex">
+<span>def <span class="ident">setNumDirLamp</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the number of directional light sources affected.
+You can specify up to 3</p>
+<p>shaderGenerater.setNumDirLamp(numLamp)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>numLamp : int
+    Number of directional light (0, 1, 2, 3)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setNumPointLamp"><code class="name flex">
+<span>def <span class="ident">setNumPointLamp</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the number of point light sources affected.
+You can specify up to 7</p>
+<p>shaderGenerater.setNumPointLamp(numLamp)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>numLamp : int
+    Number of point light (0 - 7)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setNumSpotLamp"><code class="name flex">
+<span>def <span class="ident">setNumSpotLamp</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the number of point light sources affected.
+You can specify up to 7</p>
+<p>shaderGenerater.setNumPointLamp(numLamp)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>numLamp : int
+    Number of point light (0 - 7)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlayAlphaMap"><code class="name flex">
+<span>def <span class="ident">setOverlayAlphaMap</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>set overay diffuce alpha map channel. </p>
+<p>shaderGenerater.setOverlayAlphaMap(channel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>channel : int
+            igeCore.DIFFUSE_ALPHA
+            igeCore.DIFFUSE_RED
+            igeCore.NORMAL_ALPHA
+            igeCore.NORMAL_RED
+            igeCore.LIGHT_ALPHA
+            igeCore.LIGHT_RED
+            igeCore.OVERLAY_DIFFUSE_ALPHA
+            igeCore.OVERLAY_DIFFUSE_RED
+            igeCore.OVERLAY_NORMAL_ALPHA
+            igeCore.OVERLAY_NORMAL_RED
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlayColorTexture"><code class="name flex">
+<span>def <span class="ident">setOverlayColorTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to enable overlay color texture</p>
+<p>shaderGenerater.setOverlayColorTexture(enableTexture)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableTexture : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlayColorTextureUVSet"><code class="name flex">
+<span>def <span class="ident">setOverlayColorTextureUVSet</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the UV channel of the overlay color map texture
+RGBand A can be specified separately
+Supports 3 channels of UV0, UV1and UV2</p>
+<p>shaderGenerater.setOverlayColorTextureUVSet(rgbChannel, aChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>rgbChannel : int
+    uv channel no (0, 1, 2)
+aChannel : int
+    uv channel no (0, 1, 2)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlayNormalColorTextureUVSet"><code class="name flex">
+<span>def <span class="ident">setOverlayNormalColorTextureUVSet</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specifies the UV channel of the overlay normal map texture
+RGBand A can be specified separately
+Supports 3 channels of UV0, UV1and UV2</p>
+<p>shaderGenerater.setOverlayNormalColorTextureUVSet(rgbChannel, aChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>rgbChannel : int
+    uv channel no (0, 1, 2)
+aChannel : int
+    uv channel no (0, 1, 2)
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlayNormalTexture"><code class="name flex">
+<span>def <span class="ident">setOverlayNormalTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to enable overlay normal texture</p>
+<p>shaderGenerater.setOverlayNormalTexture(enableTexture)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableTexture : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlaySpecularTexture"><code class="name flex">
+<span>def <span class="ident">setOverlaySpecularTexture</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to enable overlay specular texture</p>
+<p>shaderGenerater.setOverlaySpecularTexture(enableSpecular)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableSpecular : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setOverlayVertexAlpha"><code class="name flex">
+<span>def <span class="ident">setOverlayVertexAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to refer to the alpha channel of the vertex color
+when calculating overlay map transparency</p>
+<p>shaderGenerater.setOverlayVertexAlpha(enableVertexAlpha)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableVertexAlpha : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setProjectionMapping"><code class="name flex">
+<span>def <span class="ident">setProjectionMapping</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable / Disable projection mapping shader. </p>
+<p>shaderGenerater.setProjectionMapping(channel, enable)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>channel : int
+            UV channel no (0 - 2)
+enable : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setShadow"><code class="name flex">
+<span>def <span class="ident">setShadow</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable / disable shadow rendering</p>
+<p>shaderGenerater.setReceiveShadow(make, receive, depth)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    make : bool
+            When enabled, it produces shadows.
+    receive : bool
+            When enabled, it receive shadows.
+    depth : bool
+            When enabled, the self - shadowing algorithm with depth buffer is selected.
+            depth must be enabled for make and receive to be active at the same time.
+            If depth is disabled, you get a simpler cast shadow instead of a Depth shadow, 
+            Then you cannot enable make and receive at the same time.
+            Cast shadows have the advantages of light processing and clear shadow drawing.
+            Depth shadows and cast shadows cannot be used at the same time in the same scene.
+            You need to unify to either one.
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setSpecular"><code class="name flex">
+<span>def <span class="ident">setSpecular</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable or disable specular reflection</p>
+<p>shaderGenerater.setSpecular(enableSpecular, textureMapChannel)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableSpecular : bool
+    Enable or disable specular reflection
+textureMapChannel : int
+    Specify Specular strength map
+    The following values can be selected
+    igeCore.MAPCHANNEL_NONE
+    igeCore.MAPCHANNEL_COLOR_RED
+    igeCore.MAPCHANNEL_COLOR_ALPHA
+    igeCore.MAPCHANNEL_NORMAL_RED
+    igeCore.MAPCHANNEL_NORMAL_ALPHA
+    igeCore.MAPCHANNEL_VERTEX_COLOR_RED
+    igeCore.MAPCHANNEL_VERTEX_COLOR_ALPHA
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setUVOffset"><code class="name flex">
+<span>def <span class="ident">setUVOffset</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable / Disable UV offset shader. </p>
+<p>shaderGenerater.setUVOffset(channel, enable)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>channel : int
+            UV channel no (0 - 2)
+enable : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setUVScroll"><code class="name flex">
+<span>def <span class="ident">setUVScroll</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable / Disable UV scroll shader. </p>
+<p>shaderGenerater.setUVScroll(channel, enable)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>channel : int
+            UV channel no (0 - 2)
+enable : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setUnifiedColor"><code class="name flex">
+<span>def <span class="ident">setUnifiedColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setVertexAlpha"><code class="name flex">
+<span>def <span class="ident">setVertexAlpha</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Whether to references the vertex color alpha channel as a transparent source</p>
+<p>shaderGenerater.setVertexAlpha(enableVertexAlpha)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableVertexAlpha : bool
+</code></pre></div>
+</dd>
+<dt id="igeCore.shaderGeneragtor.setVertexColor"><code class="name flex">
+<span>def <span class="ident">setVertexColor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable or disable vertex color</p>
+<p>shaderGenerater.setVertexColor(enableVertexColor)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>enableVertexColor : bool
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.showcase"><code class="flex name class">
+<span>class <span class="ident">showcase</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>showcase is where you put the objects
+you want to render.
+You can add figure, editableFigure, environment, camera.</p>
+<p>case = igeCore.shocase()</p></div>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.showcase.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add object to showcase</p>
+<p>showcase.add(object, depth)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>object : igeCore.figure, igeCore.editableFigure, igeCore.environment
+    Object to be added to showcase
+    depth : float (optional)
+            Higher values render later.
+            If the values are the same, they will be rendered in the order in which they were added.
+            If omitted, it is assumed to be 0
+</code></pre></div>
+</dd>
+<dt id="igeCore.showcase.addShadowBuffer"><code class="name flex">
+<span>def <span class="ident">addShadowBuffer</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sort Figures registered in showcase by Z value in view space.</p>
+<p>showcase.zsort(camera)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    camera : igeCore.camera
+            Camera to render
+    depth : float
+</code></pre></div>
+</dd>
+<dt id="igeCore.showcase.changeDepth"><code class="name flex">
+<span>def <span class="ident">changeDepth</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Change depth of object in showcase</p>
+<p>showcase.changeDepth(object, depth)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    object : igeCore.figure, igeCore.editableFigure, igeCore.environment
+            Object to be added to showcase
+    depth : float
+            Higher values render later.
+            If the values are the same, they will be rendered in the order in which they were added.
+</code></pre></div>
+</dd>
+<dt id="igeCore.showcase.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove all object from showcase</p>
+<p>showcase.clear()</p></div>
+</dd>
+<dt id="igeCore.showcase.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Find object</p>
+<p>rv = showcase.find(object)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>object : igeCore.figure, igeCore.editableFigure, igeCore.environment
+    Object to find
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>    rv : bool
+            True if exist object in shocase
+</code></pre></div>
+</dd>
+<dt id="igeCore.showcase.remove"><code class="name flex">
+<span>def <span class="ident">remove</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove object from showcase</p>
+<p>showcase.add(object)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>object : igeCore.figure, igeCore.editableFigure, igeCore.environment
+    Object to be added to showcase
+</code></pre></div>
+</dd>
+<dt id="igeCore.showcase.zsort"><code class="name flex">
+<span>def <span class="ident">zsort</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sort Figures registered in showcase by Z value in view space.</p>
+<p>showcase.zsort(camera)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    camera : igeCore.camera
+            Camera to render
+    depth : float
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.texture"><code class="flex name class">
+<span>class <span class="ident">texture</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Textures are RGBA bitmap image objects </p>
+<h2 id="formula">Formula</h2>
+<pre><code>tex = igeCore.texture(name)
+    Create texture from image file.
+tex = igeCore.texture(name,width,height,format,depth,stencil,pixel)
+    Create texture from parameters.
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string
+    If there are no parameters other than name, 
+    name is assumed to be the image file name.
+    When combined with other parameters such as width and height, 
+    name is considered a unique name for the texture.
+width : int
+    width of texture pixels.
+height : int
+    height of texture pixels.
+format : int
+    enable texture format
+    GL_RED : 1 channel format (n,0,0,0)
+    GL_RGB : 3 channel format (n,m,l,0)
+    GL_RGBA : 4 channel format (n,m,l,o)
+depth : bool
+    At the same time, a depth buffer is generated.
+    This option is for use as a render target.
+stencil : bool
+    At the same time, a stencil buffer is generated.
+    This option is for use as a render target.
+pixel : numpy.ndarray or byte object
+    array for bitmap image.
+</code></pre></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeCore.texture.bitSize"><code class="name">var <span class="ident">bitSize</span></code></dt>
+<dd>
+<div class="desc"><p>Texture bit size </p>
+<p>type : int<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.texture.format"><code class="name">var <span class="ident">format</span></code></dt>
+<dd>
+<div class="desc"><p>Texture format</p>
+<p>type : int<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.texture.height"><code class="name">var <span class="ident">height</span></code></dt>
+<dd>
+<div class="desc"><p>Texture height </p>
+<p>type : int<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.texture.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"><p>The texture handle id</p>
+<p>type : int<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.texture.numMips"><code class="name">var <span class="ident">numMips</span></code></dt>
+<dd>
+<div class="desc"><p>Number of texture mipmaps</p>
+<p>type : int<br>
+read only</p></div>
+</dd>
+<dt id="igeCore.texture.width"><code class="name">var <span class="ident">width</span></code></dt>
+<dd>
+<div class="desc"><p>Texture width </p>
+<p>type : int<br>
+read only</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.texture.captureScreenshot"><code class="name flex">
+<span>def <span class="ident">captureScreenshot</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>capture the screen </p>
+<p>texture.captureScreenshot(name, x, y, w, h, callback)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>name : string (optional)
+    capture name
+     x : int
+            x offset
+     y : int
+            y offset
+     w : int
+            width
+     h : int
+            height
+     callback : function
+            call the callback when the capturing is finished
+</code></pre></div>
+</dd>
+<dt id="igeCore.texture.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Clear the texture with the specified color </p>
+<p>texture.clear(r, g, b, a)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>r, g, b, a : float
+    clear color(0-1).
+    size of render text
+</code></pre></div>
+</dd>
+<dt id="igeCore.texture.getData"><code class="name flex">
+<span>def <span class="ident">getData</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the render target data</p>
+<p>texture.getData(x,y,w,h)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>x,y,w,h : int (optional)
+    default color is (0, 0, -1, -1)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>result : list(unsigned char)
+</code></pre></div>
+</dd>
+<dt id="igeCore.texture.getResourceName"><code class="name flex">
+<span>def <span class="ident">getResourceName</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the resource name</p>
+<p>texture.getResourceName()</p>
+<h2 id="returns">Returns</h2>
+<pre><code>result : string
+</code></pre></div>
+</dd>
+<dt id="igeCore.texture.saveToGallery"><code class="name flex">
+<span>def <span class="ident">saveToGallery</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>save image captured to gallery </p>
+<p>texture.saveToGallery()</p></div>
+</dd>
+<dt id="igeCore.texture.setCheckeredImage"><code class="name flex">
+<span>def <span class="ident">setCheckeredImage</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set checkerd image to texture object</p>
+<p>texture.setCheckeredImage(r, g, b, a)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>r,g,b,a : int (optional)
+    checker color (0 - 1)
+    default color is red
+</code></pre></div>
+</dd>
+<dt id="igeCore.texture.setImage"><code class="name flex">
+<span>def <span class="ident">setImage</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set byte image to texture object</p>
+<p>texture.setImage(image, x, y, width,height)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>image : Bytes or numpy.ndarray
+    array of rgb or rgba image
+x : int (optional)
+    x offset of destination
+y : int (optional)
+    y offset of destination
+width : int (optional)
+    copy image width
+height : int (optional)
+    copy image height
+</code></pre></div>
+</dd>
+<dt id="igeCore.texture.setText"><code class="name flex">
+<span>def <span class="ident">setText</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Render text to texture object</p>
+<p>texture.setText(word, fontpath, size)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>    word : string
+            word to render.
+    fontpath : string
+            font file path.
+    size : int
+            size of render text     startX : int
+            draw text X offset
+    startY : int
+            draw text Y offset
+    clear : bool
+            clear texture befor draw text
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="igeCore.apputil" href="apputil/index.html">igeCore.apputil</a></code></li>
+<li><code><a title="igeCore.devtool" href="devtool/index.html">igeCore.devtool</a></code></li>
+<li><code><a title="igeCore.input" href="input/index.html">igeCore.input</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="igeCore.animator" href="#igeCore.animator">animator</a></code></h4>
+<ul class="two-column">
+<li><code><a title="igeCore.animator.defaultEndTime" href="#igeCore.animator.defaultEndTime">defaultEndTime</a></code></li>
+<li><code><a title="igeCore.animator.dump" href="#igeCore.animator.dump">dump</a></code></li>
+<li><code><a title="igeCore.animator.elapsedTime" href="#igeCore.animator.elapsedTime">elapsedTime</a></code></li>
+<li><code><a title="igeCore.animator.endTime" href="#igeCore.animator.endTime">endTime</a></code></li>
+<li><code><a title="igeCore.animator.evalTime" href="#igeCore.animator.evalTime">evalTime</a></code></li>
+<li><code><a title="igeCore.animator.loop" href="#igeCore.animator.loop">loop</a></code></li>
+<li><code><a title="igeCore.animator.rewind" href="#igeCore.animator.rewind">rewind</a></code></li>
+<li><code><a title="igeCore.animator.speed" href="#igeCore.animator.speed">speed</a></code></li>
+<li><code><a title="igeCore.animator.startTime" href="#igeCore.animator.startTime">startTime</a></code></li>
+<li><code><a title="igeCore.animator.totalEvalTime" href="#igeCore.animator.totalEvalTime">totalEvalTime</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.camera" href="#igeCore.camera">camera</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.camera.aspectRate" href="#igeCore.camera.aspectRate">aspectRate</a></code></li>
+<li><code><a title="igeCore.camera.farPlane" href="#igeCore.camera.farPlane">farPlane</a></code></li>
+<li><code><a title="igeCore.camera.fieldOfView" href="#igeCore.camera.fieldOfView">fieldOfView</a></code></li>
+<li><code><a title="igeCore.camera.lockon" href="#igeCore.camera.lockon">lockon</a></code></li>
+<li><code><a title="igeCore.camera.nearPlane" href="#igeCore.camera.nearPlane">nearPlane</a></code></li>
+<li><code><a title="igeCore.camera.orthoHeight" href="#igeCore.camera.orthoHeight">orthoHeight</a></code></li>
+<li><code><a title="igeCore.camera.orthoWidth" href="#igeCore.camera.orthoWidth">orthoWidth</a></code></li>
+<li><code><a title="igeCore.camera.orthographicProjection" href="#igeCore.camera.orthographicProjection">orthographicProjection</a></code></li>
+<li><code><a title="igeCore.camera.pan" href="#igeCore.camera.pan">pan</a></code></li>
+<li><code><a title="igeCore.camera.position" href="#igeCore.camera.position">position</a></code></li>
+<li><code><a title="igeCore.camera.projectionMatrix" href="#igeCore.camera.projectionMatrix">projectionMatrix</a></code></li>
+<li><code><a title="igeCore.camera.roll" href="#igeCore.camera.roll">roll</a></code></li>
+<li><code><a title="igeCore.camera.rotation" href="#igeCore.camera.rotation">rotation</a></code></li>
+<li><code><a title="igeCore.camera.scale" href="#igeCore.camera.scale">scale</a></code></li>
+<li><code><a title="igeCore.camera.screenMatrix" href="#igeCore.camera.screenMatrix">screenMatrix</a></code></li>
+<li><code><a title="igeCore.camera.screenOffset" href="#igeCore.camera.screenOffset">screenOffset</a></code></li>
+<li><code><a title="igeCore.camera.screenRadian" href="#igeCore.camera.screenRadian">screenRadian</a></code></li>
+<li><code><a title="igeCore.camera.screenScale" href="#igeCore.camera.screenScale">screenScale</a></code></li>
+<li><code><a title="igeCore.camera.shadowShoot" href="#igeCore.camera.shadowShoot">shadowShoot</a></code></li>
+<li><code><a title="igeCore.camera.shoot" href="#igeCore.camera.shoot">shoot</a></code></li>
+<li><code><a title="igeCore.camera.target" href="#igeCore.camera.target">target</a></code></li>
+<li><code><a title="igeCore.camera.tilt" href="#igeCore.camera.tilt">tilt</a></code></li>
+<li><code><a title="igeCore.camera.viewInverseMatrix" href="#igeCore.camera.viewInverseMatrix">viewInverseMatrix</a></code></li>
+<li><code><a title="igeCore.camera.widthBase" href="#igeCore.camera.widthBase">widthBase</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.editableFigure" href="#igeCore.editableFigure">editableFigure</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.editableFigure.addDrawSet" href="#igeCore.editableFigure.addDrawSet">addDrawSet</a></code></li>
+<li><code><a title="igeCore.editableFigure.addJoint" href="#igeCore.editableFigure.addJoint">addJoint</a></code></li>
+<li><code><a title="igeCore.editableFigure.addMaterial" href="#igeCore.editableFigure.addMaterial">addMaterial</a></code></li>
+<li><code><a title="igeCore.editableFigure.addMesh" href="#igeCore.editableFigure.addMesh">addMesh</a></code></li>
+<li><code><a title="igeCore.editableFigure.clear" href="#igeCore.editableFigure.clear">clear</a></code></li>
+<li><code><a title="igeCore.editableFigure.clearMesh" href="#igeCore.editableFigure.clearMesh">clearMesh</a></code></li>
+<li><code><a title="igeCore.editableFigure.connectAnimator" href="#igeCore.editableFigure.connectAnimator">connectAnimator</a></code></li>
+<li><code><a title="igeCore.editableFigure.dump" href="#igeCore.editableFigure.dump">dump</a></code></li>
+<li><code><a title="igeCore.editableFigure.enableAlphaModeByTexture" href="#igeCore.editableFigure.enableAlphaModeByTexture">enableAlphaModeByTexture</a></code></li>
+<li><code><a title="igeCore.editableFigure.getAABB" href="#igeCore.editableFigure.getAABB">getAABB</a></code></li>
+<li><code><a title="igeCore.editableFigure.getBlendingWeight" href="#igeCore.editableFigure.getBlendingWeight">getBlendingWeight</a></code></li>
+<li><code><a title="igeCore.editableFigure.getCamera" href="#igeCore.editableFigure.getCamera">getCamera</a></code></li>
+<li><code><a title="igeCore.editableFigure.getJoint" href="#igeCore.editableFigure.getJoint">getJoint</a></code></li>
+<li><code><a title="igeCore.editableFigure.getJointIndex" href="#igeCore.editableFigure.getJointIndex">getJointIndex</a></code></li>
+<li><code><a title="igeCore.editableFigure.getJointName" href="#igeCore.editableFigure.getJointName">getJointName</a></code></li>
+<li><code><a title="igeCore.editableFigure.getJointParentIndex" href="#igeCore.editableFigure.getJointParentIndex">getJointParentIndex</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMaterialIndex" href="#igeCore.editableFigure.getMaterialIndex">getMaterialIndex</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMaterialName" href="#igeCore.editableFigure.getMaterialName">getMaterialName</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMaterialParam" href="#igeCore.editableFigure.getMaterialParam">getMaterialParam</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMeshAlpha" href="#igeCore.editableFigure.getMeshAlpha">getMeshAlpha</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMeshIndex" href="#igeCore.editableFigure.getMeshIndex">getMeshIndex</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMeshName" href="#igeCore.editableFigure.getMeshName">getMeshName</a></code></li>
+<li><code><a title="igeCore.editableFigure.getMeshPrimitiveType" href="#igeCore.editableFigure.getMeshPrimitiveType">getMeshPrimitiveType</a></code></li>
+<li><code><a title="igeCore.editableFigure.getNumMeshTriangles" href="#igeCore.editableFigure.getNumMeshTriangles">getNumMeshTriangles</a></code></li>
+<li><code><a title="igeCore.editableFigure.getNumMeshVertices" href="#igeCore.editableFigure.getNumMeshVertices">getNumMeshVertices</a></code></li>
+<li><code><a title="igeCore.editableFigure.getShaderGenerator" href="#igeCore.editableFigure.getShaderGenerator">getShaderGenerator</a></code></li>
+<li><code><a title="igeCore.editableFigure.getTextureSource" href="#igeCore.editableFigure.getTextureSource">getTextureSource</a></code></li>
+<li><code><a title="igeCore.editableFigure.getTriangles" href="#igeCore.editableFigure.getTriangles">getTriangles</a></code></li>
+<li><code><a title="igeCore.editableFigure.getVertexElements" href="#igeCore.editableFigure.getVertexElements">getVertexElements</a></code></li>
+<li><code><a title="igeCore.editableFigure.importFigure" href="#igeCore.editableFigure.importFigure">importFigure</a></code></li>
+<li><code><a title="igeCore.editableFigure.jointNameToIndex" href="#igeCore.editableFigure.jointNameToIndex">jointNameToIndex</a></code></li>
+<li><code><a title="igeCore.editableFigure.mergeSameMaterialMesh" href="#igeCore.editableFigure.mergeSameMaterialMesh">mergeSameMaterialMesh</a></code></li>
+<li><code><a title="igeCore.editableFigure.numJoints" href="#igeCore.editableFigure.numJoints">numJoints</a></code></li>
+<li><code><a title="igeCore.editableFigure.numMaterials" href="#igeCore.editableFigure.numMaterials">numMaterials</a></code></li>
+<li><code><a title="igeCore.editableFigure.numMeshes" href="#igeCore.editableFigure.numMeshes">numMeshes</a></code></li>
+<li><code><a title="igeCore.editableFigure.position" href="#igeCore.editableFigure.position">position</a></code></li>
+<li><code><a title="igeCore.editableFigure.removeUnreferencedVertices" href="#igeCore.editableFigure.removeUnreferencedVertices">removeUnreferencedVertices</a></code></li>
+<li><code><a title="igeCore.editableFigure.replaceTextureSource" href="#igeCore.editableFigure.replaceTextureSource">replaceTextureSource</a></code></li>
+<li><code><a title="igeCore.editableFigure.rotation" href="#igeCore.editableFigure.rotation">rotation</a></code></li>
+<li><code><a title="igeCore.editableFigure.saveAnimation" href="#igeCore.editableFigure.saveAnimation">saveAnimation</a></code></li>
+<li><code><a title="igeCore.editableFigure.saveFigure" href="#igeCore.editableFigure.saveFigure">saveFigure</a></code></li>
+<li><code><a title="igeCore.editableFigure.saveSkeleton" href="#igeCore.editableFigure.saveSkeleton">saveSkeleton</a></code></li>
+<li><code><a title="igeCore.editableFigure.scale" href="#igeCore.editableFigure.scale">scale</a></code></li>
+<li><code><a title="igeCore.editableFigure.setBlendingWeight" href="#igeCore.editableFigure.setBlendingWeight">setBlendingWeight</a></code></li>
+<li><code><a title="igeCore.editableFigure.setBoxGeometory" href="#igeCore.editableFigure.setBoxGeometory">setBoxGeometory</a></code></li>
+<li><code><a title="igeCore.editableFigure.setDrawSetRenderState" href="#igeCore.editableFigure.setDrawSetRenderState">setDrawSetRenderState</a></code></li>
+<li><code><a title="igeCore.editableFigure.setJoint" href="#igeCore.editableFigure.setJoint">setJoint</a></code></li>
+<li><code><a title="igeCore.editableFigure.setJointParent" href="#igeCore.editableFigure.setJointParent">setJointParent</a></code></li>
+<li><code><a title="igeCore.editableFigure.setMaterialParam" href="#igeCore.editableFigure.setMaterialParam">setMaterialParam</a></code></li>
+<li><code><a title="igeCore.editableFigure.setMaterialParamTexture" href="#igeCore.editableFigure.setMaterialParamTexture">setMaterialParamTexture</a></code></li>
+<li><code><a title="igeCore.editableFigure.setMaterialRenderState" href="#igeCore.editableFigure.setMaterialRenderState">setMaterialRenderState</a></code></li>
+<li><code><a title="igeCore.editableFigure.setMeshAlpha" href="#igeCore.editableFigure.setMeshAlpha">setMeshAlpha</a></code></li>
+<li><code><a title="igeCore.editableFigure.setMeshPrimitiveType" href="#igeCore.editableFigure.setMeshPrimitiveType">setMeshPrimitiveType</a></code></li>
+<li><code><a title="igeCore.editableFigure.setParentJoint" href="#igeCore.editableFigure.setParentJoint">setParentJoint</a></code></li>
+<li><code><a title="igeCore.editableFigure.setPlaneGeometory" href="#igeCore.editableFigure.setPlaneGeometory">setPlaneGeometory</a></code></li>
+<li><code><a title="igeCore.editableFigure.setShaderGenerator" href="#igeCore.editableFigure.setShaderGenerator">setShaderGenerator</a></code></li>
+<li><code><a title="igeCore.editableFigure.setSphereGeometory" href="#igeCore.editableFigure.setSphereGeometory">setSphereGeometory</a></code></li>
+<li><code><a title="igeCore.editableFigure.setTime" href="#igeCore.editableFigure.setTime">setTime</a></code></li>
+<li><code><a title="igeCore.editableFigure.setTrianglePtr" href="#igeCore.editableFigure.setTrianglePtr">setTrianglePtr</a></code></li>
+<li><code><a title="igeCore.editableFigure.setTriangles" href="#igeCore.editableFigure.setTriangles">setTriangles</a></code></li>
+<li><code><a title="igeCore.editableFigure.setVertexElements" href="#igeCore.editableFigure.setVertexElements">setVertexElements</a></code></li>
+<li><code><a title="igeCore.editableFigure.setVertexPtr" href="#igeCore.editableFigure.setVertexPtr">setVertexPtr</a></code></li>
+<li><code><a title="igeCore.editableFigure.step" href="#igeCore.editableFigure.step">step</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.environment" href="#igeCore.environment">environment</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.environment.ambientColor" href="#igeCore.environment.ambientColor">ambientColor</a></code></li>
+<li><code><a title="igeCore.environment.ambientDirection" href="#igeCore.environment.ambientDirection">ambientDirection</a></code></li>
+<li><code><a title="igeCore.environment.distanceFogAlpha" href="#igeCore.environment.distanceFogAlpha">distanceFogAlpha</a></code></li>
+<li><code><a title="igeCore.environment.distanceFogColor" href="#igeCore.environment.distanceFogColor">distanceFogColor</a></code></li>
+<li><code><a title="igeCore.environment.distanceFogFar" href="#igeCore.environment.distanceFogFar">distanceFogFar</a></code></li>
+<li><code><a title="igeCore.environment.distanceFogNear" href="#igeCore.environment.distanceFogNear">distanceFogNear</a></code></li>
+<li><code><a title="igeCore.environment.getDirectionalLampColor" href="#igeCore.environment.getDirectionalLampColor">getDirectionalLampColor</a></code></li>
+<li><code><a title="igeCore.environment.getDirectionalLampDirection" href="#igeCore.environment.getDirectionalLampDirection">getDirectionalLampDirection</a></code></li>
+<li><code><a title="igeCore.environment.getDirectionalLampIntensity" href="#igeCore.environment.getDirectionalLampIntensity">getDirectionalLampIntensity</a></code></li>
+<li><code><a title="igeCore.environment.getPointLampColor" href="#igeCore.environment.getPointLampColor">getPointLampColor</a></code></li>
+<li><code><a title="igeCore.environment.getPointLampIntensity" href="#igeCore.environment.getPointLampIntensity">getPointLampIntensity</a></code></li>
+<li><code><a title="igeCore.environment.getPointLampPosition" href="#igeCore.environment.getPointLampPosition">getPointLampPosition</a></code></li>
+<li><code><a title="igeCore.environment.getPointLampRange" href="#igeCore.environment.getPointLampRange">getPointLampRange</a></code></li>
+<li><code><a title="igeCore.environment.getSpotLampAngle" href="#igeCore.environment.getSpotLampAngle">getSpotLampAngle</a></code></li>
+<li><code><a title="igeCore.environment.getSpotLampColor" href="#igeCore.environment.getSpotLampColor">getSpotLampColor</a></code></li>
+<li><code><a title="igeCore.environment.getSpotLampDirection" href="#igeCore.environment.getSpotLampDirection">getSpotLampDirection</a></code></li>
+<li><code><a title="igeCore.environment.getSpotLampIntensity" href="#igeCore.environment.getSpotLampIntensity">getSpotLampIntensity</a></code></li>
+<li><code><a title="igeCore.environment.getSpotLampPosition" href="#igeCore.environment.getSpotLampPosition">getSpotLampPosition</a></code></li>
+<li><code><a title="igeCore.environment.getSpotLampRange" href="#igeCore.environment.getSpotLampRange">getSpotLampRange</a></code></li>
+<li><code><a title="igeCore.environment.groundColor" href="#igeCore.environment.groundColor">groundColor</a></code></li>
+<li><code><a title="igeCore.environment.setDirectionalLampColor" href="#igeCore.environment.setDirectionalLampColor">setDirectionalLampColor</a></code></li>
+<li><code><a title="igeCore.environment.setDirectionalLampDirection" href="#igeCore.environment.setDirectionalLampDirection">setDirectionalLampDirection</a></code></li>
+<li><code><a title="igeCore.environment.setDirectionalLampIntensity" href="#igeCore.environment.setDirectionalLampIntensity">setDirectionalLampIntensity</a></code></li>
+<li><code><a title="igeCore.environment.setPointLampColor" href="#igeCore.environment.setPointLampColor">setPointLampColor</a></code></li>
+<li><code><a title="igeCore.environment.setPointLampIntensity" href="#igeCore.environment.setPointLampIntensity">setPointLampIntensity</a></code></li>
+<li><code><a title="igeCore.environment.setPointLampPosition" href="#igeCore.environment.setPointLampPosition">setPointLampPosition</a></code></li>
+<li><code><a title="igeCore.environment.setPointLampRange" href="#igeCore.environment.setPointLampRange">setPointLampRange</a></code></li>
+<li><code><a title="igeCore.environment.setSpotLampAngle" href="#igeCore.environment.setSpotLampAngle">setSpotLampAngle</a></code></li>
+<li><code><a title="igeCore.environment.setSpotLampColor" href="#igeCore.environment.setSpotLampColor">setSpotLampColor</a></code></li>
+<li><code><a title="igeCore.environment.setSpotLampDirection" href="#igeCore.environment.setSpotLampDirection">setSpotLampDirection</a></code></li>
+<li><code><a title="igeCore.environment.setSpotLampIntensity" href="#igeCore.environment.setSpotLampIntensity">setSpotLampIntensity</a></code></li>
+<li><code><a title="igeCore.environment.setSpotLampPosition" href="#igeCore.environment.setSpotLampPosition">setSpotLampPosition</a></code></li>
+<li><code><a title="igeCore.environment.setSpotLampRange" href="#igeCore.environment.setSpotLampRange">setSpotLampRange</a></code></li>
+<li><code><a title="igeCore.environment.shadowColor" href="#igeCore.environment.shadowColor">shadowColor</a></code></li>
+<li><code><a title="igeCore.environment.shadowDensity" href="#igeCore.environment.shadowDensity">shadowDensity</a></code></li>
+<li><code><a title="igeCore.environment.shadowWideness" href="#igeCore.environment.shadowWideness">shadowWideness</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.figure" href="#igeCore.figure">figure</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.figure.connectAnimator" href="#igeCore.figure.connectAnimator">connectAnimator</a></code></li>
+<li><code><a title="igeCore.figure.dump" href="#igeCore.figure.dump">dump</a></code></li>
+<li><code><a title="igeCore.figure.getAABB" href="#igeCore.figure.getAABB">getAABB</a></code></li>
+<li><code><a title="igeCore.figure.getBlendingWeight" href="#igeCore.figure.getBlendingWeight">getBlendingWeight</a></code></li>
+<li><code><a title="igeCore.figure.getCamera" href="#igeCore.figure.getCamera">getCamera</a></code></li>
+<li><code><a title="igeCore.figure.getEmbeddedAnimationName" href="#igeCore.figure.getEmbeddedAnimationName">getEmbeddedAnimationName</a></code></li>
+<li><code><a title="igeCore.figure.getEmbeddedAnimator" href="#igeCore.figure.getEmbeddedAnimator">getEmbeddedAnimator</a></code></li>
+<li><code><a title="igeCore.figure.getEnvironment" href="#igeCore.figure.getEnvironment">getEnvironment</a></code></li>
+<li><code><a title="igeCore.figure.getJoint" href="#igeCore.figure.getJoint">getJoint</a></code></li>
+<li><code><a title="igeCore.figure.getJointIndex" href="#igeCore.figure.getJointIndex">getJointIndex</a></code></li>
+<li><code><a title="igeCore.figure.getJointName" href="#igeCore.figure.getJointName">getJointName</a></code></li>
+<li><code><a title="igeCore.figure.getJointParentIndex" href="#igeCore.figure.getJointParentIndex">getJointParentIndex</a></code></li>
+<li><code><a title="igeCore.figure.getMaterialIndex" href="#igeCore.figure.getMaterialIndex">getMaterialIndex</a></code></li>
+<li><code><a title="igeCore.figure.getMaterialName" href="#igeCore.figure.getMaterialName">getMaterialName</a></code></li>
+<li><code><a title="igeCore.figure.getMaterialParam" href="#igeCore.figure.getMaterialParam">getMaterialParam</a></code></li>
+<li><code><a title="igeCore.figure.getMeshAlpha" href="#igeCore.figure.getMeshAlpha">getMeshAlpha</a></code></li>
+<li><code><a title="igeCore.figure.getMeshIndex" href="#igeCore.figure.getMeshIndex">getMeshIndex</a></code></li>
+<li><code><a title="igeCore.figure.getMeshName" href="#igeCore.figure.getMeshName">getMeshName</a></code></li>
+<li><code><a title="igeCore.figure.getMeshPrimitiveType" href="#igeCore.figure.getMeshPrimitiveType">getMeshPrimitiveType</a></code></li>
+<li><code><a title="igeCore.figure.getNumMeshTriangles" href="#igeCore.figure.getNumMeshTriangles">getNumMeshTriangles</a></code></li>
+<li><code><a title="igeCore.figure.getNumMeshVertices" href="#igeCore.figure.getNumMeshVertices">getNumMeshVertices</a></code></li>
+<li><code><a title="igeCore.figure.getShaderGenerator" href="#igeCore.figure.getShaderGenerator">getShaderGenerator</a></code></li>
+<li><code><a title="igeCore.figure.getTextureName" href="#igeCore.figure.getTextureName">getTextureName</a></code></li>
+<li><code><a title="igeCore.figure.getTriangles" href="#igeCore.figure.getTriangles">getTriangles</a></code></li>
+<li><code><a title="igeCore.figure.getVertexElements" href="#igeCore.figure.getVertexElements">getVertexElements</a></code></li>
+<li><code><a title="igeCore.figure.jointNameToIndex" href="#igeCore.figure.jointNameToIndex">jointNameToIndex</a></code></li>
+<li><code><a title="igeCore.figure.killJointTransform" href="#igeCore.figure.killJointTransform">killJointTransform</a></code></li>
+<li><code><a title="igeCore.figure.numAnimations" href="#igeCore.figure.numAnimations">numAnimations</a></code></li>
+<li><code><a title="igeCore.figure.numEmbeddedAnimations" href="#igeCore.figure.numEmbeddedAnimations">numEmbeddedAnimations</a></code></li>
+<li><code><a title="igeCore.figure.numJoints" href="#igeCore.figure.numJoints">numJoints</a></code></li>
+<li><code><a title="igeCore.figure.numMaterials" href="#igeCore.figure.numMaterials">numMaterials</a></code></li>
+<li><code><a title="igeCore.figure.numMeshes" href="#igeCore.figure.numMeshes">numMeshes</a></code></li>
+<li><code><a title="igeCore.figure.numTextures" href="#igeCore.figure.numTextures">numTextures</a></code></li>
+<li><code><a title="igeCore.figure.position" href="#igeCore.figure.position">position</a></code></li>
+<li><code><a title="igeCore.figure.rotation" href="#igeCore.figure.rotation">rotation</a></code></li>
+<li><code><a title="igeCore.figure.scale" href="#igeCore.figure.scale">scale</a></code></li>
+<li><code><a title="igeCore.figure.setBlendingWeight" href="#igeCore.figure.setBlendingWeight">setBlendingWeight</a></code></li>
+<li><code><a title="igeCore.figure.setJoint" href="#igeCore.figure.setJoint">setJoint</a></code></li>
+<li><code><a title="igeCore.figure.setMaterialParam" href="#igeCore.figure.setMaterialParam">setMaterialParam</a></code></li>
+<li><code><a title="igeCore.figure.setMaterialParamTexture" href="#igeCore.figure.setMaterialParamTexture">setMaterialParamTexture</a></code></li>
+<li><code><a title="igeCore.figure.setMaterialRenderState" href="#igeCore.figure.setMaterialRenderState">setMaterialRenderState</a></code></li>
+<li><code><a title="igeCore.figure.setMeshAlpha" href="#igeCore.figure.setMeshAlpha">setMeshAlpha</a></code></li>
+<li><code><a title="igeCore.figure.setMeshPrimitiveType" href="#igeCore.figure.setMeshPrimitiveType">setMeshPrimitiveType</a></code></li>
+<li><code><a title="igeCore.figure.setParentJoint" href="#igeCore.figure.setParentJoint">setParentJoint</a></code></li>
+<li><code><a title="igeCore.figure.setShaderGenerator" href="#igeCore.figure.setShaderGenerator">setShaderGenerator</a></code></li>
+<li><code><a title="igeCore.figure.setTime" href="#igeCore.figure.setTime">setTime</a></code></li>
+<li><code><a title="igeCore.figure.setTriangles" href="#igeCore.figure.setTriangles">setTriangles</a></code></li>
+<li><code><a title="igeCore.figure.setVertexElements" href="#igeCore.figure.setVertexElements">setVertexElements</a></code></li>
+<li><code><a title="igeCore.figure.step" href="#igeCore.figure.step">step</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.haptic" href="#igeCore.haptic">haptic</a></code></h4>
+<ul class="two-column">
+<li><code><a title="igeCore.haptic.effectPlay" href="#igeCore.haptic.effectPlay">effectPlay</a></code></li>
+<li><code><a title="igeCore.haptic.init" href="#igeCore.haptic.init">init</a></code></li>
+<li><code><a title="igeCore.haptic.play" href="#igeCore.haptic.play">play</a></code></li>
+<li><code><a title="igeCore.haptic.release" href="#igeCore.haptic.release">release</a></code></li>
+<li><code><a title="igeCore.haptic.rumblePlay" href="#igeCore.haptic.rumblePlay">rumblePlay</a></code></li>
+<li><code><a title="igeCore.haptic.stop" href="#igeCore.haptic.stop">stop</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.particle" href="#igeCore.particle">particle</a></code></h4>
+<ul class="two-column">
+<li><code><a title="igeCore.particle.SetCamera" href="#igeCore.particle.SetCamera">SetCamera</a></code></li>
+<li><code><a title="igeCore.particle.SetPPM" href="#igeCore.particle.SetPPM">SetPPM</a></code></li>
+<li><code><a title="igeCore.particle.UpdateParticles" href="#igeCore.particle.UpdateParticles">UpdateParticles</a></code></li>
+<li><code><a title="igeCore.particle.connectAnimator" href="#igeCore.particle.connectAnimator">connectAnimator</a></code></li>
+<li><code><a title="igeCore.particle.getBlendingWeight" href="#igeCore.particle.getBlendingWeight">getBlendingWeight</a></code></li>
+<li><code><a title="igeCore.particle.getCamera" href="#igeCore.particle.getCamera">getCamera</a></code></li>
+<li><code><a title="igeCore.particle.getEnvironment" href="#igeCore.particle.getEnvironment">getEnvironment</a></code></li>
+<li><code><a title="igeCore.particle.getJoint" href="#igeCore.particle.getJoint">getJoint</a></code></li>
+<li><code><a title="igeCore.particle.position" href="#igeCore.particle.position">position</a></code></li>
+<li><code><a title="igeCore.particle.rotation" href="#igeCore.particle.rotation">rotation</a></code></li>
+<li><code><a title="igeCore.particle.scale" href="#igeCore.particle.scale">scale</a></code></li>
+<li><code><a title="igeCore.particle.setBlendingWeight" href="#igeCore.particle.setBlendingWeight">setBlendingWeight</a></code></li>
+<li><code><a title="igeCore.particle.setJoint" href="#igeCore.particle.setJoint">setJoint</a></code></li>
+<li><code><a title="igeCore.particle.setTime" href="#igeCore.particle.setTime">setTime</a></code></li>
+<li><code><a title="igeCore.particle.step" href="#igeCore.particle.step">step</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.profiler" href="#igeCore.profiler">profiler</a></code></h4>
+</li>
+<li>
+<h4><code><a title="igeCore.shaderGeneragtor" href="#igeCore.shaderGeneragtor">shaderGeneragtor</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.shaderGeneragtor.dicardViewProj" href="#igeCore.shaderGeneragtor.dicardViewProj">dicardViewProj</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.discardColorMapRGB" href="#igeCore.shaderGeneragtor.discardColorMapRGB">discardColorMapRGB</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.globalAlphaRef" href="#igeCore.shaderGeneragtor.globalAlphaRef">globalAlphaRef</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.globalMipBias" href="#igeCore.shaderGeneragtor.globalMipBias">globalMipBias</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.globalShadowBias" href="#igeCore.shaderGeneragtor.globalShadowBias">globalShadowBias</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setAlphaMap" href="#igeCore.shaderGeneragtor.setAlphaMap">setAlphaMap</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setAmbientOcclusion" href="#igeCore.shaderGeneragtor.setAmbientOcclusion">setAmbientOcclusion</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setAmbientType" href="#igeCore.shaderGeneragtor.setAmbientType">setAmbientType</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setBoneCondition" href="#igeCore.shaderGeneragtor.setBoneCondition">setBoneCondition</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setCalcBinormalInShader" href="#igeCore.shaderGeneragtor.setCalcBinormalInShader">setCalcBinormalInShader</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setClutLamp" href="#igeCore.shaderGeneragtor.setClutLamp">setClutLamp</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setColorTexture" href="#igeCore.shaderGeneragtor.setColorTexture">setColorTexture</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setColorTextureUVSet" href="#igeCore.shaderGeneragtor.setColorTextureUVSet">setColorTextureUVSet</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setDistortion" href="#igeCore.shaderGeneragtor.setDistortion">setDistortion</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setLightTexture" href="#igeCore.shaderGeneragtor.setLightTexture">setLightTexture</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setLightTextureUVSet" href="#igeCore.shaderGeneragtor.setLightTextureUVSet">setLightTextureUVSet</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setNormalTexture" href="#igeCore.shaderGeneragtor.setNormalTexture">setNormalTexture</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setNormalTextureUVSet" href="#igeCore.shaderGeneragtor.setNormalTextureUVSet">setNormalTextureUVSet</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setNumDirLamp" href="#igeCore.shaderGeneragtor.setNumDirLamp">setNumDirLamp</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setNumPointLamp" href="#igeCore.shaderGeneragtor.setNumPointLamp">setNumPointLamp</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setNumSpotLamp" href="#igeCore.shaderGeneragtor.setNumSpotLamp">setNumSpotLamp</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlayAlphaMap" href="#igeCore.shaderGeneragtor.setOverlayAlphaMap">setOverlayAlphaMap</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlayColorTexture" href="#igeCore.shaderGeneragtor.setOverlayColorTexture">setOverlayColorTexture</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlayColorTextureUVSet" href="#igeCore.shaderGeneragtor.setOverlayColorTextureUVSet">setOverlayColorTextureUVSet</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlayNormalColorTextureUVSet" href="#igeCore.shaderGeneragtor.setOverlayNormalColorTextureUVSet">setOverlayNormalColorTextureUVSet</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlayNormalTexture" href="#igeCore.shaderGeneragtor.setOverlayNormalTexture">setOverlayNormalTexture</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlaySpecularTexture" href="#igeCore.shaderGeneragtor.setOverlaySpecularTexture">setOverlaySpecularTexture</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setOverlayVertexAlpha" href="#igeCore.shaderGeneragtor.setOverlayVertexAlpha">setOverlayVertexAlpha</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setProjectionMapping" href="#igeCore.shaderGeneragtor.setProjectionMapping">setProjectionMapping</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setShadow" href="#igeCore.shaderGeneragtor.setShadow">setShadow</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setSpecular" href="#igeCore.shaderGeneragtor.setSpecular">setSpecular</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setUVOffset" href="#igeCore.shaderGeneragtor.setUVOffset">setUVOffset</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setUVScroll" href="#igeCore.shaderGeneragtor.setUVScroll">setUVScroll</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setUnifiedColor" href="#igeCore.shaderGeneragtor.setUnifiedColor">setUnifiedColor</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setVertexAlpha" href="#igeCore.shaderGeneragtor.setVertexAlpha">setVertexAlpha</a></code></li>
+<li><code><a title="igeCore.shaderGeneragtor.setVertexColor" href="#igeCore.shaderGeneragtor.setVertexColor">setVertexColor</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.showcase" href="#igeCore.showcase">showcase</a></code></h4>
+<ul class="two-column">
+<li><code><a title="igeCore.showcase.add" href="#igeCore.showcase.add">add</a></code></li>
+<li><code><a title="igeCore.showcase.addShadowBuffer" href="#igeCore.showcase.addShadowBuffer">addShadowBuffer</a></code></li>
+<li><code><a title="igeCore.showcase.changeDepth" href="#igeCore.showcase.changeDepth">changeDepth</a></code></li>
+<li><code><a title="igeCore.showcase.clear" href="#igeCore.showcase.clear">clear</a></code></li>
+<li><code><a title="igeCore.showcase.find" href="#igeCore.showcase.find">find</a></code></li>
+<li><code><a title="igeCore.showcase.remove" href="#igeCore.showcase.remove">remove</a></code></li>
+<li><code><a title="igeCore.showcase.zsort" href="#igeCore.showcase.zsort">zsort</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.texture" href="#igeCore.texture">texture</a></code></h4>
+<ul class="two-column">
+<li><code><a title="igeCore.texture.bitSize" href="#igeCore.texture.bitSize">bitSize</a></code></li>
+<li><code><a title="igeCore.texture.captureScreenshot" href="#igeCore.texture.captureScreenshot">captureScreenshot</a></code></li>
+<li><code><a title="igeCore.texture.clear" href="#igeCore.texture.clear">clear</a></code></li>
+<li><code><a title="igeCore.texture.format" href="#igeCore.texture.format">format</a></code></li>
+<li><code><a title="igeCore.texture.getData" href="#igeCore.texture.getData">getData</a></code></li>
+<li><code><a title="igeCore.texture.getResourceName" href="#igeCore.texture.getResourceName">getResourceName</a></code></li>
+<li><code><a title="igeCore.texture.height" href="#igeCore.texture.height">height</a></code></li>
+<li><code><a title="igeCore.texture.id" href="#igeCore.texture.id">id</a></code></li>
+<li><code><a title="igeCore.texture.numMips" href="#igeCore.texture.numMips">numMips</a></code></li>
+<li><code><a title="igeCore.texture.saveToGallery" href="#igeCore.texture.saveToGallery">saveToGallery</a></code></li>
+<li><code><a title="igeCore.texture.setCheckeredImage" href="#igeCore.texture.setCheckeredImage">setCheckeredImage</a></code></li>
+<li><code><a title="igeCore.texture.setImage" href="#igeCore.texture.setImage">setImage</a></code></li>
+<li><code><a title="igeCore.texture.setText" href="#igeCore.texture.setText">setText</a></code></li>
+<li><code><a title="igeCore.texture.width" href="#igeCore.texture.width">width</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

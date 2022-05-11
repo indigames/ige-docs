@@ -13,15 +13,25 @@ The documents include detailed instructions, and step-by-step tutorials to help 
 Contents
 --------
 .. toctree::
+   :caption: User Manual
+
+   man_installation
+   man_layout
+   man_firstscene
+
+.. toctree::
    :caption: Tutorials
 
-   installation
-   editor_layout
-   first_scene
+   tut_scene
+   tut_script
+   tut_audio
+   tut_animation
+   tut_physic
+   tut_navmesh
 
 .. toctree::
    :caption: API Documents
-   
+
    api
 
 

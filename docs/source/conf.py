@@ -10,7 +10,6 @@ release = '0.0.1'
 version = '0.0.1'
 
 # -- General configuration
-
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -25,8 +24,6 @@ intersphinx_mapping = {
 }
 intersphinx_disabled_domains = ['std']
 
-templates_path = ['_templates']
-
 # -- Options for HTML output
 html_theme = 'sphinx_rtd_theme'
 
@@ -40,4 +37,7 @@ autosummary_generate = True
 autodoc_inherit_docstrings = True
 
 # -- Add templates paths
-templates_path = ['templates']
+templates_path = ['_templates']
+
+# -- Add any paths that contain custom static files
+html_static_path = ['_static']

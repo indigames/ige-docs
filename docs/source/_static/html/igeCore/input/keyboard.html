@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>igeCore.input.keyboard API documentation</title>
+<meta name="description" content="indi game engine - keyboard input" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>igeCore.input.keyboard</code></h1>
+</header>
+<section id="section-intro">
+<p>indi game engine - keyboard input</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+indi game engine - keyboard input
+&#34;&#34;&#34;
+import igeCore as core
+from .event import EventType
+
+class KeyEventCode:
+    PRESSED = 0
+    RELEASED = 1
+
+class KeyCode:
+    KEY_NOKEY = -1
+    KEY_0 = 0
+    KEY_1 = 1
+    KEY_2 = 2
+    KEY_3 = 3
+    KEY_4 = 4
+    KEY_5 = 5
+    KEY_6 = 6
+    KEY_7 = 7
+    KEY_8 = 8
+    KEY_9 = 9
+    KEY_A = 10
+    KEY_B = 11
+    KEY_C = 12
+    KEY_D = 13
+    KEY_E = 14
+    KEY_F = 15
+    KEY_G = 16
+    KEY_H = 17
+    KEY_I = 18
+    KEY_J = 19
+    KEY_K = 20
+    KEY_L = 21
+    KEY_M = 22
+    KEY_N = 23
+    KEY_O = 24
+    KEY_P = 25
+    KEY_Q = 26
+    KEY_R = 27
+    KEY_S = 28
+    KEY_T = 29
+    KEY_U = 30
+    KEY_V = 31
+    KEY_W = 32
+    KEY_X = 33
+    KEY_Y = 34
+    KEY_Z = 35
+    KEY_UP = 36
+    KEY_RIGHT = 37
+    KEY_DOWN = 38
+    KEY_LEFT= 39
+    KEY_F1 = 40
+    KEY_F2 = 41
+    KEY_F3 = 42
+    KEY_F4 = 43
+    KEY_F5 = 44
+    KEY_F6 = 45
+    KEY_F7 = 46
+    KEY_F8 = 47
+    KEY_F9 = 48
+    KEY_F10 = 49
+    KEY_F11 = 50
+    KEY_F12 = 51
+    KEY_ESC = 52
+    KEY_TAB = 53
+    KEY_BACK = 54
+    KEY_RETURN = 55
+    KEY_KP0 = 56
+    KEY_KP1 = 57
+    KEY_KP2 = 58
+    KEY_KP3 = 59
+    KEY_KP4 = 60
+    KEY_KP5 = 61
+    KEY_KP6 = 62
+    KEY_KP7 = 63
+    KEY_KP8 = 64
+    KEY_KP9 = 65
+    KEY_KPPLUS = 66
+    KEY_KPMINUS = 67
+    KEY_KPDIV = 68
+    KEY_KPMULT = 69
+    KEY_KPENTER = 70
+    KEY_KPPERIOD = 71
+    KEY_PAUSE = 72
+    KEY_SPACE = 73
+    KEY_PLUS = 74
+    KEY_MINUS = 75
+    KEY_PERIOD = 76
+    KEY_SLASH = 77
+    KEY_HASH = 78
+    KEY_EQUAL = 79
+    KEY_QUOTE = 80
+    KEY_BACKQUOTE = 81
+    KEY_SEMICOLON = 82
+    KEY_LEFTBRACKET = 83
+    KEY_RIGHTBRACKET = 84
+    KEY_BACKSLASH = 85
+    KEY_COMMA = 86
+    KEY_INSERT = 87
+    KEY_DEL = 88
+    KEY_HOME = 89
+    KEY_END = 90
+    KEY_PAGEUP = 91
+    KEY_PAGEDOWN = 92
+    KEY_LCTRL = 93
+    KEY_RCTRL = 94
+    KEY_LALT = 95
+    KEY_RALT = 96
+    KEY_LWIN = 97
+    KEY_RWIN = 98
+    KEY_LSHIFT = 99
+    KEY_RSHIFT = 100
+    KEY_CAPSLOCK = 101
+    KEY_NUMLOCK = 102
+    KEY_COUNT = 103
+
+class KeyModifier:
+    KEY_MOD_NONE = 0
+    KEY_MOD_CTRL = 1
+    KEY_MOD_ALT = 2
+    KEY_MOD_SHIFT = 4
+
+class Keyboard:
+    __instance = None
+
+    def __init__(self):
+        self.keyPressedCallbacks = set([])
+        self.keyReleasedCallbacks = set([])
+
+    def __del__(self):
+        self.keyPressedCallbacks.clear()
+        self.keyReleasedCallbacks.clear()
+
+    @staticmethod
+    def instance():
+        if Keyboard.__instance is None:
+            Keyboard.__instance = Keyboard()
+        return Keyboard.__instance
+     
+    def getKey(self, keyCode):
+        return core.getKeyChar(keyCode)
+
+    def getModifier(self):
+        return core.getKeyModifier()
+
+    def isPressed(self, keyCode):
+        return core.isKeyPressed(keyCode)
+
+    def isReleased(self, keyCode):
+        return core.isKeyReleased(keyCode)
+        
+    def isHold(self, keyCode):
+        return core.isKeyHold(keyCode)
+
+    def registerKeyPressedCallback(self, onKeyPressedFunc):
+        self.keyPressedCallbacks.add(onKeyPressedFunc)
+        if len(self.keyPressedCallbacks) == 1:
+            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.PRESSED, self.onKeyPressed)
+
+    def registerKeyReleasedCallback(self,onKeyReleasedFunc):
+        self.keyReleasedCallbacks.add(onKeyReleasedFunc)
+        if len(self.keyReleasedCallbacks) == 1:
+            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.RELEASED, self.onKeyReleased)
+    
+    def removeKeyPressedCallback(self, onKeyPressedFunc):
+        self.keyPressedCallbacks.remove(onKeyPressedFunc)
+
+    def removeKeyReleasedCallback(self, onKeyReleasedFunc):
+        self.keyReleasedCallbacks.remove(onKeyReleasedFunc)
+
+    def onKeyPressed(self, keyCode, eventCode, keyChar, keyModifier):
+        for callback in self.keyPressedCallbacks:
+            callback(keyCode, eventCode, keyChar, keyModifier)
+
+    def onKeyReleased(self, keyCode, eventCode, keyChar, keyModifier):
+        for callback in self.keyReleasedCallbacks:
+            callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="igeCore.input.keyboard.KeyCode"><code class="flex name class">
+<span>class <span class="ident">KeyCode</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class KeyCode:
+    KEY_NOKEY = -1
+    KEY_0 = 0
+    KEY_1 = 1
+    KEY_2 = 2
+    KEY_3 = 3
+    KEY_4 = 4
+    KEY_5 = 5
+    KEY_6 = 6
+    KEY_7 = 7
+    KEY_8 = 8
+    KEY_9 = 9
+    KEY_A = 10
+    KEY_B = 11
+    KEY_C = 12
+    KEY_D = 13
+    KEY_E = 14
+    KEY_F = 15
+    KEY_G = 16
+    KEY_H = 17
+    KEY_I = 18
+    KEY_J = 19
+    KEY_K = 20
+    KEY_L = 21
+    KEY_M = 22
+    KEY_N = 23
+    KEY_O = 24
+    KEY_P = 25
+    KEY_Q = 26
+    KEY_R = 27
+    KEY_S = 28
+    KEY_T = 29
+    KEY_U = 30
+    KEY_V = 31
+    KEY_W = 32
+    KEY_X = 33
+    KEY_Y = 34
+    KEY_Z = 35
+    KEY_UP = 36
+    KEY_RIGHT = 37
+    KEY_DOWN = 38
+    KEY_LEFT= 39
+    KEY_F1 = 40
+    KEY_F2 = 41
+    KEY_F3 = 42
+    KEY_F4 = 43
+    KEY_F5 = 44
+    KEY_F6 = 45
+    KEY_F7 = 46
+    KEY_F8 = 47
+    KEY_F9 = 48
+    KEY_F10 = 49
+    KEY_F11 = 50
+    KEY_F12 = 51
+    KEY_ESC = 52
+    KEY_TAB = 53
+    KEY_BACK = 54
+    KEY_RETURN = 55
+    KEY_KP0 = 56
+    KEY_KP1 = 57
+    KEY_KP2 = 58
+    KEY_KP3 = 59
+    KEY_KP4 = 60
+    KEY_KP5 = 61
+    KEY_KP6 = 62
+    KEY_KP7 = 63
+    KEY_KP8 = 64
+    KEY_KP9 = 65
+    KEY_KPPLUS = 66
+    KEY_KPMINUS = 67
+    KEY_KPDIV = 68
+    KEY_KPMULT = 69
+    KEY_KPENTER = 70
+    KEY_KPPERIOD = 71
+    KEY_PAUSE = 72
+    KEY_SPACE = 73
+    KEY_PLUS = 74
+    KEY_MINUS = 75
+    KEY_PERIOD = 76
+    KEY_SLASH = 77
+    KEY_HASH = 78
+    KEY_EQUAL = 79
+    KEY_QUOTE = 80
+    KEY_BACKQUOTE = 81
+    KEY_SEMICOLON = 82
+    KEY_LEFTBRACKET = 83
+    KEY_RIGHTBRACKET = 84
+    KEY_BACKSLASH = 85
+    KEY_COMMA = 86
+    KEY_INSERT = 87
+    KEY_DEL = 88
+    KEY_HOME = 89
+    KEY_END = 90
+    KEY_PAGEUP = 91
+    KEY_PAGEDOWN = 92
+    KEY_LCTRL = 93
+    KEY_RCTRL = 94
+    KEY_LALT = 95
+    KEY_RALT = 96
+    KEY_LWIN = 97
+    KEY_RWIN = 98
+    KEY_LSHIFT = 99
+    KEY_RSHIFT = 100
+    KEY_CAPSLOCK = 101
+    KEY_NUMLOCK = 102
+    KEY_COUNT = 103</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_0"><code class="name">var <span class="ident">KEY_0</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_1"><code class="name">var <span class="ident">KEY_1</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_2"><code class="name">var <span class="ident">KEY_2</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_3"><code class="name">var <span class="ident">KEY_3</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_4"><code class="name">var <span class="ident">KEY_4</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_5"><code class="name">var <span class="ident">KEY_5</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_6"><code class="name">var <span class="ident">KEY_6</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_7"><code class="name">var <span class="ident">KEY_7</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_8"><code class="name">var <span class="ident">KEY_8</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_9"><code class="name">var <span class="ident">KEY_9</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_A"><code class="name">var <span class="ident">KEY_A</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_B"><code class="name">var <span class="ident">KEY_B</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_BACK"><code class="name">var <span class="ident">KEY_BACK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_BACKQUOTE"><code class="name">var <span class="ident">KEY_BACKQUOTE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_BACKSLASH"><code class="name">var <span class="ident">KEY_BACKSLASH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_C"><code class="name">var <span class="ident">KEY_C</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_CAPSLOCK"><code class="name">var <span class="ident">KEY_CAPSLOCK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_COMMA"><code class="name">var <span class="ident">KEY_COMMA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_COUNT"><code class="name">var <span class="ident">KEY_COUNT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_D"><code class="name">var <span class="ident">KEY_D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_DEL"><code class="name">var <span class="ident">KEY_DEL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_DOWN"><code class="name">var <span class="ident">KEY_DOWN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_E"><code class="name">var <span class="ident">KEY_E</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_END"><code class="name">var <span class="ident">KEY_END</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_EQUAL"><code class="name">var <span class="ident">KEY_EQUAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_ESC"><code class="name">var <span class="ident">KEY_ESC</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F"><code class="name">var <span class="ident">KEY_F</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F1"><code class="name">var <span class="ident">KEY_F1</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F10"><code class="name">var <span class="ident">KEY_F10</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F11"><code class="name">var <span class="ident">KEY_F11</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F12"><code class="name">var <span class="ident">KEY_F12</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F2"><code class="name">var <span class="ident">KEY_F2</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F3"><code class="name">var <span class="ident">KEY_F3</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F4"><code class="name">var <span class="ident">KEY_F4</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F5"><code class="name">var <span class="ident">KEY_F5</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F6"><code class="name">var <span class="ident">KEY_F6</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F7"><code class="name">var <span class="ident">KEY_F7</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F8"><code class="name">var <span class="ident">KEY_F8</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_F9"><code class="name">var <span class="ident">KEY_F9</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_G"><code class="name">var <span class="ident">KEY_G</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_H"><code class="name">var <span class="ident">KEY_H</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_HASH"><code class="name">var <span class="ident">KEY_HASH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_HOME"><code class="name">var <span class="ident">KEY_HOME</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_I"><code class="name">var <span class="ident">KEY_I</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_INSERT"><code class="name">var <span class="ident">KEY_INSERT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_J"><code class="name">var <span class="ident">KEY_J</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_K"><code class="name">var <span class="ident">KEY_K</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP0"><code class="name">var <span class="ident">KEY_KP0</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP1"><code class="name">var <span class="ident">KEY_KP1</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP2"><code class="name">var <span class="ident">KEY_KP2</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP3"><code class="name">var <span class="ident">KEY_KP3</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP4"><code class="name">var <span class="ident">KEY_KP4</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP5"><code class="name">var <span class="ident">KEY_KP5</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP6"><code class="name">var <span class="ident">KEY_KP6</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP7"><code class="name">var <span class="ident">KEY_KP7</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP8"><code class="name">var <span class="ident">KEY_KP8</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KP9"><code class="name">var <span class="ident">KEY_KP9</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KPDIV"><code class="name">var <span class="ident">KEY_KPDIV</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KPENTER"><code class="name">var <span class="ident">KEY_KPENTER</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KPMINUS"><code class="name">var <span class="ident">KEY_KPMINUS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KPMULT"><code class="name">var <span class="ident">KEY_KPMULT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KPPERIOD"><code class="name">var <span class="ident">KEY_KPPERIOD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_KPPLUS"><code class="name">var <span class="ident">KEY_KPPLUS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_L"><code class="name">var <span class="ident">KEY_L</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_LALT"><code class="name">var <span class="ident">KEY_LALT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_LCTRL"><code class="name">var <span class="ident">KEY_LCTRL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_LEFT"><code class="name">var <span class="ident">KEY_LEFT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_LEFTBRACKET"><code class="name">var <span class="ident">KEY_LEFTBRACKET</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_LSHIFT"><code class="name">var <span class="ident">KEY_LSHIFT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_LWIN"><code class="name">var <span class="ident">KEY_LWIN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_M"><code class="name">var <span class="ident">KEY_M</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_MINUS"><code class="name">var <span class="ident">KEY_MINUS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_N"><code class="name">var <span class="ident">KEY_N</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_NOKEY"><code class="name">var <span class="ident">KEY_NOKEY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_NUMLOCK"><code class="name">var <span class="ident">KEY_NUMLOCK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_O"><code class="name">var <span class="ident">KEY_O</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_P"><code class="name">var <span class="ident">KEY_P</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_PAGEDOWN"><code class="name">var <span class="ident">KEY_PAGEDOWN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_PAGEUP"><code class="name">var <span class="ident">KEY_PAGEUP</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_PAUSE"><code class="name">var <span class="ident">KEY_PAUSE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_PERIOD"><code class="name">var <span class="ident">KEY_PERIOD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_PLUS"><code class="name">var <span class="ident">KEY_PLUS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_Q"><code class="name">var <span class="ident">KEY_Q</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_QUOTE"><code class="name">var <span class="ident">KEY_QUOTE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_R"><code class="name">var <span class="ident">KEY_R</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RALT"><code class="name">var <span class="ident">KEY_RALT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RCTRL"><code class="name">var <span class="ident">KEY_RCTRL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RETURN"><code class="name">var <span class="ident">KEY_RETURN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RIGHT"><code class="name">var <span class="ident">KEY_RIGHT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RIGHTBRACKET"><code class="name">var <span class="ident">KEY_RIGHTBRACKET</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RSHIFT"><code class="name">var <span class="ident">KEY_RSHIFT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_RWIN"><code class="name">var <span class="ident">KEY_RWIN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_S"><code class="name">var <span class="ident">KEY_S</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_SEMICOLON"><code class="name">var <span class="ident">KEY_SEMICOLON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_SLASH"><code class="name">var <span class="ident">KEY_SLASH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_SPACE"><code class="name">var <span class="ident">KEY_SPACE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_T"><code class="name">var <span class="ident">KEY_T</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_TAB"><code class="name">var <span class="ident">KEY_TAB</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_U"><code class="name">var <span class="ident">KEY_U</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_UP"><code class="name">var <span class="ident">KEY_UP</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_V"><code class="name">var <span class="ident">KEY_V</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_W"><code class="name">var <span class="ident">KEY_W</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_X"><code class="name">var <span class="ident">KEY_X</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_Y"><code class="name">var <span class="ident">KEY_Y</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyCode.KEY_Z"><code class="name">var <span class="ident">KEY_Z</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.input.keyboard.KeyEventCode"><code class="flex name class">
+<span>class <span class="ident">KeyEventCode</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class KeyEventCode:
+    PRESSED = 0
+    RELEASED = 1</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="igeCore.input.keyboard.KeyEventCode.PRESSED"><code class="name">var <span class="ident">PRESSED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyEventCode.RELEASED"><code class="name">var <span class="ident">RELEASED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.input.keyboard.KeyModifier"><code class="flex name class">
+<span>class <span class="ident">KeyModifier</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class KeyModifier:
+    KEY_MOD_NONE = 0
+    KEY_MOD_CTRL = 1
+    KEY_MOD_ALT = 2
+    KEY_MOD_SHIFT = 4</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_ALT"><code class="name">var <span class="ident">KEY_MOD_ALT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_CTRL"><code class="name">var <span class="ident">KEY_MOD_CTRL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_NONE"><code class="name">var <span class="ident">KEY_MOD_NONE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_SHIFT"><code class="name">var <span class="ident">KEY_MOD_SHIFT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard"><code class="flex name class">
+<span>class <span class="ident">Keyboard</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Keyboard:
+    __instance = None
+
+    def __init__(self):
+        self.keyPressedCallbacks = set([])
+        self.keyReleasedCallbacks = set([])
+
+    def __del__(self):
+        self.keyPressedCallbacks.clear()
+        self.keyReleasedCallbacks.clear()
+
+    @staticmethod
+    def instance():
+        if Keyboard.__instance is None:
+            Keyboard.__instance = Keyboard()
+        return Keyboard.__instance
+     
+    def getKey(self, keyCode):
+        return core.getKeyChar(keyCode)
+
+    def getModifier(self):
+        return core.getKeyModifier()
+
+    def isPressed(self, keyCode):
+        return core.isKeyPressed(keyCode)
+
+    def isReleased(self, keyCode):
+        return core.isKeyReleased(keyCode)
+        
+    def isHold(self, keyCode):
+        return core.isKeyHold(keyCode)
+
+    def registerKeyPressedCallback(self, onKeyPressedFunc):
+        self.keyPressedCallbacks.add(onKeyPressedFunc)
+        if len(self.keyPressedCallbacks) == 1:
+            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.PRESSED, self.onKeyPressed)
+
+    def registerKeyReleasedCallback(self,onKeyReleasedFunc):
+        self.keyReleasedCallbacks.add(onKeyReleasedFunc)
+        if len(self.keyReleasedCallbacks) == 1:
+            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.RELEASED, self.onKeyReleased)
+    
+    def removeKeyPressedCallback(self, onKeyPressedFunc):
+        self.keyPressedCallbacks.remove(onKeyPressedFunc)
+
+    def removeKeyReleasedCallback(self, onKeyReleasedFunc):
+        self.keyReleasedCallbacks.remove(onKeyReleasedFunc)
+
+    def onKeyPressed(self, keyCode, eventCode, keyChar, keyModifier):
+        for callback in self.keyPressedCallbacks:
+            callback(keyCode, eventCode, keyChar, keyModifier)
+
+    def onKeyReleased(self, keyCode, eventCode, keyChar, keyModifier):
+        for callback in self.keyReleasedCallbacks:
+            callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="igeCore.input.keyboard.Keyboard.instance"><code class="name flex">
+<span>def <span class="ident">instance</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def instance():
+    if Keyboard.__instance is None:
+        Keyboard.__instance = Keyboard()
+    return Keyboard.__instance</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeCore.input.keyboard.Keyboard.getKey"><code class="name flex">
+<span>def <span class="ident">getKey</span></span>(<span>self, keyCode)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getKey(self, keyCode):
+    return core.getKeyChar(keyCode)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.getModifier"><code class="name flex">
+<span>def <span class="ident">getModifier</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getModifier(self):
+    return core.getKeyModifier()</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.isHold"><code class="name flex">
+<span>def <span class="ident">isHold</span></span>(<span>self, keyCode)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def isHold(self, keyCode):
+    return core.isKeyHold(keyCode)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.isPressed"><code class="name flex">
+<span>def <span class="ident">isPressed</span></span>(<span>self, keyCode)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def isPressed(self, keyCode):
+    return core.isKeyPressed(keyCode)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.isReleased"><code class="name flex">
+<span>def <span class="ident">isReleased</span></span>(<span>self, keyCode)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def isReleased(self, keyCode):
+    return core.isKeyReleased(keyCode)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.onKeyPressed"><code class="name flex">
+<span>def <span class="ident">onKeyPressed</span></span>(<span>self, keyCode, eventCode, keyChar, keyModifier)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def onKeyPressed(self, keyCode, eventCode, keyChar, keyModifier):
+    for callback in self.keyPressedCallbacks:
+        callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.onKeyReleased"><code class="name flex">
+<span>def <span class="ident">onKeyReleased</span></span>(<span>self, keyCode, eventCode, keyChar, keyModifier)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def onKeyReleased(self, keyCode, eventCode, keyChar, keyModifier):
+    for callback in self.keyReleasedCallbacks:
+        callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.registerKeyPressedCallback"><code class="name flex">
+<span>def <span class="ident">registerKeyPressedCallback</span></span>(<span>self, onKeyPressedFunc)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def registerKeyPressedCallback(self, onKeyPressedFunc):
+    self.keyPressedCallbacks.add(onKeyPressedFunc)
+    if len(self.keyPressedCallbacks) == 1:
+        core.registerEventListener(EventType.KEYBOARD, KeyEventCode.PRESSED, self.onKeyPressed)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.registerKeyReleasedCallback"><code class="name flex">
+<span>def <span class="ident">registerKeyReleasedCallback</span></span>(<span>self, onKeyReleasedFunc)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def registerKeyReleasedCallback(self,onKeyReleasedFunc):
+    self.keyReleasedCallbacks.add(onKeyReleasedFunc)
+    if len(self.keyReleasedCallbacks) == 1:
+        core.registerEventListener(EventType.KEYBOARD, KeyEventCode.RELEASED, self.onKeyReleased)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.removeKeyPressedCallback"><code class="name flex">
+<span>def <span class="ident">removeKeyPressedCallback</span></span>(<span>self, onKeyPressedFunc)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeKeyPressedCallback(self, onKeyPressedFunc):
+    self.keyPressedCallbacks.remove(onKeyPressedFunc)</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.keyboard.Keyboard.removeKeyReleasedCallback"><code class="name flex">
+<span>def <span class="ident">removeKeyReleasedCallback</span></span>(<span>self, onKeyReleasedFunc)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeKeyReleasedCallback(self, onKeyReleasedFunc):
+    self.keyReleasedCallbacks.remove(onKeyReleasedFunc)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="igeCore.input" href="index.html">igeCore.input</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="igeCore.input.keyboard.KeyCode" href="#igeCore.input.keyboard.KeyCode">KeyCode</a></code></h4>
+<ul class="two-column">
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_0" href="#igeCore.input.keyboard.KeyCode.KEY_0">KEY_0</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_1" href="#igeCore.input.keyboard.KeyCode.KEY_1">KEY_1</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_2" href="#igeCore.input.keyboard.KeyCode.KEY_2">KEY_2</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_3" href="#igeCore.input.keyboard.KeyCode.KEY_3">KEY_3</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_4" href="#igeCore.input.keyboard.KeyCode.KEY_4">KEY_4</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_5" href="#igeCore.input.keyboard.KeyCode.KEY_5">KEY_5</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_6" href="#igeCore.input.keyboard.KeyCode.KEY_6">KEY_6</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_7" href="#igeCore.input.keyboard.KeyCode.KEY_7">KEY_7</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_8" href="#igeCore.input.keyboard.KeyCode.KEY_8">KEY_8</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_9" href="#igeCore.input.keyboard.KeyCode.KEY_9">KEY_9</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_A" href="#igeCore.input.keyboard.KeyCode.KEY_A">KEY_A</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_B" href="#igeCore.input.keyboard.KeyCode.KEY_B">KEY_B</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_BACK" href="#igeCore.input.keyboard.KeyCode.KEY_BACK">KEY_BACK</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_BACKQUOTE" href="#igeCore.input.keyboard.KeyCode.KEY_BACKQUOTE">KEY_BACKQUOTE</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_BACKSLASH" href="#igeCore.input.keyboard.KeyCode.KEY_BACKSLASH">KEY_BACKSLASH</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_C" href="#igeCore.input.keyboard.KeyCode.KEY_C">KEY_C</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_CAPSLOCK" href="#igeCore.input.keyboard.KeyCode.KEY_CAPSLOCK">KEY_CAPSLOCK</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_COMMA" href="#igeCore.input.keyboard.KeyCode.KEY_COMMA">KEY_COMMA</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_COUNT" href="#igeCore.input.keyboard.KeyCode.KEY_COUNT">KEY_COUNT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_D" href="#igeCore.input.keyboard.KeyCode.KEY_D">KEY_D</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_DEL" href="#igeCore.input.keyboard.KeyCode.KEY_DEL">KEY_DEL</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_DOWN" href="#igeCore.input.keyboard.KeyCode.KEY_DOWN">KEY_DOWN</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_E" href="#igeCore.input.keyboard.KeyCode.KEY_E">KEY_E</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_END" href="#igeCore.input.keyboard.KeyCode.KEY_END">KEY_END</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_EQUAL" href="#igeCore.input.keyboard.KeyCode.KEY_EQUAL">KEY_EQUAL</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_ESC" href="#igeCore.input.keyboard.KeyCode.KEY_ESC">KEY_ESC</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F" href="#igeCore.input.keyboard.KeyCode.KEY_F">KEY_F</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F1" href="#igeCore.input.keyboard.KeyCode.KEY_F1">KEY_F1</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F10" href="#igeCore.input.keyboard.KeyCode.KEY_F10">KEY_F10</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F11" href="#igeCore.input.keyboard.KeyCode.KEY_F11">KEY_F11</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F12" href="#igeCore.input.keyboard.KeyCode.KEY_F12">KEY_F12</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F2" href="#igeCore.input.keyboard.KeyCode.KEY_F2">KEY_F2</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F3" href="#igeCore.input.keyboard.KeyCode.KEY_F3">KEY_F3</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F4" href="#igeCore.input.keyboard.KeyCode.KEY_F4">KEY_F4</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F5" href="#igeCore.input.keyboard.KeyCode.KEY_F5">KEY_F5</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F6" href="#igeCore.input.keyboard.KeyCode.KEY_F6">KEY_F6</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F7" href="#igeCore.input.keyboard.KeyCode.KEY_F7">KEY_F7</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F8" href="#igeCore.input.keyboard.KeyCode.KEY_F8">KEY_F8</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_F9" href="#igeCore.input.keyboard.KeyCode.KEY_F9">KEY_F9</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_G" href="#igeCore.input.keyboard.KeyCode.KEY_G">KEY_G</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_H" href="#igeCore.input.keyboard.KeyCode.KEY_H">KEY_H</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_HASH" href="#igeCore.input.keyboard.KeyCode.KEY_HASH">KEY_HASH</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_HOME" href="#igeCore.input.keyboard.KeyCode.KEY_HOME">KEY_HOME</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_I" href="#igeCore.input.keyboard.KeyCode.KEY_I">KEY_I</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_INSERT" href="#igeCore.input.keyboard.KeyCode.KEY_INSERT">KEY_INSERT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_J" href="#igeCore.input.keyboard.KeyCode.KEY_J">KEY_J</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_K" href="#igeCore.input.keyboard.KeyCode.KEY_K">KEY_K</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP0" href="#igeCore.input.keyboard.KeyCode.KEY_KP0">KEY_KP0</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP1" href="#igeCore.input.keyboard.KeyCode.KEY_KP1">KEY_KP1</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP2" href="#igeCore.input.keyboard.KeyCode.KEY_KP2">KEY_KP2</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP3" href="#igeCore.input.keyboard.KeyCode.KEY_KP3">KEY_KP3</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP4" href="#igeCore.input.keyboard.KeyCode.KEY_KP4">KEY_KP4</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP5" href="#igeCore.input.keyboard.KeyCode.KEY_KP5">KEY_KP5</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP6" href="#igeCore.input.keyboard.KeyCode.KEY_KP6">KEY_KP6</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP7" href="#igeCore.input.keyboard.KeyCode.KEY_KP7">KEY_KP7</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP8" href="#igeCore.input.keyboard.KeyCode.KEY_KP8">KEY_KP8</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KP9" href="#igeCore.input.keyboard.KeyCode.KEY_KP9">KEY_KP9</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KPDIV" href="#igeCore.input.keyboard.KeyCode.KEY_KPDIV">KEY_KPDIV</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KPENTER" href="#igeCore.input.keyboard.KeyCode.KEY_KPENTER">KEY_KPENTER</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KPMINUS" href="#igeCore.input.keyboard.KeyCode.KEY_KPMINUS">KEY_KPMINUS</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KPMULT" href="#igeCore.input.keyboard.KeyCode.KEY_KPMULT">KEY_KPMULT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KPPERIOD" href="#igeCore.input.keyboard.KeyCode.KEY_KPPERIOD">KEY_KPPERIOD</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_KPPLUS" href="#igeCore.input.keyboard.KeyCode.KEY_KPPLUS">KEY_KPPLUS</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_L" href="#igeCore.input.keyboard.KeyCode.KEY_L">KEY_L</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_LALT" href="#igeCore.input.keyboard.KeyCode.KEY_LALT">KEY_LALT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_LCTRL" href="#igeCore.input.keyboard.KeyCode.KEY_LCTRL">KEY_LCTRL</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_LEFT" href="#igeCore.input.keyboard.KeyCode.KEY_LEFT">KEY_LEFT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_LEFTBRACKET" href="#igeCore.input.keyboard.KeyCode.KEY_LEFTBRACKET">KEY_LEFTBRACKET</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_LSHIFT" href="#igeCore.input.keyboard.KeyCode.KEY_LSHIFT">KEY_LSHIFT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_LWIN" href="#igeCore.input.keyboard.KeyCode.KEY_LWIN">KEY_LWIN</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_M" href="#igeCore.input.keyboard.KeyCode.KEY_M">KEY_M</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_MINUS" href="#igeCore.input.keyboard.KeyCode.KEY_MINUS">KEY_MINUS</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_N" href="#igeCore.input.keyboard.KeyCode.KEY_N">KEY_N</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_NOKEY" href="#igeCore.input.keyboard.KeyCode.KEY_NOKEY">KEY_NOKEY</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_NUMLOCK" href="#igeCore.input.keyboard.KeyCode.KEY_NUMLOCK">KEY_NUMLOCK</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_O" href="#igeCore.input.keyboard.KeyCode.KEY_O">KEY_O</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_P" href="#igeCore.input.keyboard.KeyCode.KEY_P">KEY_P</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_PAGEDOWN" href="#igeCore.input.keyboard.KeyCode.KEY_PAGEDOWN">KEY_PAGEDOWN</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_PAGEUP" href="#igeCore.input.keyboard.KeyCode.KEY_PAGEUP">KEY_PAGEUP</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_PAUSE" href="#igeCore.input.keyboard.KeyCode.KEY_PAUSE">KEY_PAUSE</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_PERIOD" href="#igeCore.input.keyboard.KeyCode.KEY_PERIOD">KEY_PERIOD</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_PLUS" href="#igeCore.input.keyboard.KeyCode.KEY_PLUS">KEY_PLUS</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_Q" href="#igeCore.input.keyboard.KeyCode.KEY_Q">KEY_Q</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_QUOTE" href="#igeCore.input.keyboard.KeyCode.KEY_QUOTE">KEY_QUOTE</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_R" href="#igeCore.input.keyboard.KeyCode.KEY_R">KEY_R</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RALT" href="#igeCore.input.keyboard.KeyCode.KEY_RALT">KEY_RALT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RCTRL" href="#igeCore.input.keyboard.KeyCode.KEY_RCTRL">KEY_RCTRL</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RETURN" href="#igeCore.input.keyboard.KeyCode.KEY_RETURN">KEY_RETURN</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RIGHT" href="#igeCore.input.keyboard.KeyCode.KEY_RIGHT">KEY_RIGHT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RIGHTBRACKET" href="#igeCore.input.keyboard.KeyCode.KEY_RIGHTBRACKET">KEY_RIGHTBRACKET</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RSHIFT" href="#igeCore.input.keyboard.KeyCode.KEY_RSHIFT">KEY_RSHIFT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_RWIN" href="#igeCore.input.keyboard.KeyCode.KEY_RWIN">KEY_RWIN</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_S" href="#igeCore.input.keyboard.KeyCode.KEY_S">KEY_S</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_SEMICOLON" href="#igeCore.input.keyboard.KeyCode.KEY_SEMICOLON">KEY_SEMICOLON</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_SLASH" href="#igeCore.input.keyboard.KeyCode.KEY_SLASH">KEY_SLASH</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_SPACE" href="#igeCore.input.keyboard.KeyCode.KEY_SPACE">KEY_SPACE</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_T" href="#igeCore.input.keyboard.KeyCode.KEY_T">KEY_T</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_TAB" href="#igeCore.input.keyboard.KeyCode.KEY_TAB">KEY_TAB</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_U" href="#igeCore.input.keyboard.KeyCode.KEY_U">KEY_U</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_UP" href="#igeCore.input.keyboard.KeyCode.KEY_UP">KEY_UP</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_V" href="#igeCore.input.keyboard.KeyCode.KEY_V">KEY_V</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_W" href="#igeCore.input.keyboard.KeyCode.KEY_W">KEY_W</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_X" href="#igeCore.input.keyboard.KeyCode.KEY_X">KEY_X</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_Y" href="#igeCore.input.keyboard.KeyCode.KEY_Y">KEY_Y</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyCode.KEY_Z" href="#igeCore.input.keyboard.KeyCode.KEY_Z">KEY_Z</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.input.keyboard.KeyEventCode" href="#igeCore.input.keyboard.KeyEventCode">KeyEventCode</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.input.keyboard.KeyEventCode.PRESSED" href="#igeCore.input.keyboard.KeyEventCode.PRESSED">PRESSED</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyEventCode.RELEASED" href="#igeCore.input.keyboard.KeyEventCode.RELEASED">RELEASED</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.input.keyboard.KeyModifier" href="#igeCore.input.keyboard.KeyModifier">KeyModifier</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_ALT" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_ALT">KEY_MOD_ALT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_CTRL" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_CTRL">KEY_MOD_CTRL</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_NONE" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_NONE">KEY_MOD_NONE</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_SHIFT" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_SHIFT">KEY_MOD_SHIFT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeCore.input.keyboard.Keyboard" href="#igeCore.input.keyboard.Keyboard">Keyboard</a></code></h4>
+<ul class="">
+<li><code><a title="igeCore.input.keyboard.Keyboard.getKey" href="#igeCore.input.keyboard.Keyboard.getKey">getKey</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.getModifier" href="#igeCore.input.keyboard.Keyboard.getModifier">getModifier</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.instance" href="#igeCore.input.keyboard.Keyboard.instance">instance</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.isHold" href="#igeCore.input.keyboard.Keyboard.isHold">isHold</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.isPressed" href="#igeCore.input.keyboard.Keyboard.isPressed">isPressed</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.isReleased" href="#igeCore.input.keyboard.Keyboard.isReleased">isReleased</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.onKeyPressed" href="#igeCore.input.keyboard.Keyboard.onKeyPressed">onKeyPressed</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.onKeyReleased" href="#igeCore.input.keyboard.Keyboard.onKeyReleased">onKeyReleased</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.registerKeyPressedCallback" href="#igeCore.input.keyboard.Keyboard.registerKeyPressedCallback">registerKeyPressedCallback</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.registerKeyReleasedCallback" href="#igeCore.input.keyboard.Keyboard.registerKeyReleasedCallback">registerKeyReleasedCallback</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.removeKeyPressedCallback" href="#igeCore.input.keyboard.Keyboard.removeKeyPressedCallback">removeKeyPressedCallback</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.removeKeyReleasedCallback" href="#igeCore.input.keyboard.Keyboard.removeKeyReleasedCallback">removeKeyReleasedCallback</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
