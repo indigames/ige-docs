@@ -13,11 +13,21 @@ The documents include detailed instructions, and step-by-step tutorials to help 
 Contents
 --------
 .. toctree::
+   :caption: Getting Started
+
+   gs_installation
+   gs_layout
+   gs_firstscene
+
+.. toctree::
    :caption: User Manual
 
-   man_installation
-   man_layout
-   man_firstscene
+   man_input
+   man_graphics
+   man_gui
+   man_audio
+   man_physic
+   man_navigation
 
 .. toctree::
    :caption: Tutorials
