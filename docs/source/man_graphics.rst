@@ -243,10 +243,72 @@ IGE provide basic fog setting to simulate fog.
 Model
 -----
 
+Models are files that contain data about the shape and appearance of 3D objects, such as characters, terrain, or environment objects.
+Model files can contain a variety of data, including meshes, materials, and textures. They can also contain animation data, for animated objects.
+Usually, models are created using an 3D modeling software, such as Blender, Autodesk Maya, Autodesk 3Ds Max ..., and then import them into IGE.
 
-Editable Model
---------------
+IGE supports importing ``.dae`` and ``.fbx`` file formats. After importing to IGE, the files are converted to ``.pyxf`` format which is specially optimized for IGE.
+The game engine will automatically detect changes in the file system, and import model files accordingly.
 
+Importing
++++++++++
+
+In order to change importing options, go to ``Assets Browser``, select the file to change settings, then look for ``Assets`` windows, then change the options when needed.
+
+.. figure:: images/man_model_import.png
+   :alt: Model settings
+
+.. table::
+   :widths: auto
+
+   =====================================  ==============================================
+    Property                               Function
+   =====================================  ==============================================
+    EXPORT_NAMES                           Include meshes name in exported version
+    BASE_SCALE                             Base scale factor (dae\: 1.0, fbx\: 100.0)
+    TRIANGLE_STRIP                         [Optimize] Strip redundant trianges
+    OPTIMIZE_MESH                          [Optimize] Optimize mesh
+    OPTIMIZE_VERTEX                        [Optimize] Optimize vertex
+    OPTIMIZE_ANIMATION                     [Optimize] Optimize animation
+    SHADER_MAKE_SHADOW                     Enable shadow casting
+    SHADER_RECEIVE_SHADOW                  Enable shadow receiving
+    SHADER_VERTEX_COLOR                    Enable vertex color
+    SHADER_NUM_DIR_LAMP                    Number of directional light
+    SHADER_NUM_POINT_LAMP                  Number of point light
+    SHADER_NUM_SPOT_LAMP                   Number of spot light
+    EMBEDDED_ANIMATION                     Embbed animation, or build saparate anim file
+   =====================================  ==============================================
+
+Using Model
++++++++++++
+
+Model can be dragged to the ``Scene View`` to create scene object. Also, it can be attached to ``Figure`` or ``EditableFigure`` components of an empty object.
+
+``Figure`` component is used to render 'fixed' model, wothout ability of modifying mesh structures. It is the fasted way to render model using IGE.
+``EditableFigure`` is used in case model's mesh need to be changed at run time. 
+
+.. figure:: images/man_figure_component.png
+   :alt: Figure component
+
+.. table::
+   :widths: auto
+
+   =====================================  ==============================================
+    Property                               Function
+   =====================================  ==============================================
+    Path                                   Path to the model file
+    Fog                                    Enable/disable fog
+    DoubleSide                             Enable/disable double side rendering
+    FFCulling                              Enable/disable front-face culling
+    Z-Test                                 Enable/disable depth testing
+    Z-Wtrie                                Enable/disable depth writing
+    ScissorTest                            Enable/disable scissor test
+    Update Ratio                           Updating ratio, used to control animation speed
+    Mesh                                   List of meshes included in the model file
+    Material                               List of materials included in the model file
+   =====================================  ==============================================
+
+For more details of scripting API, please refer to Python API document.
 
 Animation
 ---------
