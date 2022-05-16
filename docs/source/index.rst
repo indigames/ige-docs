@@ -24,10 +24,12 @@ Contents
 
    man_input
    man_graphics
+   man_animation
    man_gui
    man_audio
    man_physic
    man_navigation
+   man_particle
 
 .. toctree::
    :caption: Tutorials

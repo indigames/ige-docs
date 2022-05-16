@@ -245,7 +245,7 @@ Model
 
 Models are files that contain data about the shape and appearance of 3D objects, such as characters, terrain, or environment objects.
 Model files can contain a variety of data, including meshes, materials, and textures. They can also contain animation data, for animated objects.
-Usually, models are created using an 3D modeling software, such as Blender, Autodesk Maya, Autodesk 3Ds Max ..., and then import them into IGE.
+Usually, models are created using an 3D modeling software, such as Blender®, Autodesk® Maya®, Autodesk® 3ds Max® ..., and then import them into IGE.
 
 IGE supports importing ``.dae`` and ``.fbx`` file formats. After importing to IGE, the files are converted to ``.pyxf`` format which is specially optimized for IGE.
 The game engine will automatically detect changes in the file system, and import model files accordingly.
@@ -309,7 +309,3 @@ Model can be dragged to the ``Scene View`` to create scene object. Also, it can 
    =====================================  ==============================================
 
 For more details of scripting API, please refer to Python API document.
-
-Animation
----------
-

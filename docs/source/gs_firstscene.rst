@@ -91,4 +91,4 @@ Then drag the file in Script component Inspector.
 .. figure:: images/drag_python.png
    :alt: Create Script Component
 
-Save the scene, by pressing ``Ctrl + S`` or ``File -> Save Scene``. Then you can press the ``Play`` button to test it. The cube should move up and down continuously.
+Save the scene, by pressing ``Ctrl + S`` or ``File -> Save Scene``. Then you can press the ``Play`` button to test it, the cube should keep moving up and down follow ``sin`` pattern continuosly.
