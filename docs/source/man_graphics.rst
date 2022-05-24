@@ -301,7 +301,7 @@ Model can be dragged to the ``Scene View`` to create scene object. Also, it can 
     DoubleSide                             Enable/disable double side rendering
     FFCulling                              Enable/disable front-face culling
     Z-Test                                 Enable/disable depth testing
-    Z-Wtrie                                Enable/disable depth writing
+    Z-Write                                Enable/disable depth writing
     ScissorTest                            Enable/disable scissor test
     Update Ratio                           Updating ratio, used to control animation speed
     Mesh                                   List of meshes included in the model file
