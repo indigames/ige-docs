@@ -188,7 +188,8 @@ There are options to set the alignment of the text.
    =====================================  =====================================
 
 The ``UIText`` support drawing text using true-type font (.ttf, .otf) and bitmap font (.pybm) formats.
-``Bitmap Font Creator`` is used to create bitmap font, which can be found at ``Menu -> Tool -> Bitmap Font Creator``.
+
+``Bitmap Font Creator`` can be used to create bitmap font, which can be found at ``Menu -> Tool -> Bitmap Font Creator``.
 
 .. figure:: images/man_gui_bitmap_font_creator.png
    :alt: Bitmap Font Creator
@@ -296,10 +297,10 @@ The ``UIButton`` component implement a button in GUI, which responds to a click 
                                            - *Sprite Swap*
 
     Image                                   Background image
-    Normal                                  Color/texture of the Normal state
-    Pressed                                 Color/texture of the Pressed state
-    Selected                                Color/texture of the Selected state
-    Disabled                                Color/texture of the Disabled state
+    Normal                                  Color/sprite of the Normal state
+    Pressed                                 Color/sprite of the Pressed state
+    Selected                                Color/sprite of the Selected state
+    Disabled                                Color/sprite of the Disabled state
     Fade Duration                           Transition Duration
     Color                                   Diffuse color
 

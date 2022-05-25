@@ -40,6 +40,7 @@ Contents
    tut_animation
    tut_physic
    tut_navmesh
+   tut_particle
 
 .. toctree::
    :caption: API Documents
