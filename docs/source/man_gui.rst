@@ -86,8 +86,13 @@ UIImage
 
 The ``UIImage`` component is used to display an image on screen. 
 
+.. figure:: images/man_gui_img_image.png
+   :alt: UIImage
+
+The ``Inspector`` window allows to change the image settings:
+
 .. figure:: images/man_gui_image.png
-   :alt: UIImage Component
+   :alt: UIImage Inspector
 
 .. table::
    :widths: auto
@@ -99,7 +104,7 @@ The ``UIImage`` component is used to display an image on screen.
     Inteactable                            Ability to receive events using Script
     Sprite Type                            The Sprite type, can be:
 
-                                           - *Simple*: simple Sprite
+                                           - *Simple*: simple sprite
                                            - *Sliced*: 9-slices sprite
 
     Fill Method                            Allow to fill just part of an image by:
@@ -166,8 +171,11 @@ UIText
 ++++++
 
 The ``UIText`` component has a Text area for entering the text that will be displayed.
-It is possible to set the font, font style and font size.
-There are options to set the alignment of the text.
+
+.. figure:: images/man_gui_img_text.png
+   :alt: UIText Component
+
+It is possible to set the font, font style and font size, and alignment of the text using Inspector.
 
 .. figure:: images/man_gui_text.png
    :alt: UIText Component
@@ -226,6 +234,9 @@ To create new bitmap font, flows steps below:
 - Save the font by pressing ``Save FontBitmap`` button.
 - Test the font by create ``UITextBitmap`` component, then drag and drop the newly created font in the ``Inspector`` window.
 
+.. figure:: images/man_gui_img_text_bitmap.png
+   :alt: UIText Using Bitmap Font
+
 .. note::
     Bitmap font only displayed as RGB texture if background use alpha channel. Otherwise, it will render as `grayscale` color to resolve alpha issue.
 
@@ -238,7 +249,12 @@ To create new bitmap font, flows steps below:
 UITextField
 +++++++++++
 
-``UITextField`` is used to display an editable text box to the user. The usage of this component is similar to ``UIText``, except it allows text to be input by user.
+``UITextField`` is used to display an editable text box to the user.
+
+.. figure:: images/man_gui_img_textfield.png
+   :alt: UITextField
+
+The usage of this component is similar to ``UIText``, except it allows text to be input by user.
 
 .. figure:: images/man_gui_textfield.png
    :alt: UITextField Component
@@ -264,6 +280,7 @@ To handle the input ended event, add this code to ``Script``:
 ..  code:: python
 
    from igeScene import Script
+
    class TxtUserName(Script):
       def __init__(self, owner):
          super().__init__(owner)
@@ -280,6 +297,11 @@ UIButton
 ++++++++
 
 The ``UIButton`` component implement a button in GUI, which responds to a click from the user and is used to initiate or confirm an action.
+
+.. figure:: images/man_gui_img_button.png
+   :alt: UIButton
+
+The Inspector properties are as below:
 
 .. figure:: images/man_gui_button.png
    :alt: UIButton Component
@@ -320,6 +342,7 @@ The action can be controlled using ``Script``, which ``onClick`` callback like b
 ..  code:: python
 
    from igeScene import Script
+
    class BtnNoAds(Script):
       def __init__(self, owner):
          super().__init__(owner)
@@ -330,8 +353,126 @@ The action can be controlled using ``Script``, which ``onClick`` callback like b
 UISlider
 ++++++++
 
-UIScrollBar
-+++++++++++
+The ``UISlider`` allows user to select a numeric value from a range by dragging the mouse.
+
+.. figure:: images/man_gui_img_slider.png
+   :alt: UISlider
+
+The Inspector properties are as below:
+
+.. figure:: images/man_gui_slider.png
+   :alt: UISlider Component
+
+.. table::
+   :widths: auto
+
+   =====================================  =====================================
+    Property                               Function
+   =====================================  =====================================
+    Inteactable                            Ability to receive events using Script
+    Normal                                 Color of the Normal state
+    Pressed                                Color of the Pressed state
+    Disabled                               Color of the Disabled state
+    Fade Duration                          Transition Duration
+    Direction                              Slider direction
+
+                                           - *Left To Right*
+                                           - *Right To Left*
+                                           - *Bottom To Top*
+                                           - *Top To Bottom*
+    Min                                    Min value
+    Max                                    Max value
+    Value                                  Current value
+    Whole Numbers                          Constrained value to integer number when checked
+   =====================================  =====================================
+
+To handle value changed event, add this code to ``Script``:
+
+..  code:: python
+
+   from igeScene import Script
+
+   class VolumeSlider(Script):
+      def __init__(self, owner):
+         super().__init__(owner)
+
+      def onValueChanged(self, val):         
+         self.volume = val
 
 UIScrollView
 ++++++++++++
+
+An ``UIScrollView`` can be used to scroll the content that takes up a lot of space and needs to be displayed in a small area.
+It is usually combined with an ``UIMask`` in order to create a scroll view, and with one or two ``UIScrollBar`` that can be dragged to scroll horizontally or vertically.
+
+.. figure:: images/man_gui_img_scrollview.png
+   :alt: UIScrollView
+
+The Inspector properties are as below:
+
+.. figure:: images/man_gui_scrollview.png
+   :alt: UIScrollView Component
+
+
+.. table::
+   :widths: auto
+
+   =====================================  =====================================
+    Property                               Function
+   =====================================  =====================================    
+    Inteactable                            Ability to receive events using Script
+    Background                             Background image
+    Sprite Type                            Sprite type, either *Simple* or *Sliced*
+    Color                                  Diffuse color
+    Horizontal                             Enable/disable horizontal scrollbar reference
+    Vertical                               Enable/disable vertical scrollbar reference
+    Move Type                              Movement type, either *Claimed* or *Elastic*
+    Elasticity                             The amount of bounce used in the elasticity mode
+    Elastic Extra                          The extra boundary allowed in Elastic mode.
+    Inertia                                Allow content to move after pointer releasing
+    Deceleration Rate                      Determines how quickly the contents stop moving
+   =====================================  =====================================
+
+To support UIScrollView implement, the ``UIScrollBar`` is introduced to allow the user to scroll the view using drag handler.
+
+.. figure:: images/man_gui_scrollbar.png
+   :alt: UIScrollBar Component
+
+
+.. table::
+   :widths: auto
+
+   =====================================  =====================================
+    Property                               Function
+   =====================================  =====================================    
+    Inteactable                            Ability to receive events using Script
+    Background                             Background image
+    Sprite Type                            Sprite type, either *Simple* or *Sliced*
+    Color                                  Diffuse color
+    Normal Color                           Color of the handler in normal state
+    Pressed Color                          Color of the handler in dragging state
+    Disabled Color                         Color of the handler in disabled state
+    Fade Duration                          Fading duration, in second
+    Direction                              Dragging direction
+
+                                           - *Left To Right*
+                                           - *Right To Left*
+                                           - *Bottom To Top*
+                                           - *Top To Bottom*
+
+    Value                                  Current value
+    Size                                   Handler size
+   =====================================  =====================================
+
+To handle value changed event, add this code to ``Script``:
+
+..  code:: python
+
+   from igeScene import Script
+
+   class HScrollBar(Script):
+      def __init__(self, owner):
+         super().__init__(owner)
+
+      def onValueChanged(self, val):         
+         self.position = val
