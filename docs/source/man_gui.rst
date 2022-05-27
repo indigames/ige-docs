@@ -232,7 +232,7 @@ To create new bitmap font, flows steps below:
 - Generate glyphs by pressing ``Generate Glyphs`` button.
 - For each glyphs, input the position, size, offset and advance value.
 - Save the font by pressing ``Save FontBitmap`` button.
-- Test the font by create ``UITextBitmap`` component, then drag and drop the newly created font in the ``Inspector`` window.
+- Test the font by create ``UIText`` component, then drag and drop the newly created font in the ``Inspector`` window.
 
 .. figure:: images/man_gui_img_text_bitmap.png
    :alt: UIText Using Bitmap Font

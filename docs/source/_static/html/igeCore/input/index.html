@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
 <title>igeCore.input API documentation</title>
-<meta name="description" content="indi game engine - input module" />
+<meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -22,44 +22,10 @@
 <h1 class="title">Module <code>igeCore.input</code></h1>
 </header>
 <section id="section-intro">
-<p>indi game engine - input module</p>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">&#34;&#34;&#34;
-indi game engine - input module
-&#34;&#34;&#34;
-import igeCore as core
-from .event import EventType
-from .keyboard import KeyEventCode, KeyCode, KeyModifier, Keyboard
-from .touch import TouchEventCode, Touch
-
-def getKeyboard():
-    return Keyboard.instance()
-
-def getTouch():
-    return Touch.instance()
-
-eventListenerFuncs = set([])
-
-def onEvent(event):
-    for func in eventListenerFuncs:
-        func(event)
-
-def registerEventListener(func):
-    eventListenerFuncs.add(func)
-    if len(eventListenerFuncs) == 1:
-        core.registerEventListener(EventType.ALL, -1, onEvent)</code></pre>
-</details>
 </section>
 <section>
 <h2 class="section-title" id="header-submodules">Sub-modules</h2>
 <dl>
-<dt><code class="name"><a title="igeCore.input.event" href="event.html">igeCore.input.event</a></code></dt>
-<dd>
-<div class="desc"><p>indi game engine - input event</p></div>
-</dd>
 <dt><code class="name"><a title="igeCore.input.keyboard" href="keyboard.html">igeCore.input.keyboard</a></code></dt>
 <dd>
 <div class="desc"><p>indi game engine - keyboard input</p></div>
@@ -73,64 +39,6 @@ def registerEventListener(func):
 <section>
 </section>
 <section>
-<h2 class="section-title" id="header-functions">Functions</h2>
-<dl>
-<dt id="igeCore.input.getKeyboard"><code class="name flex">
-<span>def <span class="ident">getKeyboard</span></span>(<span>)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def getKeyboard():
-    return Keyboard.instance()</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.getTouch"><code class="name flex">
-<span>def <span class="ident">getTouch</span></span>(<span>)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def getTouch():
-    return Touch.instance()</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.onEvent"><code class="name flex">
-<span>def <span class="ident">onEvent</span></span>(<span>event)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def onEvent(event):
-    for func in eventListenerFuncs:
-        func(event)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.registerEventListener"><code class="name flex">
-<span>def <span class="ident">registerEventListener</span></span>(<span>func)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def registerEventListener(func):
-    eventListenerFuncs.add(func)
-    if len(eventListenerFuncs) == 1:
-        core.registerEventListener(EventType.ALL, -1, onEvent)</code></pre>
-</details>
-</dd>
-</dl>
 </section>
 <section>
 </section>
@@ -148,17 +56,8 @@ def registerEventListener(func):
 </li>
 <li><h3><a href="#header-submodules">Sub-modules</a></h3>
 <ul>
-<li><code><a title="igeCore.input.event" href="event.html">igeCore.input.event</a></code></li>
 <li><code><a title="igeCore.input.keyboard" href="keyboard.html">igeCore.input.keyboard</a></code></li>
 <li><code><a title="igeCore.input.touch" href="touch.html">igeCore.input.touch</a></code></li>
-</ul>
-</li>
-<li><h3><a href="#header-functions">Functions</a></h3>
-<ul class="">
-<li><code><a title="igeCore.input.getKeyboard" href="#igeCore.input.getKeyboard">getKeyboard</a></code></li>
-<li><code><a title="igeCore.input.getTouch" href="#igeCore.input.getTouch">getTouch</a></code></li>
-<li><code><a title="igeCore.input.onEvent" href="#igeCore.input.onEvent">onEvent</a></code></li>
-<li><code><a title="igeCore.input.registerEventListener" href="#igeCore.input.registerEventListener">registerEventListener</a></code></li>
 </ul>
 </li>
 </ul>

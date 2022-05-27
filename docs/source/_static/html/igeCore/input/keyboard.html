@@ -31,11 +31,6 @@
 indi game engine - keyboard input
 &#34;&#34;&#34;
 import igeCore as core
-from .event import EventType
-
-class KeyEventCode:
-    PRESSED = 0
-    RELEASED = 1
 
 class KeyCode:
     KEY_NOKEY = -1
@@ -145,66 +140,93 @@ class KeyCode:
     KEY_COUNT = 103
 
 class KeyModifier:
-    KEY_MOD_NONE = 0
-    KEY_MOD_CTRL = 1
-    KEY_MOD_ALT = 2
-    KEY_MOD_SHIFT = 4
+    NONE = 0
+    CTRL = 1
+    ALT = 2
+    SHIFT = 4
 
 class Keyboard:
-    __instance = None
-
-    def __init__(self):
-        self.keyPressedCallbacks = set([])
-        self.keyReleasedCallbacks = set([])
-
-    def __del__(self):
-        self.keyPressedCallbacks.clear()
-        self.keyReleasedCallbacks.clear()
+    &#34;&#34;&#34;
+        Class Keyboard
+    &#34;&#34;&#34;
 
     @staticmethod
-    def instance():
-        if Keyboard.__instance is None:
-            Keyboard.__instance = Keyboard()
-        return Keyboard.__instance
-     
-    def getKey(self, keyCode):
-        return core.getKeyChar(keyCode)
-
-    def getModifier(self):
-        return core.getKeyModifier()
-
     def isPressed(self, keyCode):
+        &#34;&#34;&#34;
+        Check if a key is pressed.
+
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
+
+        Returns
+        -------
+            True: If the key is pressed
+            False: If the key is not pressed
+        &#34;&#34;&#34;
         return core.isKeyPressed(keyCode)
 
+    @staticmethod
     def isReleased(self, keyCode):
+        &#34;&#34;&#34;
+        Check if a key is released.
+
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
+
+        Returns
+        -------
+            True: If the key is released
+            False: If the key is not released
+        &#34;&#34;&#34;
         return core.isKeyReleased(keyCode)
-        
+
+    @staticmethod
     def isHold(self, keyCode):
+        &#34;&#34;&#34;
+        Check if a key is hold.
+
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
+
+        Returns
+        -------
+            True: If the key is hold
+            False: If the key is not hold
+        &#34;&#34;&#34;
         return core.isKeyHold(keyCode)
 
-    def registerKeyPressedCallback(self, onKeyPressedFunc):
-        self.keyPressedCallbacks.add(onKeyPressedFunc)
-        if len(self.keyPressedCallbacks) == 1:
-            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.PRESSED, self.onKeyPressed)
+    @staticmethod
+    def getKeyChar(self, keyCode):
+        &#34;&#34;&#34;
+        Get represented character with given keyCode. It will also consider SHIFT modifier state. 
 
-    def registerKeyReleasedCallback(self,onKeyReleasedFunc):
-        self.keyReleasedCallbacks.add(onKeyReleasedFunc)
-        if len(self.keyReleasedCallbacks) == 1:
-            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.RELEASED, self.onKeyReleased)
-    
-    def removeKeyPressedCallback(self, onKeyPressedFunc):
-        self.keyPressedCallbacks.remove(onKeyPressedFunc)
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
 
-    def removeKeyReleasedCallback(self, onKeyReleasedFunc):
-        self.keyReleasedCallbacks.remove(onKeyReleasedFunc)
+        Returns
+        -------
+            key (char): The representing character
+        &#34;&#34;&#34;
+        return core.getKeyChar(keyCode)
 
-    def onKeyPressed(self, keyCode, eventCode, keyChar, keyModifier):
-        for callback in self.keyPressedCallbacks:
-            callback(keyCode, eventCode, keyChar, keyModifier)
+    @staticmethod
+    def getModifier(self):
+        &#34;&#34;&#34;
+        Get the key modifier value. To check if a key modifier activated, use code below:
+        
+        mod = Keyboard.getModifier()
+        if mod &amp; KeyModifier.SHIFT:
+            print(&#34;SHIFT is activated&#34;)
 
-    def onKeyReleased(self, keyCode, eventCode, keyChar, keyModifier):
-        for callback in self.keyReleasedCallbacks:
-            callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
+        Returns
+        -------
+            keyModifier (int): The key modifier value
+        &#34;&#34;&#34;
+        return core.getKeyModifier()</code></pre>
 </details>
 </section>
 <section>
@@ -756,31 +778,6 @@ class Keyboard:
 </dd>
 </dl>
 </dd>
-<dt id="igeCore.input.keyboard.KeyEventCode"><code class="flex name class">
-<span>class <span class="ident">KeyEventCode</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">class KeyEventCode:
-    PRESSED = 0
-    RELEASED = 1</code></pre>
-</details>
-<h3>Class variables</h3>
-<dl>
-<dt id="igeCore.input.keyboard.KeyEventCode.PRESSED"><code class="name">var <span class="ident">PRESSED</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt id="igeCore.input.keyboard.KeyEventCode.RELEASED"><code class="name">var <span class="ident">RELEASED</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-</dl>
-</dd>
 <dt id="igeCore.input.keyboard.KeyModifier"><code class="flex name class">
 <span>class <span class="ident">KeyModifier</span></span>
 </code></dt>
@@ -791,26 +788,26 @@ class Keyboard:
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class KeyModifier:
-    KEY_MOD_NONE = 0
-    KEY_MOD_CTRL = 1
-    KEY_MOD_ALT = 2
-    KEY_MOD_SHIFT = 4</code></pre>
+    NONE = 0
+    CTRL = 1
+    ALT = 2
+    SHIFT = 4</code></pre>
 </details>
 <h3>Class variables</h3>
 <dl>
-<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_ALT"><code class="name">var <span class="ident">KEY_MOD_ALT</span></code></dt>
+<dt id="igeCore.input.keyboard.KeyModifier.ALT"><code class="name">var <span class="ident">ALT</span></code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_CTRL"><code class="name">var <span class="ident">KEY_MOD_CTRL</span></code></dt>
+<dt id="igeCore.input.keyboard.KeyModifier.CTRL"><code class="name">var <span class="ident">CTRL</span></code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_NONE"><code class="name">var <span class="ident">KEY_MOD_NONE</span></code></dt>
+<dt id="igeCore.input.keyboard.KeyModifier.NONE"><code class="name">var <span class="ident">NONE</span></code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="igeCore.input.keyboard.KeyModifier.KEY_MOD_SHIFT"><code class="name">var <span class="ident">KEY_MOD_SHIFT</span></code></dt>
+<dt id="igeCore.input.keyboard.KeyModifier.SHIFT"><code class="name">var <span class="ident">SHIFT</span></code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
@@ -820,98 +817,124 @@ class Keyboard:
 <span>class <span class="ident">Keyboard</span></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Class Keyboard</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class Keyboard:
-    __instance = None
-
-    def __init__(self):
-        self.keyPressedCallbacks = set([])
-        self.keyReleasedCallbacks = set([])
-
-    def __del__(self):
-        self.keyPressedCallbacks.clear()
-        self.keyReleasedCallbacks.clear()
+    &#34;&#34;&#34;
+        Class Keyboard
+    &#34;&#34;&#34;
 
     @staticmethod
-    def instance():
-        if Keyboard.__instance is None:
-            Keyboard.__instance = Keyboard()
-        return Keyboard.__instance
-     
-    def getKey(self, keyCode):
-        return core.getKeyChar(keyCode)
-
-    def getModifier(self):
-        return core.getKeyModifier()
-
     def isPressed(self, keyCode):
+        &#34;&#34;&#34;
+        Check if a key is pressed.
+
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
+
+        Returns
+        -------
+            True: If the key is pressed
+            False: If the key is not pressed
+        &#34;&#34;&#34;
         return core.isKeyPressed(keyCode)
 
+    @staticmethod
     def isReleased(self, keyCode):
+        &#34;&#34;&#34;
+        Check if a key is released.
+
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
+
+        Returns
+        -------
+            True: If the key is released
+            False: If the key is not released
+        &#34;&#34;&#34;
         return core.isKeyReleased(keyCode)
-        
+
+    @staticmethod
     def isHold(self, keyCode):
+        &#34;&#34;&#34;
+        Check if a key is hold.
+
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
+
+        Returns
+        -------
+            True: If the key is hold
+            False: If the key is not hold
+        &#34;&#34;&#34;
         return core.isKeyHold(keyCode)
 
-    def registerKeyPressedCallback(self, onKeyPressedFunc):
-        self.keyPressedCallbacks.add(onKeyPressedFunc)
-        if len(self.keyPressedCallbacks) == 1:
-            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.PRESSED, self.onKeyPressed)
+    @staticmethod
+    def getKeyChar(self, keyCode):
+        &#34;&#34;&#34;
+        Get represented character with given keyCode. It will also consider SHIFT modifier state. 
 
-    def registerKeyReleasedCallback(self,onKeyReleasedFunc):
-        self.keyReleasedCallbacks.add(onKeyReleasedFunc)
-        if len(self.keyReleasedCallbacks) == 1:
-            core.registerEventListener(EventType.KEYBOARD, KeyEventCode.RELEASED, self.onKeyReleased)
-    
-    def removeKeyPressedCallback(self, onKeyPressedFunc):
-        self.keyPressedCallbacks.remove(onKeyPressedFunc)
+        Parameters
+        ----------
+            keyCode (int): Key Code to check
 
-    def removeKeyReleasedCallback(self, onKeyReleasedFunc):
-        self.keyReleasedCallbacks.remove(onKeyReleasedFunc)
+        Returns
+        -------
+            key (char): The representing character
+        &#34;&#34;&#34;
+        return core.getKeyChar(keyCode)
 
-    def onKeyPressed(self, keyCode, eventCode, keyChar, keyModifier):
-        for callback in self.keyPressedCallbacks:
-            callback(keyCode, eventCode, keyChar, keyModifier)
+    @staticmethod
+    def getModifier(self):
+        &#34;&#34;&#34;
+        Get the key modifier value. To check if a key modifier activated, use code below:
+        
+        mod = Keyboard.getModifier()
+        if mod &amp; KeyModifier.SHIFT:
+            print(&#34;SHIFT is activated&#34;)
 
-    def onKeyReleased(self, keyCode, eventCode, keyChar, keyModifier):
-        for callback in self.keyReleasedCallbacks:
-            callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
+        Returns
+        -------
+            keyModifier (int): The key modifier value
+        &#34;&#34;&#34;
+        return core.getKeyModifier()</code></pre>
 </details>
 <h3>Static methods</h3>
 <dl>
-<dt id="igeCore.input.keyboard.Keyboard.instance"><code class="name flex">
-<span>def <span class="ident">instance</span></span>(<span>)</span>
+<dt id="igeCore.input.keyboard.Keyboard.getKeyChar"><code class="name flex">
+<span>def <span class="ident">getKeyChar</span></span>(<span>self, keyCode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Get represented character with given keyCode. It will also consider SHIFT modifier state. </p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>keyCode (int): Key Code to check
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>key (char): The representing character
+</code></pre></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def instance():
-    if Keyboard.__instance is None:
-        Keyboard.__instance = Keyboard()
-    return Keyboard.__instance</code></pre>
-</details>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeCore.input.keyboard.Keyboard.getKey"><code class="name flex">
-<span>def <span class="ident">getKey</span></span>(<span>self, keyCode)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def getKey(self, keyCode):
+def getKeyChar(self, keyCode):
+    &#34;&#34;&#34;
+    Get represented character with given keyCode. It will also consider SHIFT modifier state. 
+
+    Parameters
+    ----------
+        keyCode (int): Key Code to check
+
+    Returns
+    -------
+        key (char): The representing character
+    &#34;&#34;&#34;
     return core.getKeyChar(keyCode)</code></pre>
 </details>
 </dd>
@@ -919,12 +942,30 @@ def instance():
 <span>def <span class="ident">getModifier</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Get the key modifier value. To check if a key modifier activated, use code below:</p>
+<p>mod = Keyboard.getModifier()
+if mod &amp; KeyModifier.SHIFT:
+print("SHIFT is activated")</p>
+<h2 id="returns">Returns</h2>
+<pre><code>keyModifier (int): The key modifier value
+</code></pre></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def getModifier(self):
+<pre><code class="python">@staticmethod
+def getModifier(self):
+    &#34;&#34;&#34;
+    Get the key modifier value. To check if a key modifier activated, use code below:
+    
+    mod = Keyboard.getModifier()
+    if mod &amp; KeyModifier.SHIFT:
+        print(&#34;SHIFT is activated&#34;)
+
+    Returns
+    -------
+        keyModifier (int): The key modifier value
+    &#34;&#34;&#34;
     return core.getKeyModifier()</code></pre>
 </details>
 </dd>
@@ -932,12 +973,32 @@ def instance():
 <span>def <span class="ident">isHold</span></span>(<span>self, keyCode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Check if a key is hold.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>keyCode (int): Key Code to check
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>True: If the key is hold
+False: If the key is not hold
+</code></pre></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def isHold(self, keyCode):
+<pre><code class="python">@staticmethod
+def isHold(self, keyCode):
+    &#34;&#34;&#34;
+    Check if a key is hold.
+
+    Parameters
+    ----------
+        keyCode (int): Key Code to check
+
+    Returns
+    -------
+        True: If the key is hold
+        False: If the key is not hold
+    &#34;&#34;&#34;
     return core.isKeyHold(keyCode)</code></pre>
 </details>
 </dd>
@@ -945,12 +1006,32 @@ def instance():
 <span>def <span class="ident">isPressed</span></span>(<span>self, keyCode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Check if a key is pressed.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>keyCode (int): Key Code to check
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>True: If the key is pressed
+False: If the key is not pressed
+</code></pre></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def isPressed(self, keyCode):
+<pre><code class="python">@staticmethod
+def isPressed(self, keyCode):
+    &#34;&#34;&#34;
+    Check if a key is pressed.
+
+    Parameters
+    ----------
+        keyCode (int): Key Code to check
+
+    Returns
+    -------
+        True: If the key is pressed
+        False: If the key is not pressed
+    &#34;&#34;&#34;
     return core.isKeyPressed(keyCode)</code></pre>
 </details>
 </dd>
@@ -958,97 +1039,33 @@ def instance():
 <span>def <span class="ident">isReleased</span></span>(<span>self, keyCode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Check if a key is released.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>keyCode (int): Key Code to check
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>True: If the key is released
+False: If the key is not released
+</code></pre></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def isReleased(self, keyCode):
+<pre><code class="python">@staticmethod
+def isReleased(self, keyCode):
+    &#34;&#34;&#34;
+    Check if a key is released.
+
+    Parameters
+    ----------
+        keyCode (int): Key Code to check
+
+    Returns
+    -------
+        True: If the key is released
+        False: If the key is not released
+    &#34;&#34;&#34;
     return core.isKeyReleased(keyCode)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.keyboard.Keyboard.onKeyPressed"><code class="name flex">
-<span>def <span class="ident">onKeyPressed</span></span>(<span>self, keyCode, eventCode, keyChar, keyModifier)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def onKeyPressed(self, keyCode, eventCode, keyChar, keyModifier):
-    for callback in self.keyPressedCallbacks:
-        callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.keyboard.Keyboard.onKeyReleased"><code class="name flex">
-<span>def <span class="ident">onKeyReleased</span></span>(<span>self, keyCode, eventCode, keyChar, keyModifier)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def onKeyReleased(self, keyCode, eventCode, keyChar, keyModifier):
-    for callback in self.keyReleasedCallbacks:
-        callback(keyCode, eventCode, keyChar, keyModifier)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.keyboard.Keyboard.registerKeyPressedCallback"><code class="name flex">
-<span>def <span class="ident">registerKeyPressedCallback</span></span>(<span>self, onKeyPressedFunc)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def registerKeyPressedCallback(self, onKeyPressedFunc):
-    self.keyPressedCallbacks.add(onKeyPressedFunc)
-    if len(self.keyPressedCallbacks) == 1:
-        core.registerEventListener(EventType.KEYBOARD, KeyEventCode.PRESSED, self.onKeyPressed)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.keyboard.Keyboard.registerKeyReleasedCallback"><code class="name flex">
-<span>def <span class="ident">registerKeyReleasedCallback</span></span>(<span>self, onKeyReleasedFunc)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def registerKeyReleasedCallback(self,onKeyReleasedFunc):
-    self.keyReleasedCallbacks.add(onKeyReleasedFunc)
-    if len(self.keyReleasedCallbacks) == 1:
-        core.registerEventListener(EventType.KEYBOARD, KeyEventCode.RELEASED, self.onKeyReleased)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.keyboard.Keyboard.removeKeyPressedCallback"><code class="name flex">
-<span>def <span class="ident">removeKeyPressedCallback</span></span>(<span>self, onKeyPressedFunc)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def removeKeyPressedCallback(self, onKeyPressedFunc):
-    self.keyPressedCallbacks.remove(onKeyPressedFunc)</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.keyboard.Keyboard.removeKeyReleasedCallback"><code class="name flex">
-<span>def <span class="ident">removeKeyReleasedCallback</span></span>(<span>self, onKeyReleasedFunc)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def removeKeyReleasedCallback(self, onKeyReleasedFunc):
-    self.keyReleasedCallbacks.remove(onKeyReleasedFunc)</code></pre>
 </details>
 </dd>
 </dl>
@@ -1180,36 +1197,22 @@ def instance():
 </ul>
 </li>
 <li>
-<h4><code><a title="igeCore.input.keyboard.KeyEventCode" href="#igeCore.input.keyboard.KeyEventCode">KeyEventCode</a></code></h4>
-<ul class="">
-<li><code><a title="igeCore.input.keyboard.KeyEventCode.PRESSED" href="#igeCore.input.keyboard.KeyEventCode.PRESSED">PRESSED</a></code></li>
-<li><code><a title="igeCore.input.keyboard.KeyEventCode.RELEASED" href="#igeCore.input.keyboard.KeyEventCode.RELEASED">RELEASED</a></code></li>
-</ul>
-</li>
-<li>
 <h4><code><a title="igeCore.input.keyboard.KeyModifier" href="#igeCore.input.keyboard.KeyModifier">KeyModifier</a></code></h4>
 <ul class="">
-<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_ALT" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_ALT">KEY_MOD_ALT</a></code></li>
-<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_CTRL" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_CTRL">KEY_MOD_CTRL</a></code></li>
-<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_NONE" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_NONE">KEY_MOD_NONE</a></code></li>
-<li><code><a title="igeCore.input.keyboard.KeyModifier.KEY_MOD_SHIFT" href="#igeCore.input.keyboard.KeyModifier.KEY_MOD_SHIFT">KEY_MOD_SHIFT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.ALT" href="#igeCore.input.keyboard.KeyModifier.ALT">ALT</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.CTRL" href="#igeCore.input.keyboard.KeyModifier.CTRL">CTRL</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.NONE" href="#igeCore.input.keyboard.KeyModifier.NONE">NONE</a></code></li>
+<li><code><a title="igeCore.input.keyboard.KeyModifier.SHIFT" href="#igeCore.input.keyboard.KeyModifier.SHIFT">SHIFT</a></code></li>
 </ul>
 </li>
 <li>
 <h4><code><a title="igeCore.input.keyboard.Keyboard" href="#igeCore.input.keyboard.Keyboard">Keyboard</a></code></h4>
 <ul class="">
-<li><code><a title="igeCore.input.keyboard.Keyboard.getKey" href="#igeCore.input.keyboard.Keyboard.getKey">getKey</a></code></li>
+<li><code><a title="igeCore.input.keyboard.Keyboard.getKeyChar" href="#igeCore.input.keyboard.Keyboard.getKeyChar">getKeyChar</a></code></li>
 <li><code><a title="igeCore.input.keyboard.Keyboard.getModifier" href="#igeCore.input.keyboard.Keyboard.getModifier">getModifier</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.instance" href="#igeCore.input.keyboard.Keyboard.instance">instance</a></code></li>
 <li><code><a title="igeCore.input.keyboard.Keyboard.isHold" href="#igeCore.input.keyboard.Keyboard.isHold">isHold</a></code></li>
 <li><code><a title="igeCore.input.keyboard.Keyboard.isPressed" href="#igeCore.input.keyboard.Keyboard.isPressed">isPressed</a></code></li>
 <li><code><a title="igeCore.input.keyboard.Keyboard.isReleased" href="#igeCore.input.keyboard.Keyboard.isReleased">isReleased</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.onKeyPressed" href="#igeCore.input.keyboard.Keyboard.onKeyPressed">onKeyPressed</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.onKeyReleased" href="#igeCore.input.keyboard.Keyboard.onKeyReleased">onKeyReleased</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.registerKeyPressedCallback" href="#igeCore.input.keyboard.Keyboard.registerKeyPressedCallback">registerKeyPressedCallback</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.registerKeyReleasedCallback" href="#igeCore.input.keyboard.Keyboard.registerKeyReleasedCallback">registerKeyReleasedCallback</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.removeKeyPressedCallback" href="#igeCore.input.keyboard.Keyboard.removeKeyPressedCallback">removeKeyPressedCallback</a></code></li>
-<li><code><a title="igeCore.input.keyboard.Keyboard.removeKeyReleasedCallback" href="#igeCore.input.keyboard.Keyboard.removeKeyReleasedCallback">removeKeyReleasedCallback</a></code></li>
 </ul>
 </li>
 </ul>

@@ -770,11 +770,9 @@ Type: Vec2</p></div>
 <li><a title="igeScene.SpotLight" href="#igeScene.SpotLight">SpotLight</a></li>
 <li><a title="igeScene.Sprite" href="#igeScene.Sprite">Sprite</a></li>
 <li><a title="igeScene.Text" href="#igeScene.Text">Text</a></li>
-<li><a title="igeScene.TextBitmap" href="#igeScene.TextBitmap">TextBitmap</a></li>
 <li><a title="igeScene.Transform" href="#igeScene.Transform">Transform</a></li>
 <li><a title="igeScene.UISlider" href="#igeScene.UISlider">UISlider</a></li>
 <li><a title="igeScene.UIText" href="#igeScene.UIText">UIText</a></li>
-<li><a title="igeScene.UITextBitmap" href="#igeScene.UITextBitmap">UITextBitmap</a></li>
 </ul>
 <h3>Instance variables</h3>
 <dl>
@@ -1126,16 +1124,6 @@ Default: 0.2</p></div>
 Type: float
 Default: 0.3</p></div>
 </dd>
-<dt id="igeScene.DynamicNavMesh.detDetailSampleMaxError"><code class="name">var <span class="ident">detDetailSampleMaxError</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.NavMesh" href="#igeScene.NavMesh">NavMesh</a></code>.<code><a title="igeScene.NavMesh.detDetailSampleMaxError" href="#igeScene.NavMesh.detDetailSampleMaxError">detDetailSampleMaxError</a></code>
-</p>
-<div class="desc inherited"><p>Detail sampling maximum error.
-Type: float
-Default: 1.0</p></div>
-</dd>
 <dt id="igeScene.DynamicNavMesh.detailSampleDistance"><code class="name">var <span class="ident">detailSampleDistance</span></code></dt>
 <dd>
 <p class="inheritance">
@@ -1145,6 +1133,16 @@ Default: 1.0</p></div>
 <div class="desc inherited"><p>Detail sampling distance.
 Type: float
 Default: 0.6</p></div>
+</dd>
+<dt id="igeScene.DynamicNavMesh.detailSampleMaxError"><code class="name">var <span class="ident">detailSampleMaxError</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.NavMesh" href="#igeScene.NavMesh">NavMesh</a></code>.<code><a title="igeScene.NavMesh.detailSampleMaxError" href="#igeScene.NavMesh.detailSampleMaxError">detailSampleMaxError</a></code>
+</p>
+<div class="desc inherited"><p>Detail sampling maximum error.
+Type: float
+Default: 1.0</p></div>
 </dd>
 <dt id="igeScene.DynamicNavMesh.edgeMaxError"><code class="name">var <span class="ident">edgeMaxError</span></code></dt>
 <dd>
@@ -2278,17 +2276,17 @@ Default: 0.2</p></div>
 Type: float
 Default: 0.3</p></div>
 </dd>
-<dt id="igeScene.NavMesh.detDetailSampleMaxError"><code class="name">var <span class="ident">detDetailSampleMaxError</span></code></dt>
-<dd>
-<div class="desc"><p>Detail sampling maximum error.
-Type: float
-Default: 1.0</p></div>
-</dd>
 <dt id="igeScene.NavMesh.detailSampleDistance"><code class="name">var <span class="ident">detailSampleDistance</span></code></dt>
 <dd>
 <div class="desc"><p>Detail sampling distance.
 Type: float
 Default: 0.6</p></div>
+</dd>
+<dt id="igeScene.NavMesh.detailSampleMaxError"><code class="name">var <span class="ident">detailSampleMaxError</span></code></dt>
+<dd>
+<div class="desc"><p>Detail sampling maximum error.
+Type: float
+Default: 1.0</p></div>
 </dd>
 <dt id="igeScene.NavMesh.edgeMaxError"><code class="name">var <span class="ident">edgeMaxError</span></code></dt>
 <dd>
@@ -6139,75 +6137,6 @@ Type: String</p></div>
 </dd>
 </dl>
 </dd>
-<dt id="igeScene.TextBitmap"><code class="flex name class">
-<span>class <span class="ident">TextBitmap</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.TextBitmap.color"><code class="name">var <span class="ident">color</span></code></dt>
-<dd>
-<div class="desc"><p>Color.
-Type: Vec4</p></div>
-</dd>
-<dt id="igeScene.TextBitmap.fontPath"><code class="name">var <span class="ident">fontPath</span></code></dt>
-<dd>
-<div class="desc"><p>Font path.
-Type: String</p></div>
-</dd>
-<dt id="igeScene.TextBitmap.fontSize"><code class="name">var <span class="ident">fontSize</span></code></dt>
-<dd>
-<div class="desc"><p>Font size.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.TextBitmap.isBillboard"><code class="name">var <span class="ident">isBillboard</span></code></dt>
-<dd>
-<div class="desc"><p>Render as billboard.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.TextBitmap.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.TextBitmap.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.TextBitmap.text"><code class="name">var <span class="ident">text</span></code></dt>
-<dd>
-<div class="desc"><p>Text.
-Type: String</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.TextBitmap.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-</dl>
-</dd>
 <dt id="igeScene.Transform"><code class="flex name class">
 <span>class <span class="ident">Transform</span></span>
 </code></dt>
@@ -7306,70 +7235,6 @@ Type: String</p></div>
 </dd>
 </dl>
 </dd>
-<dt id="igeScene.UITextBitmap"><code class="flex name class">
-<span>class <span class="ident">UITextBitmap</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.UITextBitmap.color"><code class="name">var <span class="ident">color</span></code></dt>
-<dd>
-<div class="desc"><p>Color.
-Type: Vec4</p></div>
-</dd>
-<dt id="igeScene.UITextBitmap.fontPath"><code class="name">var <span class="ident">fontPath</span></code></dt>
-<dd>
-<div class="desc"><p>Font path.
-Type: String</p></div>
-</dd>
-<dt id="igeScene.UITextBitmap.fontSize"><code class="name">var <span class="ident">fontSize</span></code></dt>
-<dd>
-<div class="desc"><p>Font size.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.UITextBitmap.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.UITextBitmap.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.UITextBitmap.text"><code class="name">var <span class="ident">text</span></code></dt>
-<dd>
-<div class="desc"><p>Text.
-Type: String</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.UITextBitmap.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-</dl>
-</dd>
 <dt id="igeScene.UITextField"><code class="flex name class">
 <span>class <span class="ident">UITextField</span></span>
 </code></dt>
@@ -7653,8 +7518,8 @@ Type: String</p></div>
 <li><code><a title="igeScene.DynamicNavMesh.build" href="#igeScene.DynamicNavMesh.build">build</a></code></li>
 <li><code><a title="igeScene.DynamicNavMesh.cellHeight" href="#igeScene.DynamicNavMesh.cellHeight">cellHeight</a></code></li>
 <li><code><a title="igeScene.DynamicNavMesh.cellSize" href="#igeScene.DynamicNavMesh.cellSize">cellSize</a></code></li>
-<li><code><a title="igeScene.DynamicNavMesh.detDetailSampleMaxError" href="#igeScene.DynamicNavMesh.detDetailSampleMaxError">detDetailSampleMaxError</a></code></li>
 <li><code><a title="igeScene.DynamicNavMesh.detailSampleDistance" href="#igeScene.DynamicNavMesh.detailSampleDistance">detailSampleDistance</a></code></li>
+<li><code><a title="igeScene.DynamicNavMesh.detailSampleMaxError" href="#igeScene.DynamicNavMesh.detailSampleMaxError">detailSampleMaxError</a></code></li>
 <li><code><a title="igeScene.DynamicNavMesh.edgeMaxError" href="#igeScene.DynamicNavMesh.edgeMaxError">edgeMaxError</a></code></li>
 <li><code><a title="igeScene.DynamicNavMesh.edgeMaxLength" href="#igeScene.DynamicNavMesh.edgeMaxLength">edgeMaxLength</a></code></li>
 <li><code><a title="igeScene.DynamicNavMesh.getAABB" href="#igeScene.DynamicNavMesh.getAABB">getAABB</a></code></li>
@@ -7826,8 +7691,8 @@ Type: String</p></div>
 <li><code><a title="igeScene.NavMesh.build" href="#igeScene.NavMesh.build">build</a></code></li>
 <li><code><a title="igeScene.NavMesh.cellHeight" href="#igeScene.NavMesh.cellHeight">cellHeight</a></code></li>
 <li><code><a title="igeScene.NavMesh.cellSize" href="#igeScene.NavMesh.cellSize">cellSize</a></code></li>
-<li><code><a title="igeScene.NavMesh.detDetailSampleMaxError" href="#igeScene.NavMesh.detDetailSampleMaxError">detDetailSampleMaxError</a></code></li>
 <li><code><a title="igeScene.NavMesh.detailSampleDistance" href="#igeScene.NavMesh.detailSampleDistance">detailSampleDistance</a></code></li>
+<li><code><a title="igeScene.NavMesh.detailSampleMaxError" href="#igeScene.NavMesh.detailSampleMaxError">detailSampleMaxError</a></code></li>
 <li><code><a title="igeScene.NavMesh.edgeMaxError" href="#igeScene.NavMesh.edgeMaxError">edgeMaxError</a></code></li>
 <li><code><a title="igeScene.NavMesh.edgeMaxLength" href="#igeScene.NavMesh.edgeMaxLength">edgeMaxLength</a></code></li>
 <li><code><a title="igeScene.NavMesh.getAABB" href="#igeScene.NavMesh.getAABB">getAABB</a></code></li>
@@ -8367,19 +8232,6 @@ Type: String</p></div>
 </ul>
 </li>
 <li>
-<h4><code><a title="igeScene.TextBitmap" href="#igeScene.TextBitmap">TextBitmap</a></code></h4>
-<ul class="two-column">
-<li><code><a title="igeScene.TextBitmap.color" href="#igeScene.TextBitmap.color">color</a></code></li>
-<li><code><a title="igeScene.TextBitmap.fontPath" href="#igeScene.TextBitmap.fontPath">fontPath</a></code></li>
-<li><code><a title="igeScene.TextBitmap.fontSize" href="#igeScene.TextBitmap.fontSize">fontSize</a></code></li>
-<li><code><a title="igeScene.TextBitmap.isBillboard" href="#igeScene.TextBitmap.isBillboard">isBillboard</a></code></li>
-<li><code><a title="igeScene.TextBitmap.name" href="#igeScene.TextBitmap.name">name</a></code></li>
-<li><code><a title="igeScene.TextBitmap.onUpdate" href="#igeScene.TextBitmap.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.TextBitmap.owner" href="#igeScene.TextBitmap.owner">owner</a></code></li>
-<li><code><a title="igeScene.TextBitmap.text" href="#igeScene.TextBitmap.text">text</a></code></li>
-</ul>
-</li>
-<li>
 <h4><code><a title="igeScene.Transform" href="#igeScene.Transform">Transform</a></code></h4>
 <ul class="two-column">
 <li><code><a title="igeScene.Transform.forward" href="#igeScene.Transform.forward">forward</a></code></li>
@@ -8547,18 +8399,6 @@ Type: String</p></div>
 <li><code><a title="igeScene.UIText.onUpdate" href="#igeScene.UIText.onUpdate">onUpdate</a></code></li>
 <li><code><a title="igeScene.UIText.owner" href="#igeScene.UIText.owner">owner</a></code></li>
 <li><code><a title="igeScene.UIText.text" href="#igeScene.UIText.text">text</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="igeScene.UITextBitmap" href="#igeScene.UITextBitmap">UITextBitmap</a></code></h4>
-<ul class="two-column">
-<li><code><a title="igeScene.UITextBitmap.color" href="#igeScene.UITextBitmap.color">color</a></code></li>
-<li><code><a title="igeScene.UITextBitmap.fontPath" href="#igeScene.UITextBitmap.fontPath">fontPath</a></code></li>
-<li><code><a title="igeScene.UITextBitmap.fontSize" href="#igeScene.UITextBitmap.fontSize">fontSize</a></code></li>
-<li><code><a title="igeScene.UITextBitmap.name" href="#igeScene.UITextBitmap.name">name</a></code></li>
-<li><code><a title="igeScene.UITextBitmap.onUpdate" href="#igeScene.UITextBitmap.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.UITextBitmap.owner" href="#igeScene.UITextBitmap.owner">owner</a></code></li>
-<li><code><a title="igeScene.UITextBitmap.text" href="#igeScene.UITextBitmap.text">text</a></code></li>
 </ul>
 </li>
 <li>
