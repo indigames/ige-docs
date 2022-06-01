@@ -266,9 +266,10 @@ The first 3 dof axis are linear axis, which represent translation of rigidbodies
 and the latter 3 dof axis represent the angular motion. Each axis can be either locked, free or limited.
 
 For each axis:
-- Lowerlimit == Upperlimit -> axis is locked.
-- Lowerlimit > Upperlimit -> axis is free.
-- Lowerlimit < Upperlimit -> axis is limted in this range.
+
+ - Lowerlimit == Upperlimit -> axis is locked.
+ - Lowerlimit > Upperlimit -> axis is free.
+ - Lowerlimit < Upperlimit -> axis is limted in this range.
 
 Check Bullet Physic manual document for more information.
 
@@ -322,13 +323,13 @@ The Softbody component works with FigureComponent, it manipulates Figure meshes 
     AnchorHardness                         Anchors hardness (kAHR)
     AeroModel                              Aerodynamic model (default: V_Point)
 
-                                           - V_Point: Vertex normals are oriented toward velocity
-                                           - V_TwoSided: Vertex normals are flipped to match velocity
-                                           - V_TwoSidedLiftDrag: Vertex normals are flipped to match velocity and lift and drag forces are applied.
-                                           - V_OneSided: Vertex normals are taken as it is
-                                           - F_TwoSided: Face normals are flipped to match velocity
-                                           - F_TwoSidedLiftDrag: Face normals are flipped to match velocity and lift and drag forces are applied
-                                           - F_OneSided: Face normals are taken as it is
+                                           - *V_Point*: Vertex normals are oriented toward velocity
+                                           - *V_TwoSided*: Vertex normals are flipped to match velocity
+                                           - *V_TwoSidedLiftDrag*: Vertex normals are flipped to match velocity and lift and drag forces are applied.
+                                           - *V_OneSided*: Vertex normals are taken as it is
+                                           - *F_TwoSided*: Face normals are flipped to match velocity
+                                           - *F_TwoSidedLiftDrag*: Face normals are flipped to match velocity and lift and drag forces are applied
+                                           - *F_OneSided*: Face normals are taken as it is
 
     WindVelocity                           Wind velocity for interaction with the air
     Constraints                            List of constraints applied   
@@ -355,7 +356,7 @@ The ``PhysicManager`` is automatically created and attached to the root object, 
     Deformable                             Enable/disable physic with Softbody simulation
     Debug                                  Show Physic debug
     NumIterations                          Number of iterations per frame
-    NumSubsteps                            Number of substeps. If NumSubSteps > 0, it will interpolate motion between fixed time step value
+    NumSubsteps                            Number of substeps. If NumSubSteps > 0, interpolate motion between fixedTimeStep
     TimeStep                               Fixed time step value (default: 1/60)
     UpdateRatio                            Update ratio, useful to do slow motion effect
     Gravity                                Global gravity value
