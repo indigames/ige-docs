@@ -513,6 +513,55 @@ Parameters</p>
 </dd>
 </dl>
 </dd>
+<dt id="igeScene.BoxCollider"><code class="flex name class">
+<span>class <span class="ident">BoxCollider</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeScene.BoxCollider.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
+</p>
+<div class="desc inherited"><p>The name of the component.
+Type: string</p></div>
+</dd>
+<dt id="igeScene.BoxCollider.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
+</p>
+<div class="desc inherited"><p>The scene object that own this component.
+Type: SceneObject</p></div>
+</dd>
+<dt id="igeScene.BoxCollider.size"><code class="name">var <span class="ident">size</span></code></dt>
+<dd>
+<div class="desc"><p>The size of the box.
+Type: Vec3</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeScene.BoxCollider.onUpdate"><code class="name flex">
+<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
+</p>
+<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
+</dd>
+</dl>
+</dd>
 <dt id="igeScene.Camera"><code class="flex name class">
 <span>class <span class="ident">Camera</span></span>
 </code></dt>
@@ -736,6 +785,60 @@ Type: Vec2</p></div>
 </dd>
 </dl>
 </dd>
+<dt id="igeScene.CapsuleCollider"><code class="flex name class">
+<span>class <span class="ident">CapsuleCollider</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeScene.CapsuleCollider.height"><code class="name">var <span class="ident">height</span></code></dt>
+<dd>
+<div class="desc"><p>The height of the capsule.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.CapsuleCollider.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
+</p>
+<div class="desc inherited"><p>The name of the component.
+Type: string</p></div>
+</dd>
+<dt id="igeScene.CapsuleCollider.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
+</p>
+<div class="desc inherited"><p>The scene object that own this component.
+Type: SceneObject</p></div>
+</dd>
+<dt id="igeScene.CapsuleCollider.radius"><code class="name">var <span class="ident">radius</span></code></dt>
+<dd>
+<div class="desc"><p>The radius of the capsule.
+Type: float</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeScene.CapsuleCollider.onUpdate"><code class="name flex">
+<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
+</p>
+<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
+</dd>
+</dl>
+</dd>
 <dt id="igeScene.Component"><code class="flex name class">
 <span>class <span class="ident">Component</span></span>
 </code></dt>
@@ -748,12 +851,15 @@ Type: Vec2</p></div>
 <li><a title="igeScene.AudioListener" href="#igeScene.AudioListener">AudioListener</a></li>
 <li><a title="igeScene.AudioManager" href="#igeScene.AudioManager">AudioManager</a></li>
 <li><a title="igeScene.AudioSource" href="#igeScene.AudioSource">AudioSource</a></li>
+<li><a title="igeScene.BoxCollider" href="#igeScene.BoxCollider">BoxCollider</a></li>
 <li><a title="igeScene.Camera" href="#igeScene.Camera">Camera</a></li>
 <li><a title="igeScene.Canvas" href="#igeScene.Canvas">Canvas</a></li>
+<li><a title="igeScene.CapsuleCollider" href="#igeScene.CapsuleCollider">CapsuleCollider</a></li>
 <li><a title="igeScene.DirectionalLight" href="#igeScene.DirectionalLight">DirectionalLight</a></li>
 <li><a title="igeScene.EditableFigure" href="#igeScene.EditableFigure">EditableFigure</a></li>
 <li><a title="igeScene.Environment" href="#igeScene.Environment">Environment</a></li>
 <li><a title="igeScene.Figure" href="#igeScene.Figure">Figure</a></li>
+<li><a title="igeScene.MeshCollider" href="#igeScene.MeshCollider">MeshCollider</a></li>
 <li><a title="igeScene.NavAgent" href="#igeScene.NavAgent">NavAgent</a></li>
 <li><a title="igeScene.NavAgentManager" href="#igeScene.NavAgentManager">NavAgentManager</a></li>
 <li><a title="igeScene.NavArea" href="#igeScene.NavArea">NavArea</a></li>
@@ -764,9 +870,10 @@ Type: Vec2</p></div>
 <li><a title="igeScene.Particle" href="#igeScene.Particle">Particle</a></li>
 <li><a title="igeScene.ParticleManager" href="#igeScene.ParticleManager">ParticleManager</a></li>
 <li><a title="igeScene.PhysicManager" href="#igeScene.PhysicManager">PhysicManager</a></li>
-<li><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></li>
 <li><a title="igeScene.PointLight" href="#igeScene.PointLight">PointLight</a></li>
 <li><a title="igeScene.RectTransform" href="#igeScene.RectTransform">RectTransform</a></li>
+<li><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></li>
+<li><a title="igeScene.SphereCollider" href="#igeScene.SphereCollider">SphereCollider</a></li>
 <li><a title="igeScene.SpotLight" href="#igeScene.SpotLight">SpotLight</a></li>
 <li><a title="igeScene.Sprite" href="#igeScene.Sprite">Sprite</a></li>
 <li><a title="igeScene.Text" href="#igeScene.Text">Text</a></li>
@@ -1020,7 +1127,7 @@ Type: Vec3</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.other" href="#igeScene.PhysicConstraint.other">other</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that linked to this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.Dof6Constraint.owner"><code class="name">var <span class="ident">owner</span></code></dt>
 <dd>
@@ -1029,7 +1136,7 @@ Type: PhysicObject</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.owner" href="#igeScene.PhysicConstraint.owner">owner</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that own this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.Dof6Constraint.type"><code class="name">var <span class="ident">type</span></code></dt>
 <dd>
@@ -1627,7 +1734,7 @@ Type: bool</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.other" href="#igeScene.PhysicConstraint.other">other</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that linked to this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.FixedConstraint.owner"><code class="name">var <span class="ident">owner</span></code></dt>
 <dd>
@@ -1636,7 +1743,7 @@ Type: PhysicObject</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.owner" href="#igeScene.PhysicConstraint.owner">owner</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that own this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.FixedConstraint.type"><code class="name">var <span class="ident">type</span></code></dt>
 <dd>
@@ -1714,7 +1821,7 @@ Type: float</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.other" href="#igeScene.PhysicConstraint.other">other</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that linked to this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.HingeConstraint.owner"><code class="name">var <span class="ident">owner</span></code></dt>
 <dd>
@@ -1723,7 +1830,7 @@ Type: PhysicObject</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.owner" href="#igeScene.PhysicConstraint.owner">owner</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that own this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.HingeConstraint.type"><code class="name">var <span class="ident">type</span></code></dt>
 <dd>
@@ -1738,6 +1845,55 @@ Type: int</p></div>
 <dd>
 <div class="desc"><p>Upper angle limit in radian. Default 3.14.
 Type: float</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeScene.MeshCollider"><code class="flex name class">
+<span>class <span class="ident">MeshCollider</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeScene.MeshCollider.isConvex"><code class="name">var <span class="ident">isConvex</span></code></dt>
+<dd>
+<div class="desc"><p>Convex/concave setting.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.MeshCollider.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
+</p>
+<div class="desc inherited"><p>The name of the component.
+Type: string</p></div>
+</dd>
+<dt id="igeScene.MeshCollider.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
+</p>
+<div class="desc inherited"><p>The scene object that own this component.
+Type: SceneObject</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeScene.MeshCollider.onUpdate"><code class="name flex">
+<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
+</p>
+<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
 </dd>
 </dl>
 </dd>
@@ -2802,611 +2958,6 @@ Default: 1</p></div>
 </dd>
 </dl>
 </dd>
-<dt id="igeScene.PhysicBox"><code class="flex name class">
-<span>class <span class="ident">PhysicBox</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></li>
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.PhysicBox.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.aabb" href="#igeScene.PhysicObject.aabb">aabb</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.activationState" href="#igeScene.PhysicObject.activationState">activationState</a></code>
-</p>
-<div class="desc inherited"><p>Physic activation state.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularFactor" href="#igeScene.PhysicObject.angularFactor">angularFactor</a></code>
-</p>
-<div class="desc inherited"><p>Angular Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularSleepingThreshold" href="#igeScene.PhysicObject.angularSleepingThreshold">angularSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularVelocity" href="#igeScene.PhysicObject.angularVelocity">angularVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Angular Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionGroup" href="#igeScene.PhysicObject.collisionGroup">collisionGroup</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter group.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionMask" href="#igeScene.PhysicObject.collisionMask">collisionMask</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter mask.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.continuousDetection" href="#igeScene.PhysicObject.continuousDetection">continuousDetection</a></code>
-</p>
-<div class="desc inherited"><p>Continuous Colision Detection.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.friction"><code class="name">var <span class="ident">friction</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.friction" href="#igeScene.PhysicObject.friction">friction</a></code>
-</p>
-<div class="desc inherited"><p>Friction.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isEnabled" href="#igeScene.PhysicObject.isEnabled">isEnabled</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isKinematic" href="#igeScene.PhysicObject.isKinematic">isKinematic</a></code>
-</p>
-<div class="desc inherited"><p>Is kinematic.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isTrigger" href="#igeScene.PhysicObject.isTrigger">isTrigger</a></code>
-</p>
-<div class="desc inherited"><p>Is trigger.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearFactor" href="#igeScene.PhysicObject.linearFactor">linearFactor</a></code>
-</p>
-<div class="desc inherited"><p>Linear Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearSleepingThreshold" href="#igeScene.PhysicObject.linearSleepingThreshold">linearSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearVelocity" href="#igeScene.PhysicObject.linearVelocity">linearVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Linear Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.mass"><code class="name">var <span class="ident">mass</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.mass" href="#igeScene.PhysicObject.mass">mass</a></code>
-</p>
-<div class="desc inherited"><p>Mass.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.name" href="#igeScene.PhysicObject.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.offset"><code class="name">var <span class="ident">offset</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.offset" href="#igeScene.PhysicObject.offset">offset</a></code>
-</p>
-<div class="desc inherited"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.owner" href="#igeScene.PhysicObject.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.restitution" href="#igeScene.PhysicObject.restitution">restitution</a></code>
-</p>
-<div class="desc inherited"><p>Restitution.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.size"><code class="name">var <span class="ident">size</span></code></dt>
-<dd>
-<div class="desc"><p>The size of the box.
-Type: Vec3</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.PhysicBox.addConstraint"><code class="name flex">
-<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.addConstraint" href="#igeScene.PhysicObject.addConstraint">addConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.applyForce"><code class="name flex">
-<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyForce" href="#igeScene.PhysicObject.applyForce">applyForce</a></code>
-</p>
-<div class="desc inherited"><p>Apply force …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.applyImpulse"><code class="name flex">
-<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyImpulse" href="#igeScene.PhysicObject.applyImpulse">applyImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.applyTorque"><code class="name flex">
-<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorque" href="#igeScene.PhysicObject.applyTorque">applyTorque</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.applyTorqueImpulse"><code class="name flex">
-<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorqueImpulse" href="#igeScene.PhysicObject.applyTorqueImpulse">applyTorqueImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.clearForces"><code class="name flex">
-<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.clearForces" href="#igeScene.PhysicObject.clearForces">clearForces</a></code>
-</p>
-<div class="desc inherited"><p>Clear all forces.</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.getConstraints"><code class="name flex">
-<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.getConstraints" href="#igeScene.PhysicObject.getConstraints">getConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Get all constraints …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.onUpdate" href="#igeScene.PhysicObject.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.removeConstraint"><code class="name flex">
-<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraint" href="#igeScene.PhysicObject.removeConstraint">removeConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicBox.removeConstraints"><code class="name flex">
-<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraints" href="#igeScene.PhysicObject.removeConstraints">removeConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Remove all constraints …</p></div>
-</dd>
-</dl>
-</dd>
-<dt id="igeScene.PhysicCapsule"><code class="flex name class">
-<span>class <span class="ident">PhysicCapsule</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></li>
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.PhysicCapsule.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.aabb" href="#igeScene.PhysicObject.aabb">aabb</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.activationState" href="#igeScene.PhysicObject.activationState">activationState</a></code>
-</p>
-<div class="desc inherited"><p>Physic activation state.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularFactor" href="#igeScene.PhysicObject.angularFactor">angularFactor</a></code>
-</p>
-<div class="desc inherited"><p>Angular Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularSleepingThreshold" href="#igeScene.PhysicObject.angularSleepingThreshold">angularSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularVelocity" href="#igeScene.PhysicObject.angularVelocity">angularVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Angular Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionGroup" href="#igeScene.PhysicObject.collisionGroup">collisionGroup</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter group.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionMask" href="#igeScene.PhysicObject.collisionMask">collisionMask</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter mask.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.continuousDetection" href="#igeScene.PhysicObject.continuousDetection">continuousDetection</a></code>
-</p>
-<div class="desc inherited"><p>Continuous Colision Detection.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.friction"><code class="name">var <span class="ident">friction</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.friction" href="#igeScene.PhysicObject.friction">friction</a></code>
-</p>
-<div class="desc inherited"><p>Friction.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.height"><code class="name">var <span class="ident">height</span></code></dt>
-<dd>
-<div class="desc"><p>The height of the capsule.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isEnabled" href="#igeScene.PhysicObject.isEnabled">isEnabled</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isKinematic" href="#igeScene.PhysicObject.isKinematic">isKinematic</a></code>
-</p>
-<div class="desc inherited"><p>Is kinematic.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isTrigger" href="#igeScene.PhysicObject.isTrigger">isTrigger</a></code>
-</p>
-<div class="desc inherited"><p>Is trigger.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearFactor" href="#igeScene.PhysicObject.linearFactor">linearFactor</a></code>
-</p>
-<div class="desc inherited"><p>Linear Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearSleepingThreshold" href="#igeScene.PhysicObject.linearSleepingThreshold">linearSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearVelocity" href="#igeScene.PhysicObject.linearVelocity">linearVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Linear Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.mass"><code class="name">var <span class="ident">mass</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.mass" href="#igeScene.PhysicObject.mass">mass</a></code>
-</p>
-<div class="desc inherited"><p>Mass.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.name" href="#igeScene.PhysicObject.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.offset"><code class="name">var <span class="ident">offset</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.offset" href="#igeScene.PhysicObject.offset">offset</a></code>
-</p>
-<div class="desc inherited"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.owner" href="#igeScene.PhysicObject.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.radius"><code class="name">var <span class="ident">radius</span></code></dt>
-<dd>
-<div class="desc"><p>The radius of the capsule.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.restitution" href="#igeScene.PhysicObject.restitution">restitution</a></code>
-</p>
-<div class="desc inherited"><p>Restitution.
-Type: float</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.PhysicCapsule.addConstraint"><code class="name flex">
-<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.addConstraint" href="#igeScene.PhysicObject.addConstraint">addConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.applyForce"><code class="name flex">
-<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyForce" href="#igeScene.PhysicObject.applyForce">applyForce</a></code>
-</p>
-<div class="desc inherited"><p>Apply force …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.applyImpulse"><code class="name flex">
-<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyImpulse" href="#igeScene.PhysicObject.applyImpulse">applyImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.applyTorque"><code class="name flex">
-<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorque" href="#igeScene.PhysicObject.applyTorque">applyTorque</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.applyTorqueImpulse"><code class="name flex">
-<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorqueImpulse" href="#igeScene.PhysicObject.applyTorqueImpulse">applyTorqueImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.clearForces"><code class="name flex">
-<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.clearForces" href="#igeScene.PhysicObject.clearForces">clearForces</a></code>
-</p>
-<div class="desc inherited"><p>Clear all forces.</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.getConstraints"><code class="name flex">
-<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.getConstraints" href="#igeScene.PhysicObject.getConstraints">getConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Get all constraints …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.onUpdate" href="#igeScene.PhysicObject.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.removeConstraint"><code class="name flex">
-<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraint" href="#igeScene.PhysicObject.removeConstraint">removeConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicCapsule.removeConstraints"><code class="name flex">
-<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraints" href="#igeScene.PhysicObject.removeConstraints">removeConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Remove all constraints …</p></div>
-</dd>
-</dl>
-</dd>
 <dt id="igeScene.PhysicConstraint"><code class="flex name class">
 <span>class <span class="ident">PhysicConstraint</span></span>
 </code></dt>
@@ -3440,12 +2991,12 @@ Type: bool</p></div>
 <dt id="igeScene.PhysicConstraint.other"><code class="name">var <span class="ident">other</span></code></dt>
 <dd>
 <div class="desc"><p>The physic object that linked to this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.PhysicConstraint.owner"><code class="name">var <span class="ident">owner</span></code></dt>
 <dd>
 <div class="desc"><p>The physic object that own this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.PhysicConstraint.type"><code class="name">var <span class="ident">type</span></code></dt>
 <dd>
@@ -3537,8 +3088,8 @@ Type: SceneObject</p></div>
 <div class="desc"><p>Perform contact test between pair of objects.</p>
 <p>PhysicManager.getInstance().contactPairTest(collisionObjectA, collisionObjectB, group, mask)</p>
 <h2 id="parameters">Parameters</h2>
-<p>collisionObjectA: SceneObject, PhysicObject, or RidgidBody
-collisionObjectB: SceneObject, PhysicObject, or RidgidBody
+<p>collisionObjectA: SceneObject, Rigidbody, or RidgidBody
+collisionObjectB: SceneObject, Rigidbody, or RidgidBody
 group: [int] Collision group
 mask: [int] Collision mask</p>
 <p>Return:
@@ -3551,7 +3102,7 @@ Tuple of (objectA: SceneObject, objectB: SceneObject, localPosA: Vec3, localPosB
 <div class="desc"><p>Perform contact test.</p>
 <p>PhysicManager.getInstance().contactTest(collisionObject, group, mask)</p>
 <h2 id="parameters">Parameters</h2>
-<p>collisionObject: SceneObject, PhysicObject, or RidgidBody
+<p>collisionObject: SceneObject, Rigidbody, or RidgidBody
 group: [int] Collision group
 mask: [int] Collision mask</p>
 <p>Return:
@@ -3603,1378 +3154,6 @@ group: [int] Collision group
 mask: [int] Collision mask</p>
 <h2 id="return">Return</h2>
 <p>(hitObject: SceneObject, hitPosition: Vec3, hitNormal: Vec3) as Tuple, or None</p></div>
-</dd>
-</dl>
-</dd>
-<dt id="igeScene.PhysicMesh"><code class="flex name class">
-<span>class <span class="ident">PhysicMesh</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></li>
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.PhysicMesh.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.aabb" href="#igeScene.PhysicObject.aabb">aabb</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.activationState" href="#igeScene.PhysicObject.activationState">activationState</a></code>
-</p>
-<div class="desc inherited"><p>Physic activation state.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularFactor" href="#igeScene.PhysicObject.angularFactor">angularFactor</a></code>
-</p>
-<div class="desc inherited"><p>Angular Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularSleepingThreshold" href="#igeScene.PhysicObject.angularSleepingThreshold">angularSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularVelocity" href="#igeScene.PhysicObject.angularVelocity">angularVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Angular Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionGroup" href="#igeScene.PhysicObject.collisionGroup">collisionGroup</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter group.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionMask" href="#igeScene.PhysicObject.collisionMask">collisionMask</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter mask.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.continuousDetection" href="#igeScene.PhysicObject.continuousDetection">continuousDetection</a></code>
-</p>
-<div class="desc inherited"><p>Continuous Colision Detection.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.friction"><code class="name">var <span class="ident">friction</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.friction" href="#igeScene.PhysicObject.friction">friction</a></code>
-</p>
-<div class="desc inherited"><p>Friction.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.isConvex"><code class="name">var <span class="ident">isConvex</span></code></dt>
-<dd>
-<div class="desc"><p>Convex/concave setting.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isEnabled" href="#igeScene.PhysicObject.isEnabled">isEnabled</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isKinematic" href="#igeScene.PhysicObject.isKinematic">isKinematic</a></code>
-</p>
-<div class="desc inherited"><p>Is kinematic.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isTrigger" href="#igeScene.PhysicObject.isTrigger">isTrigger</a></code>
-</p>
-<div class="desc inherited"><p>Is trigger.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearFactor" href="#igeScene.PhysicObject.linearFactor">linearFactor</a></code>
-</p>
-<div class="desc inherited"><p>Linear Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearSleepingThreshold" href="#igeScene.PhysicObject.linearSleepingThreshold">linearSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearVelocity" href="#igeScene.PhysicObject.linearVelocity">linearVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Linear Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.mass"><code class="name">var <span class="ident">mass</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.mass" href="#igeScene.PhysicObject.mass">mass</a></code>
-</p>
-<div class="desc inherited"><p>Mass.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.meshPath"><code class="name">var <span class="ident">meshPath</span></code></dt>
-<dd>
-<div class="desc"><p>Path to the physic model contains mesh.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.name" href="#igeScene.PhysicObject.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.offset"><code class="name">var <span class="ident">offset</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.offset" href="#igeScene.PhysicObject.offset">offset</a></code>
-</p>
-<div class="desc inherited"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.owner" href="#igeScene.PhysicObject.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.restitution" href="#igeScene.PhysicObject.restitution">restitution</a></code>
-</p>
-<div class="desc inherited"><p>Restitution.
-Type: float</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.PhysicMesh.addConstraint"><code class="name flex">
-<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.addConstraint" href="#igeScene.PhysicObject.addConstraint">addConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.applyForce"><code class="name flex">
-<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyForce" href="#igeScene.PhysicObject.applyForce">applyForce</a></code>
-</p>
-<div class="desc inherited"><p>Apply force …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.applyImpulse"><code class="name flex">
-<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyImpulse" href="#igeScene.PhysicObject.applyImpulse">applyImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.applyTorque"><code class="name flex">
-<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorque" href="#igeScene.PhysicObject.applyTorque">applyTorque</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.applyTorqueImpulse"><code class="name flex">
-<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorqueImpulse" href="#igeScene.PhysicObject.applyTorqueImpulse">applyTorqueImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.clearForces"><code class="name flex">
-<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.clearForces" href="#igeScene.PhysicObject.clearForces">clearForces</a></code>
-</p>
-<div class="desc inherited"><p>Clear all forces.</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.getConstraints"><code class="name flex">
-<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.getConstraints" href="#igeScene.PhysicObject.getConstraints">getConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Get all constraints …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.onUpdate" href="#igeScene.PhysicObject.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.removeConstraint"><code class="name flex">
-<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraint" href="#igeScene.PhysicObject.removeConstraint">removeConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicMesh.removeConstraints"><code class="name flex">
-<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraints" href="#igeScene.PhysicObject.removeConstraints">removeConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Remove all constraints …</p></div>
-</dd>
-</dl>
-</dd>
-<dt id="igeScene.PhysicObject"><code class="flex name class">
-<span>class <span class="ident">PhysicObject</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Subclasses</h3>
-<ul class="hlist">
-<li><a title="igeScene.PhysicBox" href="#igeScene.PhysicBox">PhysicBox</a></li>
-<li><a title="igeScene.PhysicCapsule" href="#igeScene.PhysicCapsule">PhysicCapsule</a></li>
-<li><a title="igeScene.PhysicMesh" href="#igeScene.PhysicMesh">PhysicMesh</a></li>
-<li><a title="igeScene.PhysicSoftBody" href="#igeScene.PhysicSoftBody">PhysicSoftBody</a></li>
-<li><a title="igeScene.PhysicSphere" href="#igeScene.PhysicSphere">PhysicSphere</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.PhysicObject.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
-<dd>
-<div class="desc"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
-<dd>
-<div class="desc"><p>Physic activation state.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
-<dd>
-<div class="desc"><p>Angular Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
-<dd>
-<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
-<dd>
-<div class="desc"><p>Angular Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
-<dd>
-<div class="desc"><p>Collision filter group.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
-<dd>
-<div class="desc"><p>Collision filter mask.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
-<dd>
-<div class="desc"><p>Continuous Colision Detection.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.friction"><code class="name">var <span class="ident">friction</span></code></dt>
-<dd>
-<div class="desc"><p>Friction.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
-<dd>
-<div class="desc"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
-<dd>
-<div class="desc"><p>Is kinematic.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
-<dd>
-<div class="desc"><p>Is trigger.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
-<dd>
-<div class="desc"><p>Linear Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
-<dd>
-<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
-<dd>
-<div class="desc"><p>Linear Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.mass"><code class="name">var <span class="ident">mass</span></code></dt>
-<dd>
-<div class="desc"><p>Mass.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.offset"><code class="name">var <span class="ident">offset</span></code></dt>
-<dd>
-<div class="desc"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
-<dd>
-<div class="desc"><p>Restitution.
-Type: float</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.PhysicObject.addConstraint"><code class="name flex">
-<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Add constraint.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>type:
-    int: Type of the constraint to be added.
-</code></pre>
-<hr>
-<pre><code>constraint : PhysicConstraint
-    Added constraint
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.applyForce"><code class="name flex">
-<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Apply force.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>force : Vec3
-    force to apply
-[Optional]position : Vec3
-    Position to apply, or center
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.applyImpulse"><code class="name flex">
-<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Apply impulse.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>impulse : Vec3
-    impulse to apply
-[Opt]position : Vec3
-    Position to apply, or center
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.applyTorque"><code class="name flex">
-<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Apply torque.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>torque : Vec3
-    torque to apply
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.applyTorqueImpulse"><code class="name flex">
-<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Apply torque impulse.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>torque : Vec3
-    torque to apply
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.clearForces"><code class="name flex">
-<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Clear all forces.</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.getConstraints"><code class="name flex">
-<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get all constraints.</p>
-<h2 id="return">Return</h2>
-<pre><code>constraints : tuple&lt;PhysicConstraint&gt;
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-<dt id="igeScene.PhysicObject.removeConstraint"><code class="name flex">
-<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Add constraint.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>constraint:
-    PhysicConstraint: constraint instance to remove.
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>result : bool
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicObject.removeConstraints"><code class="name flex">
-<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Remove all constraints.</p>
-<h2 id="return">Return</h2>
-<pre><code>result: bool
-</code></pre></div>
-</dd>
-</dl>
-</dd>
-<dt id="igeScene.PhysicSoftBody"><code class="flex name class">
-<span>class <span class="ident">PhysicSoftBody</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></li>
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.PhysicSoftBody.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.aabb" href="#igeScene.PhysicObject.aabb">aabb</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.activationState" href="#igeScene.PhysicObject.activationState">activationState</a></code>
-</p>
-<div class="desc inherited"><p>Physic activation state.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.aeroModel"><code class="name">var <span class="ident">aeroModel</span></code></dt>
-<dd>
-<div class="desc"><p>Aero model [0, 6].
-0: V_Point
-1: V_TwoSided
-2: V_TwoSidedLiftDrag
-3: V_OneSided
-4: F_TwoSided
-5: F_TwoSidedLiftDrag
-6: F_OneSided
-Default is 1.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.anchorHardness"><code class="name">var <span class="ident">anchorHardness</span></code></dt>
-<dd>
-<div class="desc"><p>Anchors hardness. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularFactor" href="#igeScene.PhysicObject.angularFactor">angularFactor</a></code>
-</p>
-<div class="desc inherited"><p>Angular Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularSleepingThreshold" href="#igeScene.PhysicObject.angularSleepingThreshold">angularSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularVelocity" href="#igeScene.PhysicObject.angularVelocity">angularVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Angular Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionGroup" href="#igeScene.PhysicObject.collisionGroup">collisionGroup</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter group.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionMask" href="#igeScene.PhysicObject.collisionMask">collisionMask</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter mask.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.continuousDetection" href="#igeScene.PhysicObject.continuousDetection">continuousDetection</a></code>
-</p>
-<div class="desc inherited"><p>Continuous Colision Detection.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.dampingCoeff"><code class="name">var <span class="ident">dampingCoeff</span></code></dt>
-<dd>
-<div class="desc"><p>Damping Coefficient [0, 1]. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.dynamicFrictionCoeff"><code class="name">var <span class="ident">dynamicFrictionCoeff</span></code></dt>
-<dd>
-<div class="desc"><p>Dynamic friction coefficient [0, 1]. Default is 0.2.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.friction"><code class="name">var <span class="ident">friction</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.friction" href="#igeScene.PhysicObject.friction">friction</a></code>
-</p>
-<div class="desc inherited"><p>Friction.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.gravityFactor"><code class="name">var <span class="ident">gravityFactor</span></code></dt>
-<dd>
-<div class="desc"><p>Gravity factor. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isEnabled" href="#igeScene.PhysicObject.isEnabled">isEnabled</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isKinematic" href="#igeScene.PhysicObject.isKinematic">isKinematic</a></code>
-</p>
-<div class="desc inherited"><p>Is kinematic.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isTrigger" href="#igeScene.PhysicObject.isTrigger">isTrigger</a></code>
-</p>
-<div class="desc inherited"><p>Is trigger.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.kineticContactHardness"><code class="name">var <span class="ident">kineticContactHardness</span></code></dt>
-<dd>
-<div class="desc"><p>Kinetic contacts hardness. Default is 0.1.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearFactor" href="#igeScene.PhysicObject.linearFactor">linearFactor</a></code>
-</p>
-<div class="desc inherited"><p>Linear Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearSleepingThreshold" href="#igeScene.PhysicObject.linearSleepingThreshold">linearSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.linearStiffness"><code class="name">var <span class="ident">linearStiffness</span></code></dt>
-<dd>
-<div class="desc"><p>Linear stiffness coefficient [0, 1]. Default is 0.5
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearVelocity" href="#igeScene.PhysicObject.linearVelocity">linearVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Linear Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.mass"><code class="name">var <span class="ident">mass</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.mass" href="#igeScene.PhysicObject.mass">mass</a></code>
-</p>
-<div class="desc inherited"><p>Mass.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.name" href="#igeScene.PhysicObject.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.offset"><code class="name">var <span class="ident">offset</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.offset" href="#igeScene.PhysicObject.offset">offset</a></code>
-</p>
-<div class="desc inherited"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.owner" href="#igeScene.PhysicObject.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.poseMatchCoeff"><code class="name">var <span class="ident">poseMatchCoeff</span></code></dt>
-<dd>
-<div class="desc"><p>Pose matching coefficient [0, 1]. Default is 0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.positionIterNumber"><code class="name">var <span class="ident">positionIterNumber</span></code></dt>
-<dd>
-<div class="desc"><p>Position iteration number. Default is 1.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.pressureCoeff"><code class="name">var <span class="ident">pressureCoeff</span></code></dt>
-<dd>
-<div class="desc"><p>Pressure coefficient [-inf, +inf]. Default is 0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.restLengthScale"><code class="name">var <span class="ident">restLengthScale</span></code></dt>
-<dd>
-<div class="desc"><p>Rest Length Scale. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.restitution" href="#igeScene.PhysicObject.restitution">restitution</a></code>
-</p>
-<div class="desc inherited"><p>Restitution.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.rigidContactHardness"><code class="name">var <span class="ident">rigidContactHardness</span></code></dt>
-<dd>
-<div class="desc"><p>Rigid contacts hardness. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.selfCollision"><code class="name">var <span class="ident">selfCollision</span></code></dt>
-<dd>
-<div class="desc"><p>Use Self Collision. Default is false.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.sleepingThreshold"><code class="name">var <span class="ident">sleepingThreshold</span></code></dt>
-<dd>
-<div class="desc"><p>Sleeping Threshold. Default is 0.04.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.softCollision"><code class="name">var <span class="ident">softCollision</span></code></dt>
-<dd>
-<div class="desc"><p>Use soft soft-collision. Default is false.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.softContactHardness"><code class="name">var <span class="ident">softContactHardness</span></code></dt>
-<dd>
-<div class="desc"><p>Soft contacts hardness. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.velocityFactor"><code class="name">var <span class="ident">velocityFactor</span></code></dt>
-<dd>
-<div class="desc"><p>Velocity correction factor. Default is 1.0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.volumeConvCoeff"><code class="name">var <span class="ident">volumeConvCoeff</span></code></dt>
-<dd>
-<div class="desc"><p>Volume conversation coefficient [0, +inf]. Default is 0.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.windVelocity"><code class="name">var <span class="ident">windVelocity</span></code></dt>
-<dd>
-<div class="desc"><p>Wind Velocity. Default is (0, 0, 0)
-Type: Vec3</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.PhysicSoftBody.addConstraint"><code class="name flex">
-<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.addConstraint" href="#igeScene.PhysicObject.addConstraint">addConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.addVelocity"><code class="name flex">
-<span>def <span class="ident">addVelocity</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Add velocity to the body.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>velocity : Vec3
-    Velocity to add
-[Optional] nodeIdx : int
-    Apply velocity just to the node with provided index.
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>None
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.appendAnchor"><code class="name flex">
-<span>def <span class="ident">appendAnchor</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Append anchor to the body.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>nodeIdx : int
-    Node index
-body : SceneObject, PhysicObject, or RigidBody
-    Body to add as anchor
-[Optional]disableLinkedColission : bool
-    Disable Linked Colission or not. Default is false.
-[Optional]influence : int
-    influence factor. Default is 1.
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>None
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.appendDeformableAnchor"><code class="name flex">
-<span>def <span class="ident">appendDeformableAnchor</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Append deformable anchor to the body.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>nodeIdx : int
-    Node index
-body : SceneObject, PhysicObject, or RigidBody
-    Body to add as anchor
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>None
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.applyForce"><code class="name flex">
-<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyForce" href="#igeScene.PhysicObject.applyForce">applyForce</a></code>
-</p>
-<div class="desc inherited"><p>Apply force …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.applyImpulse"><code class="name flex">
-<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyImpulse" href="#igeScene.PhysicObject.applyImpulse">applyImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.applyRepulsionForce"><code class="name flex">
-<span>def <span class="ident">applyRepulsionForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Apply repulsion force.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>timeStep : float
-    Time step
-applySpringForce : bool
-    Whether spring force to apply
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>None
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.applyTorque"><code class="name flex">
-<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorque" href="#igeScene.PhysicObject.applyTorque">applyTorque</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.applyTorqueImpulse"><code class="name flex">
-<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorqueImpulse" href="#igeScene.PhysicObject.applyTorqueImpulse">applyTorqueImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.clearForces"><code class="name flex">
-<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.clearForces" href="#igeScene.PhysicObject.clearForces">clearForces</a></code>
-</p>
-<div class="desc inherited"><p>Clear all forces.</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.getCenterOfMass"><code class="name flex">
-<span>def <span class="ident">getCenterOfMass</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get the body center of mass.</p>
-<h2 id="return">Return</h2>
-<pre><code>centerOfMass : Vec3
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.getConstraints"><code class="name flex">
-<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.getConstraints" href="#igeScene.PhysicObject.getConstraints">getConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Get all constraints …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.getNearestNodeIndex"><code class="name flex">
-<span>def <span class="ident">getNearestNodeIndex</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get nearest node index from a point in 3D coordination.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>position : Vec3
-    Position
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>nodeIdx : int
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.getNodeNormal"><code class="name flex">
-<span>def <span class="ident">getNodeNormal</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get the normal of a node from node index.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>nodeIdx : int
-    Node index
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>normal : Vec3
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.getNodePosition"><code class="name flex">
-<span>def <span class="ident">getNodePosition</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get the position of a node from node index.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>nodeIdx : int
-    Node index
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>position : Vec3
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.getVolume"><code class="name flex">
-<span>def <span class="ident">getVolume</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get the volume of the body.</p>
-<h2 id="return">Return</h2>
-<pre><code>volume : Vec3
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.onUpdate" href="#igeScene.PhysicObject.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.removeAnchor"><code class="name flex">
-<span>def <span class="ident">removeAnchor</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Remove anchor from the body.</p>
-<h2 id="parameters">Parameters</h2>
-<pre><code>nodeIdx : int
-    Node index
-</code></pre>
-<h2 id="return">Return</h2>
-<pre><code>None
-</code></pre></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.removeConstraint"><code class="name flex">
-<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraint" href="#igeScene.PhysicObject.removeConstraint">removeConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicSoftBody.removeConstraints"><code class="name flex">
-<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraints" href="#igeScene.PhysicObject.removeConstraints">removeConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Remove all constraints …</p></div>
-</dd>
-</dl>
-</dd>
-<dt id="igeScene.PhysicSphere"><code class="flex name class">
-<span>class <span class="ident">PhysicSphere</span></span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></li>
-<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
-</ul>
-<h3>Instance variables</h3>
-<dl>
-<dt id="igeScene.PhysicSphere.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.aabb" href="#igeScene.PhysicObject.aabb">aabb</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.activationState" href="#igeScene.PhysicObject.activationState">activationState</a></code>
-</p>
-<div class="desc inherited"><p>Physic activation state.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularFactor" href="#igeScene.PhysicObject.angularFactor">angularFactor</a></code>
-</p>
-<div class="desc inherited"><p>Angular Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularSleepingThreshold" href="#igeScene.PhysicObject.angularSleepingThreshold">angularSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.angularVelocity" href="#igeScene.PhysicObject.angularVelocity">angularVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Angular Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionGroup" href="#igeScene.PhysicObject.collisionGroup">collisionGroup</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter group.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.collisionMask" href="#igeScene.PhysicObject.collisionMask">collisionMask</a></code>
-</p>
-<div class="desc inherited"><p>Collision filter mask.
-Type: int</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.continuousDetection" href="#igeScene.PhysicObject.continuousDetection">continuousDetection</a></code>
-</p>
-<div class="desc inherited"><p>Continuous Colision Detection.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.friction"><code class="name">var <span class="ident">friction</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.friction" href="#igeScene.PhysicObject.friction">friction</a></code>
-</p>
-<div class="desc inherited"><p>Friction.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isEnabled" href="#igeScene.PhysicObject.isEnabled">isEnabled</a></code>
-</p>
-<div class="desc inherited"><p>Is enabled.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isKinematic" href="#igeScene.PhysicObject.isKinematic">isKinematic</a></code>
-</p>
-<div class="desc inherited"><p>Is kinematic.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.isTrigger" href="#igeScene.PhysicObject.isTrigger">isTrigger</a></code>
-</p>
-<div class="desc inherited"><p>Is trigger.
-Type: bool</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearFactor" href="#igeScene.PhysicObject.linearFactor">linearFactor</a></code>
-</p>
-<div class="desc inherited"><p>Linear Factor.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearSleepingThreshold" href="#igeScene.PhysicObject.linearSleepingThreshold">linearSleepingThreshold</a></code>
-</p>
-<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.linearVelocity" href="#igeScene.PhysicObject.linearVelocity">linearVelocity</a></code>
-</p>
-<div class="desc inherited"><p>Linear Velocity.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.mass"><code class="name">var <span class="ident">mass</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.mass" href="#igeScene.PhysicObject.mass">mass</a></code>
-</p>
-<div class="desc inherited"><p>Mass.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.name"><code class="name">var <span class="ident">name</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.name" href="#igeScene.PhysicObject.name">name</a></code>
-</p>
-<div class="desc inherited"><p>The name of the component.
-Type: string</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.offset"><code class="name">var <span class="ident">offset</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.offset" href="#igeScene.PhysicObject.offset">offset</a></code>
-</p>
-<div class="desc inherited"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
-Type: Vec3</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.owner"><code class="name">var <span class="ident">owner</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.owner" href="#igeScene.PhysicObject.owner">owner</a></code>
-</p>
-<div class="desc inherited"><p>The scene object that own this component.
-Type: SceneObject</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.radius"><code class="name">var <span class="ident">radius</span></code></dt>
-<dd>
-<div class="desc"><p>The radius of the sphere.
-Type: float</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.restitution" href="#igeScene.PhysicObject.restitution">restitution</a></code>
-</p>
-<div class="desc inherited"><p>Restitution.
-Type: float</p></div>
-</dd>
-</dl>
-<h3>Methods</h3>
-<dl>
-<dt id="igeScene.PhysicSphere.addConstraint"><code class="name flex">
-<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.addConstraint" href="#igeScene.PhysicObject.addConstraint">addConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.applyForce"><code class="name flex">
-<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyForce" href="#igeScene.PhysicObject.applyForce">applyForce</a></code>
-</p>
-<div class="desc inherited"><p>Apply force …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.applyImpulse"><code class="name flex">
-<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyImpulse" href="#igeScene.PhysicObject.applyImpulse">applyImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.applyTorque"><code class="name flex">
-<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorque" href="#igeScene.PhysicObject.applyTorque">applyTorque</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.applyTorqueImpulse"><code class="name flex">
-<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.applyTorqueImpulse" href="#igeScene.PhysicObject.applyTorqueImpulse">applyTorqueImpulse</a></code>
-</p>
-<div class="desc inherited"><p>Apply torque impulse …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.clearForces"><code class="name flex">
-<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.clearForces" href="#igeScene.PhysicObject.clearForces">clearForces</a></code>
-</p>
-<div class="desc inherited"><p>Clear all forces.</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.getConstraints"><code class="name flex">
-<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.getConstraints" href="#igeScene.PhysicObject.getConstraints">getConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Get all constraints …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.onUpdate"><code class="name flex">
-<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.onUpdate" href="#igeScene.PhysicObject.onUpdate">onUpdate</a></code>
-</p>
-<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.removeConstraint"><code class="name flex">
-<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraint" href="#igeScene.PhysicObject.removeConstraint">removeConstraint</a></code>
-</p>
-<div class="desc inherited"><p>Add constraint …</p></div>
-</dd>
-<dt id="igeScene.PhysicSphere.removeConstraints"><code class="name flex">
-<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
-</code></dt>
-<dd>
-<p class="inheritance">
-<em>Inherited from:</em>
-<code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code>.<code><a title="igeScene.PhysicObject.removeConstraints" href="#igeScene.PhysicObject.removeConstraints">removeConstraints</a></code>
-</p>
-<div class="desc inherited"><p>Remove all constraints …</p></div>
 </dd>
 </dl>
 </dd>
@@ -5136,6 +3315,237 @@ Type: Vec4</p></div>
 <code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
 </p>
 <div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeScene.Rigidbody"><code class="flex name class">
+<span>class <span class="ident">Rigidbody</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="igeScene.Softbody" href="#igeScene.Softbody">Softbody</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeScene.Rigidbody.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
+<dd>
+<div class="desc"><p>Is enabled.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
+<dd>
+<div class="desc"><p>Physic activation state.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
+<dd>
+<div class="desc"><p>Angular Factor.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
+<dd>
+<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
+<dd>
+<div class="desc"><p>Angular Velocity.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
+<dd>
+<div class="desc"><p>Collision filter group.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
+<dd>
+<div class="desc"><p>Collision filter mask.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
+<dd>
+<div class="desc"><p>Continuous Colision Detection.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.friction"><code class="name">var <span class="ident">friction</span></code></dt>
+<dd>
+<div class="desc"><p>Friction.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
+<dd>
+<div class="desc"><p>Is enabled.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
+<dd>
+<div class="desc"><p>Is kinematic.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
+<dd>
+<div class="desc"><p>Is trigger.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
+<dd>
+<div class="desc"><p>Linear Factor.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
+<dd>
+<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
+<dd>
+<div class="desc"><p>Linear Velocity.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.mass"><code class="name">var <span class="ident">mass</span></code></dt>
+<dd>
+<div class="desc"><p>Mass.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
+</p>
+<div class="desc inherited"><p>The name of the component.
+Type: string</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.offset"><code class="name">var <span class="ident">offset</span></code></dt>
+<dd>
+<div class="desc"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
+</p>
+<div class="desc inherited"><p>The scene object that own this component.
+Type: SceneObject</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
+<dd>
+<div class="desc"><p>Restitution.
+Type: float</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeScene.Rigidbody.addConstraint"><code class="name flex">
+<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add constraint.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>type:
+    int: Type of the constraint to be added.
+</code></pre>
+<hr>
+<pre><code>constraint : PhysicConstraint
+    Added constraint
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.applyForce"><code class="name flex">
+<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply force.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>force : Vec3
+    force to apply
+[Optional]position : Vec3
+    Position to apply, or center
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.applyImpulse"><code class="name flex">
+<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply impulse.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>impulse : Vec3
+    impulse to apply
+[Opt]position : Vec3
+    Position to apply, or center
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.applyTorque"><code class="name flex">
+<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply torque.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>torque : Vec3
+    torque to apply
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.applyTorqueImpulse"><code class="name flex">
+<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply torque impulse.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>torque : Vec3
+    torque to apply
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.clearForces"><code class="name flex">
+<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Clear all forces.</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.getConstraints"><code class="name flex">
+<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get all constraints.</p>
+<h2 id="return">Return</h2>
+<pre><code>constraints : tuple&lt;PhysicConstraint&gt;
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.onUpdate"><code class="name flex">
+<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
+</p>
+<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
+</dd>
+<dt id="igeScene.Rigidbody.removeConstraint"><code class="name flex">
+<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add constraint.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>constraint:
+    PhysicConstraint: constraint instance to remove.
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>result : bool
+</code></pre></div>
+</dd>
+<dt id="igeScene.Rigidbody.removeConstraints"><code class="name flex">
+<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove all constraints.</p>
+<h2 id="return">Return</h2>
+<pre><code>result: bool
+</code></pre></div>
 </dd>
 </dl>
 </dd>
@@ -5777,7 +4187,7 @@ Type: Vec3</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.other" href="#igeScene.PhysicConstraint.other">other</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that linked to this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.SliderConstraint.owner"><code class="name">var <span class="ident">owner</span></code></dt>
 <dd>
@@ -5786,7 +4196,7 @@ Type: PhysicObject</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.owner" href="#igeScene.PhysicConstraint.owner">owner</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that own this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.SliderConstraint.type"><code class="name">var <span class="ident">type</span></code></dt>
 <dd>
@@ -5801,6 +4211,587 @@ Type: int</p></div>
 <dd>
 <div class="desc"><p>Upper limit vector. Default (0.0, 0.0, 0.0)
 Type: Vec3</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeScene.Softbody"><code class="flex name class">
+<span>class <span class="ident">Softbody</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></li>
+<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeScene.Softbody.aabb"><code class="name">var <span class="ident">aabb</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.aabb" href="#igeScene.Rigidbody.aabb">aabb</a></code>
+</p>
+<div class="desc inherited"><p>Is enabled.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.activationState"><code class="name">var <span class="ident">activationState</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.activationState" href="#igeScene.Rigidbody.activationState">activationState</a></code>
+</p>
+<div class="desc inherited"><p>Physic activation state.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Softbody.aeroModel"><code class="name">var <span class="ident">aeroModel</span></code></dt>
+<dd>
+<div class="desc"><p>Aero model [0, 6].
+0: V_Point
+1: V_TwoSided
+2: V_TwoSidedLiftDrag
+3: V_OneSided
+4: F_TwoSided
+5: F_TwoSidedLiftDrag
+6: F_OneSided
+Default is 1.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Softbody.anchorHardness"><code class="name">var <span class="ident">anchorHardness</span></code></dt>
+<dd>
+<div class="desc"><p>Anchors hardness. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.angularFactor"><code class="name">var <span class="ident">angularFactor</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.angularFactor" href="#igeScene.Rigidbody.angularFactor">angularFactor</a></code>
+</p>
+<div class="desc inherited"><p>Angular Factor.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Softbody.angularSleepingThreshold"><code class="name">var <span class="ident">angularSleepingThreshold</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.angularSleepingThreshold" href="#igeScene.Rigidbody.angularSleepingThreshold">angularSleepingThreshold</a></code>
+</p>
+<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="igeScene.Softbody.angularVelocity"><code class="name">var <span class="ident">angularVelocity</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.angularVelocity" href="#igeScene.Rigidbody.angularVelocity">angularVelocity</a></code>
+</p>
+<div class="desc inherited"><p>Angular Velocity.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Softbody.collisionGroup"><code class="name">var <span class="ident">collisionGroup</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.collisionGroup" href="#igeScene.Rigidbody.collisionGroup">collisionGroup</a></code>
+</p>
+<div class="desc inherited"><p>Collision filter group.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Softbody.collisionMask"><code class="name">var <span class="ident">collisionMask</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.collisionMask" href="#igeScene.Rigidbody.collisionMask">collisionMask</a></code>
+</p>
+<div class="desc inherited"><p>Collision filter mask.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Softbody.continuousDetection"><code class="name">var <span class="ident">continuousDetection</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.continuousDetection" href="#igeScene.Rigidbody.continuousDetection">continuousDetection</a></code>
+</p>
+<div class="desc inherited"><p>Continuous Colision Detection.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.dampingCoeff"><code class="name">var <span class="ident">dampingCoeff</span></code></dt>
+<dd>
+<div class="desc"><p>Damping Coefficient [0, 1]. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.dynamicFrictionCoeff"><code class="name">var <span class="ident">dynamicFrictionCoeff</span></code></dt>
+<dd>
+<div class="desc"><p>Dynamic friction coefficient [0, 1]. Default is 0.2.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.friction"><code class="name">var <span class="ident">friction</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.friction" href="#igeScene.Rigidbody.friction">friction</a></code>
+</p>
+<div class="desc inherited"><p>Friction.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.gravityFactor"><code class="name">var <span class="ident">gravityFactor</span></code></dt>
+<dd>
+<div class="desc"><p>Gravity factor. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.isEnabled"><code class="name">var <span class="ident">isEnabled</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.isEnabled" href="#igeScene.Rigidbody.isEnabled">isEnabled</a></code>
+</p>
+<div class="desc inherited"><p>Is enabled.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.isKinematic"><code class="name">var <span class="ident">isKinematic</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.isKinematic" href="#igeScene.Rigidbody.isKinematic">isKinematic</a></code>
+</p>
+<div class="desc inherited"><p>Is kinematic.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.isTrigger"><code class="name">var <span class="ident">isTrigger</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.isTrigger" href="#igeScene.Rigidbody.isTrigger">isTrigger</a></code>
+</p>
+<div class="desc inherited"><p>Is trigger.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.kineticContactHardness"><code class="name">var <span class="ident">kineticContactHardness</span></code></dt>
+<dd>
+<div class="desc"><p>Kinetic contacts hardness. Default is 0.1.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.linearFactor"><code class="name">var <span class="ident">linearFactor</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.linearFactor" href="#igeScene.Rigidbody.linearFactor">linearFactor</a></code>
+</p>
+<div class="desc inherited"><p>Linear Factor.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Softbody.linearSleepingThreshold"><code class="name">var <span class="ident">linearSleepingThreshold</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.linearSleepingThreshold" href="#igeScene.Rigidbody.linearSleepingThreshold">linearSleepingThreshold</a></code>
+</p>
+<div class="desc inherited"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="igeScene.Softbody.linearStiffness"><code class="name">var <span class="ident">linearStiffness</span></code></dt>
+<dd>
+<div class="desc"><p>Linear stiffness coefficient [0, 1]. Default is 0.5
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.linearVelocity"><code class="name">var <span class="ident">linearVelocity</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.linearVelocity" href="#igeScene.Rigidbody.linearVelocity">linearVelocity</a></code>
+</p>
+<div class="desc inherited"><p>Linear Velocity.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Softbody.mass"><code class="name">var <span class="ident">mass</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.mass" href="#igeScene.Rigidbody.mass">mass</a></code>
+</p>
+<div class="desc inherited"><p>Mass.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.name" href="#igeScene.Rigidbody.name">name</a></code>
+</p>
+<div class="desc inherited"><p>The name of the component.
+Type: string</p></div>
+</dd>
+<dt id="igeScene.Softbody.offset"><code class="name">var <span class="ident">offset</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.offset" href="#igeScene.Rigidbody.offset">offset</a></code>
+</p>
+<div class="desc inherited"><p>Postion offset to adjust physic according to model in case the base position is not at the center of the model.
+Type: Vec3</p></div>
+</dd>
+<dt id="igeScene.Softbody.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.owner" href="#igeScene.Rigidbody.owner">owner</a></code>
+</p>
+<div class="desc inherited"><p>The scene object that own this component.
+Type: SceneObject</p></div>
+</dd>
+<dt id="igeScene.Softbody.poseMatchCoeff"><code class="name">var <span class="ident">poseMatchCoeff</span></code></dt>
+<dd>
+<div class="desc"><p>Pose matching coefficient [0, 1]. Default is 0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.positionIterNumber"><code class="name">var <span class="ident">positionIterNumber</span></code></dt>
+<dd>
+<div class="desc"><p>Position iteration number. Default is 1.
+Type: int</p></div>
+</dd>
+<dt id="igeScene.Softbody.pressureCoeff"><code class="name">var <span class="ident">pressureCoeff</span></code></dt>
+<dd>
+<div class="desc"><p>Pressure coefficient [-inf, +inf]. Default is 0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.restLengthScale"><code class="name">var <span class="ident">restLengthScale</span></code></dt>
+<dd>
+<div class="desc"><p>Rest Length Scale. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.restitution"><code class="name">var <span class="ident">restitution</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.restitution" href="#igeScene.Rigidbody.restitution">restitution</a></code>
+</p>
+<div class="desc inherited"><p>Restitution.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.rigidContactHardness"><code class="name">var <span class="ident">rigidContactHardness</span></code></dt>
+<dd>
+<div class="desc"><p>Rigid contacts hardness. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.selfCollision"><code class="name">var <span class="ident">selfCollision</span></code></dt>
+<dd>
+<div class="desc"><p>Use Self Collision. Default is false.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.sleepingThreshold"><code class="name">var <span class="ident">sleepingThreshold</span></code></dt>
+<dd>
+<div class="desc"><p>Sleeping Threshold. Default is 0.04.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.softCollision"><code class="name">var <span class="ident">softCollision</span></code></dt>
+<dd>
+<div class="desc"><p>Use soft soft-collision. Default is false.
+Type: bool</p></div>
+</dd>
+<dt id="igeScene.Softbody.softContactHardness"><code class="name">var <span class="ident">softContactHardness</span></code></dt>
+<dd>
+<div class="desc"><p>Soft contacts hardness. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.velocityFactor"><code class="name">var <span class="ident">velocityFactor</span></code></dt>
+<dd>
+<div class="desc"><p>Velocity correction factor. Default is 1.0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.volumeConvCoeff"><code class="name">var <span class="ident">volumeConvCoeff</span></code></dt>
+<dd>
+<div class="desc"><p>Volume conversation coefficient [0, +inf]. Default is 0.
+Type: float</p></div>
+</dd>
+<dt id="igeScene.Softbody.windVelocity"><code class="name">var <span class="ident">windVelocity</span></code></dt>
+<dd>
+<div class="desc"><p>Wind Velocity. Default is (0, 0, 0)
+Type: Vec3</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeScene.Softbody.addConstraint"><code class="name flex">
+<span>def <span class="ident">addConstraint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.addConstraint" href="#igeScene.Rigidbody.addConstraint">addConstraint</a></code>
+</p>
+<div class="desc inherited"><p>Add constraint …</p></div>
+</dd>
+<dt id="igeScene.Softbody.addVelocity"><code class="name flex">
+<span>def <span class="ident">addVelocity</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add velocity to the body.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>velocity : Vec3
+    Velocity to add
+[Optional] nodeIdx : int
+    Apply velocity just to the node with provided index.
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>None
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.appendAnchor"><code class="name flex">
+<span>def <span class="ident">appendAnchor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Append anchor to the body.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>nodeIdx : int
+    Node index
+body : SceneObject, Rigidbody, or RigidBody
+    Body to add as anchor
+[Optional]disableLinkedColission : bool
+    Disable Linked Colission or not. Default is false.
+[Optional]influence : int
+    influence factor. Default is 1.
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>None
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.appendDeformableAnchor"><code class="name flex">
+<span>def <span class="ident">appendDeformableAnchor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Append deformable anchor to the body.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>nodeIdx : int
+    Node index
+body : SceneObject, Rigidbody, or RigidBody
+    Body to add as anchor
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>None
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.applyForce"><code class="name flex">
+<span>def <span class="ident">applyForce</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.applyForce" href="#igeScene.Rigidbody.applyForce">applyForce</a></code>
+</p>
+<div class="desc inherited"><p>Apply force …</p></div>
+</dd>
+<dt id="igeScene.Softbody.applyImpulse"><code class="name flex">
+<span>def <span class="ident">applyImpulse</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.applyImpulse" href="#igeScene.Rigidbody.applyImpulse">applyImpulse</a></code>
+</p>
+<div class="desc inherited"><p>Apply impulse …</p></div>
+</dd>
+<dt id="igeScene.Softbody.applyRepulsionForce"><code class="name flex">
+<span>def <span class="ident">applyRepulsionForce</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply repulsion force.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>timeStep : float
+    Time step
+applySpringForce : bool
+    Whether spring force to apply
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>None
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.applyTorque"><code class="name flex">
+<span>def <span class="ident">applyTorque</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.applyTorque" href="#igeScene.Rigidbody.applyTorque">applyTorque</a></code>
+</p>
+<div class="desc inherited"><p>Apply torque …</p></div>
+</dd>
+<dt id="igeScene.Softbody.applyTorqueImpulse"><code class="name flex">
+<span>def <span class="ident">applyTorqueImpulse</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.applyTorqueImpulse" href="#igeScene.Rigidbody.applyTorqueImpulse">applyTorqueImpulse</a></code>
+</p>
+<div class="desc inherited"><p>Apply torque impulse …</p></div>
+</dd>
+<dt id="igeScene.Softbody.clearForces"><code class="name flex">
+<span>def <span class="ident">clearForces</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.clearForces" href="#igeScene.Rigidbody.clearForces">clearForces</a></code>
+</p>
+<div class="desc inherited"><p>Clear all forces.</p></div>
+</dd>
+<dt id="igeScene.Softbody.getCenterOfMass"><code class="name flex">
+<span>def <span class="ident">getCenterOfMass</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the body center of mass.</p>
+<h2 id="return">Return</h2>
+<pre><code>centerOfMass : Vec3
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.getConstraints"><code class="name flex">
+<span>def <span class="ident">getConstraints</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.getConstraints" href="#igeScene.Rigidbody.getConstraints">getConstraints</a></code>
+</p>
+<div class="desc inherited"><p>Get all constraints …</p></div>
+</dd>
+<dt id="igeScene.Softbody.getNearestNodeIndex"><code class="name flex">
+<span>def <span class="ident">getNearestNodeIndex</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get nearest node index from a point in 3D coordination.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>position : Vec3
+    Position
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>nodeIdx : int
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.getNodeNormal"><code class="name flex">
+<span>def <span class="ident">getNodeNormal</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the normal of a node from node index.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>nodeIdx : int
+    Node index
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>normal : Vec3
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.getNodePosition"><code class="name flex">
+<span>def <span class="ident">getNodePosition</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the position of a node from node index.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>nodeIdx : int
+    Node index
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>position : Vec3
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.getVolume"><code class="name flex">
+<span>def <span class="ident">getVolume</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the volume of the body.</p>
+<h2 id="return">Return</h2>
+<pre><code>volume : Vec3
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.onUpdate"><code class="name flex">
+<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.onUpdate" href="#igeScene.Rigidbody.onUpdate">onUpdate</a></code>
+</p>
+<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
+</dd>
+<dt id="igeScene.Softbody.removeAnchor"><code class="name flex">
+<span>def <span class="ident">removeAnchor</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove anchor from the body.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>nodeIdx : int
+    Node index
+</code></pre>
+<h2 id="return">Return</h2>
+<pre><code>None
+</code></pre></div>
+</dd>
+<dt id="igeScene.Softbody.removeConstraint"><code class="name flex">
+<span>def <span class="ident">removeConstraint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.removeConstraint" href="#igeScene.Rigidbody.removeConstraint">removeConstraint</a></code>
+</p>
+<div class="desc inherited"><p>Add constraint …</p></div>
+</dd>
+<dt id="igeScene.Softbody.removeConstraints"><code class="name flex">
+<span>def <span class="ident">removeConstraints</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code>.<code><a title="igeScene.Rigidbody.removeConstraints" href="#igeScene.Rigidbody.removeConstraints">removeConstraints</a></code>
+</p>
+<div class="desc inherited"><p>Remove all constraints …</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="igeScene.SphereCollider"><code class="flex name class">
+<span>class <span class="ident">SphereCollider</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="igeScene.Component" href="#igeScene.Component">Component</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="igeScene.SphereCollider.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.name" href="#igeScene.Component.name">name</a></code>
+</p>
+<div class="desc inherited"><p>The name of the component.
+Type: string</p></div>
+</dd>
+<dt id="igeScene.SphereCollider.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.owner" href="#igeScene.Component.owner">owner</a></code>
+</p>
+<div class="desc inherited"><p>The scene object that own this component.
+Type: SceneObject</p></div>
+</dd>
+<dt id="igeScene.SphereCollider.radius"><code class="name">var <span class="ident">radius</span></code></dt>
+<dd>
+<div class="desc"><p>The radius of the sphere.
+Type: float</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="igeScene.SphereCollider.onUpdate"><code class="name flex">
+<span>def <span class="ident">onUpdate</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="igeScene.Component" href="#igeScene.Component">Component</a></code>.<code><a title="igeScene.Component.onUpdate" href="#igeScene.Component.onUpdate">onUpdate</a></code>
+</p>
+<div class="desc inherited"><p>Utility to force update component, eg transform …</p></div>
 </dd>
 </dl>
 </dd>
@@ -5938,7 +4929,7 @@ Type: Vec3</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.other" href="#igeScene.PhysicConstraint.other">other</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that linked to this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.SpringConstraint.owner"><code class="name">var <span class="ident">owner</span></code></dt>
 <dd>
@@ -5947,7 +4938,7 @@ Type: PhysicObject</p></div>
 <code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code>.<code><a title="igeScene.PhysicConstraint.owner" href="#igeScene.PhysicConstraint.owner">owner</a></code>
 </p>
 <div class="desc inherited"><p>The physic object that own this constraint.
-Type: PhysicObject</p></div>
+Type: Rigidbody</p></div>
 </dd>
 <dt id="igeScene.SpringConstraint.stiffness"><code class="name">var <span class="ident">stiffness</span></code></dt>
 <dd>
@@ -7413,6 +6404,15 @@ Type: String</p></div>
 </ul>
 </li>
 <li>
+<h4><code><a title="igeScene.BoxCollider" href="#igeScene.BoxCollider">BoxCollider</a></code></h4>
+<ul class="">
+<li><code><a title="igeScene.BoxCollider.name" href="#igeScene.BoxCollider.name">name</a></code></li>
+<li><code><a title="igeScene.BoxCollider.onUpdate" href="#igeScene.BoxCollider.onUpdate">onUpdate</a></code></li>
+<li><code><a title="igeScene.BoxCollider.owner" href="#igeScene.BoxCollider.owner">owner</a></code></li>
+<li><code><a title="igeScene.BoxCollider.size" href="#igeScene.BoxCollider.size">size</a></code></li>
+</ul>
+</li>
+<li>
 <h4><code><a title="igeScene.Camera" href="#igeScene.Camera">Camera</a></code></h4>
 <ul class="two-column">
 <li><code><a title="igeScene.Camera.aspectRatio" href="#igeScene.Camera.aspectRatio">aspectRatio</a></code></li>
@@ -7453,6 +6453,16 @@ Type: String</p></div>
 <li><code><a title="igeScene.Canvas.onUpdate" href="#igeScene.Canvas.onUpdate">onUpdate</a></code></li>
 <li><code><a title="igeScene.Canvas.owner" href="#igeScene.Canvas.owner">owner</a></code></li>
 <li><code><a title="igeScene.Canvas.target_size" href="#igeScene.Canvas.target_size">target_size</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeScene.CapsuleCollider" href="#igeScene.CapsuleCollider">CapsuleCollider</a></code></h4>
+<ul class="">
+<li><code><a title="igeScene.CapsuleCollider.height" href="#igeScene.CapsuleCollider.height">height</a></code></li>
+<li><code><a title="igeScene.CapsuleCollider.name" href="#igeScene.CapsuleCollider.name">name</a></code></li>
+<li><code><a title="igeScene.CapsuleCollider.onUpdate" href="#igeScene.CapsuleCollider.onUpdate">onUpdate</a></code></li>
+<li><code><a title="igeScene.CapsuleCollider.owner" href="#igeScene.CapsuleCollider.owner">owner</a></code></li>
+<li><code><a title="igeScene.CapsuleCollider.radius" href="#igeScene.CapsuleCollider.radius">radius</a></code></li>
 </ul>
 </li>
 <li>
@@ -7613,6 +6623,15 @@ Type: String</p></div>
 <li><code><a title="igeScene.HingeConstraint.owner" href="#igeScene.HingeConstraint.owner">owner</a></code></li>
 <li><code><a title="igeScene.HingeConstraint.type" href="#igeScene.HingeConstraint.type">type</a></code></li>
 <li><code><a title="igeScene.HingeConstraint.upperLimit" href="#igeScene.HingeConstraint.upperLimit">upperLimit</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeScene.MeshCollider" href="#igeScene.MeshCollider">MeshCollider</a></code></h4>
+<ul class="">
+<li><code><a title="igeScene.MeshCollider.isConvex" href="#igeScene.MeshCollider.isConvex">isConvex</a></code></li>
+<li><code><a title="igeScene.MeshCollider.name" href="#igeScene.MeshCollider.name">name</a></code></li>
+<li><code><a title="igeScene.MeshCollider.onUpdate" href="#igeScene.MeshCollider.onUpdate">onUpdate</a></code></li>
+<li><code><a title="igeScene.MeshCollider.owner" href="#igeScene.MeshCollider.owner">owner</a></code></li>
 </ul>
 </li>
 <li>
@@ -7780,79 +6799,6 @@ Type: String</p></div>
 </ul>
 </li>
 <li>
-<h4><code><a title="igeScene.PhysicBox" href="#igeScene.PhysicBox">PhysicBox</a></code></h4>
-<ul class="">
-<li><code><a title="igeScene.PhysicBox.aabb" href="#igeScene.PhysicBox.aabb">aabb</a></code></li>
-<li><code><a title="igeScene.PhysicBox.activationState" href="#igeScene.PhysicBox.activationState">activationState</a></code></li>
-<li><code><a title="igeScene.PhysicBox.addConstraint" href="#igeScene.PhysicBox.addConstraint">addConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicBox.angularFactor" href="#igeScene.PhysicBox.angularFactor">angularFactor</a></code></li>
-<li><code><a title="igeScene.PhysicBox.angularSleepingThreshold" href="#igeScene.PhysicBox.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicBox.angularVelocity" href="#igeScene.PhysicBox.angularVelocity">angularVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicBox.applyForce" href="#igeScene.PhysicBox.applyForce">applyForce</a></code></li>
-<li><code><a title="igeScene.PhysicBox.applyImpulse" href="#igeScene.PhysicBox.applyImpulse">applyImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicBox.applyTorque" href="#igeScene.PhysicBox.applyTorque">applyTorque</a></code></li>
-<li><code><a title="igeScene.PhysicBox.applyTorqueImpulse" href="#igeScene.PhysicBox.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicBox.clearForces" href="#igeScene.PhysicBox.clearForces">clearForces</a></code></li>
-<li><code><a title="igeScene.PhysicBox.collisionGroup" href="#igeScene.PhysicBox.collisionGroup">collisionGroup</a></code></li>
-<li><code><a title="igeScene.PhysicBox.collisionMask" href="#igeScene.PhysicBox.collisionMask">collisionMask</a></code></li>
-<li><code><a title="igeScene.PhysicBox.continuousDetection" href="#igeScene.PhysicBox.continuousDetection">continuousDetection</a></code></li>
-<li><code><a title="igeScene.PhysicBox.friction" href="#igeScene.PhysicBox.friction">friction</a></code></li>
-<li><code><a title="igeScene.PhysicBox.getConstraints" href="#igeScene.PhysicBox.getConstraints">getConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicBox.isEnabled" href="#igeScene.PhysicBox.isEnabled">isEnabled</a></code></li>
-<li><code><a title="igeScene.PhysicBox.isKinematic" href="#igeScene.PhysicBox.isKinematic">isKinematic</a></code></li>
-<li><code><a title="igeScene.PhysicBox.isTrigger" href="#igeScene.PhysicBox.isTrigger">isTrigger</a></code></li>
-<li><code><a title="igeScene.PhysicBox.linearFactor" href="#igeScene.PhysicBox.linearFactor">linearFactor</a></code></li>
-<li><code><a title="igeScene.PhysicBox.linearSleepingThreshold" href="#igeScene.PhysicBox.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicBox.linearVelocity" href="#igeScene.PhysicBox.linearVelocity">linearVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicBox.mass" href="#igeScene.PhysicBox.mass">mass</a></code></li>
-<li><code><a title="igeScene.PhysicBox.name" href="#igeScene.PhysicBox.name">name</a></code></li>
-<li><code><a title="igeScene.PhysicBox.offset" href="#igeScene.PhysicBox.offset">offset</a></code></li>
-<li><code><a title="igeScene.PhysicBox.onUpdate" href="#igeScene.PhysicBox.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.PhysicBox.owner" href="#igeScene.PhysicBox.owner">owner</a></code></li>
-<li><code><a title="igeScene.PhysicBox.removeConstraint" href="#igeScene.PhysicBox.removeConstraint">removeConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicBox.removeConstraints" href="#igeScene.PhysicBox.removeConstraints">removeConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicBox.restitution" href="#igeScene.PhysicBox.restitution">restitution</a></code></li>
-<li><code><a title="igeScene.PhysicBox.size" href="#igeScene.PhysicBox.size">size</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="igeScene.PhysicCapsule" href="#igeScene.PhysicCapsule">PhysicCapsule</a></code></h4>
-<ul class="">
-<li><code><a title="igeScene.PhysicCapsule.aabb" href="#igeScene.PhysicCapsule.aabb">aabb</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.activationState" href="#igeScene.PhysicCapsule.activationState">activationState</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.addConstraint" href="#igeScene.PhysicCapsule.addConstraint">addConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.angularFactor" href="#igeScene.PhysicCapsule.angularFactor">angularFactor</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.angularSleepingThreshold" href="#igeScene.PhysicCapsule.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.angularVelocity" href="#igeScene.PhysicCapsule.angularVelocity">angularVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.applyForce" href="#igeScene.PhysicCapsule.applyForce">applyForce</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.applyImpulse" href="#igeScene.PhysicCapsule.applyImpulse">applyImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.applyTorque" href="#igeScene.PhysicCapsule.applyTorque">applyTorque</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.applyTorqueImpulse" href="#igeScene.PhysicCapsule.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.clearForces" href="#igeScene.PhysicCapsule.clearForces">clearForces</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.collisionGroup" href="#igeScene.PhysicCapsule.collisionGroup">collisionGroup</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.collisionMask" href="#igeScene.PhysicCapsule.collisionMask">collisionMask</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.continuousDetection" href="#igeScene.PhysicCapsule.continuousDetection">continuousDetection</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.friction" href="#igeScene.PhysicCapsule.friction">friction</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.getConstraints" href="#igeScene.PhysicCapsule.getConstraints">getConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.height" href="#igeScene.PhysicCapsule.height">height</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.isEnabled" href="#igeScene.PhysicCapsule.isEnabled">isEnabled</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.isKinematic" href="#igeScene.PhysicCapsule.isKinematic">isKinematic</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.isTrigger" href="#igeScene.PhysicCapsule.isTrigger">isTrigger</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.linearFactor" href="#igeScene.PhysicCapsule.linearFactor">linearFactor</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.linearSleepingThreshold" href="#igeScene.PhysicCapsule.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.linearVelocity" href="#igeScene.PhysicCapsule.linearVelocity">linearVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.mass" href="#igeScene.PhysicCapsule.mass">mass</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.name" href="#igeScene.PhysicCapsule.name">name</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.offset" href="#igeScene.PhysicCapsule.offset">offset</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.onUpdate" href="#igeScene.PhysicCapsule.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.owner" href="#igeScene.PhysicCapsule.owner">owner</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.radius" href="#igeScene.PhysicCapsule.radius">radius</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.removeConstraint" href="#igeScene.PhysicCapsule.removeConstraint">removeConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.removeConstraints" href="#igeScene.PhysicCapsule.removeConstraints">removeConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicCapsule.restitution" href="#igeScene.PhysicCapsule.restitution">restitution</a></code></li>
-</ul>
-</li>
-<li>
 <h4><code><a title="igeScene.PhysicConstraint" href="#igeScene.PhysicConstraint">PhysicConstraint</a></code></h4>
 <ul class="">
 <li><code><a title="igeScene.PhysicConstraint.breakingImpulse" href="#igeScene.PhysicConstraint.breakingImpulse">breakingImpulse</a></code></li>
@@ -7881,178 +6827,6 @@ Type: String</p></div>
 <li><code><a title="igeScene.PhysicManager.owner" href="#igeScene.PhysicManager.owner">owner</a></code></li>
 <li><code><a title="igeScene.PhysicManager.rayTestAll" href="#igeScene.PhysicManager.rayTestAll">rayTestAll</a></code></li>
 <li><code><a title="igeScene.PhysicManager.rayTestClosest" href="#igeScene.PhysicManager.rayTestClosest">rayTestClosest</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="igeScene.PhysicMesh" href="#igeScene.PhysicMesh">PhysicMesh</a></code></h4>
-<ul class="">
-<li><code><a title="igeScene.PhysicMesh.aabb" href="#igeScene.PhysicMesh.aabb">aabb</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.activationState" href="#igeScene.PhysicMesh.activationState">activationState</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.addConstraint" href="#igeScene.PhysicMesh.addConstraint">addConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.angularFactor" href="#igeScene.PhysicMesh.angularFactor">angularFactor</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.angularSleepingThreshold" href="#igeScene.PhysicMesh.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.angularVelocity" href="#igeScene.PhysicMesh.angularVelocity">angularVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.applyForce" href="#igeScene.PhysicMesh.applyForce">applyForce</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.applyImpulse" href="#igeScene.PhysicMesh.applyImpulse">applyImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.applyTorque" href="#igeScene.PhysicMesh.applyTorque">applyTorque</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.applyTorqueImpulse" href="#igeScene.PhysicMesh.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.clearForces" href="#igeScene.PhysicMesh.clearForces">clearForces</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.collisionGroup" href="#igeScene.PhysicMesh.collisionGroup">collisionGroup</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.collisionMask" href="#igeScene.PhysicMesh.collisionMask">collisionMask</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.continuousDetection" href="#igeScene.PhysicMesh.continuousDetection">continuousDetection</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.friction" href="#igeScene.PhysicMesh.friction">friction</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.getConstraints" href="#igeScene.PhysicMesh.getConstraints">getConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.isConvex" href="#igeScene.PhysicMesh.isConvex">isConvex</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.isEnabled" href="#igeScene.PhysicMesh.isEnabled">isEnabled</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.isKinematic" href="#igeScene.PhysicMesh.isKinematic">isKinematic</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.isTrigger" href="#igeScene.PhysicMesh.isTrigger">isTrigger</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.linearFactor" href="#igeScene.PhysicMesh.linearFactor">linearFactor</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.linearSleepingThreshold" href="#igeScene.PhysicMesh.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.linearVelocity" href="#igeScene.PhysicMesh.linearVelocity">linearVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.mass" href="#igeScene.PhysicMesh.mass">mass</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.meshPath" href="#igeScene.PhysicMesh.meshPath">meshPath</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.name" href="#igeScene.PhysicMesh.name">name</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.offset" href="#igeScene.PhysicMesh.offset">offset</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.onUpdate" href="#igeScene.PhysicMesh.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.owner" href="#igeScene.PhysicMesh.owner">owner</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.removeConstraint" href="#igeScene.PhysicMesh.removeConstraint">removeConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.removeConstraints" href="#igeScene.PhysicMesh.removeConstraints">removeConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicMesh.restitution" href="#igeScene.PhysicMesh.restitution">restitution</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="igeScene.PhysicObject" href="#igeScene.PhysicObject">PhysicObject</a></code></h4>
-<ul class="">
-<li><code><a title="igeScene.PhysicObject.aabb" href="#igeScene.PhysicObject.aabb">aabb</a></code></li>
-<li><code><a title="igeScene.PhysicObject.activationState" href="#igeScene.PhysicObject.activationState">activationState</a></code></li>
-<li><code><a title="igeScene.PhysicObject.addConstraint" href="#igeScene.PhysicObject.addConstraint">addConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicObject.angularFactor" href="#igeScene.PhysicObject.angularFactor">angularFactor</a></code></li>
-<li><code><a title="igeScene.PhysicObject.angularSleepingThreshold" href="#igeScene.PhysicObject.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicObject.angularVelocity" href="#igeScene.PhysicObject.angularVelocity">angularVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicObject.applyForce" href="#igeScene.PhysicObject.applyForce">applyForce</a></code></li>
-<li><code><a title="igeScene.PhysicObject.applyImpulse" href="#igeScene.PhysicObject.applyImpulse">applyImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicObject.applyTorque" href="#igeScene.PhysicObject.applyTorque">applyTorque</a></code></li>
-<li><code><a title="igeScene.PhysicObject.applyTorqueImpulse" href="#igeScene.PhysicObject.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicObject.clearForces" href="#igeScene.PhysicObject.clearForces">clearForces</a></code></li>
-<li><code><a title="igeScene.PhysicObject.collisionGroup" href="#igeScene.PhysicObject.collisionGroup">collisionGroup</a></code></li>
-<li><code><a title="igeScene.PhysicObject.collisionMask" href="#igeScene.PhysicObject.collisionMask">collisionMask</a></code></li>
-<li><code><a title="igeScene.PhysicObject.continuousDetection" href="#igeScene.PhysicObject.continuousDetection">continuousDetection</a></code></li>
-<li><code><a title="igeScene.PhysicObject.friction" href="#igeScene.PhysicObject.friction">friction</a></code></li>
-<li><code><a title="igeScene.PhysicObject.getConstraints" href="#igeScene.PhysicObject.getConstraints">getConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicObject.isEnabled" href="#igeScene.PhysicObject.isEnabled">isEnabled</a></code></li>
-<li><code><a title="igeScene.PhysicObject.isKinematic" href="#igeScene.PhysicObject.isKinematic">isKinematic</a></code></li>
-<li><code><a title="igeScene.PhysicObject.isTrigger" href="#igeScene.PhysicObject.isTrigger">isTrigger</a></code></li>
-<li><code><a title="igeScene.PhysicObject.linearFactor" href="#igeScene.PhysicObject.linearFactor">linearFactor</a></code></li>
-<li><code><a title="igeScene.PhysicObject.linearSleepingThreshold" href="#igeScene.PhysicObject.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicObject.linearVelocity" href="#igeScene.PhysicObject.linearVelocity">linearVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicObject.mass" href="#igeScene.PhysicObject.mass">mass</a></code></li>
-<li><code><a title="igeScene.PhysicObject.name" href="#igeScene.PhysicObject.name">name</a></code></li>
-<li><code><a title="igeScene.PhysicObject.offset" href="#igeScene.PhysicObject.offset">offset</a></code></li>
-<li><code><a title="igeScene.PhysicObject.onUpdate" href="#igeScene.PhysicObject.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.PhysicObject.owner" href="#igeScene.PhysicObject.owner">owner</a></code></li>
-<li><code><a title="igeScene.PhysicObject.removeConstraint" href="#igeScene.PhysicObject.removeConstraint">removeConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicObject.removeConstraints" href="#igeScene.PhysicObject.removeConstraints">removeConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicObject.restitution" href="#igeScene.PhysicObject.restitution">restitution</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="igeScene.PhysicSoftBody" href="#igeScene.PhysicSoftBody">PhysicSoftBody</a></code></h4>
-<ul class="">
-<li><code><a title="igeScene.PhysicSoftBody.aabb" href="#igeScene.PhysicSoftBody.aabb">aabb</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.activationState" href="#igeScene.PhysicSoftBody.activationState">activationState</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.addConstraint" href="#igeScene.PhysicSoftBody.addConstraint">addConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.addVelocity" href="#igeScene.PhysicSoftBody.addVelocity">addVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.aeroModel" href="#igeScene.PhysicSoftBody.aeroModel">aeroModel</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.anchorHardness" href="#igeScene.PhysicSoftBody.anchorHardness">anchorHardness</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.angularFactor" href="#igeScene.PhysicSoftBody.angularFactor">angularFactor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.angularSleepingThreshold" href="#igeScene.PhysicSoftBody.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.angularVelocity" href="#igeScene.PhysicSoftBody.angularVelocity">angularVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.appendAnchor" href="#igeScene.PhysicSoftBody.appendAnchor">appendAnchor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.appendDeformableAnchor" href="#igeScene.PhysicSoftBody.appendDeformableAnchor">appendDeformableAnchor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.applyForce" href="#igeScene.PhysicSoftBody.applyForce">applyForce</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.applyImpulse" href="#igeScene.PhysicSoftBody.applyImpulse">applyImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.applyRepulsionForce" href="#igeScene.PhysicSoftBody.applyRepulsionForce">applyRepulsionForce</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.applyTorque" href="#igeScene.PhysicSoftBody.applyTorque">applyTorque</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.applyTorqueImpulse" href="#igeScene.PhysicSoftBody.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.clearForces" href="#igeScene.PhysicSoftBody.clearForces">clearForces</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.collisionGroup" href="#igeScene.PhysicSoftBody.collisionGroup">collisionGroup</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.collisionMask" href="#igeScene.PhysicSoftBody.collisionMask">collisionMask</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.continuousDetection" href="#igeScene.PhysicSoftBody.continuousDetection">continuousDetection</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.dampingCoeff" href="#igeScene.PhysicSoftBody.dampingCoeff">dampingCoeff</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.dynamicFrictionCoeff" href="#igeScene.PhysicSoftBody.dynamicFrictionCoeff">dynamicFrictionCoeff</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.friction" href="#igeScene.PhysicSoftBody.friction">friction</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.getCenterOfMass" href="#igeScene.PhysicSoftBody.getCenterOfMass">getCenterOfMass</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.getConstraints" href="#igeScene.PhysicSoftBody.getConstraints">getConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.getNearestNodeIndex" href="#igeScene.PhysicSoftBody.getNearestNodeIndex">getNearestNodeIndex</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.getNodeNormal" href="#igeScene.PhysicSoftBody.getNodeNormal">getNodeNormal</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.getNodePosition" href="#igeScene.PhysicSoftBody.getNodePosition">getNodePosition</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.getVolume" href="#igeScene.PhysicSoftBody.getVolume">getVolume</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.gravityFactor" href="#igeScene.PhysicSoftBody.gravityFactor">gravityFactor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.isEnabled" href="#igeScene.PhysicSoftBody.isEnabled">isEnabled</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.isKinematic" href="#igeScene.PhysicSoftBody.isKinematic">isKinematic</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.isTrigger" href="#igeScene.PhysicSoftBody.isTrigger">isTrigger</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.kineticContactHardness" href="#igeScene.PhysicSoftBody.kineticContactHardness">kineticContactHardness</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.linearFactor" href="#igeScene.PhysicSoftBody.linearFactor">linearFactor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.linearSleepingThreshold" href="#igeScene.PhysicSoftBody.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.linearStiffness" href="#igeScene.PhysicSoftBody.linearStiffness">linearStiffness</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.linearVelocity" href="#igeScene.PhysicSoftBody.linearVelocity">linearVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.mass" href="#igeScene.PhysicSoftBody.mass">mass</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.name" href="#igeScene.PhysicSoftBody.name">name</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.offset" href="#igeScene.PhysicSoftBody.offset">offset</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.onUpdate" href="#igeScene.PhysicSoftBody.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.owner" href="#igeScene.PhysicSoftBody.owner">owner</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.poseMatchCoeff" href="#igeScene.PhysicSoftBody.poseMatchCoeff">poseMatchCoeff</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.positionIterNumber" href="#igeScene.PhysicSoftBody.positionIterNumber">positionIterNumber</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.pressureCoeff" href="#igeScene.PhysicSoftBody.pressureCoeff">pressureCoeff</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.removeAnchor" href="#igeScene.PhysicSoftBody.removeAnchor">removeAnchor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.removeConstraint" href="#igeScene.PhysicSoftBody.removeConstraint">removeConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.removeConstraints" href="#igeScene.PhysicSoftBody.removeConstraints">removeConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.restLengthScale" href="#igeScene.PhysicSoftBody.restLengthScale">restLengthScale</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.restitution" href="#igeScene.PhysicSoftBody.restitution">restitution</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.rigidContactHardness" href="#igeScene.PhysicSoftBody.rigidContactHardness">rigidContactHardness</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.selfCollision" href="#igeScene.PhysicSoftBody.selfCollision">selfCollision</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.sleepingThreshold" href="#igeScene.PhysicSoftBody.sleepingThreshold">sleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.softCollision" href="#igeScene.PhysicSoftBody.softCollision">softCollision</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.softContactHardness" href="#igeScene.PhysicSoftBody.softContactHardness">softContactHardness</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.velocityFactor" href="#igeScene.PhysicSoftBody.velocityFactor">velocityFactor</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.volumeConvCoeff" href="#igeScene.PhysicSoftBody.volumeConvCoeff">volumeConvCoeff</a></code></li>
-<li><code><a title="igeScene.PhysicSoftBody.windVelocity" href="#igeScene.PhysicSoftBody.windVelocity">windVelocity</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="igeScene.PhysicSphere" href="#igeScene.PhysicSphere">PhysicSphere</a></code></h4>
-<ul class="">
-<li><code><a title="igeScene.PhysicSphere.aabb" href="#igeScene.PhysicSphere.aabb">aabb</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.activationState" href="#igeScene.PhysicSphere.activationState">activationState</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.addConstraint" href="#igeScene.PhysicSphere.addConstraint">addConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.angularFactor" href="#igeScene.PhysicSphere.angularFactor">angularFactor</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.angularSleepingThreshold" href="#igeScene.PhysicSphere.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.angularVelocity" href="#igeScene.PhysicSphere.angularVelocity">angularVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.applyForce" href="#igeScene.PhysicSphere.applyForce">applyForce</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.applyImpulse" href="#igeScene.PhysicSphere.applyImpulse">applyImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.applyTorque" href="#igeScene.PhysicSphere.applyTorque">applyTorque</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.applyTorqueImpulse" href="#igeScene.PhysicSphere.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.clearForces" href="#igeScene.PhysicSphere.clearForces">clearForces</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.collisionGroup" href="#igeScene.PhysicSphere.collisionGroup">collisionGroup</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.collisionMask" href="#igeScene.PhysicSphere.collisionMask">collisionMask</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.continuousDetection" href="#igeScene.PhysicSphere.continuousDetection">continuousDetection</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.friction" href="#igeScene.PhysicSphere.friction">friction</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.getConstraints" href="#igeScene.PhysicSphere.getConstraints">getConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.isEnabled" href="#igeScene.PhysicSphere.isEnabled">isEnabled</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.isKinematic" href="#igeScene.PhysicSphere.isKinematic">isKinematic</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.isTrigger" href="#igeScene.PhysicSphere.isTrigger">isTrigger</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.linearFactor" href="#igeScene.PhysicSphere.linearFactor">linearFactor</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.linearSleepingThreshold" href="#igeScene.PhysicSphere.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.linearVelocity" href="#igeScene.PhysicSphere.linearVelocity">linearVelocity</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.mass" href="#igeScene.PhysicSphere.mass">mass</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.name" href="#igeScene.PhysicSphere.name">name</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.offset" href="#igeScene.PhysicSphere.offset">offset</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.onUpdate" href="#igeScene.PhysicSphere.onUpdate">onUpdate</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.owner" href="#igeScene.PhysicSphere.owner">owner</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.radius" href="#igeScene.PhysicSphere.radius">radius</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.removeConstraint" href="#igeScene.PhysicSphere.removeConstraint">removeConstraint</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.removeConstraints" href="#igeScene.PhysicSphere.removeConstraints">removeConstraints</a></code></li>
-<li><code><a title="igeScene.PhysicSphere.restitution" href="#igeScene.PhysicSphere.restitution">restitution</a></code></li>
 </ul>
 </li>
 <li>
@@ -8085,6 +6859,41 @@ Type: String</p></div>
 <li><code><a title="igeScene.RectTransform.rotation" href="#igeScene.RectTransform.rotation">rotation</a></code></li>
 <li><code><a title="igeScene.RectTransform.scale" href="#igeScene.RectTransform.scale">scale</a></code></li>
 <li><code><a title="igeScene.RectTransform.size" href="#igeScene.RectTransform.size">size</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeScene.Rigidbody" href="#igeScene.Rigidbody">Rigidbody</a></code></h4>
+<ul class="">
+<li><code><a title="igeScene.Rigidbody.aabb" href="#igeScene.Rigidbody.aabb">aabb</a></code></li>
+<li><code><a title="igeScene.Rigidbody.activationState" href="#igeScene.Rigidbody.activationState">activationState</a></code></li>
+<li><code><a title="igeScene.Rigidbody.addConstraint" href="#igeScene.Rigidbody.addConstraint">addConstraint</a></code></li>
+<li><code><a title="igeScene.Rigidbody.angularFactor" href="#igeScene.Rigidbody.angularFactor">angularFactor</a></code></li>
+<li><code><a title="igeScene.Rigidbody.angularSleepingThreshold" href="#igeScene.Rigidbody.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
+<li><code><a title="igeScene.Rigidbody.angularVelocity" href="#igeScene.Rigidbody.angularVelocity">angularVelocity</a></code></li>
+<li><code><a title="igeScene.Rigidbody.applyForce" href="#igeScene.Rigidbody.applyForce">applyForce</a></code></li>
+<li><code><a title="igeScene.Rigidbody.applyImpulse" href="#igeScene.Rigidbody.applyImpulse">applyImpulse</a></code></li>
+<li><code><a title="igeScene.Rigidbody.applyTorque" href="#igeScene.Rigidbody.applyTorque">applyTorque</a></code></li>
+<li><code><a title="igeScene.Rigidbody.applyTorqueImpulse" href="#igeScene.Rigidbody.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
+<li><code><a title="igeScene.Rigidbody.clearForces" href="#igeScene.Rigidbody.clearForces">clearForces</a></code></li>
+<li><code><a title="igeScene.Rigidbody.collisionGroup" href="#igeScene.Rigidbody.collisionGroup">collisionGroup</a></code></li>
+<li><code><a title="igeScene.Rigidbody.collisionMask" href="#igeScene.Rigidbody.collisionMask">collisionMask</a></code></li>
+<li><code><a title="igeScene.Rigidbody.continuousDetection" href="#igeScene.Rigidbody.continuousDetection">continuousDetection</a></code></li>
+<li><code><a title="igeScene.Rigidbody.friction" href="#igeScene.Rigidbody.friction">friction</a></code></li>
+<li><code><a title="igeScene.Rigidbody.getConstraints" href="#igeScene.Rigidbody.getConstraints">getConstraints</a></code></li>
+<li><code><a title="igeScene.Rigidbody.isEnabled" href="#igeScene.Rigidbody.isEnabled">isEnabled</a></code></li>
+<li><code><a title="igeScene.Rigidbody.isKinematic" href="#igeScene.Rigidbody.isKinematic">isKinematic</a></code></li>
+<li><code><a title="igeScene.Rigidbody.isTrigger" href="#igeScene.Rigidbody.isTrigger">isTrigger</a></code></li>
+<li><code><a title="igeScene.Rigidbody.linearFactor" href="#igeScene.Rigidbody.linearFactor">linearFactor</a></code></li>
+<li><code><a title="igeScene.Rigidbody.linearSleepingThreshold" href="#igeScene.Rigidbody.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
+<li><code><a title="igeScene.Rigidbody.linearVelocity" href="#igeScene.Rigidbody.linearVelocity">linearVelocity</a></code></li>
+<li><code><a title="igeScene.Rigidbody.mass" href="#igeScene.Rigidbody.mass">mass</a></code></li>
+<li><code><a title="igeScene.Rigidbody.name" href="#igeScene.Rigidbody.name">name</a></code></li>
+<li><code><a title="igeScene.Rigidbody.offset" href="#igeScene.Rigidbody.offset">offset</a></code></li>
+<li><code><a title="igeScene.Rigidbody.onUpdate" href="#igeScene.Rigidbody.onUpdate">onUpdate</a></code></li>
+<li><code><a title="igeScene.Rigidbody.owner" href="#igeScene.Rigidbody.owner">owner</a></code></li>
+<li><code><a title="igeScene.Rigidbody.removeConstraint" href="#igeScene.Rigidbody.removeConstraint">removeConstraint</a></code></li>
+<li><code><a title="igeScene.Rigidbody.removeConstraints" href="#igeScene.Rigidbody.removeConstraints">removeConstraints</a></code></li>
+<li><code><a title="igeScene.Rigidbody.restitution" href="#igeScene.Rigidbody.restitution">restitution</a></code></li>
 </ul>
 </li>
 <li>
@@ -8168,6 +6977,79 @@ Type: String</p></div>
 <li><code><a title="igeScene.SliderConstraint.owner" href="#igeScene.SliderConstraint.owner">owner</a></code></li>
 <li><code><a title="igeScene.SliderConstraint.type" href="#igeScene.SliderConstraint.type">type</a></code></li>
 <li><code><a title="igeScene.SliderConstraint.upperLimit" href="#igeScene.SliderConstraint.upperLimit">upperLimit</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeScene.Softbody" href="#igeScene.Softbody">Softbody</a></code></h4>
+<ul class="">
+<li><code><a title="igeScene.Softbody.aabb" href="#igeScene.Softbody.aabb">aabb</a></code></li>
+<li><code><a title="igeScene.Softbody.activationState" href="#igeScene.Softbody.activationState">activationState</a></code></li>
+<li><code><a title="igeScene.Softbody.addConstraint" href="#igeScene.Softbody.addConstraint">addConstraint</a></code></li>
+<li><code><a title="igeScene.Softbody.addVelocity" href="#igeScene.Softbody.addVelocity">addVelocity</a></code></li>
+<li><code><a title="igeScene.Softbody.aeroModel" href="#igeScene.Softbody.aeroModel">aeroModel</a></code></li>
+<li><code><a title="igeScene.Softbody.anchorHardness" href="#igeScene.Softbody.anchorHardness">anchorHardness</a></code></li>
+<li><code><a title="igeScene.Softbody.angularFactor" href="#igeScene.Softbody.angularFactor">angularFactor</a></code></li>
+<li><code><a title="igeScene.Softbody.angularSleepingThreshold" href="#igeScene.Softbody.angularSleepingThreshold">angularSleepingThreshold</a></code></li>
+<li><code><a title="igeScene.Softbody.angularVelocity" href="#igeScene.Softbody.angularVelocity">angularVelocity</a></code></li>
+<li><code><a title="igeScene.Softbody.appendAnchor" href="#igeScene.Softbody.appendAnchor">appendAnchor</a></code></li>
+<li><code><a title="igeScene.Softbody.appendDeformableAnchor" href="#igeScene.Softbody.appendDeformableAnchor">appendDeformableAnchor</a></code></li>
+<li><code><a title="igeScene.Softbody.applyForce" href="#igeScene.Softbody.applyForce">applyForce</a></code></li>
+<li><code><a title="igeScene.Softbody.applyImpulse" href="#igeScene.Softbody.applyImpulse">applyImpulse</a></code></li>
+<li><code><a title="igeScene.Softbody.applyRepulsionForce" href="#igeScene.Softbody.applyRepulsionForce">applyRepulsionForce</a></code></li>
+<li><code><a title="igeScene.Softbody.applyTorque" href="#igeScene.Softbody.applyTorque">applyTorque</a></code></li>
+<li><code><a title="igeScene.Softbody.applyTorqueImpulse" href="#igeScene.Softbody.applyTorqueImpulse">applyTorqueImpulse</a></code></li>
+<li><code><a title="igeScene.Softbody.clearForces" href="#igeScene.Softbody.clearForces">clearForces</a></code></li>
+<li><code><a title="igeScene.Softbody.collisionGroup" href="#igeScene.Softbody.collisionGroup">collisionGroup</a></code></li>
+<li><code><a title="igeScene.Softbody.collisionMask" href="#igeScene.Softbody.collisionMask">collisionMask</a></code></li>
+<li><code><a title="igeScene.Softbody.continuousDetection" href="#igeScene.Softbody.continuousDetection">continuousDetection</a></code></li>
+<li><code><a title="igeScene.Softbody.dampingCoeff" href="#igeScene.Softbody.dampingCoeff">dampingCoeff</a></code></li>
+<li><code><a title="igeScene.Softbody.dynamicFrictionCoeff" href="#igeScene.Softbody.dynamicFrictionCoeff">dynamicFrictionCoeff</a></code></li>
+<li><code><a title="igeScene.Softbody.friction" href="#igeScene.Softbody.friction">friction</a></code></li>
+<li><code><a title="igeScene.Softbody.getCenterOfMass" href="#igeScene.Softbody.getCenterOfMass">getCenterOfMass</a></code></li>
+<li><code><a title="igeScene.Softbody.getConstraints" href="#igeScene.Softbody.getConstraints">getConstraints</a></code></li>
+<li><code><a title="igeScene.Softbody.getNearestNodeIndex" href="#igeScene.Softbody.getNearestNodeIndex">getNearestNodeIndex</a></code></li>
+<li><code><a title="igeScene.Softbody.getNodeNormal" href="#igeScene.Softbody.getNodeNormal">getNodeNormal</a></code></li>
+<li><code><a title="igeScene.Softbody.getNodePosition" href="#igeScene.Softbody.getNodePosition">getNodePosition</a></code></li>
+<li><code><a title="igeScene.Softbody.getVolume" href="#igeScene.Softbody.getVolume">getVolume</a></code></li>
+<li><code><a title="igeScene.Softbody.gravityFactor" href="#igeScene.Softbody.gravityFactor">gravityFactor</a></code></li>
+<li><code><a title="igeScene.Softbody.isEnabled" href="#igeScene.Softbody.isEnabled">isEnabled</a></code></li>
+<li><code><a title="igeScene.Softbody.isKinematic" href="#igeScene.Softbody.isKinematic">isKinematic</a></code></li>
+<li><code><a title="igeScene.Softbody.isTrigger" href="#igeScene.Softbody.isTrigger">isTrigger</a></code></li>
+<li><code><a title="igeScene.Softbody.kineticContactHardness" href="#igeScene.Softbody.kineticContactHardness">kineticContactHardness</a></code></li>
+<li><code><a title="igeScene.Softbody.linearFactor" href="#igeScene.Softbody.linearFactor">linearFactor</a></code></li>
+<li><code><a title="igeScene.Softbody.linearSleepingThreshold" href="#igeScene.Softbody.linearSleepingThreshold">linearSleepingThreshold</a></code></li>
+<li><code><a title="igeScene.Softbody.linearStiffness" href="#igeScene.Softbody.linearStiffness">linearStiffness</a></code></li>
+<li><code><a title="igeScene.Softbody.linearVelocity" href="#igeScene.Softbody.linearVelocity">linearVelocity</a></code></li>
+<li><code><a title="igeScene.Softbody.mass" href="#igeScene.Softbody.mass">mass</a></code></li>
+<li><code><a title="igeScene.Softbody.name" href="#igeScene.Softbody.name">name</a></code></li>
+<li><code><a title="igeScene.Softbody.offset" href="#igeScene.Softbody.offset">offset</a></code></li>
+<li><code><a title="igeScene.Softbody.onUpdate" href="#igeScene.Softbody.onUpdate">onUpdate</a></code></li>
+<li><code><a title="igeScene.Softbody.owner" href="#igeScene.Softbody.owner">owner</a></code></li>
+<li><code><a title="igeScene.Softbody.poseMatchCoeff" href="#igeScene.Softbody.poseMatchCoeff">poseMatchCoeff</a></code></li>
+<li><code><a title="igeScene.Softbody.positionIterNumber" href="#igeScene.Softbody.positionIterNumber">positionIterNumber</a></code></li>
+<li><code><a title="igeScene.Softbody.pressureCoeff" href="#igeScene.Softbody.pressureCoeff">pressureCoeff</a></code></li>
+<li><code><a title="igeScene.Softbody.removeAnchor" href="#igeScene.Softbody.removeAnchor">removeAnchor</a></code></li>
+<li><code><a title="igeScene.Softbody.removeConstraint" href="#igeScene.Softbody.removeConstraint">removeConstraint</a></code></li>
+<li><code><a title="igeScene.Softbody.removeConstraints" href="#igeScene.Softbody.removeConstraints">removeConstraints</a></code></li>
+<li><code><a title="igeScene.Softbody.restLengthScale" href="#igeScene.Softbody.restLengthScale">restLengthScale</a></code></li>
+<li><code><a title="igeScene.Softbody.restitution" href="#igeScene.Softbody.restitution">restitution</a></code></li>
+<li><code><a title="igeScene.Softbody.rigidContactHardness" href="#igeScene.Softbody.rigidContactHardness">rigidContactHardness</a></code></li>
+<li><code><a title="igeScene.Softbody.selfCollision" href="#igeScene.Softbody.selfCollision">selfCollision</a></code></li>
+<li><code><a title="igeScene.Softbody.sleepingThreshold" href="#igeScene.Softbody.sleepingThreshold">sleepingThreshold</a></code></li>
+<li><code><a title="igeScene.Softbody.softCollision" href="#igeScene.Softbody.softCollision">softCollision</a></code></li>
+<li><code><a title="igeScene.Softbody.softContactHardness" href="#igeScene.Softbody.softContactHardness">softContactHardness</a></code></li>
+<li><code><a title="igeScene.Softbody.velocityFactor" href="#igeScene.Softbody.velocityFactor">velocityFactor</a></code></li>
+<li><code><a title="igeScene.Softbody.volumeConvCoeff" href="#igeScene.Softbody.volumeConvCoeff">volumeConvCoeff</a></code></li>
+<li><code><a title="igeScene.Softbody.windVelocity" href="#igeScene.Softbody.windVelocity">windVelocity</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="igeScene.SphereCollider" href="#igeScene.SphereCollider">SphereCollider</a></code></h4>
+<ul class="">
+<li><code><a title="igeScene.SphereCollider.name" href="#igeScene.SphereCollider.name">name</a></code></li>
+<li><code><a title="igeScene.SphereCollider.onUpdate" href="#igeScene.SphereCollider.onUpdate">onUpdate</a></code></li>
+<li><code><a title="igeScene.SphereCollider.owner" href="#igeScene.SphereCollider.owner">owner</a></code></li>
+<li><code><a title="igeScene.SphereCollider.radius" href="#igeScene.SphereCollider.radius">radius</a></code></li>
 </ul>
 </li>
 <li>
