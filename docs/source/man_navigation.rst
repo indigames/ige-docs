@@ -6,6 +6,9 @@ Dynamic obstacles allow you to alter the navigation of the characters at runtime
 
 IGE Navigation system implement `Recast & Detour libraries <https://github.com/recastnavigation/recastnavigation>`_ which provide both navigation mesh contruction toolset and path-finding toolkit.
 
+.. figure:: images/man_nav_recast.png
+   :alt: NavMesh
+
 NavMesh
 -------
 
@@ -128,9 +131,9 @@ The areaId then assigned to NavArea component, to configure traversal cost for t
    =====================================  =====================================
 
 Navigation System supports different filters for each type of NavAgent, up to 16 types.
-For each agent type, the area cost canbe configured saparately, providing abilities to customize agent behaviors.
+For each agent type, the area cost canbe configured separately, providing abilities to customize agent behaviors.
 
-To configure area cost for each area, for each type of agent, use Python API of NavAgentManager, as below:
+To configure area cost for each area, for each type of agent, use `Python API Document <_static/html/igeScene.html#igeScene.NavAgentManager>`_, as below:
 
 ..  code:: python
 
@@ -169,7 +172,7 @@ OffMeshLink
 Off-Mesh Links are used to create paths crossing outside the walkable navigation mesh surface.
 For example, jumping over a ditch or a fence, or opening a door before walking through it, can be all described as Off-mesh links.
 
-We're going to add an Off-Mesh Link component to describe a jump from the upper platform to the ground.
+To use OffMeshLink optimally, follow steps below:
 
 #. First create two cylinders, scale to (0.1, 0.2, 0.1) to make it easier to work with them.
 #. Move the first cylinder inside the first NavMesh surface.
@@ -282,4 +285,4 @@ It's automatically created when creating NavMesh or DynamicNavMesh, and usually 
     Max Agent Radius                       The agent's max radius
    =====================================  =====================================
 
-NavAgentManager also provides useful functions to control the agents by using Python Script. Refer to Python API document for more information.
+NavAgentManager also provides useful functions to control the agents by using Python Script. Refer to `Python API Document <_static/html/igeScene.html#igeScene.NavAgentManager>`_ for more information.

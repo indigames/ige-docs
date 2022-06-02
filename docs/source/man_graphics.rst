@@ -64,7 +64,7 @@ Camera inspector reference:
     ClearColor                             Color set to when clear screen
    =====================================  =====================================
 
-Camera can be controlled by using Python API, with module ``igeScene.Camera``. Check the API document for more info.
+Camera can be controlled by using Python API, with module ``igeScene.Camera``. Check the `Python API Document <_static/html/igeScene.html#igeScene.Camera>`_ for more info.
 
 Multiple camera also supported, but only one active camera can be used at a time (in combination with builtin GUI Camera).
 To set current camera as active, use Python API as example below:
@@ -308,4 +308,4 @@ Model can be dragged to the ``Scene View`` to create scene object. Also, it can 
     Material                               List of materials included in the model file
    =====================================  ==============================================
 
-For more details of scripting API, please refer to Python API document.
+For more details of scripting API, please refer to `Python API Document <_static/html/igeScene.html#igeScene.Figure>`_.

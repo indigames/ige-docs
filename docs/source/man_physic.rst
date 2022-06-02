@@ -41,7 +41,7 @@ With a Rigidbody attached, the object will immediately respond to gravity. If on
     If the game object contains Rigidbody component, it's Transform will be controlled by the Rigidbody. Thus, to change the transform just apply force or torque to the Rigidbody by using Python Script.
 
 .. note::
-    When Trigger is enabled, use Python Script to receive triggered events. Refer to Python API for more details.
+    When Trigger is enabled, use Python Script to receive triggered events. Refer to `Rigidbody API <_static/html/igeScene.html#igeScene.Rigidbody>`_ for more details.
 
 Collision
 ---------
@@ -54,6 +54,9 @@ BoxCollider
 
 The ``BoxCollider`` is a basic cuboid-shaped collision primitive, which are useful for items such as crates, chests, or floors using thin boxes.
 It can also be used to create complex collision shape using ``CompoundCollider`` component.
+
+.. figure:: images/man_physic_box_collider_.png
+   :alt: BoxCollider
 
 .. figure:: images/man_physic_box_collider.png
    :alt: BoxCollider Component
@@ -76,8 +79,11 @@ SphereCollider
 
 The ``SphereCollider`` is a basic sphere-shaped collision primitive.
 
-.. figure:: images/man_physic_box_collider.png
-   :alt: BoxCollider Component
+.. figure:: images/man_physic_sphere_collider_.png
+   :alt: SphereCollider
+
+.. figure:: images/man_physic_sphere_collider.png
+   :alt: SphereCollider Component
 
 .. table::
    :widths: auto
@@ -93,6 +99,9 @@ CapsuleColider
 ++++++++++++++
 
 The ``CapsuleCollider`` is made of two half-spheres joined together by a cylinder, to create a capsule primitive shape.
+
+.. figure:: images/man_physic_capsule_collider_.png
+   :alt: CapsuleColider
 
 .. figure:: images/man_physic_capsule_collider.png
    :alt: CapsuleColider Component
@@ -115,6 +124,10 @@ CompoundCollider
 Compound colliders approximate the shape of an object while keeping a low processor overhead, by combining primitive colliders of the child objects.
 When you create a compound collider like this, you should only use one Rigidbody component, placed on the owner object in the hierarchy.
 
+.. figure:: images/man_physic_compound_collider_.png
+   :alt: CompoundCollider
+
+
 .. note::
     CompoundCollider do not work with child objects which contains other CompoundCollider or MeshCollider.
 
@@ -126,6 +139,9 @@ MeshCollider
 ++++++++++++
 
 The ``MeshCollider`` create Collider from meshes in ``FigureComponent``. It is more accurate for collision detection than using primitives colliders.
+
+.. figure:: images/man_physic_mesh_collider_.png
+   :alt: MeshCollider
 
 .. figure:: images/man_physic_mesh_collider.png
    :alt: MeshCollider Component
@@ -279,8 +295,11 @@ Softbody
 The soft body dynamics provides rope, cloth simulation and volumetric soft bodies, on top of the existing rigid body dynamics.
 The Softbody component works with FigureComponent, it manipulates Figure meshes to simulate deformable objects like cloth, fluid, jelly,...
 
-.. figure:: images/man_physic_softbody.png
+.. figure:: images/man_physic_softbody_.png
    :alt: Softbody
+
+.. figure:: images/man_physic_softbody.png
+   :alt: Softbody Component
 
 .. table::
    :widths: auto
@@ -362,4 +381,4 @@ The ``PhysicManager`` is automatically created and attached to the root object, 
     Gravity                                Global gravity value
    =====================================  =====================================
 
-Please refer to Bullet Physic manual document and Python API document for more details of Physic usage using IGE.
+Please refer to `Bullet Physic Manual <https://github.com/bulletphysics/bullet3/tree/master/docs>`_ and `Python API Document <_static/html/igeScene.html#igeScene.PhysicManager>`_ document for more details of Physic usage using IGE.

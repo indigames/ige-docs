@@ -41,7 +41,7 @@ Indigames engine supports playing *.ogg, .wav, .mp3, .mp4* formats.
     Doppler Factor                         Factor to reduce or enhance doppler effect
    =====================================  ===========================================================
 
-Refer to Python API documents for usage of AudioSource component within Python Script.
+Refer to `AudioSource API <_static/html/igeScene.html#igeScene.AudioSource>`_ for usage within Python Script.
 
 AudioListener
 -------------
@@ -62,7 +62,7 @@ The audio system will play through only one listener at the same time, which is 
     Enable                                 Enable/disable the audio listener
    =====================================  =====================================
 
-Refer to Python API documents for usage of AudioListener component within Python Script.
+Refer to `AudioListener API <_static/html/igeScene.html#igeScene.AudioListener>`_ for usage of AudioListener component within Python Script.
 
 AudioManager
 ------------
@@ -81,4 +81,4 @@ The ``AudioManager`` is automatically created and attached to the root object, t
     Global Volume                          Global volume of audio system
    =====================================  =====================================
 
-The AudioManager properties also can be controlled using Python Script. Refer to Python API documents for more details.
+The AudioManager properties also can be controlled using Python Script. Refer to `AudioManager Document <_static/html/igeScene.html#igeScene.AudioManager>`_ for more details.

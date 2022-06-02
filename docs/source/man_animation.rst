@@ -33,7 +33,7 @@ To create an Animator Controller, right-click on the ``Assets Browser``, select 
 
 Double-clicking the new created file will open ``Animator Window`` which can be used to create, view and modify the animator controller.
 
-The animator controller is then finally applied to an object by attaching an ``Animator`` component that references them. See the Python API, section ``Animator`` for further details about their use.
+The animator controller is then finally applied to an object by attaching an ``Animator`` component that references them. See the `Python API Document <_static/html/igeScene.html#igeScene.Animator>`_ for further details about their usage.
 
 The Animator Window
 -------------------
@@ -100,7 +100,7 @@ Parameters can be assigned values from a script using functions in the Animator 
          self.animator.setFloat("moveZ_y", y)
          self.animator.setTrigger("fire", fire)
 
-More details about ``Animator`` API, please check Python API document.
+More details about ``Animator`` API, please check `Python API Document <_static/html/igeScene.html#igeScene.Animator>`_.
 
 Animation transitions
 ---------------------
