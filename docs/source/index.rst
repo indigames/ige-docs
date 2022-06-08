@@ -34,13 +34,8 @@ Contents
 .. toctree::
    :caption: Tutorials
 
-   tut_scene
-   tut_script
-   tut_audio
-   tut_animation
-   tut_physic
-   tut_navmesh
-   tut_particle
+   tut_3rd_shooter
+   
 
 .. toctree::
    :caption: API Documents
