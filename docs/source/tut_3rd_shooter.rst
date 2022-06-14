@@ -88,8 +88,44 @@ Also, try to modify the environment by adjust objects' position, rotation and sc
 
 Save the Scene using ``Ctrl + S``, or ``File -> Save Scene``.
 
+Background Music
+----------------
+
+To play an audio clip, we need to use ``AudioSource`` component, either by dragging the audio file to scene to create new object with ``AudioSource`` attached, or just to add ``AudioSource`` component to an existing object.
+To make it simple, select `root` object, add ``AudioSource`` component, then drag the ``audio/bgm.mp3`` file to the inspector.
+The background music should be play once loaded, and should be looped as well. To save memory, it can also be streamed.
+
+.. figure:: images/tut_3rd_shooter_bgm.png
+   :alt: Background Music
+
+
+Also, ``AudioListener`` is required to act as a listener in 3D space, usually added to the active camera.
+
+
+
+Save the Scene, then press `Play` button, the background music should be played and looped during the playing session.
+
 Main Character
 --------------
+
+Create MC
++++++++++
+
+The MC model is located in ``figures/characters/NoMan.dae`` folder. Add the MC to the scene by dragging the model file in the Scene View.
+
+
+Create MC Animation
++++++++++++++++++++
+
+Animation state machine:
+
+Idle -> Move -> Dead
+
+
+1. Create ``animations`` folder.
+
+2. Create ``Animator``, name the file as Player
+
 
 Camera Setup
 ------------
