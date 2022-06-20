@@ -59,7 +59,7 @@ Open The Scene
 
 Open the project using igeCreator, you will see a screen similar to this:
 
-.. figure:: images/tut_3rd_shooter_view.png
+.. figure:: images/editor_layout.png
    :alt: Basic Scene View
 
 Scene Navigation
@@ -95,55 +95,117 @@ To play an audio clip, we need to use ``AudioSource`` component, either by dragg
 To make it simple, select `root` object, add ``AudioSource`` component, then drag the ``audio/bgm.mp3`` file to the inspector.
 The background music should be play once loaded, and should be looped as well. To save memory, it can also be streamed.
 
+Let's add the background music to the ``Environment`` object, like as below:
+
 .. figure:: images/tut_3rd_shooter_bgm.png
    :alt: Background Music
 
+Also, ``AudioListener`` is required to act as a listener in 3D space, it's usually added to the active camera.
+So, let's add ``AudioListener`` to the ``Default Camera`` object:
 
-Also, ``AudioListener`` is required to act as a listener in 3D space, usually added to the active camera.
-
-
+.. figure:: images/tut_3rd_shooter_audiolistener.png
+   :alt: Background Music
 
 Save the Scene, then press `Play` button, the background music should be played and looped during the playing session.
 
 Main Character
 --------------
 
-Create MC
-+++++++++
+Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `02-character-movement`
 
-The MC model is located in ``figures/characters/NoMan.dae`` folder. Add the MC to the scene by dragging the model file in the Scene View.
+Add MC
+++++++
 
+The MC prefab is located in ``prefabs/NoMan.prefab`` folder. Add the MC to the scene by dragging the prefab file in the Scene View.
 
-Create MC Animation
+In the Inspector, you can see the MC already have:
+- Figure: using model from ``figures/characters/NoMan.dae``
+- Animator: using animator controller from ``animators/Player.anim``
+- Capsule Collider and Rigidbody for Physic simulation
+- Script: movement script located at ``scripts/PlayerMovement``
+
+.. figure:: images/tut_3rd_shooter_mc.png
+   :alt: Main Character
+
+Character Animation
 +++++++++++++++++++
 
-Animation state machine:
+IGE Animation makes use of Animator Controller, which control the animation using State Machine defined in ``.anim`` file.
 
-Idle -> Move -> Dead
+Open ``animators/Player.anim`` by double clicking the file icon in ``AssetBrowser``, the Animator Editor appears like below:
 
+.. figure:: images/tut_3rd_shooter_animator.png
+   :alt: Player Animator
 
-1. Create ``animations`` folder.
+Every animator controller implements internal state machine system, which consists at least ``Entry``, ``Exit`` and ``Any`` states.
+The ``Entry`` state help to configure the initial state of the animation. The ``Exit`` state is to end animation. And the ``Any`` state is a helper state to simplify the state diagram.
 
-2. Create ``Animator``, name the file as Player
+The player has other three states: ``Idle``, ``Move``, ``Dead``.
 
+To decide what state to play next, the ``Parameters`` and ``Conditions`` can be used.
+
+- ``Parameters``: define global parameters and their values.
+- ``Conditions``: attached to each transition, with compare the parameters' values which predefined threshold.
+
+The animation transition happens when all conditions are meet, or ``HasExitTime`` checked and the ``ExitTime`` value reached.
+
+The animation is controllable using Python Script, by setting the value of the parameters at runtime.
+Check the ``PlayerMovement.py`` for more information.
+
+Character Physic
+++++++++++++++++
+
+In the Inspector, the character object includes a ``Capsule`` collider and a ``Ridgidbody``. This is a dynamic object, thus ``IsKinematic`` is set to `false`.
+Notice that, the movement along `Y-Axis` is fixed, by setting the second parameter of ``LinearFactor`` to zero.
+Also, the rotation along `X-Axis` and `Z-Axis` is locked, by setting the first and the thirst parameter of ``AngularFactor`` to zero.
+
+Click ``Play`` button, then in the playing mode, the main character can be controlled by pressing arrow keys or WASD keys.
+The character also has collision with the houses and other objects in the scene.
 
 Camera Setup
 ------------
 
+Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `03-camera-setup`
+
+Navigate to ``Default Camera`` object, add a ``Script`` component.
+Drag and drop ``scripts/CameraFollow.py`` from ``AssetBrowser`` to the newly created ``Script``.
+Lastly, drag and drop the ``NoMan`` from ``Hierarchy`` to ``target`` property, then select ``Transform``.
+Save the scene, and after press ``Play``, the camera will follow the main character while moving around.
+
+.. figure:: images/tut_3rd_shooter_camera.png
+   :alt: Camera Follow
+
 Enemy NPC
 ---------
+
+Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `04-enemy-setup`
+
+Like the MC, the Enemy prefab is added at ``prefabs/Enemy.prefab``. Create an enemy by drag and drop the prefab to the ``Hierarchy``.
+
+In the Inspector, the ``Enemy`` object contains:
+
+.. figure:: images/tut_3rd_shooter_enemy.png
+   :alt: Enemy Object
+
+- Figure Component: similar to MC, but the Diffuse Collor changed to Red instead of Blue.
+- Animator Component: same MC
+- Rigidbody and Collider: same MC
+- NavAgent: use NavAgent to find and navigate the object in the map
+- Script Components: ``EnemyMovement.py`` and ``EnemyHealth.py`` control the movement and heal of the enemy.
+
+Click ``Play`` button, then the Enemy will keep running toward the MC character around the map.
 
 GUI & HUD
 ---------
 
+Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `05-gui-hud`
+
+
 MC Health
 ---------
 
-Shooting Enemy
---------------
-
-Scoring Points
---------------
+MC Shooting
+-----------
 
 Spawning Enemies
 ----------------
