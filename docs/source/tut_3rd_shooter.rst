@@ -204,8 +204,13 @@ Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github re
 MC Health
 ---------
 
+Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `06-player-health`
+
+
 MC Shooting
 -----------
+
+Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `07-player-shooting`
 
 Spawning Enemies
 ----------------
