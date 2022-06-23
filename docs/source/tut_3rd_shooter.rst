@@ -5,13 +5,13 @@ Welcome to Indigames Game Engine tutorial series!
 
 This tutorial will introduce how to work with IGE Engine to create a third-person shooter game.
 
-About Scene
------------
-
 Before starting, let make sure you have:
 
 - **IGE Engine**: check :doc:`gs_installation` document if you haven't have it installed.
-- **ige-tutorials**: checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `01-basic-scene`
+- **ige-tutorials**: checkout `ige-tutorials, branch 01-basic-scene <https://github.com/indigames/ige-tutorials/tree/01-basic-scene>`_ github repo.
+
+About Scene
+-----------
 
 A scene is an abstract collection of game objects, representing a part of the game's world created by using the scene editor.
 
@@ -49,7 +49,8 @@ Creating scene object with ``Object Creation Menu`` or by dragging assets will a
 Scripting
 +++++++++
 
-Indigames Game Engine allow writing Python Script to control the scene object behavior. The Script canbe attached to an object using ``ScriptComponent``.
+Indigames Game Engine allow writing Python Script to control the scene object behavior.
+The Script canbe attached to an object using ``Script`` component, and canbe accesses using ``getComponent(<class_name>)`` from other scripts.
 
 Basic Scene
 -----------
@@ -108,15 +109,15 @@ So, let's add ``AudioListener`` to the ``Default Camera`` object:
 
 Save the Scene, then press `Play` button, the background music should be played and looped during the playing session.
 
-Main Character
---------------
+Character Movement
+------------------
 
-Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `02-character-movement`
+Checkout `ige-tutorials, branch 02-character-movement <https://github.com/indigames/ige-tutorials/tree/02-character-movement>`_ github repo.
 
 Add MC
 ++++++
 
-The MC prefab is located in ``prefabs/NoMan.prefab`` folder. Add the MC to the scene by dragging the prefab file in the Scene View.
+The MC prefab is located in ``prefabs/MC.prefab`` folder. Add the MC to the scene by dragging the prefab file in the Scene View.
 
 In the Inspector, you can see the MC already have:
 - Figure: using model from ``figures/characters/NoMan.dae``
@@ -162,23 +163,30 @@ Also, the rotation along `X-Axis` and `Z-Axis` is locked, by setting the first a
 Click ``Play`` button, then in the playing mode, the main character can be controlled by pressing arrow keys or WASD keys.
 The character also has collision with the houses and other objects in the scene.
 
+.. figure:: images/tut_3rd_shooter_added_mc.png
+   :alt: MC
+
 Camera Setup
 ------------
 
-Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `03-camera-setup`
+Checkout `ige-tutorials, branch 03-camera-setup <https://github.com/indigames/ige-tutorials/tree/03-camera-setup>`_ github repo.
 
 Navigate to ``Default Camera`` object, add a ``Script`` component.
 Drag and drop ``scripts/CameraFollow.py`` from ``AssetBrowser`` to the newly created ``Script``.
 Lastly, drag and drop the ``NoMan`` from ``Hierarchy`` to ``target`` property, then select ``Transform``.
-Save the scene, and after press ``Play``, the camera will follow the main character while moving around.
 
 .. figure:: images/tut_3rd_shooter_camera.png
    :alt: Camera Follow
 
-Enemy NPC
+Save the scene, and after press ``Play``, the camera will follow the main character while moving around.
+
+.. figure:: images/tut_3rd_shooter_added_camera.png
+   :alt: MC
+
+Add Enemy
 ---------
 
-Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `04-enemy-setup`
+Checkout `ige-tutorials, branch 04-enemy-setup <https://github.com/indigames/ige-tutorials/tree/04-enemy-setup>`_ github repo.
 
 Like the MC, the Enemy prefab is added at ``prefabs/Enemy.prefab``. Create an enemy by drag and drop the prefab to the ``Hierarchy``.
 
@@ -195,25 +203,33 @@ In the Inspector, the ``Enemy`` object contains:
 
 Click ``Play`` button, then the Enemy will keep running toward the MC character around the map.
 
+.. figure:: images/tut_3rd_shooter_added_enemy.png
+   :alt: MC
+
 GUI & HUD
 ---------
 
-Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `05-gui-hud`
-
+Checkout `ige-tutorials, branch 05-gui-hud <https://github.com/indigames/ige-tutorials/tree/05-gui-hud>`_ github repo.
 
 MC Health
 ---------
 
-Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `06-player-health`
+Checkout `ige-tutorials, branch 06-player-health <https://github.com/indigames/ige-tutorials/tree/06-player-health>`_ github repo.
 
 
 MC Shooting
 -----------
 
-Checkout `ige-tutorials <https://github.com/indigames/ige-tutorials>`_ github repo, branch `07-player-shooting`
+Checkout `ige-tutorials, branch 07-player-shooting <https://github.com/indigames/ige-tutorials/tree/07-player-shooting>`_ github repo.
 
-Spawning Enemies
-----------------
 
 Game Over
 ---------
+
+Checkout `ige-tutorials, branch 08-game-over <https://github.com/indigames/ige-tutorials/tree/08-game-over>`_ github repo.
+
+
+Mobile Control
+--------------
+
+Checkout `ige-tutorials, branch 09-mobile-control <https://github.com/indigames/ige-tutorials/tree/09-mobile-control>`_ github repo.

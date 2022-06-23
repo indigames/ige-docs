@@ -35,11 +35,10 @@ Below is an example of how to use Touch to control UI behavior:
          super().__init__(owner)
 
       def onUpdate(self, dt):
-         if Touch.count() > 0:
-            for i in range(0, Touch.count())
-               x,y = Touch.getPosition(i)
-               if Touch.isPressed(i):
-                  print(f"Pressed {Touch.getId(i)} at ({x}, {y})")
+         for i in range(0, Touch.count()):
+            x,y = Touch.getPosition(i)
+            if Touch.isPressed(i):
+               print(f"Pressed {Touch.getId(i)} at ({x}, {y})")
 
 Using Keyboard
 --------------
