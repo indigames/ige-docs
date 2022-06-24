@@ -394,6 +394,20 @@ faster than creating and multiplying a scale transformation matrix</p>
 <pre><code>matrix = igeVmath.prependScale(matrix, vector)
 </code></pre></div>
 </dd>
+<dt id="igeVmath.quat_look_rotation"><code class="name flex">
+<span>def <span class="ident">quat_look_rotation</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates a rotation with the specified forward and upwards directions.
+- Z axis will be aligned with forward
+- X axis aligned with cross product between forwardand upwards
+- Y axis aligned with cross product between Z and X</p>
+<p>vmath.quat_look_rotation(forward: vmath.vec3, up: vmath.vec3)</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>forward: forward vector
+up: up vector
+</code></pre></div>
+</dd>
 <dt id="igeVmath.quat_rotation"><code class="name flex">
 <span>def <span class="ident">quat_rotation</span></span>(<span>...)</span>
 </code></dt>
@@ -1443,6 +1457,7 @@ igeVmath.vec4(quat)
 <li><code><a title="igeVmath.orthographic" href="#igeVmath.orthographic">orthographic</a></code></li>
 <li><code><a title="igeVmath.perspective" href="#igeVmath.perspective">perspective</a></code></li>
 <li><code><a title="igeVmath.prependScale" href="#igeVmath.prependScale">prependScale</a></code></li>
+<li><code><a title="igeVmath.quat_look_rotation" href="#igeVmath.quat_look_rotation">quat_look_rotation</a></code></li>
 <li><code><a title="igeVmath.quat_rotation" href="#igeVmath.quat_rotation">quat_rotation</a></code></li>
 <li><code><a title="igeVmath.quat_rotationX" href="#igeVmath.quat_rotationX">quat_rotationX</a></code></li>
 <li><code><a title="igeVmath.quat_rotationY" href="#igeVmath.quat_rotationY">quat_rotationY</a></code></li>

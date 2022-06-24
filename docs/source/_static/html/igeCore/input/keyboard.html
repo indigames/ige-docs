@@ -151,7 +151,7 @@ class Keyboard:
     &#34;&#34;&#34;
 
     @staticmethod
-    def isPressed(self, keyCode):
+    def isPressed(keyCode):
         &#34;&#34;&#34;
         Check if a key is pressed.
 
@@ -167,7 +167,7 @@ class Keyboard:
         return core.isKeyPressed(keyCode)
 
     @staticmethod
-    def isReleased(self, keyCode):
+    def isReleased(keyCode):
         &#34;&#34;&#34;
         Check if a key is released.
 
@@ -183,7 +183,7 @@ class Keyboard:
         return core.isKeyReleased(keyCode)
 
     @staticmethod
-    def isHold(self, keyCode):
+    def isHold(keyCode):
         &#34;&#34;&#34;
         Check if a key is hold.
 
@@ -199,7 +199,7 @@ class Keyboard:
         return core.isKeyHold(keyCode)
 
     @staticmethod
-    def getKeyChar(self, keyCode):
+    def getKeyChar(keyCode):
         &#34;&#34;&#34;
         Get represented character with given keyCode. It will also consider SHIFT modifier state. 
 
@@ -214,7 +214,7 @@ class Keyboard:
         return core.getKeyChar(keyCode)
 
     @staticmethod
-    def getModifier(self):
+    def getModifier():
         &#34;&#34;&#34;
         Get the key modifier value. To check if a key modifier activated, use code below:
         
@@ -828,7 +828,7 @@ class Keyboard:
     &#34;&#34;&#34;
 
     @staticmethod
-    def isPressed(self, keyCode):
+    def isPressed(keyCode):
         &#34;&#34;&#34;
         Check if a key is pressed.
 
@@ -844,7 +844,7 @@ class Keyboard:
         return core.isKeyPressed(keyCode)
 
     @staticmethod
-    def isReleased(self, keyCode):
+    def isReleased(keyCode):
         &#34;&#34;&#34;
         Check if a key is released.
 
@@ -860,7 +860,7 @@ class Keyboard:
         return core.isKeyReleased(keyCode)
 
     @staticmethod
-    def isHold(self, keyCode):
+    def isHold(keyCode):
         &#34;&#34;&#34;
         Check if a key is hold.
 
@@ -876,7 +876,7 @@ class Keyboard:
         return core.isKeyHold(keyCode)
 
     @staticmethod
-    def getKeyChar(self, keyCode):
+    def getKeyChar(keyCode):
         &#34;&#34;&#34;
         Get represented character with given keyCode. It will also consider SHIFT modifier state. 
 
@@ -891,7 +891,7 @@ class Keyboard:
         return core.getKeyChar(keyCode)
 
     @staticmethod
-    def getModifier(self):
+    def getModifier():
         &#34;&#34;&#34;
         Get the key modifier value. To check if a key modifier activated, use code below:
         
@@ -908,7 +908,7 @@ class Keyboard:
 <h3>Static methods</h3>
 <dl>
 <dt id="igeCore.input.keyboard.Keyboard.getKeyChar"><code class="name flex">
-<span>def <span class="ident">getKeyChar</span></span>(<span>self, keyCode)</span>
+<span>def <span class="ident">getKeyChar</span></span>(<span>keyCode)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get represented character with given keyCode. It will also consider SHIFT modifier state. </p>
@@ -923,7 +923,7 @@ class Keyboard:
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def getKeyChar(self, keyCode):
+def getKeyChar(keyCode):
     &#34;&#34;&#34;
     Get represented character with given keyCode. It will also consider SHIFT modifier state. 
 
@@ -939,7 +939,7 @@ def getKeyChar(self, keyCode):
 </details>
 </dd>
 <dt id="igeCore.input.keyboard.Keyboard.getModifier"><code class="name flex">
-<span>def <span class="ident">getModifier</span></span>(<span>self)</span>
+<span>def <span class="ident">getModifier</span></span>(<span>)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get the key modifier value. To check if a key modifier activated, use code below:</p>
@@ -954,7 +954,7 @@ print("SHIFT is activated")</p>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def getModifier(self):
+def getModifier():
     &#34;&#34;&#34;
     Get the key modifier value. To check if a key modifier activated, use code below:
     
@@ -970,7 +970,7 @@ def getModifier(self):
 </details>
 </dd>
 <dt id="igeCore.input.keyboard.Keyboard.isHold"><code class="name flex">
-<span>def <span class="ident">isHold</span></span>(<span>self, keyCode)</span>
+<span>def <span class="ident">isHold</span></span>(<span>keyCode)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a key is hold.</p>
@@ -986,7 +986,7 @@ False: If the key is not hold
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isHold(self, keyCode):
+def isHold(keyCode):
     &#34;&#34;&#34;
     Check if a key is hold.
 
@@ -1003,7 +1003,7 @@ def isHold(self, keyCode):
 </details>
 </dd>
 <dt id="igeCore.input.keyboard.Keyboard.isPressed"><code class="name flex">
-<span>def <span class="ident">isPressed</span></span>(<span>self, keyCode)</span>
+<span>def <span class="ident">isPressed</span></span>(<span>keyCode)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a key is pressed.</p>
@@ -1019,7 +1019,7 @@ False: If the key is not pressed
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isPressed(self, keyCode):
+def isPressed(keyCode):
     &#34;&#34;&#34;
     Check if a key is pressed.
 
@@ -1036,7 +1036,7 @@ def isPressed(self, keyCode):
 </details>
 </dd>
 <dt id="igeCore.input.keyboard.Keyboard.isReleased"><code class="name flex">
-<span>def <span class="ident">isReleased</span></span>(<span>self, keyCode)</span>
+<span>def <span class="ident">isReleased</span></span>(<span>keyCode)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a key is released.</p>
@@ -1052,7 +1052,7 @@ False: If the key is not released
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isReleased(self, keyCode):
+def isReleased(keyCode):
     &#34;&#34;&#34;
     Check if a key is released.
 

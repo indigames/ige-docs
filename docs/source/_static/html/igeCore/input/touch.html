@@ -31,6 +31,12 @@
 indi game engine - touch input
 &#34;&#34;&#34;
 import igeCore as core
+import igeVmath as vmath
+
+try:
+    from igeScene import SceneManager
+except:
+    print(&#34;igeScene not installed&#34;)
 
 class Touch:
     &#39;&#39;&#39;
@@ -38,7 +44,7 @@ class Touch:
     &#39;&#39;&#39;
 
     @staticmethod
-    def getFingerPosition(self, fingerIndex):
+    def getPosition(fingerIndex):
         &#34;&#34;&#34;
         Get a finger position by the index of the finger.
 
@@ -50,10 +56,17 @@ class Touch:
         -------
             [x (int), y (int)] : Position
         &#34;&#34;&#34;
-        return core.getFingerPosition(fingerIndex)
+        x, y = core.getFingerPosition(fingerIndex)
+        if SceneManager is not None:
+            scene = SceneManager.getInstance().currentScene
+            if scene is not None:
+                delta = (scene.getViewSize() - scene.getScreenSize()) * 0.5
+                x = x - delta.x
+                y = y + delta.y
+        return [x, y]
 
     @staticmethod
-    def isFingerPressed(self, fingerIndex):
+    def isPressed(fingerIndex):
         &#34;&#34;&#34;
         Check if a finger has pressed.
 
@@ -69,7 +82,7 @@ class Touch:
         return core.isFingerPressed(fingerIndex)
 
     @staticmethod
-    def isFingerMoved(self, fingerIndex):
+    def isMoved(fingerIndex):
         &#34;&#34;&#34;
         Check if a finger has moved.
 
@@ -85,7 +98,7 @@ class Touch:
         return core.isFingerMoved(fingerIndex)
 
     @staticmethod
-    def isFingerReleased(self, fingerIndex):
+    def isReleased(fingerIndex):
         &#34;&#34;&#34;
         Check if a finger has released.
 
@@ -101,7 +114,7 @@ class Touch:
         return core.isFingerReleased(fingerIndex)
 
     @staticmethod
-    def isFingerScrolled(self, fingerIndex):
+    def isScrolled(fingerIndex):
         &#34;&#34;&#34;
         Check if a mouse has scrolled.
 
@@ -117,9 +130,9 @@ class Touch:
         return core.isFingerScrolled(fingerIndex)
 
     @staticmethod
-    def getFingerScrolledData(self, fingerIndex):
+    def getScrollData(fingerIndex):
         &#34;&#34;&#34;
-        Get scrolling delta if mouse has scrolled.
+        Get scrolling data if mouse has scrolled.
 
         Parameters
         ----------
@@ -132,7 +145,7 @@ class Touch:
         return core.getFingerScrolledData(fingerIndex)
 
     @staticmethod
-    def getFingerPressure(self, fingerIndex):
+    def getPressure(fingerIndex):
         &#34;&#34;&#34;
         Get the pressure value from a finger.
 
@@ -147,7 +160,7 @@ class Touch:
         return core.getFingerPressure(fingerIndex)
 
     @staticmethod
-    def getFingerId(self, fingerIndex):
+    def getId(fingerIndex):
         &#34;&#34;&#34;
         Get the finger unique id from finger index.
         This is useful for multiple touch application when user need to check the source of an event.
@@ -163,7 +176,7 @@ class Touch:
         return core.getFingerId(fingerIndex)
 
     @staticmethod
-    def getFingersCount(self):
+    def count():
         &#34;&#34;&#34;
         Get the total number of active fingers on screen.
 
@@ -198,7 +211,7 @@ class Touch:
     &#39;&#39;&#39;
 
     @staticmethod
-    def getFingerPosition(self, fingerIndex):
+    def getPosition(fingerIndex):
         &#34;&#34;&#34;
         Get a finger position by the index of the finger.
 
@@ -210,10 +223,17 @@ class Touch:
         -------
             [x (int), y (int)] : Position
         &#34;&#34;&#34;
-        return core.getFingerPosition(fingerIndex)
+        x, y = core.getFingerPosition(fingerIndex)
+        if SceneManager is not None:
+            scene = SceneManager.getInstance().currentScene
+            if scene is not None:
+                delta = (scene.getViewSize() - scene.getScreenSize()) * 0.5
+                x = x - delta.x
+                y = y + delta.y
+        return [x, y]
 
     @staticmethod
-    def isFingerPressed(self, fingerIndex):
+    def isPressed(fingerIndex):
         &#34;&#34;&#34;
         Check if a finger has pressed.
 
@@ -229,7 +249,7 @@ class Touch:
         return core.isFingerPressed(fingerIndex)
 
     @staticmethod
-    def isFingerMoved(self, fingerIndex):
+    def isMoved(fingerIndex):
         &#34;&#34;&#34;
         Check if a finger has moved.
 
@@ -245,7 +265,7 @@ class Touch:
         return core.isFingerMoved(fingerIndex)
 
     @staticmethod
-    def isFingerReleased(self, fingerIndex):
+    def isReleased(fingerIndex):
         &#34;&#34;&#34;
         Check if a finger has released.
 
@@ -261,7 +281,7 @@ class Touch:
         return core.isFingerReleased(fingerIndex)
 
     @staticmethod
-    def isFingerScrolled(self, fingerIndex):
+    def isScrolled(fingerIndex):
         &#34;&#34;&#34;
         Check if a mouse has scrolled.
 
@@ -277,9 +297,9 @@ class Touch:
         return core.isFingerScrolled(fingerIndex)
 
     @staticmethod
-    def getFingerScrolledData(self, fingerIndex):
+    def getScrollData(fingerIndex):
         &#34;&#34;&#34;
-        Get scrolling delta if mouse has scrolled.
+        Get scrolling data if mouse has scrolled.
 
         Parameters
         ----------
@@ -292,7 +312,7 @@ class Touch:
         return core.getFingerScrolledData(fingerIndex)
 
     @staticmethod
-    def getFingerPressure(self, fingerIndex):
+    def getPressure(fingerIndex):
         &#34;&#34;&#34;
         Get the pressure value from a finger.
 
@@ -307,7 +327,7 @@ class Touch:
         return core.getFingerPressure(fingerIndex)
 
     @staticmethod
-    def getFingerId(self, fingerIndex):
+    def getId(fingerIndex):
         &#34;&#34;&#34;
         Get the finger unique id from finger index.
         This is useful for multiple touch application when user need to check the source of an event.
@@ -323,7 +343,7 @@ class Touch:
         return core.getFingerId(fingerIndex)
 
     @staticmethod
-    def getFingersCount(self):
+    def count():
         &#34;&#34;&#34;
         Get the total number of active fingers on screen.
 
@@ -335,8 +355,32 @@ class Touch:
 </details>
 <h3>Static methods</h3>
 <dl>
-<dt id="igeCore.input.touch.Touch.getFingerId"><code class="name flex">
-<span>def <span class="ident">getFingerId</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.count"><code class="name flex">
+<span>def <span class="ident">count</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the total number of active fingers on screen.</p>
+<h2 id="returns">Returns</h2>
+<pre><code>numberOfFingers (int)
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def count():
+    &#34;&#34;&#34;
+    Get the total number of active fingers on screen.
+
+    Returns
+    -------
+        numberOfFingers (int)
+    &#34;&#34;&#34;
+    return core.getFingersCount()</code></pre>
+</details>
+</dd>
+<dt id="igeCore.input.touch.Touch.getId"><code class="name flex">
+<span>def <span class="ident">getId</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get the finger unique id from finger index.
@@ -352,7 +396,7 @@ This is useful for multiple touch application when user need to check the source
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def getFingerId(self, fingerIndex):
+def getId(fingerIndex):
     &#34;&#34;&#34;
     Get the finger unique id from finger index.
     This is useful for multiple touch application when user need to check the source of an event.
@@ -368,8 +412,8 @@ def getFingerId(self, fingerIndex):
     return core.getFingerId(fingerIndex)</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.getFingerPosition"><code class="name flex">
-<span>def <span class="ident">getFingerPosition</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.getPosition"><code class="name flex">
+<span>def <span class="ident">getPosition</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get a finger position by the index of the finger.</p>
@@ -384,7 +428,7 @@ def getFingerId(self, fingerIndex):
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def getFingerPosition(self, fingerIndex):
+def getPosition(fingerIndex):
     &#34;&#34;&#34;
     Get a finger position by the index of the finger.
 
@@ -396,11 +440,18 @@ def getFingerPosition(self, fingerIndex):
     -------
         [x (int), y (int)] : Position
     &#34;&#34;&#34;
-    return core.getFingerPosition(fingerIndex)</code></pre>
+    x, y = core.getFingerPosition(fingerIndex)
+    if SceneManager is not None:
+        scene = SceneManager.getInstance().currentScene
+        if scene is not None:
+            delta = (scene.getViewSize() - scene.getScreenSize()) * 0.5
+            x = x - delta.x
+            y = y + delta.y
+    return [x, y]</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.getFingerPressure"><code class="name flex">
-<span>def <span class="ident">getFingerPressure</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.getPressure"><code class="name flex">
+<span>def <span class="ident">getPressure</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get the pressure value from a finger.</p>
@@ -415,7 +466,7 @@ def getFingerPosition(self, fingerIndex):
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def getFingerPressure(self, fingerIndex):
+def getPressure(fingerIndex):
     &#34;&#34;&#34;
     Get the pressure value from a finger.
 
@@ -430,11 +481,11 @@ def getFingerPressure(self, fingerIndex):
     return core.getFingerPressure(fingerIndex)</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.getFingerScrolledData"><code class="name flex">
-<span>def <span class="ident">getFingerScrolledData</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.getScrollData"><code class="name flex">
+<span>def <span class="ident">getScrollData</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Get scrolling delta if mouse has scrolled.</p>
+<div class="desc"><p>Get scrolling data if mouse has scrolled.</p>
 <h2 id="parameters">Parameters</h2>
 <pre><code>fingerIndex (int): The finger index to check
 </code></pre>
@@ -446,9 +497,9 @@ def getFingerPressure(self, fingerIndex):
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def getFingerScrolledData(self, fingerIndex):
+def getScrollData(fingerIndex):
     &#34;&#34;&#34;
-    Get scrolling delta if mouse has scrolled.
+    Get scrolling data if mouse has scrolled.
 
     Parameters
     ----------
@@ -461,32 +512,8 @@ def getFingerScrolledData(self, fingerIndex):
     return core.getFingerScrolledData(fingerIndex)</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.getFingersCount"><code class="name flex">
-<span>def <span class="ident">getFingersCount</span></span>(<span>self)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Get the total number of active fingers on screen.</p>
-<h2 id="returns">Returns</h2>
-<pre><code>numberOfFingers (int)
-</code></pre></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">@staticmethod
-def getFingersCount(self):
-    &#34;&#34;&#34;
-    Get the total number of active fingers on screen.
-
-    Returns
-    -------
-        numberOfFingers (int)
-    &#34;&#34;&#34;
-    return core.getFingersCount()</code></pre>
-</details>
-</dd>
-<dt id="igeCore.input.touch.Touch.isFingerMoved"><code class="name flex">
-<span>def <span class="ident">isFingerMoved</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.isMoved"><code class="name flex">
+<span>def <span class="ident">isMoved</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a finger has moved.</p>
@@ -502,7 +529,7 @@ False: If the finger has not moved
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isFingerMoved(self, fingerIndex):
+def isMoved(fingerIndex):
     &#34;&#34;&#34;
     Check if a finger has moved.
 
@@ -518,8 +545,8 @@ def isFingerMoved(self, fingerIndex):
     return core.isFingerMoved(fingerIndex)</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.isFingerPressed"><code class="name flex">
-<span>def <span class="ident">isFingerPressed</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.isPressed"><code class="name flex">
+<span>def <span class="ident">isPressed</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a finger has pressed.</p>
@@ -535,7 +562,7 @@ False: If the finger has not pressed
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isFingerPressed(self, fingerIndex):
+def isPressed(fingerIndex):
     &#34;&#34;&#34;
     Check if a finger has pressed.
 
@@ -551,8 +578,8 @@ def isFingerPressed(self, fingerIndex):
     return core.isFingerPressed(fingerIndex)</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.isFingerReleased"><code class="name flex">
-<span>def <span class="ident">isFingerReleased</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.isReleased"><code class="name flex">
+<span>def <span class="ident">isReleased</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a finger has released.</p>
@@ -568,7 +595,7 @@ False: If the finger has not released
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isFingerReleased(self, fingerIndex):
+def isReleased(fingerIndex):
     &#34;&#34;&#34;
     Check if a finger has released.
 
@@ -584,8 +611,8 @@ def isFingerReleased(self, fingerIndex):
     return core.isFingerReleased(fingerIndex)</code></pre>
 </details>
 </dd>
-<dt id="igeCore.input.touch.Touch.isFingerScrolled"><code class="name flex">
-<span>def <span class="ident">isFingerScrolled</span></span>(<span>self, fingerIndex)</span>
+<dt id="igeCore.input.touch.Touch.isScrolled"><code class="name flex">
+<span>def <span class="ident">isScrolled</span></span>(<span>fingerIndex)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if a mouse has scrolled.</p>
@@ -601,7 +628,7 @@ False: If the mouse has not scrolled
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
-def isFingerScrolled(self, fingerIndex):
+def isScrolled(fingerIndex):
     &#34;&#34;&#34;
     Check if a mouse has scrolled.
 
@@ -637,16 +664,16 @@ def isFingerScrolled(self, fingerIndex):
 <ul>
 <li>
 <h4><code><a title="igeCore.input.touch.Touch" href="#igeCore.input.touch.Touch">Touch</a></code></h4>
-<ul class="">
-<li><code><a title="igeCore.input.touch.Touch.getFingerId" href="#igeCore.input.touch.Touch.getFingerId">getFingerId</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.getFingerPosition" href="#igeCore.input.touch.Touch.getFingerPosition">getFingerPosition</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.getFingerPressure" href="#igeCore.input.touch.Touch.getFingerPressure">getFingerPressure</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.getFingerScrolledData" href="#igeCore.input.touch.Touch.getFingerScrolledData">getFingerScrolledData</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.getFingersCount" href="#igeCore.input.touch.Touch.getFingersCount">getFingersCount</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.isFingerMoved" href="#igeCore.input.touch.Touch.isFingerMoved">isFingerMoved</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.isFingerPressed" href="#igeCore.input.touch.Touch.isFingerPressed">isFingerPressed</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.isFingerReleased" href="#igeCore.input.touch.Touch.isFingerReleased">isFingerReleased</a></code></li>
-<li><code><a title="igeCore.input.touch.Touch.isFingerScrolled" href="#igeCore.input.touch.Touch.isFingerScrolled">isFingerScrolled</a></code></li>
+<ul class="two-column">
+<li><code><a title="igeCore.input.touch.Touch.count" href="#igeCore.input.touch.Touch.count">count</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.getId" href="#igeCore.input.touch.Touch.getId">getId</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.getPosition" href="#igeCore.input.touch.Touch.getPosition">getPosition</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.getPressure" href="#igeCore.input.touch.Touch.getPressure">getPressure</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.getScrollData" href="#igeCore.input.touch.Touch.getScrollData">getScrollData</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.isMoved" href="#igeCore.input.touch.Touch.isMoved">isMoved</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.isPressed" href="#igeCore.input.touch.Touch.isPressed">isPressed</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.isReleased" href="#igeCore.input.touch.Touch.isReleased">isReleased</a></code></li>
+<li><code><a title="igeCore.input.touch.Touch.isScrolled" href="#igeCore.input.touch.Touch.isScrolled">isScrolled</a></code></li>
 </ul>
 </li>
 </ul>
