@@ -30,6 +30,7 @@ Contents
    man_physic
    man_navigation
    man_particle
+   man_platforms
 
 .. toctree::
    :caption: Tutorials
